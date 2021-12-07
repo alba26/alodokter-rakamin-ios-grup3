@@ -1,14 +1,12 @@
 //
-//  Utiliy.swift
-//  Alodokter_bootcamp
+//  Utility.swift
+//  Alodokter_Rakamin_Bootcamp
 //
-//  Created by Abdul Aziz on 20/11/21.
+//  Created by Adhitya Laksamana Bayu Adrian on 07/12/21.
 //
 
 import Foundation
 import UIKit
-import SwiftyJSON
-
 class Utility {
     public func isValidEmail(text: String?) -> Bool {
         if text != nil {

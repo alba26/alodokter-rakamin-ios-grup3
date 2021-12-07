@@ -1,8 +1,8 @@
 //
-//  DeviceHelper.swift
-//  Alodokter_bootcamp
+//  DeviceHelper+Extension.swift
+//  Alodokter_Rakamin_Bootcamp
 //
-//  Created by Abdul Aziz on 20/11/21.
+//  Created by Adhitya Laksamana Bayu Adrian on 07/12/21.
 //
 
 import Foundation
