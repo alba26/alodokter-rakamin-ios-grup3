@@ -10,8 +10,14 @@ import UIKit
 class LoginView: UIView {
 
     @IBOutlet var contentView: UIView!
-    
+    @IBOutlet weak var logoImage: UIImageView!
     @IBAction func authButton(_ sender: Any) {
+        print("test")
+    }
+    
+    @IBAction func loginEmailTextField(_ sender: Any) {
+    }
+    @IBAction func loginPasswordTextField(_ sender: Any) {
     }
     
     override init(frame: CGRect) {
