@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		17CD8F27275F5EA5009043F0 /* Article.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F26275F5EA5009043F0 /* Article.storyboard */; };
-		17CD8F29275F5EC5009043F0 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD8F28275F5EC5009043F0 /* ArticleViewController.swift */; };
+		3EFA07B8275F8B800010AA10 /* ResetPasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EFA07B7275F8B800010AA10 /* ResetPasswordView.xib */; };
+		3EFA07BA275F90C20010AA10 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFA07B9275F90C20010AA10 /* ResetPasswordView.swift */; };
+		3EFA07BC275F99100010AA10 /* UIButton+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFA07BB275F99100010AA10 /* UIButton+extension.swift */; };
+		3EFA07BE275F9B050010AA10 /* UITextField+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFA07BD275F9B050010AA10 /* UITextField+extension.swift */; };
+		3EFA07C0275F9E020010AA10 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EFA07BF275F9E020010AA10 /* Profile.storyboard */; };
+		3EFA07C2275F9E3F0010AA10 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFA07C1275F9E3F0010AA10 /* ResetPasswordViewController.swift */; };
 		924DC49B275F141700FCE093 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC49A275F141700FCE093 /* AppDelegate.swift */; };
 		924DC49D275F141700FCE093 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC49C275F141700FCE093 /* SceneDelegate.swift */; };
 		924DC49F275F141700FCE093 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC49E275F141700FCE093 /* ViewController.swift */; };
@@ -25,6 +29,12 @@
 /* Begin PBXFileReference section */
 		17CD8F26275F5EA5009043F0 /* Article.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Article.storyboard; path = ../../../../Article.storyboard; sourceTree = "<group>"; };
 		17CD8F28275F5EC5009043F0 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArticleViewController.swift; path = ../../../../ArticleViewController.swift; sourceTree = "<group>"; };
+		3EFA07B7275F8B800010AA10 /* ResetPasswordView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ResetPasswordView.xib; path = Profile/ResetPassword/ResetPasswordView.xib; sourceTree = SOURCE_ROOT; };
+		3EFA07B9275F90C20010AA10 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResetPasswordView.swift; path = Profile/ResetPassword/ResetPasswordView.swift; sourceTree = SOURCE_ROOT; };
+		3EFA07BB275F99100010AA10 /* UIButton+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+extension.swift"; sourceTree = "<group>"; };
+		3EFA07BD275F9B050010AA10 /* UITextField+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+extension.swift"; sourceTree = "<group>"; };
+		3EFA07BF275F9E020010AA10 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Profile/Profile.storyboard; sourceTree = SOURCE_ROOT; };
+		3EFA07C1275F9E3F0010AA10 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResetPasswordViewController.swift; path = Profile/ResetPassword/ResetPasswordViewController.swift; sourceTree = SOURCE_ROOT; };
 		924DC497275F141700FCE093 /* Alodokter_Rakamin_Bootcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alodokter_Rakamin_Bootcamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		924DC49A275F141700FCE093 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		924DC49C275F141700FCE093 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +61,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3EFA07B6275F8B110010AA10 /* ResetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				3EFA07B7275F8B800010AA10 /* ResetPasswordView.xib */,
+				3EFA07B9275F90C20010AA10 /* ResetPasswordView.swift */,
+				3EFA07C1275F9E3F0010AA10 /* ResetPasswordViewController.swift */,
+			);
+			path = ResetPassword;
+			sourceTree = "<group>";
+		};
 		924DC48E275F141700FCE093 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +126,8 @@
 		924DC4B4275F25C100FCE093 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				3EFA07B6275F8B110010AA10 /* ResetPassword */,
+				3EFA07BF275F9E020010AA10 /* Profile.storyboard */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -132,6 +154,8 @@
 				924DC4B8275F266500FCE093 /* UIColor.swift */,
 				924DC4BA275F269100FCE093 /* DeviceHelper.swift */,
 				924DC4BC275F26DF00FCE093 /* Utility.swift */,
+				3EFA07BB275F99100010AA10 /* UIButton+extension.swift */,
+				3EFA07BD275F9B050010AA10 /* UITextField+extension.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -210,8 +234,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EFA07C0275F9E020010AA10 /* Profile.storyboard in Resources */,
 				924DC4A7275F141800FCE093 /* LaunchScreen.storyboard in Resources */,
-				17CD8F27275F5EA5009043F0 /* Article.storyboard in Resources */,
+				3EFA07B8275F8B800010AA10 /* ResetPasswordView.xib in Resources */,
 				924DC4A4275F141800FCE093 /* Assets.xcassets in Resources */,
 				924DC4A2275F141700FCE093 /* Main.storyboard in Resources */,
 			);
@@ -225,11 +250,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				924DC49F275F141700FCE093 /* ViewController.swift in Sources */,
+				3EFA07BE275F9B050010AA10 /* UITextField+extension.swift in Sources */,
 				924DC49B275F141700FCE093 /* AppDelegate.swift in Sources */,
+				3EFA07C2275F9E3F0010AA10 /* ResetPasswordViewController.swift in Sources */,
 				924DC4C3275F337200FCE093 /* SetRootView+Extension.swift in Sources */,
 				924DC4BD275F26DF00FCE093 /* Utility.swift in Sources */,
-				17CD8F29275F5EC5009043F0 /* ArticleViewController.swift in Sources */,
+				3EFA07BA275F90C20010AA10 /* ResetPasswordView.swift in Sources */,
 				924DC49D275F141700FCE093 /* SceneDelegate.swift in Sources */,
+				3EFA07BC275F99100010AA10 /* UIButton+extension.swift in Sources */,
 				924DC4B9275F266500FCE093 /* UIColor.swift in Sources */,
 				924DC4C1275F32E900FCE093 /* PopToSelectedController+Exten.swift in Sources */,
 				924DC4BB275F269100FCE093 /* DeviceHelper.swift in Sources */,
@@ -386,7 +414,7 @@
 				INFOPLIST_FILE = Alodokter_Rakamin_Bootcamp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Profile;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -414,7 +442,7 @@
 				INFOPLIST_FILE = Alodokter_Rakamin_Bootcamp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Profile;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
