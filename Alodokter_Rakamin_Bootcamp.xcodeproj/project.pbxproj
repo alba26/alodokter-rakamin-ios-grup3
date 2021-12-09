@@ -13,6 +13,10 @@
 		3EFA07BE275F9B050010AA10 /* UITextField+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFA07BD275F9B050010AA10 /* UITextField+extension.swift */; };
 		3EFA07C0275F9E020010AA10 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EFA07BF275F9E020010AA10 /* Profile.storyboard */; };
 		3EFA07C2275F9E3F0010AA10 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFA07C1275F9E3F0010AA10 /* ResetPasswordViewController.swift */; };
+		8C6121102761CB5800511B76 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C61210F2761CB5800511B76 /* LoginView.xib */; };
+		8C6121142761CB6500511B76 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6121112761CB6500511B76 /* LoginView.swift */; };
+		8C6121152761CB6500511B76 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6121122761CB6500511B76 /* LoginViewController.swift */; };
+		8C6121162761CB6500511B76 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C6121132761CB6500511B76 /* Login.storyboard */; };
 		924DC49B275F141700FCE093 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC49A275F141700FCE093 /* AppDelegate.swift */; };
 		924DC49D275F141700FCE093 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC49C275F141700FCE093 /* SceneDelegate.swift */; };
 		924DC49F275F141700FCE093 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC49E275F141700FCE093 /* ViewController.swift */; };
@@ -35,6 +39,10 @@
 		3EFA07BD275F9B050010AA10 /* UITextField+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+extension.swift"; sourceTree = "<group>"; };
 		3EFA07BF275F9E020010AA10 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Profile/Profile.storyboard; sourceTree = SOURCE_ROOT; };
 		3EFA07C1275F9E3F0010AA10 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResetPasswordViewController.swift; path = Profile/ResetPassword/ResetPasswordViewController.swift; sourceTree = SOURCE_ROOT; };
+		8C61210F2761CB5800511B76 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginView.xib; path = Profile/Login/LoginView.xib; sourceTree = SOURCE_ROOT; };
+		8C6121112761CB6500511B76 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginView.swift; path = Profile/Login/LoginView.swift; sourceTree = SOURCE_ROOT; };
+		8C6121122761CB6500511B76 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Profile/Login/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
+		8C6121132761CB6500511B76 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Profile/Login/Login.storyboard; sourceTree = SOURCE_ROOT; };
 		924DC497275F141700FCE093 /* Alodokter_Rakamin_Bootcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alodokter_Rakamin_Bootcamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		924DC49A275F141700FCE093 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		924DC49C275F141700FCE093 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +77,17 @@
 				3EFA07C1275F9E3F0010AA10 /* ResetPasswordViewController.swift */,
 			);
 			path = ResetPassword;
+			sourceTree = "<group>";
+		};
+		8C61210A2761CAB700511B76 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8C6121132761CB6500511B76 /* Login.storyboard */,
+				8C6121112761CB6500511B76 /* LoginView.swift */,
+				8C6121122761CB6500511B76 /* LoginViewController.swift */,
+				8C61210F2761CB5800511B76 /* LoginView.xib */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		924DC48E275F141700FCE093 = {
@@ -126,6 +145,7 @@
 		924DC4B4275F25C100FCE093 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				8C61210A2761CAB700511B76 /* Login */,
 				3EFA07B6275F8B110010AA10 /* ResetPassword */,
 				3EFA07BF275F9E020010AA10 /* Profile.storyboard */,
 			);
@@ -236,6 +256,8 @@
 			files = (
 				3EFA07C0275F9E020010AA10 /* Profile.storyboard in Resources */,
 				924DC4A7275F141800FCE093 /* LaunchScreen.storyboard in Resources */,
+				8C6121162761CB6500511B76 /* Login.storyboard in Resources */,
+				8C6121102761CB5800511B76 /* LoginView.xib in Resources */,
 				3EFA07B8275F8B800010AA10 /* ResetPasswordView.xib in Resources */,
 				924DC4A4275F141800FCE093 /* Assets.xcassets in Resources */,
 				924DC4A2275F141700FCE093 /* Main.storyboard in Resources */,
@@ -249,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C6121152761CB6500511B76 /* LoginViewController.swift in Sources */,
 				924DC49F275F141700FCE093 /* ViewController.swift in Sources */,
 				3EFA07BE275F9B050010AA10 /* UITextField+extension.swift in Sources */,
 				924DC49B275F141700FCE093 /* AppDelegate.swift in Sources */,
@@ -259,6 +282,7 @@
 				924DC49D275F141700FCE093 /* SceneDelegate.swift in Sources */,
 				3EFA07BC275F99100010AA10 /* UIButton+extension.swift in Sources */,
 				924DC4B9275F266500FCE093 /* UIColor.swift in Sources */,
+				8C6121142761CB6500511B76 /* LoginView.swift in Sources */,
 				924DC4C1275F32E900FCE093 /* PopToSelectedController+Exten.swift in Sources */,
 				924DC4BB275F269100FCE093 /* DeviceHelper.swift in Sources */,
 			);
