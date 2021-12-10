@@ -43,6 +43,9 @@ class ArticleViewController: UIViewController {
         profileImageView.layer.cornerRadius = 20
         profileImageView.layer.masksToBounds = true
         profileNavView.addSubview(profileImageView)
+        profileImageView.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(profileMenuTapped(sender:)))
+        profileImageView.addGestureRecognizer(tap)
         let rightBarButton = UIBarButtonItem(customView: profileNavView)
         self.navigationItem.rightBarButtonItem = rightBarButton
         self.navigationItem.rightBarButtonItem?.target = self
@@ -66,7 +69,6 @@ class ArticleViewController: UIViewController {
         let loginStoryboard : UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
         let loginVC = loginStoryboard.instantiateViewController(withIdentifier: "LoginViewController")
         self.navigationController?.pushViewController(loginVC, animated: true)
-//        self.present(loginVC, animated: true, completion: nil)
     }
     
     
