@@ -1,18 +1,18 @@
 //
-//  LoginModel.swift
+//  UserData.swift
 //  Alodokter_Rakamin_Bootcamp
 //
-//  Created by Adhitya Laksamana Bayu Adrian on 08/12/21.
+//  Created by Adhitya Laksamana Bayu Adrian on 11/12/21.
 //
 
 import Foundation
 
-struct LoginModel: Codable {
+
+struct UserData: Codable {
     let code: Int
     let message: String
-    let data: DataLogin?
+    let data: UserProfile
     let currentPage, perPage, totalPage, totalCount: Bool?
-
     enum CodingKeys: String, CodingKey {
         case code, message, data
         case currentPage = "current_page"
@@ -23,7 +23,9 @@ struct LoginModel: Codable {
 }
 
 // MARK: - DataClass
-struct DataLogin: Codable {
+struct UserProfile: Codable {
     let id: Int
-    let email, token: String
+    let email, firstname, lastname, birthdate: String
+    let gender, phone, identity, address: String
+    let city: String
 }

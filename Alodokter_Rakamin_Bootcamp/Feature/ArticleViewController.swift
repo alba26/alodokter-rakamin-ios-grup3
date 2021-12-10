@@ -14,6 +14,7 @@ class ArticleViewController: UIViewController {
     
     @IBOutlet weak var profileNavItemView: UIView!
     @IBOutlet weak var profileNavImageView: UIImageView!
+
     
     override func viewWillAppear(_ animated: Bool) {
         articleCollectionView.collectionViewLayout = setupCollectionViewLayout()
@@ -68,7 +69,11 @@ class ArticleViewController: UIViewController {
     @objc func profileMenuTapped(sender: UIBarButtonItem) {
         let loginStoryboard : UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
         let loginVC = loginStoryboard.instantiateViewController(withIdentifier: "LoginViewController")
-        self.navigationController?.pushViewController(loginVC, animated: true)
+        
+        if checkSession() == Session.unregistered.rawValue{
+            self.navigationController?.pushViewController(loginVC, animated: true)
+        }
+        
     }
     
     
@@ -126,5 +131,6 @@ extension ArticleViewController: UICollectionViewDataSource {
         return cell
     }
 }
+
 
 

@@ -21,7 +21,6 @@
 		17CD8F692761F35A009043F0 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F572761F106009043F0 /* Login.storyboard */; };
 		17CD8F6A2761F366009043F0 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F552761F106009043F0 /* LoginView.xib */; };
 		17CD8F6B2761F36B009043F0 /* ResetPasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F5A2761F106009043F0 /* ResetPasswordView.xib */; };
-		3EC13CB92763146B00B4A878 /* UITextField+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC13CB82763146B00B4A878 /* UITextField+extension.swift */; };
 		3EFA07BC275F99100010AA10 /* UIButton+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFA07BB275F99100010AA10 /* UIButton+extension.swift */; };
 		8C61212D2762214600511B76 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6121292762214600511B76 /* RegisterViewController.swift */; };
 		8C61212E2762214600511B76 /* RegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C61212A2762214600511B76 /* RegisterView.xib */; };
@@ -48,6 +47,10 @@
 		92A9D65F27620362001BD05C /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9D65E27620362001BD05C /* ArticleService.swift */; };
 		92A9D66327620380001BD05C /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9D66227620380001BD05C /* APIService.swift */; };
 		92A9D66B276213AD001BD05C /* TabBarControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9D66A276213AD001BD05C /* TabBarControll.swift */; };
+		92DA8AE62763BE4900028BF3 /* UITextField+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC13CB82763146B00B4A878 /* UITextField+extension.swift */; };
+		92DA8AE82763C02D00028BF3 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DA8AE72763C02D00028BF3 /* Session.swift */; };
+		92DA8AEA2763C1EE00028BF3 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DA8AE92763C1EE00028BF3 /* UserData.swift */; };
+		92DA8AEC2763C35B00028BF3 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DA8AEB2763C35B00028BF3 /* LoginService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +98,9 @@
 		92A9D6602762036B001BD05C /* UserLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLoginService.swift; sourceTree = "<group>"; };
 		92A9D66227620380001BD05C /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		92A9D66A276213AD001BD05C /* TabBarControll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControll.swift; sourceTree = "<group>"; };
+		92DA8AE72763C02D00028BF3 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		92DA8AE92763C1EE00028BF3 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		92DA8AEB2763C35B00028BF3 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +153,7 @@
 				17CD8F562761F106009043F0 /* LoginView.swift */,
 				17CD8F572761F106009043F0 /* Login.storyboard */,
 				17CD8F582761F106009043F0 /* LoginViewController.swift */,
+				92DA8AEB2763C35B00028BF3 /* LoginService.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -265,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				92A9D66227620380001BD05C /* APIService.swift */,
+				92DA8AE72763C02D00028BF3 /* Session.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -274,6 +282,7 @@
 			children = (
 				92A9D65A27620338001BD05C /* ArticleModel.swift */,
 				92A9D65B27620338001BD05C /* LoginModel.swift */,
+				92DA8AE92763C1EE00028BF3 /* UserData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -369,7 +378,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92DA8AE62763BE4900028BF3 /* UITextField+extension.swift in Sources */,
 				17CD8F672761F138009043F0 /* LoginView.swift in Sources */,
+				92DA8AEC2763C35B00028BF3 /* LoginService.swift in Sources */,
+				92DA8AEA2763C1EE00028BF3 /* UserData.swift in Sources */,
 				92A9D66327620380001BD05C /* APIService.swift in Sources */,
 				17CD8F622761F106009043F0 /* LoginViewController.swift in Sources */,
 				8CB695EE27639F440096BCAB /* UserProfileViewController.swift in Sources */,
@@ -385,6 +397,7 @@
 				17CD8F412761ED49009043F0 /* ArticleViewController.swift in Sources */,
 				92A9D65C27620338001BD05C /* ArticleModel.swift in Sources */,
 				3EFA07BC275F99100010AA10 /* UIButton+extension.swift in Sources */,
+				92DA8AE82763C02D00028BF3 /* Session.swift in Sources */,
 				924DC4B9275F266500FCE093 /* UIColor.swift in Sources */,
 				92A9D65D27620338001BD05C /* LoginModel.swift in Sources */,
 				17CD8F3F2761ED3F009043F0 /* ArticleCollectionViewCell.swift in Sources */,

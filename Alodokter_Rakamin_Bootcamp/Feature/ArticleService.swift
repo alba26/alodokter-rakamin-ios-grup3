@@ -8,6 +8,14 @@
 import Foundation
 
 class ArticleService: BaseService{
+    func httpBody() -> [String : String] {
+        return [:]
+    }
+    
+    func auth() -> String {
+        return ""
+    }
+    
     func method() -> APIService.Method {
         return .get
     }
@@ -20,7 +28,4 @@ class ArticleService: BaseService{
         return 30
     }
     
-    func httpBody() -> [String : Any] {
-        return [:]
-    }
 }

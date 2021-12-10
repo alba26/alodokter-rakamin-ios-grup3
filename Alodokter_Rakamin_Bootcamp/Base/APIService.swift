@@ -11,7 +11,8 @@ protocol BaseService{
     func method() -> APIService.Method
     func url() -> URL
     func timeout() -> TimeInterval
-    func httpBody() -> [String:Any]
+    func httpBody() -> [String:String]
+    func auth() -> String
 }
 
 enum NetworkResult {
@@ -30,7 +31,6 @@ class APIService{
     static func APIRequest<T:Codable>(model: T.Type,req: BaseService, completion: @escaping (NetworkResult) -> Void) {
         var request = URLRequest(url: req.url())
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("alo", forHTTPHeaderField: "auth")
         request.httpMethod = req.method().rawValue
         if req.httpBody().isEmpty != true{
             do {
@@ -39,10 +39,14 @@ class APIService{
                 completion(.failure(error))
             }
         }
+        
+        if req.auth() != ""{
+            request.setValue(req.auth(), forHTTPHeaderField: "Authorization")
+        }
 
         let task = URLSession.shared.dataTask(with: request) {data, _, error in
             guard let data = data, error == nil else{
-                completion(.failure(error as! Error))
+                completion(.failure(error!))
                 return
             }
             do{
