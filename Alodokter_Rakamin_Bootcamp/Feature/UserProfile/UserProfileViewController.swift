@@ -9,10 +9,16 @@ import UIKit
 
 class UserProfileViewController: UIViewController {
 
+    @IBOutlet weak var userProfileView: UserProfileView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        userProfileView.resetPasswordButton.addTarget(self, action: #selector(resetPasswordTapped), for: .touchUpInside)
+    }
+    
+    @objc func resetPasswordTapped() {
+        let storyboard = UIStoryboard.init(name: "Profile", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "ResetPasswordView") as? ResetPasswordViewController else { return }
+        self.present(vc, animated: true, completion: nil)
     }
 
 }
