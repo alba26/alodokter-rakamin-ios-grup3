@@ -46,13 +46,20 @@ class ArticleViewController: UIViewController {
         let rightBarButton = UIBarButtonItem(customView: profileNavView)
         self.navigationItem.rightBarButtonItem = rightBarButton
         self.navigationItem.rightBarButtonItem?.target = self
-        self.navigationItem.rightBarButtonItem?.action = #selector(profileMenuTapped(sender:))
+//        self.navigationItem.rightBarButtonItem?.action = #selector(profileMenuTapped(sender:))
+        self.navigationItem.rightBarButtonItem?.action = #selector(test)
+        
+    
         
 //        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: profileImageView.image, style: .plain, target: self, action: #selector(profileMenuTapped(sender:)))
     
 
         //kasih trailing leading constraintnya right attribute
         
+    }
+    
+    @objc func test(){
+        print("Clicked")
     }
     
     @objc func profileMenuTapped(sender: UIBarButtonItem) {
@@ -117,3 +124,5 @@ extension ArticleViewController: UICollectionViewDataSource {
         return cell
     }
 }
+
+
