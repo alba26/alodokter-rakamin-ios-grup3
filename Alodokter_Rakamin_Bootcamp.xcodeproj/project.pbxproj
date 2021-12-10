@@ -25,8 +25,14 @@
 		3EFA07BC275F99100010AA10 /* UIButton+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFA07BB275F99100010AA10 /* UIButton+extension.swift */; };
 		8C61212D2762214600511B76 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6121292762214600511B76 /* RegisterViewController.swift */; };
 		8C61212E2762214600511B76 /* RegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C61212A2762214600511B76 /* RegisterView.xib */; };
-		8C61212F2762214600511B76 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61212B2762214600511B76 /* RegisterView.swift */; };
-		8C6121302762214600511B76 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C61212C2762214600511B76 /* Register.storyboard */; };
+		8CB695E627639EE00096BCAB /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB695E527639EE00096BCAB /* Register.storyboard */; };
+		8CB695E827639EEE0096BCAB /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB695E727639EEE0096BCAB /* RegisterView.swift */; };
+		8CB695EE27639F440096BCAB /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB695EA27639F430096BCAB /* UserProfileViewController.swift */; };
+		8CB695EF27639F440096BCAB /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB695EB27639F430096BCAB /* UserProfile.storyboard */; };
+		8CB695F027639F440096BCAB /* UserProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CB695EC27639F440096BCAB /* UserProfileView.xib */; };
+		8CB695F127639F440096BCAB /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB695ED27639F440096BCAB /* UserProfileView.swift */; };
+		8CB695F527639F850096BCAB /* ChangeDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB695F327639F850096BCAB /* ChangeDataViewController.swift */; };
+		8CB695F627639F850096BCAB /* ChangeData.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB695F427639F850096BCAB /* ChangeData.storyboard */; };
 		924DC49B275F141700FCE093 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC49A275F141700FCE093 /* AppDelegate.swift */; };
 		924DC49D275F141700FCE093 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC49C275F141700FCE093 /* SceneDelegate.swift */; };
 		924DC49F275F141700FCE093 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC49E275F141700FCE093 /* ViewController.swift */; };
@@ -59,8 +65,14 @@
 		3EFA07BD275F9B050010AA10 /* UITextField+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+extension.swift"; sourceTree = "<group>"; };
 		8C6121292762214600511B76 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8C61212A2762214600511B76 /* RegisterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterView.xib; sourceTree = "<group>"; };
-		8C61212B2762214600511B76 /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
-		8C61212C2762214600511B76 /* Register.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		8CB695E527639EE00096BCAB /* Register.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		8CB695E727639EEE0096BCAB /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		8CB695EA27639F430096BCAB /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		8CB695EB27639F430096BCAB /* UserProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
+		8CB695EC27639F440096BCAB /* UserProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserProfileView.xib; sourceTree = "<group>"; };
+		8CB695ED27639F440096BCAB /* UserProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		8CB695F327639F850096BCAB /* ChangeDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeDataViewController.swift; sourceTree = "<group>"; };
+		8CB695F427639F850096BCAB /* ChangeData.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChangeData.storyboard; sourceTree = "<group>"; };
 		924DC497275F141700FCE093 /* Alodokter_Rakamin_Bootcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alodokter_Rakamin_Bootcamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		924DC49A275F141700FCE093 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		924DC49C275F141700FCE093 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +120,8 @@
 		17CD8F522761F0E3009043F0 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				8CB695F227639F790096BCAB /* ChangeData */,
+				8CB695E927639F2E0096BCAB /* UserProfile */,
 				17CD8F542761F106009043F0 /* Login */,
 				17CD8F532761F106009043F0 /* Profile.storyboard */,
 				17CD8F592761F106009043F0 /* ResetPassword */,
@@ -140,12 +154,32 @@
 		8C6121282762213700511B76 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				8C61212C2762214600511B76 /* Register.storyboard */,
-				8C61212B2762214600511B76 /* RegisterView.swift */,
+				8CB695E727639EEE0096BCAB /* RegisterView.swift */,
+				8CB695E527639EE00096BCAB /* Register.storyboard */,
 				8C61212A2762214600511B76 /* RegisterView.xib */,
 				8C6121292762214600511B76 /* RegisterViewController.swift */,
 			);
 			name = Register;
+			sourceTree = "<group>";
+		};
+		8CB695E927639F2E0096BCAB /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				8CB695EB27639F430096BCAB /* UserProfile.storyboard */,
+				8CB695ED27639F440096BCAB /* UserProfileView.swift */,
+				8CB695EC27639F440096BCAB /* UserProfileView.xib */,
+				8CB695EA27639F430096BCAB /* UserProfileViewController.swift */,
+			);
+			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		8CB695F227639F790096BCAB /* ChangeData */ = {
+			isa = PBXGroup;
+			children = (
+				8CB695F427639F850096BCAB /* ChangeData.storyboard */,
+				8CB695F327639F850096BCAB /* ChangeDataViewController.swift */,
+			);
+			path = ChangeData;
 			sourceTree = "<group>";
 		};
 		924DC48E275F141700FCE093 = {
@@ -286,11 +320,14 @@
 				17CD8F432761ED55009043F0 /* ArticleListSection.xib in Resources */,
 				924DC4A7275F141800FCE093 /* LaunchScreen.storyboard in Resources */,
 				924DC4A4275F141800FCE093 /* Assets.xcassets in Resources */,
+				8CB695F627639F850096BCAB /* ChangeData.storyboard in Resources */,
+				8CB695F027639F440096BCAB /* UserProfileView.xib in Resources */,
 				17CD8F482761ED86009043F0 /* Booking.storyboard in Resources */,
 				17CD8F452761ED71009043F0 /* Main.storyboard in Resources */,
 				17CD8F5E2761F106009043F0 /* Profile.storyboard in Resources */,
+				8CB695EF27639F440096BCAB /* UserProfile.storyboard in Resources */,
 				17CD8F3D2761ED2D009043F0 /* Article.storyboard in Resources */,
-				8C6121302762214600511B76 /* Register.storyboard in Resources */,
+				8CB695E627639EE00096BCAB /* Register.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +340,8 @@
 			files = (
 				17CD8F672761F138009043F0 /* LoginView.swift in Sources */,
 				17CD8F622761F106009043F0 /* LoginViewController.swift in Sources */,
+				8CB695EE27639F440096BCAB /* UserProfileViewController.swift in Sources */,
+				8CB695F527639F850096BCAB /* ChangeDataViewController.swift in Sources */,
 				17CD8F662761F106009043F0 /* ResetPasswordPage.swift in Sources */,
 				924DC49F275F141700FCE093 /* ViewController.swift in Sources */,
 				17CD8F652761F106009043F0 /* ResetPasswordViewController.swift in Sources */,
@@ -310,11 +349,12 @@
 				924DC4C3275F337200FCE093 /* SetRootView+Extension.swift in Sources */,
 				924DC4BD275F26DF00FCE093 /* Utility.swift in Sources */,
 				924DC49D275F141700FCE093 /* SceneDelegate.swift in Sources */,
-				8C61212F2762214600511B76 /* RegisterView.swift in Sources */,
+				8CB695E827639EEE0096BCAB /* RegisterView.swift in Sources */,
 				17CD8F412761ED49009043F0 /* ArticleViewController.swift in Sources */,
 				3EFA07BC275F99100010AA10 /* UIButton+extension.swift in Sources */,
 				924DC4B9275F266500FCE093 /* UIColor.swift in Sources */,
 				17CD8F3F2761ED3F009043F0 /* ArticleCollectionViewCell.swift in Sources */,
+				8CB695F127639F440096BCAB /* UserProfileView.swift in Sources */,
 				8C61212D2762214600511B76 /* RegisterViewController.swift in Sources */,
 				17CD8F642761F106009043F0 /* ResetPasswordView.swift in Sources */,
 				924DC4C1275F32E900FCE093 /* PopToSelectedController+Exten.swift in Sources */,
