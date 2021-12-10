@@ -41,6 +41,9 @@ class UserProfileView: UIView {
         logoutContainer.layer.shadowRadius = 3
         logoutContainer.layer.cornerRadius = 10
         
+        userImage.layer.cornerRadius = userImage.frame.width/2
+        userImage.clipsToBounds = true
+        
         addSubview(contentView)
     }
 }
