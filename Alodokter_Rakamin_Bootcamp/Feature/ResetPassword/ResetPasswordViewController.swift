@@ -9,7 +9,14 @@ import UIKit
 
 class ResetPasswordViewController: UIViewController {
 
+    @IBOutlet weak var resetPasswordView: ResetPasswordView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        resetPasswordView.cancelButton.action = #selector(dismissButtonTapped)
+    }
+    
+    @objc func dismissButtonTapped() {
+        self.dismiss(animated: true, completion: nil)
     }
 }

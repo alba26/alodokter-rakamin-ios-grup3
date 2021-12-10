@@ -14,6 +14,7 @@ class UserProfileView: UIView {
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var logoutContainer: UIView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var resetPasswordButton: UIButton!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
