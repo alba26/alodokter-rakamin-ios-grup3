@@ -23,6 +23,10 @@
 		17CD8F6A2761F366009043F0 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F552761F106009043F0 /* LoginView.xib */; };
 		17CD8F6B2761F36B009043F0 /* ResetPasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F5A2761F106009043F0 /* ResetPasswordView.xib */; };
 		3EFA07BC275F99100010AA10 /* UIButton+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFA07BB275F99100010AA10 /* UIButton+extension.swift */; };
+		8C61212D2762214600511B76 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6121292762214600511B76 /* RegisterViewController.swift */; };
+		8C61212E2762214600511B76 /* RegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C61212A2762214600511B76 /* RegisterView.xib */; };
+		8C61212F2762214600511B76 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61212B2762214600511B76 /* RegisterView.swift */; };
+		8C6121302762214600511B76 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C61212C2762214600511B76 /* Register.storyboard */; };
 		924DC49B275F141700FCE093 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC49A275F141700FCE093 /* AppDelegate.swift */; };
 		924DC49D275F141700FCE093 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC49C275F141700FCE093 /* SceneDelegate.swift */; };
 		924DC49F275F141700FCE093 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC49E275F141700FCE093 /* ViewController.swift */; };
@@ -53,6 +57,10 @@
 		17CD8F5D2761F106009043F0 /* ResetPasswordPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordPage.swift; sourceTree = "<group>"; };
 		3EFA07BB275F99100010AA10 /* UIButton+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+extension.swift"; sourceTree = "<group>"; };
 		3EFA07BD275F9B050010AA10 /* UITextField+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+extension.swift"; sourceTree = "<group>"; };
+		8C6121292762214600511B76 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		8C61212A2762214600511B76 /* RegisterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterView.xib; sourceTree = "<group>"; };
+		8C61212B2762214600511B76 /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		8C61212C2762214600511B76 /* Register.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		924DC497275F141700FCE093 /* Alodokter_Rakamin_Bootcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alodokter_Rakamin_Bootcamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		924DC49A275F141700FCE093 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		924DC49C275F141700FCE093 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +137,17 @@
 			path = ResetPassword;
 			sourceTree = "<group>";
 		};
+		8C6121282762213700511B76 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				8C61212C2762214600511B76 /* Register.storyboard */,
+				8C61212B2762214600511B76 /* RegisterView.swift */,
+				8C61212A2762214600511B76 /* RegisterView.xib */,
+				8C6121292762214600511B76 /* RegisterViewController.swift */,
+			);
+			name = Register;
+			sourceTree = "<group>";
+		};
 		924DC48E275F141700FCE093 = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +192,7 @@
 		924DC4B3275F25BA00FCE093 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				8C6121282762213700511B76 /* Register */,
 				17CD8F522761F0E3009043F0 /* Profile */,
 				17CD8F392761ECAC009043F0 /* Artikel */,
 				17CD8F462761ED7D009043F0 /* Booking */,
@@ -259,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C61212E2762214600511B76 /* RegisterView.xib in Resources */,
 				17CD8F6B2761F36B009043F0 /* ResetPasswordView.xib in Resources */,
 				17CD8F6A2761F366009043F0 /* LoginView.xib in Resources */,
 				17CD8F692761F35A009043F0 /* Login.storyboard in Resources */,
@@ -269,6 +290,7 @@
 				17CD8F452761ED71009043F0 /* Main.storyboard in Resources */,
 				17CD8F5E2761F106009043F0 /* Profile.storyboard in Resources */,
 				17CD8F3D2761ED2D009043F0 /* Article.storyboard in Resources */,
+				8C6121302762214600511B76 /* Register.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,10 +310,12 @@
 				924DC4C3275F337200FCE093 /* SetRootView+Extension.swift in Sources */,
 				924DC4BD275F26DF00FCE093 /* Utility.swift in Sources */,
 				924DC49D275F141700FCE093 /* SceneDelegate.swift in Sources */,
+				8C61212F2762214600511B76 /* RegisterView.swift in Sources */,
 				17CD8F412761ED49009043F0 /* ArticleViewController.swift in Sources */,
 				3EFA07BC275F99100010AA10 /* UIButton+extension.swift in Sources */,
 				924DC4B9275F266500FCE093 /* UIColor.swift in Sources */,
 				17CD8F3F2761ED3F009043F0 /* ArticleCollectionViewCell.swift in Sources */,
+				8C61212D2762214600511B76 /* RegisterViewController.swift in Sources */,
 				17CD8F642761F106009043F0 /* ResetPasswordView.swift in Sources */,
 				924DC4C1275F32E900FCE093 /* PopToSelectedController+Exten.swift in Sources */,
 				924DC4BB275F269100FCE093 /* DeviceHelper.swift in Sources */,
