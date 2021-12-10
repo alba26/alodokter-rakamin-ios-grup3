@@ -16,14 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qnr-Hh-cPl" customClass="RegisterView" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="808"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qnr-Hh-cPl" customClass="RegisterView" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qnr-Hh-cPl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="0aT-Zp-bxN"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="qnr-Hh-cPl" secondAttribute="bottom" id="D58-lr-XL3"/>
+                            <constraint firstItem="qnr-Hh-cPl" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="IrO-p0-azm"/>
+                            <constraint firstItem="qnr-Hh-cPl" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="xbN-T8-SZN"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
