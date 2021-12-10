@@ -46,7 +46,6 @@
 		92A9D65C27620338001BD05C /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9D65A27620338001BD05C /* ArticleModel.swift */; };
 		92A9D65D27620338001BD05C /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9D65B27620338001BD05C /* LoginModel.swift */; };
 		92A9D65F27620362001BD05C /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9D65E27620362001BD05C /* ArticleService.swift */; };
-		92A9D6612762036B001BD05C /* UserLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9D6602762036B001BD05C /* UserLoginService.swift */; };
 		92A9D66327620380001BD05C /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9D66227620380001BD05C /* APIService.swift */; };
 		92A9D66B276213AD001BD05C /* TabBarControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9D66A276213AD001BD05C /* TabBarControll.swift */; };
 /* End PBXBuildFile section */
@@ -200,6 +199,7 @@
 			children = (
 				924DC499275F141700FCE093 /* Alodokter_Rakamin_Bootcamp */,
 				924DC498275F141700FCE093 /* Products */,
+				92DA8AE32763AA0300028BF3 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -278,6 +278,14 @@
 				92A9D65B27620338001BD05C /* LoginModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		92DA8AE32763AA0300028BF3 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				92A9D6602762036B001BD05C /* UserLoginService.swift */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,7 +389,6 @@
 				92A9D65C27620338001BD05C /* ArticleModel.swift in Sources */,
 				3EFA07BC275F99100010AA10 /* UIButton+extension.swift in Sources */,
 				924DC4B9275F266500FCE093 /* UIColor.swift in Sources */,
-				92A9D6612762036B001BD05C /* UserLoginService.swift in Sources */,
 				92A9D65D27620338001BD05C /* LoginModel.swift in Sources */,
 				17CD8F3F2761ED3F009043F0 /* ArticleCollectionViewCell.swift in Sources */,
 				8CB695F127639F440096BCAB /* UserProfileView.swift in Sources */,
