@@ -131,6 +131,9 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <connections>
+                                <action selector="profileTap:" destination="F7J-lf-dcU" id="Tut-9e-T6z"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
