@@ -22,6 +22,7 @@
 		17CD8F692761F35A009043F0 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F572761F106009043F0 /* Login.storyboard */; };
 		17CD8F6A2761F366009043F0 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F552761F106009043F0 /* LoginView.xib */; };
 		17CD8F6B2761F36B009043F0 /* ResetPasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F5A2761F106009043F0 /* ResetPasswordView.xib */; };
+		3EC13CB92763146B00B4A878 /* UITextField+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC13CB82763146B00B4A878 /* UITextField+extension.swift */; };
 		3EFA07BC275F99100010AA10 /* UIButton+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFA07BB275F99100010AA10 /* UIButton+extension.swift */; };
 		924DC49B275F141700FCE093 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC49A275F141700FCE093 /* AppDelegate.swift */; };
 		924DC49D275F141700FCE093 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC49C275F141700FCE093 /* SceneDelegate.swift */; };
@@ -51,8 +52,8 @@
 		17CD8F5B2761F106009043F0 /* ResetPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		17CD8F5C2761F106009043F0 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		17CD8F5D2761F106009043F0 /* ResetPasswordPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordPage.swift; sourceTree = "<group>"; };
+		3EC13CB82763146B00B4A878 /* UITextField+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+extension.swift"; sourceTree = "<group>"; };
 		3EFA07BB275F99100010AA10 /* UIButton+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+extension.swift"; sourceTree = "<group>"; };
-		3EFA07BD275F9B050010AA10 /* UITextField+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+extension.swift"; sourceTree = "<group>"; };
 		924DC497275F141700FCE093 /* Alodokter_Rakamin_Bootcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alodokter_Rakamin_Bootcamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		924DC49A275F141700FCE093 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		924DC49C275F141700FCE093 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -187,7 +188,7 @@
 				924DC4BA275F269100FCE093 /* DeviceHelper.swift */,
 				924DC4BC275F26DF00FCE093 /* Utility.swift */,
 				3EFA07BB275F99100010AA10 /* UIButton+extension.swift */,
-				3EFA07BD275F9B050010AA10 /* UITextField+extension.swift */,
+				3EC13CB82763146B00B4A878 /* UITextField+extension.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -291,6 +292,7 @@
 				17CD8F412761ED49009043F0 /* ArticleViewController.swift in Sources */,
 				3EFA07BC275F99100010AA10 /* UIButton+extension.swift in Sources */,
 				924DC4B9275F266500FCE093 /* UIColor.swift in Sources */,
+				3EC13CB92763146B00B4A878 /* UITextField+extension.swift in Sources */,
 				17CD8F3F2761ED3F009043F0 /* ArticleCollectionViewCell.swift in Sources */,
 				17CD8F642761F106009043F0 /* ResetPasswordView.swift in Sources */,
 				924DC4C1275F32E900FCE093 /* PopToSelectedController+Exten.swift in Sources */,
