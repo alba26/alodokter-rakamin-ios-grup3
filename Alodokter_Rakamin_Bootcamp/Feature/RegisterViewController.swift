@@ -43,7 +43,7 @@ class RegisterViewController: UIViewController {
                     }
                     
                 }else{
-                    print("GAGAL")
+                    print("GAGAL Mendaftar")
                 }
                 
             case .failure(let error):
