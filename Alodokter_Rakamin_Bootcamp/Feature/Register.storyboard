@@ -30,6 +30,9 @@
                             <constraint firstItem="qnr-Hh-cPl" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="xbN-T8-SZN"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="registerView" destination="qnr-Hh-cPl" id="q1N-lg-Okx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

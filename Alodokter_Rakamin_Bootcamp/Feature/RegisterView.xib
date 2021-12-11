@@ -11,6 +11,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterView" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="ezh-Le-eYJ"/>
+                <outlet property="emailRegisterTextField" destination="7JK-hp-aza" id="UgH-Tn-Eby"/>
+                <outlet property="nameRegisterTextField" destination="EBi-be-W3d" id="2Fo-CK-83k"/>
+                <outlet property="passwordConfirmRegisterTextField" destination="YcP-Mb-wzC" id="qr0-3M-0Tt"/>
+                <outlet property="passwordRegisterTextField" destination="nfL-Wm-4TS" id="Tbt-sw-7tI"/>
+                <outlet property="registerButton" destination="bev-Ke-pdm" id="6aN-sV-pAf"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

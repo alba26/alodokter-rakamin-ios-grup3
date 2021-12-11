@@ -11,7 +11,7 @@ import Foundation
 struct UserData: Codable {
     let code: Int
     let message: String
-    let data: UserProfile
+    let data: UserProfile?
     let currentPage, perPage, totalPage, totalCount: Bool?
     enum CodingKeys: String, CodingKey {
         case code, message, data
@@ -26,6 +26,6 @@ struct UserData: Codable {
 struct UserProfile: Codable {
     let id: Int
     let email, firstname, lastname, birthdate: String
-    let gender, phone, identity, address: String
+    let gender, phone, identity, address: String?
     let city: String
 }

@@ -22,5 +22,14 @@ extension UserDefaults{
         return state
     }
     
+    func checkIsUserLogin() -> Bool{
+        let session = UserDefaults.standard.value(forKey: "session") as? String
+        if session == Session.loggedIn.rawValue{
+            return true
+        } else {
+            return false
+        }
+    }
+    
 }
 

@@ -16,6 +16,7 @@ class LoginView: UIView {
     @IBOutlet weak var emailLoginTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
+    @IBOutlet weak var registerButton: UIButton!
     
     override init(frame: CGRect) {
         super.init(frame: frame)

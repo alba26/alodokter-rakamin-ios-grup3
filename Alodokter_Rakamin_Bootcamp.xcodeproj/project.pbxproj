@@ -52,6 +52,7 @@
 		92DA8AEA2763C1EE00028BF3 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DA8AE92763C1EE00028BF3 /* UserData.swift */; };
 		92DA8AEC2763C35B00028BF3 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DA8AEB2763C35B00028BF3 /* LoginService.swift */; };
 		92DA8AF02763D46200028BF3 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DA8AEF2763D46200028BF3 /* RegisterService.swift */; };
+		92E21A4A2764A3A200924C38 /* UserProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E21A492764A3A100924C38 /* UserProfileService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +104,7 @@
 		92DA8AE92763C1EE00028BF3 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		92DA8AEB2763C35B00028BF3 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		92DA8AEF2763D46200028BF3 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
+		92E21A492764A3A100924C38 /* UserProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 				8CB695EA27639F430096BCAB /* UserProfileViewController.swift */,
 				8CB695ED27639F440096BCAB /* UserProfileView.swift */,
 				8CB695EC27639F440096BCAB /* UserProfileView.xib */,
+				92E21A492764A3A100924C38 /* UserProfileService.swift */,
 			);
 			path = UserProfile;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				92DA8AEA2763C1EE00028BF3 /* UserData.swift in Sources */,
 				92A9D66327620380001BD05C /* APIService.swift in Sources */,
 				17CD8F622761F106009043F0 /* LoginViewController.swift in Sources */,
+				92E21A4A2764A3A200924C38 /* UserProfileService.swift in Sources */,
 				8CB695EE27639F440096BCAB /* UserProfileViewController.swift in Sources */,
 				8CB695F527639F850096BCAB /* ChangeDataViewController.swift in Sources */,
 				924DC49F275F141700FCE093 /* ViewController.swift in Sources */,

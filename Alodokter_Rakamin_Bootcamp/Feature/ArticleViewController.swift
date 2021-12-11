@@ -67,16 +67,9 @@ class ArticleViewController: UIViewController {
     }
     
     @objc func profileMenuTapped(sender: UIBarButtonItem) {
-        let loginStoryboard : UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
-        let loginVC = loginStoryboard.instantiateViewController(withIdentifier: "LoginViewController")
         let profileStoryboard : UIStoryboard = UIStoryboard(name: "UserProfile", bundle: nil)
         let profileVC = profileStoryboard.instantiateViewController(withIdentifier: "UserProfileViewController")
 
-//        if UserDefaults().checkSession() == Session.unregistered.rawValue{
-//            self.navigationController?.pushViewController(loginVC, animated: true)
-//        }else if UserDefaults().checkSession() == Session.loggedIn.rawValue{
-//            self.navigationController?.pushViewController(profileVC, animated: true)
-//        }
         self.navigationController?.pushViewController(profileVC, animated: true)
     }
     

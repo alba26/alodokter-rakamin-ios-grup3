@@ -11,6 +11,12 @@ class RegisterView: UIView {
 
     @IBOutlet var contentView: UIView!
     
+    @IBOutlet weak var passwordRegisterTextField: UITextField!
+    @IBOutlet weak var passwordConfirmRegisterTextField: UITextField!
+    
+    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var emailRegisterTextField: UITextField!
+    @IBOutlet weak var nameRegisterTextField: UITextField!
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()

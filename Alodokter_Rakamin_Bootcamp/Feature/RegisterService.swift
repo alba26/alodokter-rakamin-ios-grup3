@@ -11,7 +11,7 @@ class RegisterService:BaseService{
     
     var email, firstname, lastname, birthdate: String
     var gender, phone, identity, address: String
-    var city: String
+    var city,password : String
     
     func method() -> APIService.Method {
         return .post
@@ -26,14 +26,14 @@ class RegisterService:BaseService{
     }
     
     func httpBody() -> [String : String] {
-        return ["email":email,"firstname":firstname,"lastname":lastname,"birthdate":birthdate,"gender":gender,"phone":phone,"identity":identity,"addres":address,"city":city]
+        return ["email":email,"firstname":firstname,"lastname":lastname,"birthdate":birthdate,"gender":gender,"phone":phone,"identity":identity,"addres":address,"city":city,"password":password]
     }
     
     func auth() -> String {
         return ""
     }
     
-    init(email:String, firstname:String, lastname:String, birthdate:String, gender:String, phone:String, identity:String, addres:String, city:String) {
+    init(email:String, firstname:String, lastname:String, birthdate:String, gender:String, phone:String, identity:String, address:String, city:String, password: String) {
         self.email = email
         self.firstname = firstname
         self.lastname = lastname
@@ -41,8 +41,9 @@ class RegisterService:BaseService{
         self.gender = gender
         self.phone = phone
         self.identity = identity
-        self.address = addres
+        self.address = address
         self.city = city
+        self.password = password
     }
 
 }

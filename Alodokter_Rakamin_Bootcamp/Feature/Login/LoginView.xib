@@ -15,6 +15,7 @@
                 <outlet property="loginButton" destination="xZm-UZ-IAB" id="j6s-Ln-eJF"/>
                 <outlet property="logoImage" destination="gbx-mg-PDi" id="PgY-fW-6qX"/>
                 <outlet property="passwordLoginTextField" destination="hsQ-aj-dYF" id="2Sn-0R-mL6"/>
+                <outlet property="registerButton" destination="0Nh-Ua-64y" id="8mU-q6-nKn"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

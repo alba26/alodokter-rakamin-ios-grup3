@@ -10,8 +10,14 @@ import UIKit
 class ChangeDataViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
     
     
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var ktpTextField: UITextField!
+    @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var cancelMyData: UIBarButtonItem!
     @IBOutlet weak var changeMyData: UIBarButtonItem!
+    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -40,6 +46,26 @@ class ChangeDataViewController: UIViewController, UIPickerViewDataSource, UIPick
         self.changeMyData.tintColor = .white
         genderPicker.dataSource = self
         genderPicker.delegate = self
+        
+        if UserDefaults().checkSession() == Session.loggedIn.rawValue{
+            loadData()
+        }
+        
+    }
+    
+    func loadData(){
+        if let data = UserDefaults.standard.data(forKey: "userdata"){
+            do{
+                let decoder = JSONDecoder()
+                let userdata = try decoder.decode(UserProfile.self, from: data)
+                nameTextField.text = userdata.firstname+" "+userdata.lastname
+                emailTextField.text = userdata.email
+                ktpTextField.text = userdata.identity
+                addressTextField.text = userdata.address
+            }catch{
+                print(error)
+            }
+        }
         
     }
     
