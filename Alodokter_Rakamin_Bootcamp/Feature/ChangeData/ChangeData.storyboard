@@ -11,7 +11,7 @@
         <!--Change Data View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="ChangeDataViewController" id="Y6W-OH-hqX" customClass="ChangeDataViewController" customModule="testProject2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChangeDataViewController" id="Y6W-OH-hqX" customClass="ChangeDataViewController" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,9 +20,14 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Data Saya" id="b9p-nb-1OC">
-                                        <barButtonItem key="leftBarButtonItem" title="Batalkan" id="FMn-mE-6Pk"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Batalkan" id="FMn-mE-6Pk">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="closeChangeDataButton:" destination="Y6W-OH-hqX" id="qjJ-F9-e4M"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Ubah" id="srx-q5-Fmr">
-                                            <color key="tintColor" red="0.0" green="0.45882352939999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -56,84 +61,89 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jenis Kelamin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8T-AV-6vR">
-                                <rect key="frame" x="32" y="381" width="99" height="18"/>
+                                <rect key="frame" x="32" y="384" width="99" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KTP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rua-f5-cM1">
-                                <rect key="frame" x="32" y="494" width="30" height="18"/>
+                                <rect key="frame" x="32" y="472" width="30" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dG4-Mo-W4V">
-                                <rect key="frame" x="32" y="520" width="350" height="34"/>
+                                <rect key="frame" x="32" y="498" width="350" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="date-time"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alamat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASe-4A-ndX">
-                                <rect key="frame" x="32" y="582" width="51" height="18"/>
+                                <rect key="frame" x="32" y="560" width="51" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2uO-A9-v3W">
-                                <rect key="frame" x="32" y="608" width="350" height="34"/>
+                                <rect key="frame" x="32" y="586" width="350" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="date-time"/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="IJ8-h9-bm1">
-                                <rect key="frame" x="32" y="322" width="118" height="31"/>
-                                <color key="backgroundColor" red="0.74901960779999999" green="0.15686274510000001" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <locale key="locale" localeIdentifier="id"/>
-                            </datePicker>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5y-Fq-nMW">
-                                <rect key="frame" x="32" y="399" width="350" height="69"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="69" id="yY6-Jh-ncv"/>
-                                </constraints>
-                            </pickerView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9e1-iw-d9o">
+                                <rect key="frame" x="32" y="410" width="350" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="date-time"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ggh-Wm-xFP">
+                                <rect key="frame" x="32" y="322" width="350" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="date-time"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fYl-qh-Gxo" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="16h-KN-5jT"/>
                             <constraint firstItem="I8T-AV-6vR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="1jZ-DL-NEQ"/>
+                            <constraint firstItem="9e1-iw-d9o" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="50e-rI-ZBt"/>
                             <constraint firstItem="2uO-A9-v3W" firstAttribute="top" secondItem="ASe-4A-ndX" secondAttribute="bottom" constant="8" symbolic="YES" id="5Rz-Eo-x04"/>
                             <constraint firstItem="9TW-A9-qyp" firstAttribute="top" secondItem="fYl-qh-Gxo" secondAttribute="bottom" constant="8" id="6pA-Gm-IeB"/>
-                            <constraint firstItem="I8T-AV-6vR" firstAttribute="top" secondItem="IJ8-h9-bm1" secondAttribute="bottom" constant="28" id="8G8-2m-gBY"/>
+                            <constraint firstItem="Ggh-Wm-xFP" firstAttribute="top" secondItem="N2s-Sp-NiU" secondAttribute="bottom" constant="8" id="9Sa-uO-iZb"/>
                             <constraint firstItem="N2s-Sp-NiU" firstAttribute="top" secondItem="9TW-A9-qyp" secondAttribute="bottom" constant="28" id="9fL-LB-qRZ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6u4-dT-JBf" secondAttribute="trailing" constant="32" id="BXC-YK-7sL"/>
-                            <constraint firstItem="IJ8-h9-bm1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="BlW-FR-tSm"/>
                             <constraint firstItem="ASe-4A-ndX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="F97-Z5-k9l"/>
+                            <constraint firstItem="Ggh-Wm-xFP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="GbR-1l-KW1"/>
+                            <constraint firstItem="9e1-iw-d9o" firstAttribute="top" secondItem="I8T-AV-6vR" secondAttribute="bottom" constant="8" id="IFN-nB-F2X"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dG4-Mo-W4V" secondAttribute="trailing" constant="32" id="IhG-Ra-enc"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9TW-A9-qyp" secondAttribute="trailing" constant="32" id="Ive-hb-aXp"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="M5y-Fq-nMW" secondAttribute="trailing" constant="32" id="J6k-7j-fZY"/>
-                            <constraint firstItem="IJ8-h9-bm1" firstAttribute="top" secondItem="N2s-Sp-NiU" secondAttribute="bottom" constant="8" symbolic="YES" id="Jjp-48-j2f"/>
                             <constraint firstItem="voW-jt-eaC" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="LoB-qj-87W"/>
                             <constraint firstItem="ASe-4A-ndX" firstAttribute="top" secondItem="dG4-Mo-W4V" secondAttribute="bottom" constant="28" id="M9L-dn-Qr3"/>
                             <constraint firstItem="voW-jt-eaC" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="OWk-GF-VDA"/>
                             <constraint firstItem="dG4-Mo-W4V" firstAttribute="top" secondItem="rua-f5-cM1" secondAttribute="bottom" constant="8" symbolic="YES" id="RzL-Qw-WlG"/>
-                            <constraint firstItem="M5y-Fq-nMW" firstAttribute="top" secondItem="I8T-AV-6vR" secondAttribute="bottom" id="TLQ-KL-ITG"/>
                             <constraint firstItem="dG4-Mo-W4V" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="UBn-nI-0eJ"/>
                             <constraint firstItem="hqf-Gy-3hT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="XhU-yi-0Mv"/>
                             <constraint firstItem="6u4-dT-JBf" firstAttribute="top" secondItem="hqf-Gy-3hT" secondAttribute="bottom" constant="8" id="Zyt-O8-NuS"/>
                             <constraint firstItem="hqf-Gy-3hT" firstAttribute="top" secondItem="voW-jt-eaC" secondAttribute="bottom" constant="32" id="aNJ-ai-Kql"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ggh-Wm-xFP" secondAttribute="trailing" constant="32" id="aVB-Ou-R0p"/>
                             <constraint firstItem="rua-f5-cM1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="ba1-6D-nqD"/>
                             <constraint firstItem="9TW-A9-qyp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="dtk-4h-4C4"/>
                             <constraint firstItem="N2s-Sp-NiU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="eAe-h4-TP3"/>
                             <constraint firstItem="6u4-dT-JBf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="gc2-5V-0gy"/>
-                            <constraint firstItem="M5y-Fq-nMW" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="lnh-WC-Sjm"/>
+                            <constraint firstItem="I8T-AV-6vR" firstAttribute="top" secondItem="Ggh-Wm-xFP" secondAttribute="bottom" constant="28" id="hac-IY-YN0"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2uO-A9-v3W" secondAttribute="trailing" constant="32" id="mYH-fN-jx8"/>
-                            <constraint firstItem="rua-f5-cM1" firstAttribute="top" secondItem="M5y-Fq-nMW" secondAttribute="bottom" constant="26" id="rwI-SD-DYo"/>
                             <constraint firstItem="2uO-A9-v3W" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="suc-IC-jib"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9e1-iw-d9o" secondAttribute="trailing" constant="32" id="uO4-OB-SRS"/>
                             <constraint firstItem="voW-jt-eaC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="xg9-aU-5wh"/>
+                            <constraint firstItem="rua-f5-cM1" firstAttribute="top" secondItem="9e1-iw-d9o" secondAttribute="bottom" constant="28" id="xl4-oY-taI"/>
                             <constraint firstItem="fYl-qh-Gxo" firstAttribute="top" secondItem="6u4-dT-JBf" secondAttribute="bottom" constant="28" id="ypp-lA-fO6"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="genderPicker" destination="M5y-Fq-nMW" id="VtZ-WI-AbF"/>
+                        <outlet property="addressTextField" destination="2uO-A9-v3W" id="ILs-zY-0Rr"/>
+                        <outlet property="birthdayTextField" destination="Ggh-Wm-xFP" id="mlM-vy-Urs"/>
+                        <outlet property="emailTextField" destination="9TW-A9-qyp" id="MTm-Pt-WCl"/>
+                        <outlet property="genderTextField" destination="9e1-iw-d9o" id="Egg-Iu-PsY"/>
+                        <outlet property="idTextField" destination="dG4-Mo-W4V" id="YpQ-rZ-RIZ"/>
+                        <outlet property="nameTextField" destination="6u4-dT-JBf" id="j7P-Su-Y4s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

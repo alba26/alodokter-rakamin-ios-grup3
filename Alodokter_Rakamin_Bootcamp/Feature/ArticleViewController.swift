@@ -57,6 +57,10 @@ class ArticleViewController: UIViewController {
         let loginStoryboard : UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
         let loginVC = loginStoryboard.instantiateViewController(withIdentifier: "LoginViewController")
         self.navigationController?.pushViewController(loginVC, animated: true)
+        
+//        let userProfileStoryboard : UIStoryboard = UIStoryboard(name: "UserProfile", bundle: nil)
+//        let userProfileVC = userProfileStoryboard.instantiateViewController(withIdentifier: "UserProfileViewController")
+//        self.navigationController?.pushViewController(userProfileVC, animated: true)
     }
     
     

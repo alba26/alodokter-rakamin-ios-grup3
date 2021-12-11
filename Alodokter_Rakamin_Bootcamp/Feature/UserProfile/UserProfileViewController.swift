@@ -13,6 +13,7 @@ class UserProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         userProfileView.resetPasswordButton.addTarget(self, action: #selector(resetPasswordTapped), for: .touchUpInside)
+        userProfileView.changeDataButton.addTarget(self, action: #selector(modalUser), for: .touchUpInside)
     }
     
     @objc func resetPasswordTapped() {
@@ -20,5 +21,12 @@ class UserProfileViewController: UIViewController {
         guard let vc = storyboard.instantiateViewController(withIdentifier: "ResetPasswordView") as? ResetPasswordViewController else { return }
         self.present(vc, animated: true, completion: nil)
     }
+    
+    @objc func modalUser() {
+        let changeDataStoryBoard: UIStoryboard = UIStoryboard(name: "ChangeData", bundle: nil)
+        let changeDataVC = changeDataStoryBoard.instantiateViewController(withIdentifier: "ChangeDataViewController")
+        self.present(changeDataVC, animated: true, completion: nil)
+    }
+    
 
 }
