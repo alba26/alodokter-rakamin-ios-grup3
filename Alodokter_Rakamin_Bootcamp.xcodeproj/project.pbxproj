@@ -21,6 +21,8 @@
 		17CD8F692761F35A009043F0 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F572761F106009043F0 /* Login.storyboard */; };
 		17CD8F6A2761F366009043F0 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F552761F106009043F0 /* LoginView.xib */; };
 		17CD8F6B2761F36B009043F0 /* ResetPasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F5A2761F106009043F0 /* ResetPasswordView.xib */; };
+		17CD8F6F27645070009043F0 /* ImageSliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD8F6E27645070009043F0 /* ImageSliderCollectionViewCell.swift */; };
+		3EC13CB92763146B00B4A878 /* UITextField+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC13CB82763146B00B4A878 /* UITextField+extension.swift */; };
 		3EFA07BC275F99100010AA10 /* UIButton+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFA07BB275F99100010AA10 /* UIButton+extension.swift */; };
 		8C61212D2762214600511B76 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6121292762214600511B76 /* RegisterViewController.swift */; };
 		8C61212E2762214600511B76 /* RegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C61212A2762214600511B76 /* RegisterView.xib */; };
@@ -70,6 +72,7 @@
 		17CD8F5A2761F106009043F0 /* ResetPasswordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResetPasswordView.xib; sourceTree = "<group>"; };
 		17CD8F5B2761F106009043F0 /* ResetPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		17CD8F5C2761F106009043F0 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		17CD8F6E27645070009043F0 /* ImageSliderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSliderCollectionViewCell.swift; sourceTree = "<group>"; };
 		3EC13CB82763146B00B4A878 /* UITextField+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+extension.swift"; sourceTree = "<group>"; };
 		3EFA07BB275F99100010AA10 /* UIButton+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+extension.swift"; sourceTree = "<group>"; };
 		8C6121292762214600511B76 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +129,7 @@
 				17CD8F422761ED55009043F0 /* ArticleListSection.xib */,
 				17CD8F3E2761ED3F009043F0 /* ArticleCollectionViewCell.swift */,
 				17CD8F402761ED49009043F0 /* ArticleViewController.swift */,
+				17CD8F6E27645070009043F0 /* ImageSliderCollectionViewCell.swift */,
 			);
 			name = Artikel;
 			sourceTree = "<group>";
@@ -396,6 +400,7 @@
 				924DC49F275F141700FCE093 /* ViewController.swift in Sources */,
 				17CD8F652761F106009043F0 /* ResetPasswordViewController.swift in Sources */,
 				924DC49B275F141700FCE093 /* AppDelegate.swift in Sources */,
+				17CD8F6F27645070009043F0 /* ImageSliderCollectionViewCell.swift in Sources */,
 				924DC4C3275F337200FCE093 /* SetRootView+Extension.swift in Sources */,
 				92A9D65F27620362001BD05C /* ArticleService.swift in Sources */,
 				924DC4BD275F26DF00FCE093 /* Utility.swift in Sources */,
