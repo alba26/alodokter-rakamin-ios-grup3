@@ -16,14 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7CU-AF-H8f" customClass="LoginView" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target">
-                                <rect key="frame" x="8" y="88" width="398" height="720"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7CU-AF-H8f" customClass="LoginView" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7CU-AF-H8f" secondAttribute="trailing" id="XEV-XD-oi0"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="7CU-AF-H8f" secondAttribute="bottom" id="apk-ep-3V6"/>
+                            <constraint firstItem="7CU-AF-H8f" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="gVc-qo-HZd"/>
+                            <constraint firstItem="7CU-AF-H8f" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="uN9-q9-lFI"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="emJ-eL-vAK"/>
                     <connections>
