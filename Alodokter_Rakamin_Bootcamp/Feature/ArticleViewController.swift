@@ -10,18 +10,39 @@ import UIKit
 class ArticleViewController: UIViewController {
 
     @IBOutlet weak var contentScrollView: UIScrollView!
+    @IBOutlet weak var sliderCollectionView: UICollectionView!
+    
+    @IBOutlet weak var pageControl: UIPageControl!
+    
     @IBOutlet weak var articleCollectionView: UICollectionView!
     
     @IBOutlet weak var profileNavItemView: UIView!
     @IBOutlet weak var profileNavImageView: UIImageView!
     
+    var imageArray = ["ArticleImage","ArticleImage","ProfileImage"]
+    var timer : Timer?
+    var currentCellIndex: Int = 0
+    
     override func viewWillAppear(_ animated: Bool) {
         articleCollectionView.collectionViewLayout = setupCollectionViewLayout()
+        sliderCollectionView.collectionViewLayout = setupImageSliderViewLayout()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configNavigationBar()
+        timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(slideToNext), userInfo: nil, repeats: true)
+    }
+    
+    @objc func slideToNext(){
+        if currentCellIndex < imageArray.count-1
+        {
+            currentCellIndex += 1
+        }
+        else {
+            currentCellIndex = 0
+        }
+        sliderCollectionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0), at: .right, animated: true)
     }
     
     func configNavigationBar(){
@@ -82,6 +103,28 @@ class ArticleViewController: UIViewController {
         return layout
         
     }
+    func setupImageSliderViewLayout() -> UICollectionViewCompositionalLayout{
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(245))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+        group.interItemSpacing = .flexible(12)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .groupPaging
+        section.interGroupSpacing = 16
+        
+        let layout = UICollectionViewCompositionalLayout(section: section)
+        
+        let config = UICollectionViewCompositionalLayoutConfiguration()
+        config.interSectionSpacing = 100
+        layout.configuration = config
+        
+        
+        return layout
+        
+    }
 
     /*
     // MARK: - Navigation
@@ -103,14 +146,28 @@ extension ArticleViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        if collectionView == self.articleCollectionView {
+            return 30
+        }
+        else {
+            return imageArray.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "articleCell", for: indexPath) as! ArticleCollectionViewCell
+            if collectionView == self.articleCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "articleCell", for: indexPath) as! ArticleCollectionViewCell
         
-//        cell.articleTitleLabel.text = "Artikel ke \(String(indexPath.item+1))"
+//          cell.articleTitleLabel.text = "Artikel ke \(String(indexPath.item+1))"
         
+            return cell
+        }
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageSliderCell", for: indexPath) as! ImageSliderCollectionViewCell
+        cell.imageSliderImg.image = UIImage(named: imageArray[indexPath.row])
+        cell.imageSliderTitle.text = "4 Manfaat Daun Sambiloto untuk Kulit yang Sayang Dilewatkan"
+        cell.imageSliderTitle.backgroundColor = UIColor.black
+        cell.imageSliderTitle.textColor = UIColor.white
         return cell
+        
     }
 }
