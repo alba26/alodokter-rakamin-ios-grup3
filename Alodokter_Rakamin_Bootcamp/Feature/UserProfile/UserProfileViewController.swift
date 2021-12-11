@@ -16,7 +16,7 @@ class UserProfileViewController: UIViewController {
     }
     
     @objc func resetPasswordTapped() {
-        let storyboard = UIStoryboard.init(name: "Profile", bundle: nil)
+        let storyboard = UIStoryboard.init(name: "ResetPassword", bundle: nil)
         guard let vc = storyboard.instantiateViewController(withIdentifier: "ResetPasswordView") as? ResetPasswordViewController else { return }
         self.present(vc, animated: true, completion: nil)
     }

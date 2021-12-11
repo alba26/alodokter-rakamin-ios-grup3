@@ -13,7 +13,7 @@
 		17CD8F432761ED55009043F0 /* ArticleListSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F422761ED55009043F0 /* ArticleListSection.xib */; };
 		17CD8F452761ED71009043F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F442761ED71009043F0 /* Main.storyboard */; };
 		17CD8F482761ED86009043F0 /* Booking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F472761ED86009043F0 /* Booking.storyboard */; };
-		17CD8F5E2761F106009043F0 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F532761F106009043F0 /* Profile.storyboard */; };
+		17CD8F5E2761F106009043F0 /* ResetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F532761F106009043F0 /* ResetPassword.storyboard */; };
 		17CD8F622761F106009043F0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD8F582761F106009043F0 /* LoginViewController.swift */; };
 		17CD8F642761F106009043F0 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD8F5B2761F106009043F0 /* ResetPasswordView.swift */; };
 		17CD8F652761F106009043F0 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD8F5C2761F106009043F0 /* ResetPasswordViewController.swift */; };
@@ -61,7 +61,7 @@
 		17CD8F422761ED55009043F0 /* ArticleListSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleListSection.xib; sourceTree = "<group>"; };
 		17CD8F442761ED71009043F0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		17CD8F472761ED86009043F0 /* Booking.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Booking.storyboard; sourceTree = "<group>"; };
-		17CD8F532761F106009043F0 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		17CD8F532761F106009043F0 /* ResetPassword.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ResetPassword.storyboard; sourceTree = "<group>"; };
 		17CD8F552761F106009043F0 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		17CD8F562761F106009043F0 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		17CD8F572761F106009043F0 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -142,7 +142,6 @@
 				8CB695F227639F790096BCAB /* ChangeData */,
 				8CB695E927639F2E0096BCAB /* UserProfile */,
 				17CD8F542761F106009043F0 /* Login */,
-				17CD8F532761F106009043F0 /* Profile.storyboard */,
 				17CD8F592761F106009043F0 /* ResetPassword */,
 			);
 			name = Profile;
@@ -163,6 +162,7 @@
 		17CD8F592761F106009043F0 /* ResetPassword */ = {
 			isa = PBXGroup;
 			children = (
+				17CD8F532761F106009043F0 /* ResetPassword.storyboard */,
 				17CD8F5A2761F106009043F0 /* ResetPasswordView.xib */,
 				17CD8F5B2761F106009043F0 /* ResetPasswordView.swift */,
 				17CD8F5C2761F106009043F0 /* ResetPasswordViewController.swift */,
@@ -367,7 +367,7 @@
 				8CB695F027639F440096BCAB /* UserProfileView.xib in Resources */,
 				17CD8F482761ED86009043F0 /* Booking.storyboard in Resources */,
 				17CD8F452761ED71009043F0 /* Main.storyboard in Resources */,
-				17CD8F5E2761F106009043F0 /* Profile.storyboard in Resources */,
+				17CD8F5E2761F106009043F0 /* ResetPassword.storyboard in Resources */,
 				8CB695EF27639F440096BCAB /* UserProfile.storyboard in Resources */,
 				17CD8F3D2761ED2D009043F0 /* Article.storyboard in Resources */,
 				8CB695E627639EE00096BCAB /* Register.storyboard in Resources */,
