@@ -15,9 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         setUpNavigation()
+        firstInstall()
+        
         return true
     }
 
+    func firstInstall(){
+        if UserDefaults.standard.value(forKey: "firstInstall") == nil{
+            UserDefaults.standard.set(Session.unregistered.rawValue, forKey: "session")
+            UserDefaults.standard.set("alreadyInstalled", forKey: "firstInstall")
+        }
+    }
+    
     func setUpNavigation() {
         let navigationBarAppearance = UINavigationBar.appearance()
         var backgroundImage = UIImage(named: "NavbarBG")
@@ -30,6 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationBarAppearance.scrollEdgeAppearance = navigationBarAppearance.standardAppearance
         newNavigationBarAppearance.largeTitleTextAttributes = [.foregroundColor : UIColor.white]
         newNavigationBarAppearance.titleTextAttributes = [.foregroundColor : UIColor.white]
+        
         
     }
     

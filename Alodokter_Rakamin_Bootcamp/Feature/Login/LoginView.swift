@@ -7,18 +7,16 @@
 
 import UIKit
 
-class LoginView: UIView {
 
+class LoginView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var logoImage: UIImageView!
-    @IBAction func authButton(_ sender: Any) {
-        print("test")
-    }
     
-    @IBAction func loginEmailTextField(_ sender: Any) {
-    }
-    @IBAction func loginPasswordTextField(_ sender: Any) {
-    }
+    @IBOutlet weak var passwordLoginTextField: UITextField!
+    @IBOutlet weak var emailLoginTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    
+    @IBOutlet weak var registerButton: UIButton!
     
     override init(frame: CGRect) {
         super.init(frame: frame)

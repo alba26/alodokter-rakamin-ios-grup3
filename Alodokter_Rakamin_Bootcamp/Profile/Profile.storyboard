@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -8,15 +8,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Register View Controller-->
+        <!--Reset Password View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="RegisterViewController" hidesBottomBarWhenPushed="YES" id="Y6W-OH-hqX" customClass="RegisterViewController" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="ResetPasswordViewController" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qnr-Hh-cPl" customClass="RegisterView" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vyx-Ta-ich" customClass="ResetPasswordPage" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -24,19 +24,16 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="qnr-Hh-cPl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="0aT-Zp-bxN"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="qnr-Hh-cPl" secondAttribute="bottom" id="D58-lr-XL3"/>
-                            <constraint firstItem="qnr-Hh-cPl" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="IrO-p0-azm"/>
-                            <constraint firstItem="qnr-Hh-cPl" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="xbN-T8-SZN"/>
+                            <constraint firstItem="Vyx-Ta-ich" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="8ek-SA-qdm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Vyx-Ta-ich" secondAttribute="trailing" id="dbf-Vx-cEB"/>
+                            <constraint firstItem="Vyx-Ta-ich" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="pFS-sg-Mm4"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Vyx-Ta-ich" secondAttribute="bottom" id="xAX-oV-EEQ"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="registerView" destination="qnr-Hh-cPl" id="q1N-lg-Okx"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="116.51785714285714"/>
+            <point key="canvasLocation" x="139" y="135"/>
         </scene>
     </scenes>
     <resources>

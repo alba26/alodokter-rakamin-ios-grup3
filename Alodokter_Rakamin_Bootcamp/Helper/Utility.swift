@@ -19,7 +19,7 @@ class Utility {
     }
     
     public func checkTextFieldIsEmpty(textfield:UITextField) -> Bool {
-        if textfield.text == "" {
+        if textfield.text != "" {
             return true
         }
         return false
