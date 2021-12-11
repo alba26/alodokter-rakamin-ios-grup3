@@ -110,17 +110,28 @@
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ArticleImage" translatesAutoresizingMaskIntoConstraints="NO" id="rFW-4f-BOE">
                                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
                                                                 </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="km4-cM-hNa">
+                                                                    <rect key="frame" x="8" y="210.5" width="398" height="26.5"/>
+                                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstItem="rFW-4f-BOE" firstAttribute="centerX" secondItem="7VZ-oa-scY" secondAttribute="centerX" id="3bk-eY-ZCX"/>
                                                                 <constraint firstAttribute="bottom" secondItem="rFW-4f-BOE" secondAttribute="bottom" constant="-5" id="JKg-fg-TXF"/>
+                                                                <constraint firstAttribute="trailing" secondItem="km4-cM-hNa" secondAttribute="trailing" constant="8" id="NOy-z2-WHB"/>
+                                                                <constraint firstItem="km4-cM-hNa" firstAttribute="leading" secondItem="7VZ-oa-scY" secondAttribute="leading" constant="8" id="Vs6-0c-NAG"/>
                                                                 <constraint firstItem="rFW-4f-BOE" firstAttribute="top" secondItem="7VZ-oa-scY" secondAttribute="top" id="bsu-uQ-FOR"/>
                                                                 <constraint firstItem="rFW-4f-BOE" firstAttribute="leading" secondItem="7VZ-oa-scY" secondAttribute="leading" id="c76-gJ-oj4"/>
+                                                                <constraint firstAttribute="bottom" secondItem="km4-cM-hNa" secondAttribute="bottom" constant="8" id="oEK-Dh-alp"/>
                                                             </constraints>
                                                         </collectionViewCellContentView>
                                                         <size key="customSize" width="414" height="245"/>
                                                         <connections>
                                                             <outlet property="imageSliderImg" destination="rFW-4f-BOE" id="v2u-oV-shW"/>
+                                                            <outlet property="imageSliderTitle" destination="km4-cM-hNa" id="TyP-Fn-nbt"/>
                                                         </connections>
                                                     </collectionViewCell>
                                                 </cells>

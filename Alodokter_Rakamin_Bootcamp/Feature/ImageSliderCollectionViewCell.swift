@@ -9,5 +9,6 @@ import UIKit
 
 class ImageSliderCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageSliderImg: UIImageView!
+    @IBOutlet weak var imageSliderTitle: UILabel!
     
 }

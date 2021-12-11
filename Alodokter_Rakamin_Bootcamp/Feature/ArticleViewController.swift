@@ -164,6 +164,9 @@ extension ArticleViewController: UICollectionViewDataSource {
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageSliderCell", for: indexPath) as! ImageSliderCollectionViewCell
         cell.imageSliderImg.image = UIImage(named: imageArray[indexPath.row])
+        cell.imageSliderTitle.text = "4 Manfaat Daun Sambiloto untuk Kulit yang Sayang Dilewatkan"
+        cell.imageSliderTitle.backgroundColor = UIColor.black
+        cell.imageSliderTitle.textColor = UIColor.white
         return cell
         
     }
