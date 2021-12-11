@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginView" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="Kfy-6I-tn6"/>
+                <outlet property="loginButton" destination="xZm-UZ-IAB" id="j6s-Ln-eJF"/>
                 <outlet property="logoImage" destination="gbx-mg-PDi" id="PgY-fW-6qX"/>
             </connections>
         </placeholder>
@@ -70,9 +71,6 @@
                         <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
                         <color key="baseBackgroundColor" red="0.90980392160000001" green="0.4549019608" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
                     </buttonConfiguration>
-                    <connections>
-                        <action selector="authButton:" destination="-1" eventType="touchUpInside" id="nhd-9R-1Kh"/>
-                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zc-5b-EMM">
                     <rect key="frame" x="282" y="478" width="116" height="28.5"/>

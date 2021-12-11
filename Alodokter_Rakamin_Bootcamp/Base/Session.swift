@@ -13,9 +13,14 @@ enum Session:String{
     case sessionExpired = "sessionExpired"
 }
 
-func checkSession() -> String{
-    guard let state = UserDefaults.standard.value(forKey: "session") as? String else{
-        return ""
+
+extension UserDefaults{
+    func checkSession() -> String{
+        guard let state = UserDefaults.standard.value(forKey: "session") as? String else{
+            return ""
+        }
+        return state
     }
-    return state
+    
 }
+

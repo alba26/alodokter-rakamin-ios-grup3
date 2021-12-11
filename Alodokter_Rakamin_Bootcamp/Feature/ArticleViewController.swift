@@ -70,7 +70,7 @@ class ArticleViewController: UIViewController {
         let loginStoryboard : UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
         let loginVC = loginStoryboard.instantiateViewController(withIdentifier: "LoginViewController")
         
-        if checkSession() == Session.unregistered.rawValue{
+        if UserDefaults().checkSession() == Session.unregistered.rawValue{
             self.navigationController?.pushViewController(loginVC, animated: true)
         }
         
