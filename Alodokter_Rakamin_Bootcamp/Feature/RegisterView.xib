@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterView" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="ezh-Le-eYJ"/>
+                <outlet property="emailRegisterTextField" destination="7JK-hp-aza" id="UgH-Tn-Eby"/>
+                <outlet property="nameRegisterTextField" destination="EBi-be-W3d" id="2Fo-CK-83k"/>
+                <outlet property="passwordConfirmRegisterTextField" destination="YcP-Mb-wzC" id="qr0-3M-0Tt"/>
+                <outlet property="passwordRegisterTextField" destination="nfL-Wm-4TS" id="Tbt-sw-7tI"/>
+                <outlet property="registerButton" destination="bev-Ke-pdm" id="6aN-sV-pAf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AloBanner" translatesAutoresizingMaskIntoConstraints="NO" id="M8K-Py-SOL">
+                    <rect key="frame" x="39" y="104" width="337" height="64"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daftar sekarang dan buat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9J-bf-QBQ">
+                    <rect key="frame" x="20" y="191" width="331" height="34"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="janji dengan dokter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQS-uX-rbq">
+                    <rect key="frame" x="20" y="227" width="250" height="34"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bev-Ke-pdm">
+                    <rect key="frame" x="20" y="732.5" width="374" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="oL0-gS-Q3I"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Daftar Sekarang">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                        <color key="baseBackgroundColor" red="0.90980392160000001" green="0.4549019608" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </buttonConfiguration>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7JK-hp-aza">
+                    <rect key="frame" x="20" y="425" width="374" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQX-9O-Cyu">
+                    <rect key="frame" x="20" y="402" width="46" height="18"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EBi-be-W3d">
+                    <rect key="frame" x="20" y="353" width="374" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nama Pasien" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5u-lM-OsL">
+                    <rect key="frame" x="20" y="330" width="93" height="18"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kata Sandi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14y-QH-KeC">
+                    <rect key="frame" x="20" y="477" width="77" height="18"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kata Sandi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nfL-Wm-4TS">
+                    <rect key="frame" x="20" y="500" width="374" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Konfirmasi Kata Sandi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TkZ-yc-gnc">
+                    <rect key="frame" x="20" y="551" width="157" height="18"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kata Sandi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YcP-Mb-wzC">
+                    <rect key="frame" x="20" y="574" width="374" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                </textField>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="M8K-Py-SOL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="39" id="3s0-hL-5xN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EBi-be-W3d" secondAttribute="trailing" constant="20" id="6CS-LO-W3s"/>
+                <constraint firstItem="nfL-Wm-4TS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="73O-Wv-tzu"/>
+                <constraint firstItem="m9J-bf-QBQ" firstAttribute="top" secondItem="M8K-Py-SOL" secondAttribute="bottom" constant="23" id="8is-23-X6x"/>
+                <constraint firstItem="YcP-Mb-wzC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="9f8-LH-ovE"/>
+                <constraint firstItem="VQS-uX-rbq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="EOS-lO-cq2"/>
+                <constraint firstItem="d5u-lM-OsL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Eos-r1-gEd"/>
+                <constraint firstItem="YcP-Mb-wzC" firstAttribute="top" secondItem="TkZ-yc-gnc" secondAttribute="bottom" constant="5" id="FdR-oh-TB8"/>
+                <constraint firstItem="EBi-be-W3d" firstAttribute="top" secondItem="d5u-lM-OsL" secondAttribute="bottom" constant="5" id="I4S-x5-AsY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nfL-Wm-4TS" secondAttribute="trailing" constant="20" id="IDB-Pl-Wco"/>
+                <constraint firstItem="7JK-hp-aza" firstAttribute="top" secondItem="IQX-9O-Cyu" secondAttribute="bottom" constant="5" id="II4-0c-dJM"/>
+                <constraint firstItem="bev-Ke-pdm" firstAttribute="top" secondItem="YcP-Mb-wzC" secondAttribute="bottom" constant="124.5" id="JE7-fx-FT0"/>
+                <constraint firstItem="TkZ-yc-gnc" firstAttribute="top" secondItem="nfL-Wm-4TS" secondAttribute="bottom" constant="17" id="MIl-TF-sDn"/>
+                <constraint firstItem="IQX-9O-Cyu" firstAttribute="top" secondItem="EBi-be-W3d" secondAttribute="bottom" constant="15" id="MlA-fn-6Kh"/>
+                <constraint firstItem="m9J-bf-QBQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="QyJ-Z8-CuR"/>
+                <constraint firstItem="EBi-be-W3d" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="R9K-a3-LXF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="YcP-Mb-wzC" secondAttribute="trailing" constant="20" id="RpW-tg-2y5"/>
+                <constraint firstItem="nfL-Wm-4TS" firstAttribute="top" secondItem="14y-QH-KeC" secondAttribute="bottom" constant="5" id="TuS-jX-Nwd"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="bev-Ke-pdm" secondAttribute="bottom" constant="84.5" id="UeS-FL-NId"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7JK-hp-aza" secondAttribute="trailing" constant="20" id="Wtn-vA-0Kx"/>
+                <constraint firstItem="14y-QH-KeC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="bVw-gl-utL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bev-Ke-pdm" secondAttribute="trailing" constant="20" id="dlx-oF-7XA"/>
+                <constraint firstItem="TkZ-yc-gnc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="giR-Pj-D1y"/>
+                <constraint firstItem="14y-QH-KeC" firstAttribute="top" secondItem="7JK-hp-aza" secondAttribute="bottom" constant="18" id="ids-dV-lvR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="M8K-Py-SOL" secondAttribute="trailing" constant="38" id="lB0-Bh-IM9"/>
+                <constraint firstItem="VQS-uX-rbq" firstAttribute="top" secondItem="m9J-bf-QBQ" secondAttribute="bottom" constant="2" id="mXj-F1-os1"/>
+                <constraint firstItem="7JK-hp-aza" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="mm0-Od-WgZ"/>
+                <constraint firstItem="IQX-9O-Cyu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="tTh-R9-OBR"/>
+                <constraint firstItem="bev-Ke-pdm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="wGg-hX-BhZ"/>
+                <constraint firstItem="M8K-Py-SOL" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="60" id="wvE-c1-4Iq"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="131.91964285714286"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="AloBanner" width="412" height="64"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
