@@ -9,6 +9,10 @@ import UIKit
 
 class ChangeDataViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
     
+    
+    @IBOutlet weak var cancelMyData: UIBarButtonItem!
+    @IBOutlet weak var changeMyData: UIBarButtonItem!
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -23,13 +27,20 @@ class ChangeDataViewController: UIViewController, UIPickerViewDataSource, UIPick
     
     let data = ["Pria", "Wanita"]
     
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true){
+            
+        }
+    }
     @IBOutlet weak var genderPicker: UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.cancelMyData.tintColor = .white
+        self.changeMyData.tintColor = .white
         genderPicker.dataSource = self
         genderPicker.delegate = self
+        
     }
     
 

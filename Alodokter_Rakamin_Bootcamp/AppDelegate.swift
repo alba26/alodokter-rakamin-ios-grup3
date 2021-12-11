@@ -40,6 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         newNavigationBarAppearance.largeTitleTextAttributes = [.foregroundColor : UIColor.white]
         newNavigationBarAppearance.titleTextAttributes = [.foregroundColor : UIColor.white]
         
+        
     }
     
     // MARK: UISceneSession Lifecycle

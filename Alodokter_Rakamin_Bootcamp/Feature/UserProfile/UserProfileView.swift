@@ -15,7 +15,8 @@ class UserProfileView: UIView {
     @IBOutlet weak var logoutContainer: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var resetPasswordButton: UIButton!
-    
+    @IBOutlet weak var myData: UIButton!
+    @IBOutlet weak var logout: UIButton!
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()

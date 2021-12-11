@@ -11,7 +11,7 @@
         <!--Change Data View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="ChangeDataViewController" id="Y6W-OH-hqX" customClass="ChangeDataViewController" customModule="testProject2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChangeDataViewController" id="Y6W-OH-hqX" customClass="ChangeDataViewController" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,7 +20,11 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Data Saya" id="b9p-nb-1OC">
-                                        <barButtonItem key="leftBarButtonItem" title="Batalkan" id="FMn-mE-6Pk"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Batalkan" id="FMn-mE-6Pk">
+                                            <connections>
+                                                <action selector="cancelButtonPressed:" destination="Y6W-OH-hqX" id="esS-N7-naS"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Ubah" id="srx-q5-Fmr">
                                             <color key="tintColor" red="0.0" green="0.45882352939999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </barButtonItem>
@@ -88,7 +92,7 @@
                                 <color key="backgroundColor" red="0.74901960779999999" green="0.15686274510000001" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <locale key="locale" localeIdentifier="id"/>
                             </datePicker>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5y-Fq-nMW">
+                            <pickerView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5y-Fq-nMW">
                                 <rect key="frame" x="32" y="399" width="350" height="69"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="69" id="yY6-Jh-ncv"/>
@@ -133,6 +137,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cancelMyData" destination="FMn-mE-6Pk" id="cVq-T2-w3a"/>
+                        <outlet property="changeMyData" destination="srx-q5-Fmr" id="cOQ-vX-9gg"/>
                         <outlet property="genderPicker" destination="M5y-Fq-nMW" id="VtZ-WI-AbF"/>
                     </connections>
                 </viewController>

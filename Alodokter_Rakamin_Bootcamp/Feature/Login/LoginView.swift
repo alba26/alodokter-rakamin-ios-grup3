@@ -12,12 +12,10 @@ class LoginView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var logoImage: UIImageView!
     
+    @IBOutlet weak var passwordLoginTextField: UITextField!
+    @IBOutlet weak var emailLoginTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
-    @IBAction func loginEmailTextField(_ sender: Any) {
-    }
-    @IBAction func loginPasswordTextField(_ sender: Any) {
-    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
