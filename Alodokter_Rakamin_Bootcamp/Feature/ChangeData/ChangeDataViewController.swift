@@ -11,16 +11,16 @@ class ChangeDataViewController: UIViewController, UIPickerViewDataSource, UIPick
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var idTextField: UITextField!
+    @IBOutlet weak var ktpTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var genderTextField: UITextField!
     @IBOutlet weak var birthdayTextField: UITextField!
+    @IBOutlet weak var changeDataButton: UIBarButtonItem!
     @IBAction func closeChangeDataButton(_ sender: Any) {
         closeModal()
     }
     
     let data = ["Pria", "Wanita"]
-    let genderData = [String](arrayLiteral: "Pria", "Wanita")
     let picker = UIPickerView()
     let datePicker = UIDatePicker()
     
@@ -31,11 +31,15 @@ class ChangeDataViewController: UIViewController, UIPickerViewDataSource, UIPick
         genderTextField.setCustomUI(withPlaceholder: "Jenis kelamin")
         nameTextField.setCustomUI(withPlaceholder: "Nama")
         emailTextField.setCustomUI(withPlaceholder: "Email")
-        idTextField.setCustomUI(withPlaceholder: "KTP")
+        ktpTextField.setCustomUI(withPlaceholder: "KTP")
         addressTextField.setCustomUI(withPlaceholder: "Alamat")
         
         picker.delegate = self
         picker.dataSource = self
+        
+        if UserDefaults().checkSession() == Session.loggedIn.rawValue{
+            loadData()
+        }
     }
     
     // gender picker function
@@ -89,6 +93,20 @@ class ChangeDataViewController: UIViewController, UIPickerViewDataSource, UIPick
         self.dismiss(animated: true, completion: nil)
     }
     
-
+    func loadData(){
+        if let data = UserDefaults.standard.data(forKey: "userdata"){
+            do{
+                let decoder = JSONDecoder()
+                let userdata = try decoder.decode(UserProfile.self, from: data)
+                nameTextField.text = userdata.firstname+" "+userdata.lastname
+                emailTextField.text = userdata.email
+                ktpTextField.text = userdata.identity
+                addressTextField.text = userdata.address
+            }catch{
+                print(error)
+            }
+        }
+        
+    }
 }
 
