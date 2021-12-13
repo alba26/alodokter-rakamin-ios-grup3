@@ -63,7 +63,7 @@ class ChangeDataViewController: UIViewController, UIPickerViewDataSource, UIPick
                 ktpTextField.text = userdata.identity
                 addressTextField.text = userdata.address
             }catch{
-                print(error)
+                print(error) //OUTPUT ERROR
             }
         }
         

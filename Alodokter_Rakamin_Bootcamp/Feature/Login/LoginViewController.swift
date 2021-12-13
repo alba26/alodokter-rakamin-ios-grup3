@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
        if Utility().checkTextFieldIsEmpty(textfield: loginView.passwordLoginTextField){
            login()
        }else{
-           print("KOSONG")
+           print("KOSONG") //OUTPUT ERROR
        }
 
     }
@@ -39,7 +39,6 @@ class LoginViewController: UIViewController {
     @objc func registerButton(){
         let registerStoryboard : UIStoryboard = UIStoryboard(name: "Register", bundle: nil)
         let registerVC = registerStoryboard.instantiateViewController(withIdentifier: "RegisterViewController")
-
         self.present(registerVC, animated: true){
         }
     }
@@ -63,7 +62,6 @@ extension LoginViewController{
                         loginDataToken = login.data?.token
                         UserDefaults.standard.set(loginDataToken, forKey: "token")
                         self.dismiss(animated: true){
-                            print("GG")
                             getUserData()
                         }
                     }
@@ -74,7 +72,7 @@ extension LoginViewController{
                 }
                 
             case .failure(let err):
-                print("Error",err)
+                print("Error",err) //OUTPUT ERROR
             }
         }
     }
@@ -99,7 +97,7 @@ extension LoginViewController{
                     }
                 }
             case .failure(let error):
-                print(error)
+                print(error) //OUTPUT ERROR
             }
             
         }

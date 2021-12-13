@@ -30,24 +30,23 @@ class RegisterViewController: UIViewController {
         print(registerService.password)
         APIService.APIRequest(model: UserData.self, req: registerService){ [self](result) in
             switch result {
+                
             case .success(let user):
                 guard let register = user as? UserData else{
                     return
                 }
                 if register.code == 201{
-                    print("BERHASIL MENDAFTAR")
                     DispatchQueue.main.async {
                         self.dismiss(animated: true){
                             
                         }
                     }
-                    
                 }else{
                     print("GAGAL Mendaftar")
                 }
                 
             case .failure(let error):
-                print(error)
+                print(error) //OUTPUT ERROR
             }
             
         }
