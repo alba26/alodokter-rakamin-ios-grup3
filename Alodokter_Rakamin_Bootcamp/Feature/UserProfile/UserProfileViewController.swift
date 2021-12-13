@@ -48,7 +48,7 @@ class UserProfileViewController: UIViewController {
         if UserDefaults().checkSession() == Session.loggedIn.rawValue{
             let myDataStoryboard : UIStoryboard = UIStoryboard(name: "ChangeData", bundle: nil)
             let myDataVC = myDataStoryboard.instantiateViewController(withIdentifier: "ChangeDataViewController")
-//            myDataVC.modalPresentationStyle = .fullScreen
+            myDataVC.modalPresentationStyle = .fullScreen
             self.present(myDataVC, animated: true){
                 
             }
