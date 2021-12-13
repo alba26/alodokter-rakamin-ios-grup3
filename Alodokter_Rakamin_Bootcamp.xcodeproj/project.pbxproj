@@ -566,6 +566,7 @@
 				DEVELOPMENT_TEAM = 6W5NPNJGK4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Alodokter_Rakamin_Bootcamp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Alodokter;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = UserProfile;
@@ -594,6 +595,7 @@
 				DEVELOPMENT_TEAM = 6W5NPNJGK4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Alodokter_Rakamin_Bootcamp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Alodokter;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = UserProfile;
