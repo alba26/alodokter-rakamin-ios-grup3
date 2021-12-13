@@ -29,6 +29,7 @@ class LoginViewController: UIViewController {
        self.email = loginView.emailLoginTextField.text ?? "default"
        self.password = loginView.passwordLoginTextField.text ?? "default"
        if Utility().checkTextFieldIsEmpty(textfield: loginView.passwordLoginTextField){
+           loginView.isUserInteractionEnabled = false
            login()
        }else{
            print("KOSONG") //OUTPUT ERROR
@@ -63,6 +64,7 @@ extension LoginViewController{
                         UserDefaults.standard.set(loginDataToken, forKey: "token")
                         self.dismiss(animated: true){
                             getUserData()
+                            loginView.isUserInteractionEnabled = true
                         }
                     }
                 } else if login.code == 401 {
@@ -82,6 +84,7 @@ extension LoginViewController{
         APIService.APIRequest(model: UserData.self, req: userProfile){ [self](result) in
             switch result {
             case .success(let user):
+                
                 guard let myData = user as? UserData else{
                     return
                 }
