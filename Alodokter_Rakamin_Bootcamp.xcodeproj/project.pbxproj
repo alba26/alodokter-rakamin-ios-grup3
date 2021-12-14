@@ -22,6 +22,9 @@
 		17CD8F6A2761F366009043F0 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F552761F106009043F0 /* LoginView.xib */; };
 		17CD8F6B2761F36B009043F0 /* ResetPasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F5A2761F106009043F0 /* ResetPasswordView.xib */; };
 		17CD8F6F27645070009043F0 /* ImageSliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD8F6E27645070009043F0 /* ImageSliderCollectionViewCell.swift */; };
+		3EF0F9D5276839320058CFCF /* ArticleDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EF0F9D4276839320058CFCF /* ArticleDetailView.xib */; };
+		3EF0F9D727683EFF0058CFCF /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF0F9D627683EFF0058CFCF /* ArticleDetailView.swift */; };
+		3EF0F9D927686F3D0058CFCF /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF0F9D827686F3D0058CFCF /* ArticleDetailViewController.swift */; };
 		3EFA07BC275F99100010AA10 /* UIButton+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFA07BB275F99100010AA10 /* UIButton+extension.swift */; };
 		8C61212D2762214600511B76 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6121292762214600511B76 /* RegisterViewController.swift */; };
 		8C61212E2762214600511B76 /* RegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C61212A2762214600511B76 /* RegisterView.xib */; };
@@ -73,6 +76,9 @@
 		17CD8F5C2761F106009043F0 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		17CD8F6E27645070009043F0 /* ImageSliderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSliderCollectionViewCell.swift; sourceTree = "<group>"; };
 		3EC13CB82763146B00B4A878 /* UITextField+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+extension.swift"; sourceTree = "<group>"; };
+		3EF0F9D4276839320058CFCF /* ArticleDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleDetailView.xib; sourceTree = "<group>"; };
+		3EF0F9D627683EFF0058CFCF /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
+		3EF0F9D827686F3D0058CFCF /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
 		3EFA07BB275F99100010AA10 /* UIButton+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+extension.swift"; sourceTree = "<group>"; };
 		8C6121292762214600511B76 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8C61212A2762214600511B76 /* RegisterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterView.xib; sourceTree = "<group>"; };
@@ -123,6 +129,7 @@
 		17CD8F392761ECAC009043F0 /* Artikel */ = {
 			isa = PBXGroup;
 			children = (
+				3EF0F9D3276839110058CFCF /* ArticleDetail */,
 				92A9D65E27620362001BD05C /* ArticleService.swift */,
 				17CD8F3C2761ED2D009043F0 /* Article.storyboard */,
 				17CD8F422761ED55009043F0 /* ArticleListSection.xib */,
@@ -173,6 +180,16 @@
 				17CD8F5C2761F106009043F0 /* ResetPasswordViewController.swift */,
 			);
 			path = ResetPassword;
+			sourceTree = "<group>";
+		};
+		3EF0F9D3276839110058CFCF /* ArticleDetail */ = {
+			isa = PBXGroup;
+			children = (
+				3EF0F9D4276839320058CFCF /* ArticleDetailView.xib */,
+				3EF0F9D627683EFF0058CFCF /* ArticleDetailView.swift */,
+				3EF0F9D827686F3D0058CFCF /* ArticleDetailViewController.swift */,
+			);
+			name = ArticleDetail;
 			sourceTree = "<group>";
 		};
 		8C6121282762213700511B76 /* Register */ = {
@@ -370,6 +387,7 @@
 				924DC4A7275F141800FCE093 /* LaunchScreen.storyboard in Resources */,
 				924DC4A4275F141800FCE093 /* Assets.xcassets in Resources */,
 				8CB695F627639F850096BCAB /* ChangeData.storyboard in Resources */,
+				3EF0F9D5276839320058CFCF /* ArticleDetailView.xib in Resources */,
 				8CB695F027639F440096BCAB /* UserProfileView.xib in Resources */,
 				17CD8F482761ED86009043F0 /* Booking.storyboard in Resources */,
 				17CD8F452761ED71009043F0 /* Main.storyboard in Resources */,
@@ -391,11 +409,13 @@
 				17CD8F672761F138009043F0 /* LoginView.swift in Sources */,
 				92DA8AEC2763C35B00028BF3 /* LoginService.swift in Sources */,
 				92DA8AEA2763C1EE00028BF3 /* UserData.swift in Sources */,
+				3EF0F9D927686F3D0058CFCF /* ArticleDetailViewController.swift in Sources */,
 				92A9D66327620380001BD05C /* APIService.swift in Sources */,
 				17CD8F622761F106009043F0 /* LoginViewController.swift in Sources */,
 				92E21A4A2764A3A200924C38 /* UserProfileService.swift in Sources */,
 				8CB695EE27639F440096BCAB /* UserProfileViewController.swift in Sources */,
 				8CB695F527639F850096BCAB /* ChangeDataViewController.swift in Sources */,
+				3EF0F9D727683EFF0058CFCF /* ArticleDetailView.swift in Sources */,
 				924DC49F275F141700FCE093 /* ViewController.swift in Sources */,
 				17CD8F652761F106009043F0 /* ResetPasswordViewController.swift in Sources */,
 				924DC49B275F141700FCE093 /* AppDelegate.swift in Sources */,

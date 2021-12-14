@@ -32,6 +32,7 @@ class ArticleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configNavigationBar()
+        articleCollectionView.delegate = self
         timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(slideToNext), userInfo: nil, repeats: true)
     }
     
@@ -139,21 +140,10 @@ class ArticleViewController: UIViewController {
         return layout
         
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 
-extension ArticleViewController: UICollectionViewDataSource {
+extension ArticleViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -182,8 +172,14 @@ extension ArticleViewController: UICollectionViewDataSource {
         cell.imageSliderTitle.backgroundColor = UIColor.black
         cell.imageSliderTitle.textColor = UIColor.white
         return cell
-        
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Article", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "ArticleDetail") as? ArticleDetailViewController else { return }
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 
 
