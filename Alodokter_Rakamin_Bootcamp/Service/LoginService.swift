@@ -16,7 +16,7 @@ class LoginService: BaseService{
     }
     
     func url() -> URL {
-        return URL(string: "https://hidden-cliffs-45052.herokuapp.com/api/v1/users/login")!
+        return URL(string: "https://alogrup3.herokuapp.com/api/v1/users/login")!
     }
     
     func timeout() -> TimeInterval {
