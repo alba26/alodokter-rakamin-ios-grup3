@@ -10,10 +10,24 @@ import UIKit
 class ResetPasswordViewController: UIViewController {
 
     @IBOutlet weak var resetPasswordView: ResetPasswordView!
+    var userId: String?
+    let viewModel = ResetPasswordViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         resetPasswordView.cancelButton.action = #selector(dismissButtonTapped)
+        resetPasswordView.saveButton.addTarget(self, action: #selector(saveNewPassword), for: .touchUpInside)
+    }
+    
+    @objc func saveNewPassword() {
+        viewModel.idUser = self.userId
+        viewModel.oldPassword = resetPasswordView.oldPasswordTextField.text
+        viewModel.newPassword = resetPasswordView.newPasswordTextField.text
+        viewModel.confirmPassword = resetPasswordView.confirmPasswordTextField.text
+        viewModel.resetPassword { result in
+            print(result)
+        }
+        
     }
     
     @objc func dismissButtonTapped() {
