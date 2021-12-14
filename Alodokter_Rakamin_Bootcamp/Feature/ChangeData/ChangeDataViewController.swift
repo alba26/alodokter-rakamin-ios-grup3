@@ -142,7 +142,7 @@ class ChangeDataViewController: UIViewController, UIPickerViewDataSource, UIPick
                 let userdata = try decoder.decode(UserProfile.self, from: data)
                 nameTextField.text = userdata.fullname
                 emailTextField.text = userdata.email
-                birthdayTextField.text = Utility().convertDate(date: userdata.birthdate ?? "")
+                birthdayTextField.text = Utility().convertDateToIOSFormat(date: userdata.birthdate ?? "")
                 genderTextField.text = userdata.gender
                 ktpTextField.text = userdata.identity
                 addressTextField.text = userdata.address

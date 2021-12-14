@@ -57,7 +57,7 @@ class Utility {
         uiview.present(alert, animated: true, completion: nil)
     }
     
-    public func convertDate(date:String) -> String{
+    public func convertDateToIOSFormat(date:String) -> String{
         if date != ""{
             let dateFormatterGet = DateFormatter()
             dateFormatterGet.dateFormat = "yyyy-MM-dd"
