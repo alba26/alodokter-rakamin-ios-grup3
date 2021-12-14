@@ -25,7 +25,11 @@ class ResetPasswordViewController: UIViewController {
         viewModel.newPassword = resetPasswordView.newPasswordTextField.text
         viewModel.confirmPassword = resetPasswordView.confirmPasswordTextField.text
         viewModel.resetPassword { result in
-            print(result)
+            if result != "success" {
+                Utility().showAlertAction(title: result.capitalized, message: result.capitalized, uiview: self)
+            } else {
+                self.dismiss(animated: true, completion: nil)
+            }
         }
         
     }

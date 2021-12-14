@@ -60,8 +60,8 @@ extension UserProfileViewController{
                 let decoder = JSONDecoder()
                 let userdata = try decoder.decode(UserProfile.self, from: data)
                 userId = String(userdata.id)
-                userLabelName = userdata.firstname
-                userProfileView.nameLabel.text = userdata.firstname
+                userLabelName = userdata.fullname
+                userProfileView.nameLabel.text = userdata.fullname
             }catch{
                 print(error)
             }

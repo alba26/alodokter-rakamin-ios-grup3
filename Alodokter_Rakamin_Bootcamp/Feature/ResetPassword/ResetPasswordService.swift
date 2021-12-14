@@ -29,7 +29,8 @@ class ResetPasswordService: BaseService {
     }
     
     func auth() -> String {
-        return ""
+        guard let token = UserDefaults.standard.string(forKey: "token") else { return "" }
+        return token
     }
     
     init(oldPassword: String, newPassword: String, idUser: String) {
@@ -37,5 +38,4 @@ class ResetPasswordService: BaseService {
         self.newPassword = newPassword
         self.idUser = idUser
     }
-    
 }
