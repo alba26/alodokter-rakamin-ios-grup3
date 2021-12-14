@@ -38,6 +38,7 @@ class ChangeDataViewController: UIViewController, UIPickerViewDataSource, UIPick
         birthdayTextField.backgroundColor = UIColor.white
         saveButton.isHidden = false
         changeButton.isEnabled = false
+        changeButton.tintColor = UIColor.clear
         
     }
     @IBAction func saveButtonPressed(_ sender: Any) {
@@ -54,6 +55,7 @@ class ChangeDataViewController: UIViewController, UIPickerViewDataSource, UIPick
         birthdayTextField.backgroundColor = UIColor.systemGray6
         saveButton.isHidden = true
         changeButton.isEnabled = true
+        changeButton.tintColor = UIColor.white
     }
     
     
