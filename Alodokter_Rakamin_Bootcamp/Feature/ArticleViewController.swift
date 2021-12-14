@@ -8,11 +8,15 @@
 import UIKit
 
 class ArticleViewController: UIViewController {
+    
 
     @IBOutlet weak var contentScrollView: UIScrollView!
     @IBOutlet weak var sliderCollectionView: UICollectionView!
     
     @IBOutlet weak var pageControl: UIPageControl!
+    
+    @IBOutlet weak var categoryMenu: UIButton!
+    @IBOutlet weak var categoryView: UIView!
     
     @IBOutlet weak var articleCollectionView: UICollectionView!
     
@@ -27,12 +31,14 @@ class ArticleViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         articleCollectionView.collectionViewLayout = setupCollectionViewLayout()
         sliderCollectionView.collectionViewLayout = setupImageSliderViewLayout()
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configNavigationBar()
         timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(slideToNext), userInfo: nil, repeats: true)
+        setUpMenu()
     }
     
     @objc func slideToNext(){
@@ -94,29 +100,6 @@ class ArticleViewController: UIViewController {
         self.navigationController?.pushViewController(profileVC, animated: true)
     }
     
-    
-    func setupCollectionViewLayout() -> UICollectionViewCompositionalLayout{
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(100))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
-        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
-        group.interItemSpacing = .flexible(12)
-        
-        let section = NSCollectionLayoutSection(group: group)
-        section.orthogonalScrollingBehavior = .groupPaging
-        section.interGroupSpacing = 16
-        
-        let layout = UICollectionViewCompositionalLayout(section: section)
-        
-        let config = UICollectionViewCompositionalLayoutConfiguration()
-        config.interSectionSpacing = 100
-        layout.configuration = config
-        
-        
-        return layout
-        
-    }
     func setupImageSliderViewLayout() -> UICollectionViewCompositionalLayout{
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(245))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -140,6 +123,43 @@ class ArticleViewController: UIViewController {
         
     }
 
+    func setUpMenu() {
+        categoryView.layer.borderWidth = 1
+        categoryView.layer.borderColor = UIColor.black.cgColor
+        categoryView.layer.cornerRadius = 10
+        
+        let menu = UIMenu(title: "Category", options: .displayInline, children: [
+            UIAction(title: "Trending") {(_) in self.categoryMenu.titleLabel?.text = "Trending"},
+            UIAction(title: "Kesehatan") {(_) in self.categoryMenu.titleLabel?.text = "Kesehatan"},
+            UIAction(title: "Keluarga") {(_) in self.categoryMenu.titleLabel?.text = "Keluarga"},
+        ])
+        
+        self.categoryMenu.menu = menu
+        self.categoryMenu.showsMenuAsPrimaryAction = true
+    }
+    
+    func setupCollectionViewLayout() -> UICollectionViewCompositionalLayout{
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(100))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+        group.interItemSpacing = .flexible(12)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .groupPaging
+        section.interGroupSpacing = 16
+        
+        let layout = UICollectionViewCompositionalLayout(section: section)
+        
+        let config = UICollectionViewCompositionalLayoutConfiguration()
+        config.interSectionSpacing = 100
+        layout.configuration = config
+        
+        
+        return layout
+        
+    }
     /*
     // MARK: - Navigation
 
