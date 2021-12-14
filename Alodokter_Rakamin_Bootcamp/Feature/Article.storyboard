@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="always" translatesAutoresizingMaskIntoConstraints="NO" id="rta-eA-dmR">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TWg-pC-sm7">
                                         <rect key="frame" x="0.0" y="282" width="414" height="61"/>
@@ -207,10 +207,10 @@
             </objects>
             <point key="canvasLocation" x="2255.072463768116" y="-135.26785714285714"/>
         </scene>
-        <!--Article Detail-->
+        <!--Article Detail View Controller-->
         <scene sceneID="sdt-91-Qsm">
             <objects>
-                <viewController storyboardIdentifier="ArticleDetail" title="Article Detail" id="KNc-kC-tgg" customClass="ArticleDetailViewController" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ArticleDetail" id="KNc-kC-tgg" customClass="ArticleDetailViewController" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hNh-sU-OVT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
