@@ -104,7 +104,6 @@ class ChangeDataViewController: UIViewController, UIPickerViewDataSource, UIPick
         if UserDefaults().checkSession() == Session.loggedIn.rawValue{
             loadData()
         }
-        
     }
     
     // birthday picker function
@@ -141,14 +140,14 @@ class ChangeDataViewController: UIViewController, UIPickerViewDataSource, UIPick
             do{
                 let decoder = JSONDecoder()
                 let userdata = try decoder.decode(UserProfile.self, from: data)
-                nameTextField.text = userdata.firstname+" "+userdata.lastname
+                nameTextField.text = userdata.fullname
                 emailTextField.text = userdata.email
-                birthdayTextField.text = userdata.birthdate
+                birthdayTextField.text = Utility().convertDateToIOSFormat(date: userdata.birthdate ?? "")
                 genderTextField.text = userdata.gender
                 ktpTextField.text = userdata.identity
                 addressTextField.text = userdata.address
             }catch{
-                print(error)
+                print(error) //OUTPUT ERROR
             }
         }
         
