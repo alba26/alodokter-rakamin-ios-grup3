@@ -25,7 +25,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XQO-b9-ltZ">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="895"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="921"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ola-3X-tUQ">
                                     <rect key="frame" x="24" y="24" width="366" height="30"/>
@@ -34,16 +34,16 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ArticleImage" translatesAutoresizingMaskIntoConstraints="NO" id="H22-XI-aDS">
-                                    <rect key="frame" x="24" y="78" width="366" height="195"/>
+                                    <rect key="frame" x="0.0" y="78" width="414" height="221"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="H22-XI-aDS" secondAttribute="height" multiplier="15:8" id="lZd-6i-8YX"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbz-9W-CeV">
-                                    <rect key="frame" x="24" y="297" width="366" height="548"/>
-                                    <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sollicitudin odio libero, sit amet placerat odio bibendum eu. Donec porta felis id pulvinar pharetra. Sed dapibus congue lorem, sit amet ultricies massa pellentesque eget. Suspendisse gravida lacinia nibh eu porta. In euismod mi eu odio fringilla, eget rhoncus eros dignissim. Proin imperdiet mi non tortor consequat auctor. Duis a lorem aliquam, accumsan nisi ut, tristique justo. Sed hendrerit, eros vitae vestibulum viverra, risus metus suscipit velit, egestas ultricies sem tortor et lectus. Etiam ultricies leo sed tempus dapibus.
+                                    <rect key="frame" x="24" y="323" width="366" height="548"/>
+                                    <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sollicitudin odio libero, sit amet placerat odio bibendum eu. Donec porta felis id pulvinar pharetra. Sed dapibus congue lorem, sit amet ultricies massa pellentesque eget. Suspendisse gravida lacinia nibh eu porta. In euismod mi eu odio fringilla, eget rhoncus eros dignissim. Proin imperdiet mi non tortor consequat auctor. Duis a lorem aliquam, accumsan nisi ut, tristique justo. Sed hendrerit, eros vitae vestibulum viverra, risus metus suscipit velit, egestas ultricies sem tortor et lectus. Etiam ultricies leo sed tempus dapibus.
 
-Suspendisse potenti. Suspendisse a fringilla lacus, vel venenatis enim. Morbi vel congue mauris. Praesent rhoncus sem ut dui posuere pretium at nec elit. Maecenas nec nibh in justo ornare scelerisque at id odio. Nunc luctus eros sit amet eros condimentum rutrum. Phasellus eget dignissim leo. Nulla dignissim tortor nec quam faucibus, sed laoreet arcu volutpat. Proin eu ultrices lorem. Nullam tempor id tellus a placerat. Nunc rutrum ipsum at elit consectetur, sed semper ipsum tempor. Curabitur in eros ut urna rutrum fermentum sed at quam.</mutableString>
+Suspendisse potenti. Suspendisse a fringilla lacus, vel venenatis enim. Morbi vel congue mauris. Praesent rhoncus sem ut dui posuere pretium at nec elit. Maecenas nec nibh in justo ornare scelerisque at id odio. Nunc luctus eros sit amet eros condimentum rutrum. Phasellus eget dignissim leo. Nulla dignissim tortor nec quam faucibus, sed laoreet arcu volutpat. Proin eu ultrices lorem. Nullam tempor id tellus a placerat. Nunc rutrum ipsum at elit consectetur, sed semper ipsum tempor. Curabitur in eros ut urna rutrum fermentum sed at quam.</string>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -56,10 +56,10 @@ Suspendisse potenti. Suspendisse a fringilla lacus, vel venenatis enim. Morbi ve
                                 <constraint firstItem="H22-XI-aDS" firstAttribute="top" secondItem="ola-3X-tUQ" secondAttribute="bottom" constant="24" id="DkC-1w-LmK"/>
                                 <constraint firstAttribute="bottom" secondItem="rbz-9W-CeV" secondAttribute="bottom" constant="50" id="GN1-il-MjV"/>
                                 <constraint firstItem="ola-3X-tUQ" firstAttribute="top" secondItem="XQO-b9-ltZ" secondAttribute="top" constant="24" id="NaC-Mh-frC"/>
-                                <constraint firstItem="H22-XI-aDS" firstAttribute="leading" secondItem="XQO-b9-ltZ" secondAttribute="leading" constant="24" id="eZV-Ef-jQa"/>
+                                <constraint firstItem="H22-XI-aDS" firstAttribute="leading" secondItem="XQO-b9-ltZ" secondAttribute="leading" id="eZV-Ef-jQa"/>
                                 <constraint firstAttribute="trailing" secondItem="rbz-9W-CeV" secondAttribute="trailing" constant="24" id="jJW-6e-3Am"/>
                                 <constraint firstItem="rbz-9W-CeV" firstAttribute="leading" secondItem="XQO-b9-ltZ" secondAttribute="leading" constant="24" id="kW2-Sv-MBr"/>
-                                <constraint firstAttribute="trailing" secondItem="H22-XI-aDS" secondAttribute="trailing" constant="24" id="pXo-MX-LeA"/>
+                                <constraint firstAttribute="trailing" secondItem="H22-XI-aDS" secondAttribute="trailing" id="pXo-MX-LeA"/>
                                 <constraint firstAttribute="trailing" secondItem="ola-3X-tUQ" secondAttribute="trailing" constant="24" id="yid-GT-46n"/>
                             </constraints>
                         </view>
