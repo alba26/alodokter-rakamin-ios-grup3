@@ -18,16 +18,10 @@ class UserProfileViewController: UIViewController {
         userProfileView.logout.addTarget(self, action: #selector(logout), for: .touchUpInside)
         userProfileView.myData.addTarget(self, action: #selector(seeMyData), for: .touchUpInside)
         
-        let loginStoryboard : UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
-        let loginVC = loginStoryboard.instantiateViewController(withIdentifier: "LoginViewController")
-        loginVC.modalPresentationStyle = .fullScreen
-        
-        if UserDefaults().checkSession() == Session.unregistered.rawValue{
-            self.present(loginVC, animated: true){
-            }
-        }else if UserDefaults().checkSession() == Session.loggedIn.rawValue{
+        if UserDefaults().checkIsUserLogin(){
             decodeUserData()
         }
+
         NotificationCenter.default.addObserver(self, selector: #selector(changeLabelImageName), name: NSNotification.Name(rawValue: "changeNameLabel"), object: nil)
     }
     
@@ -48,19 +42,14 @@ class UserProfileViewController: UIViewController {
         if UserDefaults().checkSession() == Session.loggedIn.rawValue{
             let myDataStoryboard : UIStoryboard = UIStoryboard(name: "ChangeData", bundle: nil)
             let myDataVC = myDataStoryboard.instantiateViewController(withIdentifier: "ChangeDataViewController")
-//            myDataVC.modalPresentationStyle = .fullScreen
             self.present(myDataVC, animated: true){
                 
             }
         }
-        
     }
-    
-
 }
 
 extension UserProfileViewController{
-    
     
     //NEED IMPROVEMENT
     func decodeUserData(){
@@ -68,8 +57,8 @@ extension UserProfileViewController{
             do{
                 let decoder = JSONDecoder()
                 let userdata = try decoder.decode(UserProfile.self, from: data)
-                userLabelName = userdata.firstname
-                userProfileView.nameLabel.text = userdata.firstname
+                userLabelName = userdata.fullname
+                userProfileView.nameLabel.text = userdata.fullname
             }catch{
                 print(error)
             }
@@ -81,9 +70,9 @@ extension UserProfileViewController{
             do{
                 let decoder = JSONDecoder()
                 let userdata = try decoder.decode(UserProfile.self, from: data)
-                userLabelName = userdata.firstname
+                userLabelName = userdata.fullname
                 DispatchQueue.main.async { [self] in
-                    userProfileView.nameLabel.text = userdata.firstname
+                    userProfileView.nameLabel.text = userdata.fullname
                 }
                
             }catch{

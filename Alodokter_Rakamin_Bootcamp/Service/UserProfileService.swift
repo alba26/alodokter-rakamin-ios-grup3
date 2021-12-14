@@ -9,17 +9,18 @@ import Foundation
 
 class UserProfileService: BaseService{
     var token:String
+    var id:Int
     
     func method() -> APIService.Method {
         return .get
     }
     
     func url() -> URL {
-        return URL(string: "https://hidden-cliffs-45052.herokuapp.com/api/v1/users/1")!
+        return URL(string: "https://alogrup3.herokuapp.com/api/v1/users/\(id)")!
     }
     
     func timeout() -> TimeInterval {
-        return 20
+        return 10
     }
     
     func httpBody() -> [String : String] {
@@ -30,8 +31,9 @@ class UserProfileService: BaseService{
         return token
     }
     
-    init(token:String){
+    init(token:String,id:Int){
         self.token = "Bearer "+token
+        self.id = id
     }
     
 }

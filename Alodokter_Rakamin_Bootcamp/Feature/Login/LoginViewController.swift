@@ -10,17 +10,18 @@ import UIKit
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var loginView: LoginView!
-    
     var email:String = ""
     var password:String = ""
     var loginDataToken:String?
+    var loginDataId:Int?
     var userProfileData: UserProfile?
+    let utils = Utility()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loginView.loginButton.addTarget(self, action: #selector(loginButton), for: .touchUpInside)
         loginView.registerButton.addTarget(self, action: #selector(registerButton), for: .touchUpInside)
-        
+        hideSpinner()
     }
     
     
@@ -28,29 +29,30 @@ class LoginViewController: UIViewController {
 
        self.email = loginView.emailLoginTextField.text ?? "default"
        self.password = loginView.passwordLoginTextField.text ?? "default"
-       if Utility().checkTextFieldIsEmpty(textfield: loginView.passwordLoginTextField){
+       if utils.checkTextFieldIsEmpty(textfield: loginView.passwordLoginTextField){
+           loginView.isUserInteractionEnabled = false
+           showSpinner()
            login()
        }else{
-           print("KOSONG")
+           utils.showAlertAction(title: "Password Kosong", message: "Password tidak boleh kosong", uiview: self)
        }
-
+       
     }
     
     @objc func registerButton(){
         let registerStoryboard : UIStoryboard = UIStoryboard(name: "Register", bundle: nil)
         let registerVC = registerStoryboard.instantiateViewController(withIdentifier: "RegisterViewController")
-
-        self.present(registerVC, animated: true){
-        }
+        self.navigationController?.pushViewController(registerVC, animated: true)
     }
 
 }
+
 
 extension LoginViewController{
 
     func login(){
         let login = LoginService(email: self.email, password: self.password)
-        
+    
         APIService.APIRequest(model: LoginModel.self, req: login){ [self](result) in
             switch result {
             case .success(let result):
@@ -60,27 +62,37 @@ extension LoginViewController{
                 if login.code == 201{
                     DispatchQueue.main.async {
                         UserDefaults.standard.set(Session.loggedIn.rawValue, forKey: "session")
-                        loginDataToken = login.data?.token
                         UserDefaults.standard.set(loginDataToken, forKey: "token")
-                        self.dismiss(animated: true){
-                            print("GG")
-                            getUserData()
-                        }
+                        
+                        loginDataToken = login.data?.token
+                        loginDataId = login.data?.id
+        
+                        getUserData()
+                        hideSpinner()
+                        
+                        loginView.isUserInteractionEnabled = true
+                        let profileStoryboard : UIStoryboard = UIStoryboard(name: "UserProfile", bundle: nil)
+                        let profileVC = profileStoryboard.instantiateViewController(withIdentifier: "UserProfileViewController")
+                        self.navigationController?.pushViewController(profileVC, animated: true)
+                        self.navigationController?.viewControllers.remove(at: 1)
+                        
                     }
-                } else if login.code == 401 {
-                    DispatchQueue.main.async {
-                        loginView.emailLoginTextField.text = login.message
-                    }
+                } else if login.message == "No such user" {
+                    failToLogin(title: "Login Gagal", message: "User tidak terdaftar")
+                } else if login.message == "Incorrect password" {
+                    failToLogin(title: "Login Gagal", message: "Password Salah")
+                } else{
+                    failToLogin(title: "Login Gagal", message: "Login gagal silahkan coba lagi")
                 }
                 
-            case .failure(let err):
-                print("Error",err)
+            case .failure(_):
+                failToLogin(title: "Login Gagal", message: "Periksa jaringan anda")
             }
         }
     }
     
     func getUserData(){
-        let userProfile = UserProfileService(token: self.loginDataToken ?? "")
+        let userProfile = UserProfileService(token: self.loginDataToken ?? "", id: self.loginDataId ?? 1)
         APIService.APIRequest(model: UserData.self, req: userProfile){ [self](result) in
             switch result {
             case .success(let user):
@@ -99,9 +111,29 @@ extension LoginViewController{
                     }
                 }
             case .failure(let error):
-                print(error)
+                print(error) //OUTPUT ERROR
             }
             
         }
     }
+    
+    private func hideSpinner(){
+        loginView.loginSpinner.isHidden = true
+        loginView.loginSpinner.stopAnimating()
+    }
+    
+    private func showSpinner(){
+        loginView.loginSpinner.isHidden = false
+        loginView.loginSpinner.startAnimating()
+    }
+    
+    private func failToLogin(title: String, message:String){
+        DispatchQueue.main.async { [self] in
+            utils.showAlertAction(title: title, message: message, uiview: self)
+            loginView.passwordLoginTextField.text = ""
+            hideSpinner()
+            loginView.isUserInteractionEnabled = true
+        }
+    }
+    
 }

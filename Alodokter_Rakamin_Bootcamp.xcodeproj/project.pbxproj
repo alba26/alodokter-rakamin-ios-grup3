@@ -53,6 +53,7 @@
 		92DA8AEA2763C1EE00028BF3 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DA8AE92763C1EE00028BF3 /* UserData.swift */; };
 		92DA8AEC2763C35B00028BF3 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DA8AEB2763C35B00028BF3 /* LoginService.swift */; };
 		92DA8AF02763D46200028BF3 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DA8AEF2763D46200028BF3 /* RegisterService.swift */; };
+		92DC1A402765AEE20084FC4E /* SavedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DC1A3F2765AEE20084FC4E /* SavedData.swift */; };
 		92E21A4A2764A3A200924C38 /* UserProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E21A492764A3A100924C38 /* UserProfileService.swift */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +107,7 @@
 		92DA8AE92763C1EE00028BF3 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		92DA8AEB2763C35B00028BF3 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		92DA8AEF2763D46200028BF3 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
+		92DC1A3F2765AEE20084FC4E /* SavedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedData.swift; sourceTree = "<group>"; };
 		92E21A492764A3A100924C38 /* UserProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,7 +125,6 @@
 		17CD8F392761ECAC009043F0 /* Artikel */ = {
 			isa = PBXGroup;
 			children = (
-				92A9D65E27620362001BD05C /* ArticleService.swift */,
 				17CD8F3C2761ED2D009043F0 /* Article.storyboard */,
 				17CD8F422761ED55009043F0 /* ArticleListSection.xib */,
 				17CD8F3E2761ED3F009043F0 /* ArticleCollectionViewCell.swift */,
@@ -159,7 +160,6 @@
 				17CD8F562761F106009043F0 /* LoginView.swift */,
 				17CD8F572761F106009043F0 /* Login.storyboard */,
 				17CD8F582761F106009043F0 /* LoginViewController.swift */,
-				92DA8AEB2763C35B00028BF3 /* LoginService.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -182,7 +182,6 @@
 				8CB695E527639EE00096BCAB /* Register.storyboard */,
 				8C61212A2762214600511B76 /* RegisterView.xib */,
 				8C6121292762214600511B76 /* RegisterViewController.swift */,
-				92DA8AEF2763D46200028BF3 /* RegisterService.swift */,
 			);
 			name = Register;
 			sourceTree = "<group>";
@@ -194,7 +193,6 @@
 				8CB695EA27639F430096BCAB /* UserProfileViewController.swift */,
 				8CB695ED27639F440096BCAB /* UserProfileView.swift */,
 				8CB695EC27639F440096BCAB /* UserProfileView.xib */,
-				92E21A492764A3A100924C38 /* UserProfileService.swift */,
 			);
 			path = UserProfile;
 			sourceTree = "<group>";
@@ -228,6 +226,7 @@
 		924DC499275F141700FCE093 /* Alodokter_Rakamin_Bootcamp */ = {
 			isa = PBXGroup;
 			children = (
+				92EED41C27683818005B8F32 /* Service */,
 				92A9D6592762032B001BD05C /* Model */,
 				92A9D6582762030D001BD05C /* Base */,
 				924DC4B3275F25BA00FCE093 /* Feature */,
@@ -282,6 +281,7 @@
 			children = (
 				92A9D66227620380001BD05C /* APIService.swift */,
 				92DA8AE72763C02D00028BF3 /* Session.swift */,
+				92DC1A3F2765AEE20084FC4E /* SavedData.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -302,6 +302,17 @@
 				92A9D6602762036B001BD05C /* UserLoginService.swift */,
 			);
 			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		92EED41C27683818005B8F32 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				92A9D65E27620362001BD05C /* ArticleService.swift */,
+				92DA8AEF2763D46200028BF3 /* RegisterService.swift */,
+				92E21A492764A3A100924C38 /* UserProfileService.swift */,
+				92DA8AEB2763C35B00028BF3 /* LoginService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,6 +417,7 @@
 				924DC49D275F141700FCE093 /* SceneDelegate.swift in Sources */,
 				8CB695E827639EEE0096BCAB /* RegisterView.swift in Sources */,
 				17CD8F412761ED49009043F0 /* ArticleViewController.swift in Sources */,
+				92DC1A402765AEE20084FC4E /* SavedData.swift in Sources */,
 				92A9D65C27620338001BD05C /* ArticleModel.swift in Sources */,
 				3EFA07BC275F99100010AA10 /* UIButton+extension.swift in Sources */,
 				92DA8AE82763C02D00028BF3 /* Session.swift in Sources */,
