@@ -24,6 +24,8 @@ class ArticleViewController: UIViewController {
     var timer : Timer?
     var currentCellIndex: Int = 0
     
+    var viewModel : ArticleViewModel?
+    
     override func viewWillAppear(_ animated: Bool) {
         articleCollectionView.collectionViewLayout = setupCollectionViewLayout()
         sliderCollectionView.collectionViewLayout = setupImageSliderViewLayout()
@@ -158,9 +160,10 @@ extension ArticleViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.articleCollectionView {
-            return 30
+            return viewModel?.articlesData.listOfArticles.count ?? 0
         }
         else {
+            //viewmodel heroArticle.count
             return imageArray.count
         }
     }
@@ -168,16 +171,18 @@ extension ArticleViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             if collectionView == self.articleCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "articleCell", for: indexPath) as! ArticleCollectionViewCell
-        
-//          cell.articleTitleLabel.text = "Artikel ke \(String(indexPath.item+1))"
+                cell.articleTitleLabel.text = viewModel?.articlesData.listOfArticles[indexPath.row].title
+//                cell.articleImageView.image = viewModel?.articlesData.listOfArticles[indexPath.row].image
         
             return cell
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageSliderCell", for: indexPath) as! ImageSliderCollectionViewCell
+        //assign viewmodel
         cell.imageSliderImg.image = UIImage(named: imageArray[indexPath.row])
         cell.imageSliderTitle.text = "4 Manfaat Daun Sambiloto untuk Kulit yang Sayang Dilewatkan"
         cell.imageSliderTitle.backgroundColor = UIColor.black
         cell.imageSliderTitle.textColor = UIColor.white
+        
         return cell
         
     }
