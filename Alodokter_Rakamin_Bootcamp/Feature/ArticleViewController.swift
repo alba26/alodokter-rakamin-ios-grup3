@@ -72,27 +72,24 @@ class ArticleViewController: UIViewController {
         let rightBarButton = UIBarButtonItem(customView: profileNavView)
         self.navigationItem.rightBarButtonItem = rightBarButton
         self.navigationItem.rightBarButtonItem?.target = self
-//        self.navigationItem.rightBarButtonItem?.action = #selector(profileMenuTapped(sender:))
-        self.navigationItem.rightBarButtonItem?.action = #selector(test)
-        
-    
-        
-//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: profileImageView.image, style: .plain, target: self, action: #selector(profileMenuTapped(sender:)))
+
     
 
         //kasih trailing leading constraintnya right attribute
         
     }
     
-    @objc func test(){
-        print("Clicked")
-    }
     
     @objc func profileMenuTapped(sender: UIBarButtonItem) {
-        let profileStoryboard : UIStoryboard = UIStoryboard(name: "UserProfile", bundle: nil)
-        let profileVC = profileStoryboard.instantiateViewController(withIdentifier: "UserProfileViewController")
-
-        self.navigationController?.pushViewController(profileVC, animated: true)
+        if !UserDefaults().checkIsUserLogin(){
+            let loginStoryboard : UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
+            let loginVC = loginStoryboard.instantiateViewController(withIdentifier: "LoginViewController")
+            self.navigationController?.pushViewController(loginVC, animated: true)
+        }else{
+            let profileStoryboard : UIStoryboard = UIStoryboard(name: "UserProfile", bundle: nil)
+            let profileVC = profileStoryboard.instantiateViewController(withIdentifier: "UserProfileViewController")
+            self.navigationController?.pushViewController(profileVC, animated: true)
+        }
     }
     
     

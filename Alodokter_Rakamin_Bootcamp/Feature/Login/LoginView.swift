@@ -18,6 +18,7 @@ class LoginView: UIView {
     
     @IBOutlet weak var registerButton: UIButton!
     
+    @IBOutlet weak var loginSpinner: UIActivityIndicatorView!
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()

@@ -25,7 +25,7 @@ struct UserData: Codable {
 // MARK: - DataClass
 struct UserProfile: Codable {
     let id: Int
-    let email, firstname, lastname, birthdate: String
-    let gender, phone, identity, address: String?
-    let city: String
+    let email, fullname, gender: String
+    let phone, identity, address: String?
+    let birthdate: String?
 }
