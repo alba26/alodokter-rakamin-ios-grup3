@@ -50,7 +50,6 @@ class ChangeDataViewController: UIViewController, UIPickerViewDataSource, UIPick
         if UserDefaults().checkSession() == Session.loggedIn.rawValue{
             loadData()
         }
-        
     }
     
     func loadData(){
@@ -58,7 +57,7 @@ class ChangeDataViewController: UIViewController, UIPickerViewDataSource, UIPick
             do{
                 let decoder = JSONDecoder()
                 let userdata = try decoder.decode(UserProfile.self, from: data)
-                nameTextField.text = userdata.firstname+" "+userdata.lastname
+                nameTextField.text = userdata.fullname
                 emailTextField.text = userdata.email
                 ktpTextField.text = userdata.identity
                 addressTextField.text = userdata.address

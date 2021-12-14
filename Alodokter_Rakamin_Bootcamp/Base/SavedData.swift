@@ -12,5 +12,4 @@ enum SavedData:String{
     case session = "session"
     case token = "token"
     case userdata = "userdata"
-    
 }

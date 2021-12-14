@@ -49,4 +49,11 @@ class Utility {
         }
         return fixedString
     }
+    
+    
+    func showAlertAction(title: String, message: String, uiview: UIViewController){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        uiview.present(alert, animated: true, completion: nil)
+    }
 }

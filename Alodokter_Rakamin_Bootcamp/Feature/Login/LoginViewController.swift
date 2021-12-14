@@ -10,17 +10,17 @@ import UIKit
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var loginView: LoginView!
-    
     var email:String = ""
     var password:String = ""
     var loginDataToken:String?
     var userProfileData: UserProfile?
+    let utils = Utility()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loginView.loginButton.addTarget(self, action: #selector(loginButton), for: .touchUpInside)
         loginView.registerButton.addTarget(self, action: #selector(registerButton), for: .touchUpInside)
-        
+        hideSpinner()
     }
     
     
@@ -28,29 +28,30 @@ class LoginViewController: UIViewController {
 
        self.email = loginView.emailLoginTextField.text ?? "default"
        self.password = loginView.passwordLoginTextField.text ?? "default"
-       if Utility().checkTextFieldIsEmpty(textfield: loginView.passwordLoginTextField){
+       if utils.checkTextFieldIsEmpty(textfield: loginView.passwordLoginTextField){
            loginView.isUserInteractionEnabled = false
+           showSpinner()
            login()
        }else{
-           print("KOSONG") //OUTPUT ERROR
+           utils.showAlertAction(title: "Password Kosong", message: "Password tidak boleh kosong", uiview: self)
        }
-
+       
     }
     
     @objc func registerButton(){
         let registerStoryboard : UIStoryboard = UIStoryboard(name: "Register", bundle: nil)
         let registerVC = registerStoryboard.instantiateViewController(withIdentifier: "RegisterViewController")
-        self.present(registerVC, animated: true){
-        }
+        self.navigationController?.pushViewController(registerVC, animated: true)
     }
 
 }
+
 
 extension LoginViewController{
 
     func login(){
         let login = LoginService(email: self.email, password: self.password)
-        
+    
         APIService.APIRequest(model: LoginModel.self, req: login){ [self](result) in
             switch result {
             case .success(let result):
@@ -60,21 +61,25 @@ extension LoginViewController{
                 if login.code == 201{
                     DispatchQueue.main.async {
                         UserDefaults.standard.set(Session.loggedIn.rawValue, forKey: "session")
-                        loginDataToken = login.data?.token
                         UserDefaults.standard.set(loginDataToken, forKey: "token")
-                        self.dismiss(animated: true){
-                            getUserData()
-                            loginView.isUserInteractionEnabled = true
-                        }
+                        
+                        loginDataToken = login.data?.token
+                        getUserData()
+                        hideSpinner()
+                        
+                        loginView.isUserInteractionEnabled = true
+                        let profileStoryboard : UIStoryboard = UIStoryboard(name: "UserProfile", bundle: nil)
+                        let profileVC = profileStoryboard.instantiateViewController(withIdentifier: "UserProfileViewController")
+                        self.navigationController?.pushViewController(profileVC, animated: true)
+                        self.navigationController?.viewControllers.remove(at: 1)
+                        
                     }
                 } else if login.code == 401 {
-                    DispatchQueue.main.async {
-                        loginView.emailLoginTextField.text = login.message
-                    }
+                    failToLogin(title: "Login Gagal", message: "User/Password Salah")
                 }
                 
-            case .failure(let err):
-                print("Error",err) //OUTPUT ERROR
+            case .failure(_):
+                failToLogin(title: "Login Gagal", message: "Periksa jaringan anda")
             }
         }
     }
@@ -84,7 +89,6 @@ extension LoginViewController{
         APIService.APIRequest(model: UserData.self, req: userProfile){ [self](result) in
             switch result {
             case .success(let user):
-                
                 guard let myData = user as? UserData else{
                     return
                 }
@@ -105,4 +109,24 @@ extension LoginViewController{
             
         }
     }
+    
+    private func hideSpinner(){
+        loginView.loginSpinner.isHidden = true
+        loginView.loginSpinner.stopAnimating()
+    }
+    
+    private func showSpinner(){
+        loginView.loginSpinner.isHidden = false
+        loginView.loginSpinner.startAnimating()
+    }
+    
+    private func failToLogin(title: String, message:String){
+        DispatchQueue.main.async { [self] in
+            utils.showAlertAction(title: title, message: message, uiview: self)
+            loginView.passwordLoginTextField.text = ""
+            hideSpinner()
+            loginView.isUserInteractionEnabled = true
+        }
+    }
+    
 }

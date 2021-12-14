@@ -15,7 +15,7 @@ class UserProfileService: BaseService{
     }
     
     func url() -> URL {
-        return URL(string: "https://hidden-cliffs-45052.herokuapp.com/api/v1/users/1")!
+        return URL(string: "https://alogrup3.herokuapp.com/api/v1/users/1")!
     }
     
     func timeout() -> TimeInterval {
