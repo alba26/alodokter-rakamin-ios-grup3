@@ -11,6 +11,7 @@ class UserProfileViewController: UIViewController {
 
     @IBOutlet weak var userProfileView: UserProfileView!
     var userLabelName = ""
+    var userId = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,7 @@ class UserProfileViewController: UIViewController {
     @objc func resetPasswordTapped() {
         let storyboard = UIStoryboard.init(name: "ResetPassword", bundle: nil)
         guard let vc = storyboard.instantiateViewController(withIdentifier: "ResetPasswordView") as? ResetPasswordViewController else { return }
+        vc.userId = userId
         self.present(vc, animated: true, completion: nil)
     }
     
@@ -57,6 +59,7 @@ extension UserProfileViewController{
             do{
                 let decoder = JSONDecoder()
                 let userdata = try decoder.decode(UserProfile.self, from: data)
+                userId = String(userdata.id)
                 userLabelName = userdata.fullname
                 userProfileView.nameLabel.text = userdata.fullname
             }catch{
