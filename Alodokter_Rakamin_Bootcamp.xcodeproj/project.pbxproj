@@ -22,11 +22,11 @@
 		17CD8F6A2761F366009043F0 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F552761F106009043F0 /* LoginView.xib */; };
 		17CD8F6B2761F36B009043F0 /* ResetPasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F5A2761F106009043F0 /* ResetPasswordView.xib */; };
 		17CD8F6F27645070009043F0 /* ImageSliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD8F6E27645070009043F0 /* ImageSliderCollectionViewCell.swift */; };
+		3E15D843276881C00050F6CC /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E15D842276881C00050F6CC /* ResetPasswordViewModel.swift */; };
+		3E15D84527688D0E0050F6CC /* ResetPasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E15D84427688D0E0050F6CC /* ResetPasswordService.swift */; };
 		3EF0F9D5276839320058CFCF /* ArticleDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EF0F9D4276839320058CFCF /* ArticleDetailView.xib */; };
 		3EF0F9D727683EFF0058CFCF /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF0F9D627683EFF0058CFCF /* ArticleDetailView.swift */; };
 		3EF0F9D927686F3D0058CFCF /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF0F9D827686F3D0058CFCF /* ArticleDetailViewController.swift */; };
-          3E15D843276881C00050F6CC /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E15D842276881C00050F6CC /* ResetPasswordViewModel.swift */; };
-        3E15D84527688D0E0050F6CC /* ResetPasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E15D84427688D0E0050F6CC /* ResetPasswordService.swift */; };
 		3EFA07BC275F99100010AA10 /* UIButton+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFA07BB275F99100010AA10 /* UIButton+extension.swift */; };
 		8C61212D2762214600511B76 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6121292762214600511B76 /* RegisterViewController.swift */; };
 		8C61212E2762214600511B76 /* RegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C61212A2762214600511B76 /* RegisterView.xib */; };
@@ -50,7 +50,6 @@
 		924DC4C3275F337200FCE093 /* SetRootView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC4C2275F337200FCE093 /* SetRootView+Extension.swift */; };
 		92A9D65C27620338001BD05C /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9D65A27620338001BD05C /* ArticleModel.swift */; };
 		92A9D65D27620338001BD05C /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9D65B27620338001BD05C /* LoginModel.swift */; };
-		92A9D65F27620362001BD05C /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9D65E27620362001BD05C /* ArticleService.swift */; };
 		92A9D66327620380001BD05C /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9D66227620380001BD05C /* APIService.swift */; };
 		92A9D66B276213AD001BD05C /* TabBarControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9D66A276213AD001BD05C /* TabBarControll.swift */; };
 		92DA8AE62763BE4900028BF3 /* UITextField+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC13CB82763146B00B4A878 /* UITextField+extension.swift */; };
@@ -109,7 +108,6 @@
 		924DC4C2275F337200FCE093 /* SetRootView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SetRootView+Extension.swift"; sourceTree = "<group>"; };
 		92A9D65A27620338001BD05C /* ArticleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 		92A9D65B27620338001BD05C /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
-		92A9D65E27620362001BD05C /* ArticleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleService.swift; sourceTree = "<group>"; };
 		92A9D6602762036B001BD05C /* UserLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLoginService.swift; sourceTree = "<group>"; };
 		92A9D66227620380001BD05C /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		92A9D66A276213AD001BD05C /* TabBarControll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControll.swift; sourceTree = "<group>"; };
@@ -136,7 +134,6 @@
 			isa = PBXGroup;
 			children = (
 				3EF0F9D3276839110058CFCF /* ArticleDetail */,
-				92A9D65E27620362001BD05C /* ArticleService.swift */,
 				17CD8F3C2761ED2D009043F0 /* Article.storyboard */,
 				17CD8F422761ED55009043F0 /* ArticleListSection.xib */,
 				17CD8F3E2761ED3F009043F0 /* ArticleCollectionViewCell.swift */,
@@ -331,7 +328,6 @@
 		92EED41C27683818005B8F32 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				92A9D65E27620362001BD05C /* ArticleService.swift */,
 				92DA8AEF2763D46200028BF3 /* RegisterService.swift */,
 				92E21A492764A3A100924C38 /* UserProfileService.swift */,
 				92DA8AEB2763C35B00028BF3 /* LoginService.swift */,
@@ -440,7 +436,6 @@
 				924DC49B275F141700FCE093 /* AppDelegate.swift in Sources */,
 				17CD8F6F27645070009043F0 /* ImageSliderCollectionViewCell.swift in Sources */,
 				924DC4C3275F337200FCE093 /* SetRootView+Extension.swift in Sources */,
-				92A9D65F27620362001BD05C /* ArticleService.swift in Sources */,
 				924DC4BD275F26DF00FCE093 /* Utility.swift in Sources */,
 				924DC49D275F141700FCE093 /* SceneDelegate.swift in Sources */,
 				8CB695E827639EEE0096BCAB /* RegisterView.swift in Sources */,
