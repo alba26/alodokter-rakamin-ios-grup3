@@ -51,9 +51,24 @@ class Utility {
     }
     
     
-    func showAlertAction(title: String, message: String, uiview: UIViewController){
+    public func showAlertAction(title: String, message: String, uiview: UIViewController){
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         uiview.present(alert, animated: true, completion: nil)
+    }
+    
+    public func convertDate(date:String) -> String{
+        if date != ""{
+            let dateFormatterGet = DateFormatter()
+            dateFormatterGet.dateFormat = "yyyy-MM-dd"
+            let dateFormatterPrint = DateFormatter()
+            dateFormatterPrint.dateFormat = "MMM dd,yyyy"
+            let date: NSDate? = dateFormatterGet.date(from: date) as NSDate?
+            let fixDate = dateFormatterPrint.string(from: date! as Date)
+            return fixDate
+        }else{
+            return ""
+        }
+
     }
 }

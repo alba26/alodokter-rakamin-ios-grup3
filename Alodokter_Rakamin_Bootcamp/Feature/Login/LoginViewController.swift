@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     var email:String = ""
     var password:String = ""
     var loginDataToken:String?
+    var loginDataId:Int?
     var userProfileData: UserProfile?
     let utils = Utility()
     
@@ -64,6 +65,8 @@ extension LoginViewController{
                         UserDefaults.standard.set(loginDataToken, forKey: "token")
                         
                         loginDataToken = login.data?.token
+                        loginDataId = login.data?.id
+        
                         getUserData()
                         hideSpinner()
                         
@@ -74,8 +77,12 @@ extension LoginViewController{
                         self.navigationController?.viewControllers.remove(at: 1)
                         
                     }
-                } else if login.code == 401 {
-                    failToLogin(title: "Login Gagal", message: "User/Password Salah")
+                } else if login.message == "No such user" {
+                    failToLogin(title: "Login Gagal", message: "User tidak terdaftar")
+                } else if login.message == "Incorrect password" {
+                    failToLogin(title: "Login Gagal", message: "Password Salah")
+                } else{
+                    failToLogin(title: "Login Gagal", message: "Login gagal silahkan coba lagi")
                 }
                 
             case .failure(_):
@@ -85,7 +92,7 @@ extension LoginViewController{
     }
     
     func getUserData(){
-        let userProfile = UserProfileService(token: self.loginDataToken ?? "")
+        let userProfile = UserProfileService(token: self.loginDataToken ?? "", id: self.loginDataId ?? 1)
         APIService.APIRequest(model: UserData.self, req: userProfile){ [self](result) in
             switch result {
             case .success(let user):
