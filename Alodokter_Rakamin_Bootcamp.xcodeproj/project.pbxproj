@@ -55,6 +55,7 @@
 		92DA8AF02763D46200028BF3 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DA8AEF2763D46200028BF3 /* RegisterService.swift */; };
 		92DC1A402765AEE20084FC4E /* SavedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DC1A3F2765AEE20084FC4E /* SavedData.swift */; };
 		92E21A4A2764A3A200924C38 /* UserProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E21A492764A3A100924C38 /* UserProfileService.swift */; };
+		92EED41E2768E86C005B8F32 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EED41D2768E86C005B8F32 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +110,7 @@
 		92DA8AEF2763D46200028BF3 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
 		92DC1A3F2765AEE20084FC4E /* SavedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedData.swift; sourceTree = "<group>"; };
 		92E21A492764A3A100924C38 /* UserProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileService.swift; sourceTree = "<group>"; };
+		92EED41D2768E86C005B8F32 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,9 +159,10 @@
 			isa = PBXGroup;
 			children = (
 				17CD8F552761F106009043F0 /* LoginView.xib */,
-				17CD8F562761F106009043F0 /* LoginView.swift */,
 				17CD8F572761F106009043F0 /* Login.storyboard */,
+				17CD8F562761F106009043F0 /* LoginView.swift */,
 				17CD8F582761F106009043F0 /* LoginViewController.swift */,
+				92EED41D2768E86C005B8F32 /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				8CB695EE27639F440096BCAB /* UserProfileViewController.swift in Sources */,
 				8CB695F527639F850096BCAB /* ChangeDataViewController.swift in Sources */,
 				924DC49F275F141700FCE093 /* ViewController.swift in Sources */,
+				92EED41E2768E86C005B8F32 /* LoginViewModel.swift in Sources */,
 				17CD8F652761F106009043F0 /* ResetPasswordViewController.swift in Sources */,
 				924DC49B275F141700FCE093 /* AppDelegate.swift in Sources */,
 				17CD8F6F27645070009043F0 /* ImageSliderCollectionViewCell.swift in Sources */,

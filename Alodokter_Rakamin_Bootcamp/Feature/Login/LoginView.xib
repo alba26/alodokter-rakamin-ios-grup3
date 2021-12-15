@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="Kfy-6I-tn6"/>
                 <outlet property="emailLoginTextField" destination="gvs-Ia-SvG" id="cvP-2O-Ylv"/>
+                <outlet property="forgotPassword" destination="1zc-5b-EMM" id="MHd-Jm-qE2"/>
                 <outlet property="loginButton" destination="xZm-UZ-IAB" id="j6s-Ln-eJF"/>
                 <outlet property="loginSpinner" destination="hCS-8a-Pj7" id="8mb-jp-gng"/>
                 <outlet property="logoImage" destination="gbx-mg-PDi" id="PgY-fW-6qX"/>

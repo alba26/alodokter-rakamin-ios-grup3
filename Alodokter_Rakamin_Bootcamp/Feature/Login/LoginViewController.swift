@@ -16,12 +16,22 @@ class LoginViewController: UIViewController {
     var loginDataId:Int?
     var userProfileData: UserProfile?
     let utils = Utility()
+    var loginVM = LoginViewModel()
+
+    
+    var test:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loginView.loginButton.addTarget(self, action: #selector(loginButton), for: .touchUpInside)
         loginView.registerButton.addTarget(self, action: #selector(registerButton), for: .touchUpInside)
+        loginView.forgotPassword.addTarget(self, action: #selector(lupa), for: .touchUpInside)
         hideSpinner()
+        loginVM.msgSuccess = { [self] msg in
+            loginView.emailLoginTextField.text = msg
+            hideSpinner()
+        }
+
     }
     
     
@@ -29,6 +39,7 @@ class LoginViewController: UIViewController {
 
        self.email = loginView.emailLoginTextField.text ?? "default"
        self.password = loginView.passwordLoginTextField.text ?? "default"
+       
        if utils.checkTextFieldIsEmpty(textfield: loginView.passwordLoginTextField){
            loginView.isUserInteractionEnabled = false
            showSpinner()
@@ -36,7 +47,6 @@ class LoginViewController: UIViewController {
        }else{
            utils.showAlertAction(title: "Password Kosong", message: "Password tidak boleh kosong", uiview: self)
        }
-       
     }
     
     @objc func registerButton(){
@@ -44,15 +54,19 @@ class LoginViewController: UIViewController {
         let registerVC = registerStoryboard.instantiateViewController(withIdentifier: "RegisterViewController")
         self.navigationController?.pushViewController(registerVC, animated: true)
     }
+    
+    @objc func lupa(){
 
+        showSpinner()
+        loginVM.login(email: loginView.emailLoginTextField.text ?? "default", password: loginView.passwordLoginTextField.text ?? "default")
+        
+    }
 }
-
 
 extension LoginViewController{
 
     func login(){
         let login = LoginService(email: self.email, password: self.password)
-    
         APIService.APIRequest(model: LoginModel.self, req: login){ [self](result) in
             switch result {
             case .success(let result):
@@ -60,13 +74,15 @@ extension LoginViewController{
                     return
                 }
                 if login.code == 201{
+                    
                     DispatchQueue.main.async {
-                        UserDefaults.standard.set(Session.loggedIn.rawValue, forKey: "session")
-                        UserDefaults.standard.set(loginDataToken, forKey: "token")
                         
                         loginDataToken = login.data?.token
                         loginDataId = login.data?.id
-        
+                        
+                        UserDefaults.standard.set(Session.loggedIn.rawValue, forKey: "session")
+                        UserDefaults.standard.set(loginDataToken, forKey: "token")
+                        
                         getUserData()
                         hideSpinner()
                         
@@ -75,7 +91,6 @@ extension LoginViewController{
                         let profileVC = profileStoryboard.instantiateViewController(withIdentifier: "UserProfileViewController")
                         self.navigationController?.pushViewController(profileVC, animated: true)
                         self.navigationController?.viewControllers.remove(at: 1)
-                        
                     }
                 } else if login.message == "No such user" {
                     failToLogin(title: "Login Gagal", message: "User tidak terdaftar")
