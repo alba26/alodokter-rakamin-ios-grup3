@@ -33,25 +33,34 @@ class ArticleViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         articleCollectionView.collectionViewLayout = setupCollectionViewLayout()
         sliderCollectionView.collectionViewLayout = setupImageSliderViewLayout()
+        pageControl.numberOfPages = imageArray.count //viewModel. HeroArticlesData.count
         viewModel.getArticlesData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configNavigationBar()
-        timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(slideToNext), userInfo: nil, repeats: true)
+        DispatchQueue.main.async {
+            self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.slideToNext), userInfo: nil, repeats: true)
+        }
         setUpMenu()
     }
     
     @objc func slideToNext(){
-        if currentCellIndex < imageArray.count-1
+        if currentCellIndex < imageArray.count //diganti ke pagecontrol.numberofpages ato viewModel HeroArticles.count
         {
+            let index = IndexPath.init(item: currentCellIndex, section: 0)
+            self.sliderCollectionView.scrollToItem(at:  index, at: .centeredHorizontally, animated: true)
+            pageControl.currentPage = currentCellIndex
             currentCellIndex += 1
         }
         else {
             currentCellIndex = 0
+            let index = IndexPath.init(item: currentCellIndex, section: 0)
+            self.sliderCollectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: false)
+            pageControl.currentPage = currentCellIndex
+            currentCellIndex = 1
         }
-        sliderCollectionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0), at: .right, animated: true)
     }
     
     func configNavigationBar(){
@@ -159,16 +168,6 @@ class ArticleViewController: UIViewController {
         return layout
         
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 
@@ -180,7 +179,8 @@ extension ArticleViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.articleCollectionView {
-            return viewModel.listOfArticle?.count ?? 0
+//            return viewModel.listOfArticle?.count ?? 0
+            return 12
         }
         else {
             //viewmodel heroArticle.count
@@ -191,11 +191,12 @@ extension ArticleViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             if collectionView == self.articleCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "articleCell", for: indexPath) as! ArticleCollectionViewCell
-                cell.articleTitleLabel.text = viewModel.listOfArticle?[indexPath.row].title
-//                cell.articleImageView.image = viewModel.listOfArticle?[indexPath.row].image
-                let imgURL = URL(string: (viewModel.listOfArticle?[indexPath.row].image)!)
-                let data = try? Data(contentsOf: imgURL!)
-                cell.articleImageView.image = UIImage(data: data!)
+//                cell.articleTitleLabel.text = viewModel.listOfArticle?[indexPath.row].title
+                cell.articleTitleLabel.text = "4 Manfaat Daun Sambiloto untuk Kulit yang Sayang Dilewatkan"
+                cell.articleImageView.image = UIImage(named: "ArticleImage")
+//                let imgURL = URL(string: (viewModel.listOfArticle?[indexPath.row].image)!)
+//                let data = try? Data(contentsOf: imgURL!)
+//                cell.articleImageView.image = UIImage(data: data!)
         
             return cell
         }
