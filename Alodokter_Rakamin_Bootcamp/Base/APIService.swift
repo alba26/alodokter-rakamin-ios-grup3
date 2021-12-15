@@ -41,7 +41,7 @@ class APIService{
             }
         }
         
-        if req.auth() != ""{
+        if req.auth() != "" {
             request.setValue(req.auth(), forHTTPHeaderField: "Authorization")
         }
 
@@ -50,11 +50,11 @@ class APIService{
                 completion(.failure(error!))
                 return
             }
-            do{
+            do {
                 let response = try JSONDecoder().decode(model.self, from: data)
                 completion(.success(response))
             }
-            catch{
+            catch {
                 completion(.failure(error))
             }
         }
