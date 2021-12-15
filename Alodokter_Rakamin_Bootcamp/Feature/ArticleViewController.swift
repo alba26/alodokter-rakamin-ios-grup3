@@ -24,11 +24,12 @@ class ArticleViewController: UIViewController {
     var timer : Timer?
     var currentCellIndex: Int = 0
     
-    var viewModel : ArticleViewModel?
+    var viewModel = ArticleViewModel()
     
     override func viewWillAppear(_ animated: Bool) {
         articleCollectionView.collectionViewLayout = setupCollectionViewLayout()
         sliderCollectionView.collectionViewLayout = setupImageSliderViewLayout()
+        viewModel.getArticlesData()
     }
     
     override func viewDidLoad() {
@@ -160,7 +161,7 @@ extension ArticleViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.articleCollectionView {
-            return viewModel?.articlesData.listOfArticles.count ?? 0
+            return viewModel.listOfArticle?.count ?? 0
         }
         else {
             //viewmodel heroArticle.count
@@ -171,8 +172,11 @@ extension ArticleViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             if collectionView == self.articleCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "articleCell", for: indexPath) as! ArticleCollectionViewCell
-                cell.articleTitleLabel.text = viewModel?.articlesData.listOfArticles[indexPath.row].title
-//                cell.articleImageView.image = viewModel?.articlesData.listOfArticles[indexPath.row].image
+                cell.articleTitleLabel.text = viewModel.listOfArticle?[indexPath.row].title
+//                cell.articleImageView.image = viewModel.listOfArticle?[indexPath.row].image
+                let imgURL = URL(string: (viewModel.listOfArticle?[indexPath.row].image)!)
+                let data = try? Data(contentsOf: imgURL!)
+                cell.articleImageView.image = UIImage(data: data!)
         
             return cell
         }

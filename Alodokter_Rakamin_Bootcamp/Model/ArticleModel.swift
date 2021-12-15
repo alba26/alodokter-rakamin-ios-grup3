@@ -9,14 +9,16 @@ import Foundation
 
 struct ArticleModel: Codable, Hashable{
     
+    //samain nama var kayak di backend
     var listOfArticles: [Article]
     
 }
 
 struct Article: Codable, Hashable{
+    //samain nama var kayak di backend
     var title: String
     var category: String
     var content: String
     var reviewer: String
-    var image: URL
+    var image: String
 }

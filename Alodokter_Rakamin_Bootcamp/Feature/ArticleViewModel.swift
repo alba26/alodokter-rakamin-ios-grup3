@@ -7,24 +7,25 @@
 
 import Foundation
 
-struct ArticleViewModel {
+class ArticleViewModel {
     
     let utils = Utility()
-    let articleVC = ArticleViewController()
-    var articlesData: ArticleModel
+    var listOfArticle: [Article]?
     
     func getArticlesData() {
         let articleService = ArticleService()
-        APIService.APIRequest(model: ArticleModel.self, req: articleService) { [self] (articles) in
-        switch(articles) {
-        case .success(let articles):
-                DispatchQueue.main.async {
-                   // articlesData.listOfArticles = articles as! [Article]
-                    
-        }
+        APIService.APIRequest(model: ArticleModel.self, req: articleService) { (results) in
+        switch(results) {
+        case .success(let results):
+            guard let articlesData  = results as? ArticleModel else {
+                return
+            }
+            self.listOfArticle = articlesData.listOfArticles
+            
                 
         case .failure(_):
-            failToLoadArticle(title: "Load Artikel Gagal", message: "Terdapat kendala load artikel")
+//            failToLoadArticle(title: "Load Artikel Gagal", message: "Terdapat kendala load artikel")
+            print("error")
         }
             
             
@@ -32,10 +33,10 @@ struct ArticleViewModel {
         }
     }
     
-    private func failToLoadArticle(title: String, message:String){
-        DispatchQueue.main.async { [self] in
-            utils.showAlertAction(title: title, message: message, uiview: articleVC)
-            articleVC.view.isUserInteractionEnabled = true
-        }
-    }
+//    private func failToLoadArticle(title: String, message:String){
+//        DispatchQueue.main.async { [self] in
+//            utils.showAlertAction(title: title, message: message, uiview: articleVC)
+//            articleVC.view.isUserInteractionEnabled = true
+//        }
+//    }
 }
