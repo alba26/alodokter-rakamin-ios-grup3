@@ -72,7 +72,8 @@ class ArticleViewController: UIViewController {
         searchArticleController.searchBar.tintColor = UIColor.white
         searchArticleController.searchBar.barTintColor = UIColor.white
         searchArticleController.searchBar.searchTextField.backgroundColor = UIColor.white
-        
+        searchArticleController.searchBar.searchTextField.target(forAction: #selector(goToSearchArticle), withSender: searchArticleController)
+//        searchArticleController.searchBar.delegate?.searchBarSearchButtonClicked(<#T##UISearchBar#>)
         
         //right attribute
         let profileNavView = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
@@ -95,6 +96,12 @@ class ArticleViewController: UIViewController {
         
     }
     
+    @objc func goToSearchArticle(){
+        let searchStoryboard : UIStoryboard = UIStoryboard(name: "searchArticle", bundle: nil)
+        let searchArticleVC = searchStoryboard.instantiateViewController(withIdentifier: "ArticleSearchViewController")
+        self.navigationController?.pushViewController(searchArticleVC, animated: true)
+        
+    }
     
     @objc func profileMenuTapped(sender: UIBarButtonItem) {
         if !UserDefaults().checkIsUserLogin(){
