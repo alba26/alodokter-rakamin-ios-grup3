@@ -51,9 +51,15 @@ class Utility {
     }
     
     
-    public func showAlertAction(title: String, message: String, uiview: UIViewController){
+    public func showAlertAction(title: String, message: String, uiview: UIViewController, controller:UINavigationController = UINavigationController(), action:Bool = false){
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        if action{
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {_ in 
+                uiview.navigationController?.viewControllers.removeLast()
+            }))
+        }else{
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        }
         uiview.present(alert, animated: true, completion: nil)
     }
     
@@ -70,5 +76,14 @@ class Utility {
             return ""
         }
 
+    }
+    
+    public func showSpinner() -> UIAlertController{
+        let alert = UIAlertController(title: nil, message: "Mohon Tunggu", preferredStyle: .alert)
+        let spinner = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+        spinner.startAnimating()
+        spinner.hidesWhenStopped = true
+        alert.view.addSubview(spinner)
+        return alert
     }
 }

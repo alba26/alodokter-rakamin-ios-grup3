@@ -14,24 +14,27 @@ class LoginViewController: UIViewController {
     var userProfileData: UserProfile?
     let utils = Utility()
     var loginVM = LoginViewModel()
+    let spinner = Utility().showSpinner()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loginView.loginButton.addTarget(self, action: #selector(loginButton), for: .touchUpInside)
         loginView.registerButton.addTarget(self, action: #selector(registerButton), for: .touchUpInside)
 
-        hideSpinner()
         loginVM.msgSuccess = { [self] msg in
-            loginView.emailLoginTextField.text = msg
-            hideSpinner()
             let profileStoryboard : UIStoryboard = UIStoryboard(name: "UserProfile", bundle: nil)
             let profileVC = profileStoryboard.instantiateViewController(withIdentifier: "UserProfileViewController")
-            self.navigationController?.pushViewController(profileVC, animated: true)
-            self.navigationController?.viewControllers.remove(at: 1)
+            spinner.dismiss(animated: true, completion: {
+                self.navigationController?.pushViewController(profileVC, animated: true)
+                self.navigationController?.viewControllers.remove(at: 1)
+            })
+
         }
         loginVM.msgFail = { [self] msg in
-            hideSpinner()
-            failToLogin(title: "Login Gagal", message: msg ?? "")
+            spinner.dismiss(animated: true, completion: {
+                failToLogin(title: "Login Gagal", message: msg ?? "")
+            })
+
         }
 
     }
@@ -43,7 +46,7 @@ class LoginViewController: UIViewController {
     }
     
     @objc func loginButton(){
-        showSpinner()
+        self.present(spinner, animated: true, completion: nil)
         loginVM.login(email: loginView.emailLoginTextField.text ?? "default", password: loginView.passwordLoginTextField.text ?? "default")
         
     }
@@ -51,25 +54,10 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController{
     
-    private func hideSpinner(){
-        loginView.loginSpinner.isHidden = true
-        loginView.loginSpinner.stopAnimating()
-        loginView.isUserInteractionEnabled = true
-    }
-    
-    private func showSpinner(){
-        loginView.loginSpinner.isHidden = false
-        loginView.loginSpinner.startAnimating()
-        loginView.isUserInteractionEnabled = false
-    }
-    
     private func failToLogin(title: String, message:String){
-        DispatchQueue.main.async { [self] in
-            utils.showAlertAction(title: title, message: message, uiview: self)
-            loginView.passwordLoginTextField.text = ""
-            hideSpinner()
-            loginView.isUserInteractionEnabled = true
-        }
+        utils.showAlertAction(title: title, message: message, uiview: self)
+        loginView.passwordLoginTextField.text = ""
+        loginView.isUserInteractionEnabled = true
     }
     
 }

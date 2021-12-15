@@ -14,7 +14,6 @@
                 <outlet property="emailLoginTextField" destination="gvs-Ia-SvG" id="cvP-2O-Ylv"/>
                 <outlet property="forgotPassword" destination="1zc-5b-EMM" id="MHd-Jm-qE2"/>
                 <outlet property="loginButton" destination="xZm-UZ-IAB" id="j6s-Ln-eJF"/>
-                <outlet property="loginSpinner" destination="hCS-8a-Pj7" id="8mb-jp-gng"/>
                 <outlet property="logoImage" destination="gbx-mg-PDi" id="PgY-fW-6qX"/>
                 <outlet property="passwordLoginTextField" destination="hsQ-aj-dYF" id="2Sn-0R-mL6"/>
                 <outlet property="registerButton" destination="0Nh-Ua-64y" id="8mU-q6-nKn"/>
@@ -60,7 +59,7 @@
                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZm-UZ-IAB">
-                    <rect key="frame" x="20" y="746" width="374" height="45"/>
+                    <rect key="frame" x="20" y="760.5" width="374" height="45"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="374" id="3Ce-8d-r82"/>
                         <constraint firstAttribute="height" constant="45" id="MXV-T1-aI3"/>
@@ -78,17 +77,20 @@
                         <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                     </buttonConfiguration>
                 </button>
-                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NbX-tn-OGb">
-                    <rect key="frame" x="98" y="808.5" width="225.5" height="43"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AloBanner" translatesAutoresizingMaskIntoConstraints="NO" id="gbx-mg-PDi">
+                    <rect key="frame" x="49" y="104" width="316" height="64"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="NbX-tn-OGb">
+                    <rect key="frame" x="98" y="826" width="232.5" height="28.5"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Belum punya akun?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5S-O2-2gd">
-                            <rect key="frame" x="0.0" y="0.0" width="109.5" height="43"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Belum punya akun?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5S-O2-2gd">
+                            <rect key="frame" x="0.0" y="0.0" width="109.5" height="28.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Nh-Ua-64y">
-                            <rect key="frame" x="114.5" y="0.0" width="111" height="43"/>
+                            <rect key="frame" x="116.5" y="0.0" width="116" height="28.5"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Daftar Sekarang">
                                 <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
@@ -96,24 +98,17 @@
                         </button>
                     </subviews>
                 </stackView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AloBanner" translatesAutoresizingMaskIntoConstraints="NO" id="gbx-mg-PDi">
-                    <rect key="frame" x="49" y="104" width="316" height="64"/>
-                </imageView>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="hCS-8a-Pj7">
-                    <rect key="frame" x="200" y="583" width="20" height="20"/>
-                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="gvs-Ia-SvG" firstAttribute="top" secondItem="3Dg-CM-35T" secondAttribute="bottom" constant="5" id="3di-iW-FKr"/>
                 <constraint firstItem="egR-zN-DZa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="3nc-os-tfY"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="NbX-tn-OGb" secondAttribute="trailing" constant="90.5" id="5xa-pl-WjK"/>
-                <constraint firstItem="NbX-tn-OGb" firstAttribute="top" secondItem="xZm-UZ-IAB" secondAttribute="bottom" constant="17.5" id="AU9-HT-k1z"/>
+                <constraint firstItem="NbX-tn-OGb" firstAttribute="top" secondItem="xZm-UZ-IAB" secondAttribute="bottom" constant="20.5" id="5fV-si-g4O"/>
                 <constraint firstItem="xZm-UZ-IAB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="AWX-4z-spS"/>
                 <constraint firstItem="gbx-mg-PDi" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="60" id="C6s-k3-kuf"/>
                 <constraint firstItem="Z7y-Pd-BFz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Eb2-Z5-JsM"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="NbX-tn-OGb" secondAttribute="bottom" constant="10.5" id="EqH-uq-FYj"/>
+                <constraint firstItem="NbX-tn-OGb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="98" id="GJm-0d-Qdt"/>
                 <constraint firstItem="hsQ-aj-dYF" firstAttribute="top" secondItem="v0g-L7-LM0" secondAttribute="bottom" constant="5" id="Nhw-l1-mA2"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xZm-UZ-IAB" secondAttribute="trailing" constant="20" id="PBl-oi-Rs3"/>
                 <constraint firstItem="gbx-mg-PDi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="49" id="Prk-VG-VnM"/>
@@ -124,19 +119,16 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="3Dg-CM-35T" secondAttribute="trailing" constant="20" id="YSF-Bd-TyT"/>
                 <constraint firstItem="egR-zN-DZa" firstAttribute="top" secondItem="Z7y-Pd-BFz" secondAttribute="bottom" constant="2" id="YdV-by-edg"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gvs-Ia-SvG" secondAttribute="trailing" constant="20" id="bvS-RL-A5i"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="NbX-tn-OGb" secondAttribute="bottom" constant="7.5" id="dJj-2C-twC"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hsQ-aj-dYF" secondAttribute="trailing" constant="20" id="gtH-GJ-ff1"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="NbX-tn-OGb" secondAttribute="trailing" constant="83.5" id="hUS-gx-rbB"/>
                 <constraint firstItem="3Dg-CM-35T" firstAttribute="top" secondItem="egR-zN-DZa" secondAttribute="bottom" constant="80" id="hUZ-js-nGx"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="hCS-8a-Pj7" secondAttribute="bottom" constant="259" id="hfb-AS-rh0"/>
                 <constraint firstItem="hsQ-aj-dYF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="hkF-24-tyI"/>
-                <constraint firstItem="NbX-tn-OGb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="98" id="i7d-Pe-YRy"/>
-                <constraint firstItem="hCS-8a-Pj7" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="539" id="j6L-PW-ZzL"/>
                 <constraint firstItem="v0g-L7-LM0" firstAttribute="top" secondItem="gvs-Ia-SvG" secondAttribute="bottom" constant="18" id="ja7-x7-kJv"/>
                 <constraint firstItem="3Dg-CM-35T" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="lJn-hP-6gT"/>
                 <constraint firstItem="Z7y-Pd-BFz" firstAttribute="top" secondItem="gbx-mg-PDi" secondAttribute="bottom" constant="20" id="p39-Uy-71n"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gbx-mg-PDi" secondAttribute="trailing" constant="49" id="pvR-KC-LA8"/>
                 <constraint firstItem="v0g-L7-LM0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="rMA-r3-mF1"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hCS-8a-Pj7" secondAttribute="trailing" constant="194" id="roR-W9-INb"/>
-                <constraint firstItem="hCS-8a-Pj7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="200" id="tkA-my-eTw"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="117.85714285714285"/>
         </view>

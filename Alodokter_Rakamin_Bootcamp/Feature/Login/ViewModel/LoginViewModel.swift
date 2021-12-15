@@ -10,15 +10,14 @@ import Foundation
 
 class LoginViewModel{
     
-    var loginDataToken:String?
-    var loginDataId:Int?
-    var loginMsg:String?
-    var userProfileData: UserProfile?
+//    var loginDataToken:String?
+//    var loginDataId:Int?
+//    var loginMsg:String?
     
+    var userProfileData: UserProfile?
     var loginData:LoginModel?
     var msgSuccess: ((String?) -> Void)?
     var msgFail: ((String?) -> Void)?
-    
     
     func login(email: String, password:String) {
         let login = LoginService(email: email, password: password)
@@ -30,32 +29,32 @@ class LoginViewModel{
                 }
                 if login.code == 201{
                     DispatchQueue.main.async {
-                        loginDataToken = login.data?.token
-                        loginDataId = login.data?.id
+//                        loginDataToken = login.data?.token
+//                        loginDataId = login.data?.id
                         UserDefaults.standard.set(Session.loggedIn.rawValue, forKey: "session")
-                        UserDefaults.standard.set(loginDataToken, forKey: "token")
-                        loginMsg = login.message
-                        getUserData()
-                        msgSuccess?(loginMsg)
+                        UserDefaults.standard.set(login.data?.token, forKey: "token")
+//                        loginMsg = login.message
+                        getUserData(token: login.data?.token ?? "", id: login.data?.id ?? 1)
+                        msgSuccess?(login.message)
                         
                     }
                 } else {
                     DispatchQueue.main.async {
-                        loginMsg = login.message
-                        msgFail?(loginMsg)
+//                        loginMsg = login.message
+                        msgFail?(login.message)
                     }
 
                 }
                 
             case .failure(_):
-                loginMsg = "Server Error"
-                msgFail?(loginMsg)
+//                loginMsg = "Server Error"
+                msgFail?("Server Error")
             }
         }
     }
     
-    func getUserData(){
-        let userProfile = UserProfileService(token: self.loginDataToken ?? "", id: self.loginDataId ?? 1)
+    func getUserData(token:String, id:Int){
+        let userProfile = UserProfileService(token: token, id: id)
         APIService.APIRequest(model: UserData.self, req: userProfile){ [self](result) in
             switch result {
             case .success(let user):
@@ -75,8 +74,8 @@ class LoginViewModel{
                 }
             case .failure(_):
                 DispatchQueue.main.async {
-                    loginMsg = "Server Error"
-                    msgFail?(loginMsg)
+//                    loginMsg = "Server Error"
+                    msgFail?("Server Error")
                 }
             }
             
