@@ -11,9 +11,15 @@ class RegisterView: UIView {
 
     @IBOutlet var contentView: UIView!
     
+    @IBOutlet weak var hpValidationLabel: UILabel!
     @IBOutlet weak var passwordRegisterTextField: UITextField!
     @IBOutlet weak var passwordConfirmRegisterTextField: UITextField!
     
+    @IBOutlet weak var phoneRegisterTextField: UITextField!
+    @IBOutlet weak var passwordConfirmValidationLabel: UILabel!
+    @IBOutlet weak var passwordValidationLabel: UILabel!
+    @IBOutlet weak var emailValidationLabel: UILabel!
+    @IBOutlet weak var namaValidationLabel: UILabel!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var emailRegisterTextField: UITextField!
     @IBOutlet weak var nameRegisterTextField: UITextField!
