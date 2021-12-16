@@ -214,7 +214,19 @@ extension ArticleViewController: UICollectionViewDataSource {
     }
 }
 
-extension ArticleViewController : UISearchResultsUpdating, UISearchBarDelegate {
+extension ArticleViewController : UISearchResultsUpdating, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 12
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = ArticleSearchViewController().searchResultTableView.dequeueReusableCell(withIdentifier: "searchResultCell", for: indexPath) as! ArticleSearchTableViewCell
+        cell.articleSearchImage.image = UIImage(named: "ArticleImage")
+        cell.articleSearchTitleLabel.text = "4 Manfaat Daun"
+        
+        return cell
+    }
+    
     func updateSearchResults(for searchController: UISearchController) {
         guard let searchText = searchController.searchBar.text else {
             return

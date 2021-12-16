@@ -14,14 +14,12 @@ class ArticleSearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
-//        self.searchResultTableView.delegate = self
-//        self.searchResultTableView.dataSource = self
 
     }
 
 }
 
-extension ArticleSearchViewController: UITableViewDataSource {
+extension ArticleSearchViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 12
     }
