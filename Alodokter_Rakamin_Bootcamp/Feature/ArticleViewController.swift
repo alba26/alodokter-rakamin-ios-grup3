@@ -66,14 +66,16 @@ class ArticleViewController: UIViewController {
     func configNavigationBar(){
         
         //search bar
-        let searchArticleController = UISearchController(searchResultsController: nil)
+        let searchArticleController = UISearchController(searchResultsController: ArticleSearchViewController())
+        searchArticleController.searchResultsUpdater = self
+        
         self.navigationItem.searchController = searchArticleController
         self.navigationItem.hidesSearchBarWhenScrolling = false
         searchArticleController.searchBar.tintColor = UIColor.white
         searchArticleController.searchBar.barTintColor = UIColor.white
         searchArticleController.searchBar.searchTextField.backgroundColor = UIColor.white
-        searchArticleController.searchBar.searchTextField.target(forAction: #selector(goToSearchArticle), withSender: searchArticleController)
-//        searchArticleController.searchBar.delegate?.searchBarSearchButtonClicked(<#T##UISearchBar#>)
+        searchArticleController.searchBar.delegate = self
+
         
         //right attribute
         let profileNavView = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
@@ -93,13 +95,6 @@ class ArticleViewController: UIViewController {
     
 
         //kasih trailing leading constraintnya right attribute
-        
-    }
-    
-    @objc func goToSearchArticle(){
-        let searchStoryboard : UIStoryboard = UIStoryboard(name: "searchArticle", bundle: nil)
-        let searchArticleVC = searchStoryboard.instantiateViewController(withIdentifier: "ArticleSearchViewController")
-        self.navigationController?.pushViewController(searchArticleVC, animated: true)
         
     }
     
@@ -217,6 +212,20 @@ extension ArticleViewController: UICollectionViewDataSource {
         return cell
         
     }
+}
+
+extension ArticleViewController : UISearchResultsUpdating, UISearchBarDelegate {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let searchText = searchController.searchBar.text else {
+            return
+        }
+        let searchResultVC = searchController.searchResultsController as? ArticleSearchViewController
+        
+        
+        print(searchText) // call api get data or filter api get data
+    }
+    
+    
 }
 
 
