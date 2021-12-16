@@ -41,11 +41,10 @@ class UserProfileViewController: UIViewController {
     }
     
     @objc func seeMyData(){
-        if UserDefaults().checkSession() == Session.loggedIn.rawValue{
+        if UserDefaults().checkIsUserLogin(){
             let myDataStoryboard : UIStoryboard = UIStoryboard(name: "ChangeData", bundle: nil)
             let myDataVC = myDataStoryboard.instantiateViewController(withIdentifier: "ChangeDataViewController")
             self.present(myDataVC, animated: true){
-                
             }
         }
     }
@@ -54,7 +53,7 @@ class UserProfileViewController: UIViewController {
 extension UserProfileViewController{
     
     //NEED IMPROVEMENT
-    func decodeUserData(){
+   private func decodeUserData(){
         if let data = UserDefaults.standard.data(forKey: "userdata"){
             do{
                 let decoder = JSONDecoder()
@@ -77,7 +76,6 @@ extension UserProfileViewController{
                 DispatchQueue.main.async { [self] in
                     userProfileView.nameLabel.text = userdata.fullname
                 }
-               
             }catch{
                 print(error)
             }
