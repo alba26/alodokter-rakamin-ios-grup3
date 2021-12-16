@@ -38,7 +38,7 @@ class RegisterView: UIView {
         contentView.frame = self.bounds
         addSubview(contentView)
         
-        passwordRegisterTextField.setCustomUI(withPlaceholder: "Kata Sandi")
+        passwordRegisterTextField.setCustomUI(withPlaceholder: "Konfirmasi Kata Sandi")
         passwordConfirmRegisterTextField.setCustomUI(withPlaceholder: "Kata Sandi")
         phoneRegisterTextField.setCustomUI(withPlaceholder: "No. HP")
         emailRegisterTextField.setCustomUI(withPlaceholder: "Email")
