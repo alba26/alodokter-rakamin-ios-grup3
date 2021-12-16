@@ -37,6 +37,14 @@ class RegisterView: UIView {
         Bundle.main.loadNibNamed("RegisterView", owner: self, options: nil)
         contentView.frame = self.bounds
         addSubview(contentView)
+        
+        passwordRegisterTextField.setCustomUI(withPlaceholder: "Kata Sandi")
+        passwordConfirmRegisterTextField.setCustomUI(withPlaceholder: "Kata Sandi")
+        phoneRegisterTextField.setCustomUI(withPlaceholder: "No. HP")
+        emailRegisterTextField.setCustomUI(withPlaceholder: "Email")
+        nameRegisterTextField.setCustomUI(withPlaceholder: "Nama")
+        
+        phoneRegisterTextField.keyboardType = .numberPad
     }
 
 }

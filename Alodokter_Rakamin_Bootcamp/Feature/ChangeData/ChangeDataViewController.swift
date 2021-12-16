@@ -16,6 +16,7 @@ class ChangeDataViewController: UIViewController, UIPickerViewDataSource, UIPick
     @IBOutlet weak var genderTextField: UITextField!
     @IBOutlet weak var ktpTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
+    @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var changeButton: UIBarButtonItem!
     @IBOutlet weak var saveButton: UIButton!
     @IBAction func cancelButtonPressed(_ sender: Any) {
@@ -30,12 +31,14 @@ class ChangeDataViewController: UIViewController, UIPickerViewDataSource, UIPick
         genderTextField.isUserInteractionEnabled = true
         ktpTextField.isUserInteractionEnabled = true
         addressTextField.isUserInteractionEnabled = true
+        phoneTextField.isUserInteractionEnabled = true
         nameTextField.backgroundColor = UIColor.white
         emailTextField.backgroundColor = UIColor.white
         genderTextField.backgroundColor = UIColor.white
         ktpTextField.backgroundColor = UIColor.white
         addressTextField.backgroundColor = UIColor.white
         birthdayTextField.backgroundColor = UIColor.white
+        phoneTextField.backgroundColor = .white
         saveButton.isHidden = false
         changeButton.isEnabled = false
         changeButton.tintColor = UIColor.clear
@@ -47,12 +50,14 @@ class ChangeDataViewController: UIViewController, UIPickerViewDataSource, UIPick
         genderTextField.isUserInteractionEnabled = false
         ktpTextField.isUserInteractionEnabled = false
         addressTextField.isUserInteractionEnabled = false
+        phoneTextField.isUserInteractionEnabled = false
         nameTextField.backgroundColor = UIColor.systemGray6
         emailTextField.backgroundColor = UIColor.systemGray6
         genderTextField.backgroundColor = UIColor.systemGray6
         ktpTextField.backgroundColor = UIColor.systemGray6
         addressTextField.backgroundColor = UIColor.systemGray6
         birthdayTextField.backgroundColor = UIColor.systemGray6
+        phoneTextField.backgroundColor = .systemGray6
         saveButton.isHidden = true
         changeButton.isEnabled = true
         changeButton.tintColor = UIColor.white
@@ -84,6 +89,7 @@ class ChangeDataViewController: UIViewController, UIPickerViewDataSource, UIPick
         super.viewDidLoad()
         createDatePicker()
         genderTextField.inputView  = picker
+        changeTextField()
         
         nameTextField.isUserInteractionEnabled = false
         emailTextField.isUserInteractionEnabled = false
@@ -95,12 +101,15 @@ class ChangeDataViewController: UIViewController, UIPickerViewDataSource, UIPick
         genderTextField.backgroundColor = UIColor.systemGray6
         ktpTextField.backgroundColor = UIColor.systemGray6
         addressTextField.backgroundColor = UIColor.systemGray6
+        ktpTextField.keyboardType = .numberPad
+        phoneTextField.isUserInteractionEnabled = false
+        phoneTextField.backgroundColor = .systemGray6
         
         saveButton.isHidden = true
         
         picker.dataSource = self
         picker.delegate = self
-        
+
         if UserDefaults().checkSession() == Session.loggedIn.rawValue{
             loadData()
         }
@@ -120,6 +129,9 @@ class ChangeDataViewController: UIViewController, UIPickerViewDataSource, UIPick
     func createDatePicker() {
         datePicker.preferredDatePickerStyle = .wheels
         datePicker.datePickerMode = .date
+        let yesterdayDate = Calendar.current.date(byAdding: .day, value: 0, to: Date())
+        datePicker.maximumDate = yesterdayDate
+        
         birthdayTextField.isUserInteractionEnabled = false
         birthdayTextField.backgroundColor = UIColor.systemGray6
         birthdayTextField.inputView =  datePicker
@@ -146,11 +158,22 @@ class ChangeDataViewController: UIViewController, UIPickerViewDataSource, UIPick
                 genderTextField.text = userdata.gender
                 ktpTextField.text = userdata.identity
                 addressTextField.text = userdata.address
+                phoneTextField.text = userdata.phone
             }catch{
                 print(error) //OUTPUT ERROR
             }
         }
         
+    }
+    
+    private func changeTextField(){
+        nameTextField.setCustomUI(withPlaceholder: "Nama")
+        ktpTextField.setCustomUI(withPlaceholder: "No. KTP")
+        emailTextField.setCustomUI(withPlaceholder: "Email")
+        genderTextField.setCustomUI(withPlaceholder: "Pria/Wanita")
+        addressTextField.setCustomUI(withPlaceholder: "Alamat")
+        birthdayTextField.setCustomUI(withPlaceholder: "Tanggal Lahir")
+        phoneTextField.setCustomUI(withPlaceholder: "No. Handphone")
     }
     
 

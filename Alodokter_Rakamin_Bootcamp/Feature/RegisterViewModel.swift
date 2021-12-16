@@ -60,8 +60,8 @@ class RegisterViewModel{
             phoneValidationMsg?("Nomor tidak boleh mengandung karakter")
             return
         }
-        guard phone.count >= 11 && phone.count <= 12 else {
-            phoneValidationMsg?("Nomor HP harus berjumlah 11/12")
+        guard phone.count >= 10 && phone.count <= 12 else {
+            phoneValidationMsg?("Nomor HP harus berjumlah 10/12")
             return
         }
         isPhoneValid = true

@@ -156,6 +156,7 @@
 		17CD8F522761F0E3009043F0 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				8C6121282762213700511B76 /* Register */,
 				8CB695F227639F790096BCAB /* ChangeData */,
 				8CB695E927639F2E0096BCAB /* UserProfile */,
 				17CD8F542761F106009043F0 /* Login */,
@@ -257,7 +258,6 @@
 		924DC4B3275F25BA00FCE093 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				8C6121282762213700511B76 /* Register */,
 				17CD8F522761F0E3009043F0 /* Profile */,
 				17CD8F392761ECAC009043F0 /* Artikel */,
 				17CD8F462761ED7D009043F0 /* Booking */,
@@ -271,8 +271,6 @@
 				924DC4B8275F266500FCE093 /* UIColor.swift */,
 				924DC4BA275F269100FCE093 /* DeviceHelper.swift */,
 				924DC4BC275F26DF00FCE093 /* Utility.swift */,
-				3EFA07BB275F99100010AA10 /* UIButton+extension.swift */,
-				3EC13CB82763146B00B4A878 /* UITextField+extension.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -280,6 +278,8 @@
 		924DC4BF275F32DA00FCE093 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				3EFA07BB275F99100010AA10 /* UIButton+extension.swift */,
+				3EC13CB82763146B00B4A878 /* UITextField+extension.swift */,
 				924DC4C0275F32E900FCE093 /* PopToSelectedController+Exten.swift */,
 				924DC4C2275F337200FCE093 /* SetRootView+Extension.swift */,
 			);
