@@ -12,7 +12,6 @@ class LoginService: BaseService{
     var password:String
     func method() -> APIService.Method {
         return .post
-        
     }
     
     func url() -> URL {

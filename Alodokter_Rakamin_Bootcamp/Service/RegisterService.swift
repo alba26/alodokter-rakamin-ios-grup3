@@ -9,8 +9,7 @@ import Foundation
 
 class RegisterService:BaseService{
     
-    var email, fullname, birthdate: String
-    var gender, phone, identity, address: String
+    var email, fullname, phone: String
     var password : String
     
     func method() -> APIService.Method {
@@ -26,21 +25,17 @@ class RegisterService:BaseService{
     }
     
     func httpBody() -> [String : String] {
-        return ["email":email,"fullname":fullname,"birthdate":birthdate,"gender":gender,"phone":phone,"identity":identity,"addres":address,"password":password]
+        return ["email":email,"fullname":fullname,"phone":phone,"password":password]
     }
     
     func auth() -> String {
         return ""
     }
     
-    init(email:String, fullname:String, birthdate:String, gender:String, phone:String, identity:String, address:String, password: String) {
+    init(email:String, fullname:String, phone:String,  password: String) {
         self.email = email
         self.fullname = fullname
-        self.birthdate = birthdate
-        self.gender = gender
         self.phone = phone
-        self.identity = identity
-        self.address = address
         self.password = password
     }
 

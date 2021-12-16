@@ -8,11 +8,15 @@
 import UIKit
 
 class ArticleViewController: UIViewController {
+    
 
     @IBOutlet weak var contentScrollView: UIScrollView!
     @IBOutlet weak var sliderCollectionView: UICollectionView!
     
     @IBOutlet weak var pageControl: UIPageControl!
+    
+    @IBOutlet weak var categoryMenu: UIButton!
+    @IBOutlet weak var categoryView: UIView!
     
     @IBOutlet weak var articleCollectionView: UICollectionView!
     
@@ -24,27 +28,39 @@ class ArticleViewController: UIViewController {
     var timer : Timer?
     var currentCellIndex: Int = 0
     
+    var viewModel = ArticleViewModel()
+    
     override func viewWillAppear(_ animated: Bool) {
         articleCollectionView.collectionViewLayout = setupCollectionViewLayout()
         sliderCollectionView.collectionViewLayout = setupImageSliderViewLayout()
+        pageControl.numberOfPages = imageArray.count //viewModel. HeroArticlesData.count
+        viewModel.getArticlesData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configNavigationBar()
-        articleCollectionView.delegate = self
-        timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(slideToNext), userInfo: nil, repeats: true)
+        DispatchQueue.main.async {
+            self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.slideToNext), userInfo: nil, repeats: true)
+        }
+        setUpMenu()
     }
     
     @objc func slideToNext(){
-        if currentCellIndex < imageArray.count-1
+        if currentCellIndex < imageArray.count //diganti ke pagecontrol.numberofpages ato viewModel HeroArticles.count
         {
+            let index = IndexPath.init(item: currentCellIndex, section: 0)
+            self.sliderCollectionView.scrollToItem(at:  index, at: .centeredHorizontally, animated: true)
+            pageControl.currentPage = currentCellIndex
             currentCellIndex += 1
         }
         else {
             currentCellIndex = 0
+            let index = IndexPath.init(item: currentCellIndex, section: 0)
+            self.sliderCollectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: false)
+            pageControl.currentPage = currentCellIndex
+            currentCellIndex = 1
         }
-        sliderCollectionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0), at: .right, animated: true)
     }
     
     func configNavigationBar(){
@@ -92,9 +108,8 @@ class ArticleViewController: UIViewController {
         }
     }
     
-    
-    func setupCollectionViewLayout() -> UICollectionViewCompositionalLayout{
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(100))
+    func setupImageSliderViewLayout() -> UICollectionViewCompositionalLayout{
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(245))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
@@ -115,8 +130,24 @@ class ArticleViewController: UIViewController {
         return layout
         
     }
-    func setupImageSliderViewLayout() -> UICollectionViewCompositionalLayout{
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(245))
+
+    func setUpMenu() {
+        categoryView.layer.borderWidth = 1
+        categoryView.layer.borderColor = UIColor.black.cgColor
+        categoryView.layer.cornerRadius = 10
+        
+        let menu = UIMenu(title: "Category", options: .displayInline, children: [
+            UIAction(title: "Trending") {(_) in self.categoryMenu.titleLabel?.text = "Trending"},
+            UIAction(title: "Kesehatan") {(_) in self.categoryMenu.titleLabel?.text = "Kesehatan"},
+            UIAction(title: "Keluarga") {(_) in self.categoryMenu.titleLabel?.text = "Keluarga"},
+        ])
+        
+        self.categoryMenu.menu = menu
+        self.categoryMenu.showsMenuAsPrimaryAction = true
+    }
+    
+    func setupCollectionViewLayout() -> UICollectionViewCompositionalLayout{
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(100))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
@@ -148,9 +179,11 @@ extension ArticleViewController: UICollectionViewDataSource, UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.articleCollectionView {
-            return 30
+//            return viewModel.listOfArticle?.count ?? 0
+            return 12
         }
         else {
+            //viewmodel heroArticle.count
             return imageArray.count
         }
     }
@@ -158,16 +191,22 @@ extension ArticleViewController: UICollectionViewDataSource, UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             if collectionView == self.articleCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "articleCell", for: indexPath) as! ArticleCollectionViewCell
-        
-//          cell.articleTitleLabel.text = "Artikel ke \(String(indexPath.item+1))"
+//                cell.articleTitleLabel.text = viewModel.listOfArticle?[indexPath.row].title
+                cell.articleTitleLabel.text = "4 Manfaat Daun Sambiloto untuk Kulit yang Sayang Dilewatkan"
+                cell.articleImageView.image = UIImage(named: "ArticleImage")
+//                let imgURL = URL(string: (viewModel.listOfArticle?[indexPath.row].image)!)
+//                let data = try? Data(contentsOf: imgURL!)
+//                cell.articleImageView.image = UIImage(data: data!)
         
             return cell
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageSliderCell", for: indexPath) as! ImageSliderCollectionViewCell
+        //assign viewmodel
         cell.imageSliderImg.image = UIImage(named: imageArray[indexPath.row])
         cell.imageSliderTitle.text = "4 Manfaat Daun Sambiloto untuk Kulit yang Sayang Dilewatkan"
         cell.imageSliderTitle.backgroundColor = UIColor.black
         cell.imageSliderTitle.textColor = UIColor.white
+        
         return cell
     }
     

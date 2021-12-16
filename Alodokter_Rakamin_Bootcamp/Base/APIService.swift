@@ -44,7 +44,7 @@ class APIService{
         if req.auth() != "" {
             request.setValue(req.auth(), forHTTPHeaderField: "Authorization")
         }
-
+        
         let task = URLSession.shared.dataTask(with: request) {data, _, error in
             guard let data = data, error == nil else{
                 completion(.failure(error!))
