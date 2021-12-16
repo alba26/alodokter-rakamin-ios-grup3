@@ -12,7 +12,9 @@ class LoginView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var logoImage: UIImageView!
     
+    @IBOutlet weak var emailValidationMessage: UILabel!
     @IBOutlet weak var passwordLoginTextField: UITextField!
+    @IBOutlet weak var passwordValidationMessage: UILabel!
     @IBOutlet weak var emailLoginTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
@@ -34,4 +36,6 @@ class LoginView: UIView {
         contentView.frame = self.bounds
         addSubview(contentView)
     }
+    
+    
 }

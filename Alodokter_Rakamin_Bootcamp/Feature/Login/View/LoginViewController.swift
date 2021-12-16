@@ -20,6 +20,9 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         loginView.loginButton.addTarget(self, action: #selector(loginButton), for: .touchUpInside)
         loginView.registerButton.addTarget(self, action: #selector(registerButton), for: .touchUpInside)
+        loginView.emailLoginTextField.addTarget(self, action: #selector(emailLoginValidation), for: .editingChanged)
+        loginView.passwordLoginTextField.addTarget(self, action: #selector(passwordLoginValidation), for: .editingChanged)
+        loginView.loginButton.isEnabled = false
 
         loginVM.msgSuccess = { [self] msg in
             let profileStoryboard : UIStoryboard = UIStoryboard(name: "UserProfile", bundle: nil)
@@ -34,9 +37,22 @@ class LoginViewController: UIViewController {
             spinner.dismiss(animated: true, completion: {
                 failToLogin(title: "Login Gagal", message: msg ?? "")
             })
+            loginView.loginButton.isEnabled = false
 
         }
-
+        loginVM.emailValidationMsg = { [self] msg in
+            loginView.emailValidationMessage.text = msg
+            loginView.emailValidationMessage.textColor = .red
+        }
+        
+        loginVM.passwordValidationMsg = { [self] msg in
+            loginView.passwordValidationMessage.text = msg
+            loginView.passwordValidationMessage.textColor = .red
+        }
+        
+        loginVM.enabledButton = {[self] isEnable in
+            loginView.loginButton.isEnabled = isEnable ?? false
+        }
     }
     
     @objc func registerButton(){
@@ -49,6 +65,14 @@ class LoginViewController: UIViewController {
         self.present(spinner, animated: true, completion: nil)
         loginVM.login(email: loginView.emailLoginTextField.text ?? "default", password: loginView.passwordLoginTextField.text ?? "default")
         
+    }
+    
+    @objc func emailLoginValidation(){
+        loginVM.emailValidation(email: loginView.emailLoginTextField.text ?? "")
+    }
+    
+    @objc func passwordLoginValidation(){
+        loginVM.passwordValidation(password: loginView.passwordLoginTextField.text ?? "")
     }
 }
 

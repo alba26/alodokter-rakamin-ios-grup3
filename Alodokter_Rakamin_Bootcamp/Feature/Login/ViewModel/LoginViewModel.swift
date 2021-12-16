@@ -18,6 +18,46 @@ class LoginViewModel{
     var loginData:LoginModel?
     var msgSuccess: ((String?) -> Void)?
     var msgFail: ((String?) -> Void)?
+    var emailValidationMsg: ((String?) -> Void)?
+    var passwordValidationMsg: ((String?) -> Void)?
+    var enabledButton: ((Bool?) -> Void)?
+    var isEmailValid = false
+    var isPasswordValid = false
+    
+    
+    func emailValidation(email:String){
+        isEmailValid = false
+        checkEmailAndPassword()
+        emailValidationMsg?("Email tidak valid")
+        guard !Utility().isValidEmail(text: email) else{
+            emailValidationMsg?("")
+            isEmailValid = true
+            checkEmailAndPassword()
+            return
+        }
+        guard !email.isEmpty else {
+            emailValidationMsg?("Email tidak boleh kosong")
+            return
+        }
+        
+    }
+    func passwordValidation(password:String){
+        isPasswordValid = false
+        checkEmailAndPassword()
+        passwordValidationMsg?("Password kurang dari 6 digit")
+        guard password.count < 6 else {
+            passwordValidationMsg?("")
+            isPasswordValid = true
+            checkEmailAndPassword()
+            return
+        }
+        guard !password.isEmpty else {
+            passwordValidationMsg?("Password tidak boleh kosong")
+            return
+        }
+  
+    }
+    
     
     func login(email: String, password:String) {
         let login = LoginService(email: email, password: password)
@@ -79,6 +119,14 @@ class LoginViewModel{
                 }
             }
             
+        }
+    }
+    
+    private func checkEmailAndPassword(){
+        if isEmailValid && isPasswordValid{
+            enabledButton?(true)
+        }else{
+            enabledButton?(false)
         }
     }
 }
