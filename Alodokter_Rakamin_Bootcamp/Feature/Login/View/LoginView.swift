@@ -35,6 +35,9 @@ class LoginView: UIView {
         Bundle.main.loadNibNamed("LoginView", owner: self, options: nil)
         contentView.frame = self.bounds
         addSubview(contentView)
+        passwordLoginTextField.setCustomUI(withPlaceholder: "Kata Sandi")
+        emailLoginTextField.setCustomUI(withPlaceholder: "Email")
+        
     }
     
     

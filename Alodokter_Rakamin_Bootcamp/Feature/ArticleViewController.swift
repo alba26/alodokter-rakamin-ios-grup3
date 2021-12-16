@@ -31,10 +31,12 @@ class ArticleViewController: UIViewController {
     var viewModel = ArticleViewModel()
     
     override func viewWillAppear(_ animated: Bool) {
+        
         articleCollectionView.collectionViewLayout = setupCollectionViewLayout()
         sliderCollectionView.collectionViewLayout = setupImageSliderViewLayout()
         pageControl.numberOfPages = imageArray.count //viewModel. HeroArticlesData.count
         viewModel.getArticlesData()
+        
     }
     
     override func viewDidLoad() {
