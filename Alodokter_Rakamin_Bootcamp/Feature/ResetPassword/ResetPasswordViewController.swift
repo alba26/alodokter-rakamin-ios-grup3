@@ -28,7 +28,9 @@ class ResetPasswordViewController: UIViewController {
             if result != "success" {
                 Utility().showAlertAction(title: result.capitalized, message: result.capitalized, uiview: self)
             } else {
-                self.dismiss(animated: true, completion: nil)
+                DispatchQueue.main.async {
+                    self.dismiss(animated: true, completion: nil)
+                }
             }
         }
         
