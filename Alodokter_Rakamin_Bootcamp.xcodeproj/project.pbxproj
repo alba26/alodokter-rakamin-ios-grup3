@@ -25,7 +25,6 @@
 		17CD8F6A2761F366009043F0 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F552761F106009043F0 /* LoginView.xib */; };
 		17CD8F6B2761F36B009043F0 /* ResetPasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F5A2761F106009043F0 /* ResetPasswordView.xib */; };
 		17CD8F6F27645070009043F0 /* ImageSliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD8F6E27645070009043F0 /* ImageSliderCollectionViewCell.swift */; };
-		3E14E2DB276C81C400495CF1 /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E2DA276C81C400495CF1 /* ArticleService.swift */; };
 		3E15D843276881C00050F6CC /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E15D842276881C00050F6CC /* ResetPasswordViewModel.swift */; };
 		3E15D84527688D0E0050F6CC /* ResetPasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E15D84427688D0E0050F6CC /* ResetPasswordService.swift */; };
 		3EF0F9D5276839320058CFCF /* ArticleDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EF0F9D4276839320058CFCF /* ArticleDetailView.xib */; };
@@ -58,7 +57,6 @@
 		924DC4BD275F26DF00FCE093 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC4BC275F26DF00FCE093 /* Utility.swift */; };
 		924DC4C1275F32E900FCE093 /* PopToSelectedController+Exten.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC4C0275F32E900FCE093 /* PopToSelectedController+Exten.swift */; };
 		924DC4C3275F337200FCE093 /* SetRootView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC4C2275F337200FCE093 /* SetRootView+Extension.swift */; };
-		92A9D65C27620338001BD05C /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9D65A27620338001BD05C /* ArticleModel.swift */; };
 		92A9D65D27620338001BD05C /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9D65B27620338001BD05C /* LoginModel.swift */; };
 		92A9D66327620380001BD05C /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9D66227620380001BD05C /* APIService.swift */; };
 		92A9D66B276213AD001BD05C /* TabBarControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9D66A276213AD001BD05C /* TabBarControll.swift */; };
@@ -70,6 +68,8 @@
 		92DA8AF02763D46200028BF3 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DA8AEF2763D46200028BF3 /* RegisterService.swift */; };
 		92DC1A402765AEE20084FC4E /* SavedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DC1A3F2765AEE20084FC4E /* SavedData.swift */; };
 		92E21A4A2764A3A200924C38 /* UserProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E21A492764A3A100924C38 /* UserProfileService.swift */; };
+		92E668E4276CB83200578B04 /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E668E3276CB83200578B04 /* ArticleService.swift */; };
+		92E668E7276CB86000578B04 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E668E6276CB85F00578B04 /* ArticleModel.swift */; };
 		92EED41E2768E86C005B8F32 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EED41D2768E86C005B8F32 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -92,7 +92,6 @@
 		17CD8F5B2761F106009043F0 /* ResetPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		17CD8F5C2761F106009043F0 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		17CD8F6E27645070009043F0 /* ImageSliderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSliderCollectionViewCell.swift; sourceTree = "<group>"; };
-		3E14E2DA276C81C400495CF1 /* ArticleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleService.swift; sourceTree = "<group>"; };
 		3E15D842276881C00050F6CC /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
 		3E15D84427688D0E0050F6CC /* ResetPasswordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordService.swift; sourceTree = "<group>"; };
 		3EC13CB82763146B00B4A878 /* UITextField+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+extension.swift"; sourceTree = "<group>"; };
@@ -140,6 +139,8 @@
 		92DA8AEF2763D46200028BF3 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
 		92DC1A3F2765AEE20084FC4E /* SavedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedData.swift; sourceTree = "<group>"; };
 		92E21A492764A3A100924C38 /* UserProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileService.swift; sourceTree = "<group>"; };
+		92E668E3276CB83200578B04 /* ArticleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArticleService.swift; path = Alodokter_Rakamin_Bootcamp/Feature/ArticleService.swift; sourceTree = SOURCE_ROOT; };
+		92E668E6276CB85F00578B04 /* ArticleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 		92EED41D2768E86C005B8F32 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,6 +168,7 @@
 		17CD8F392761ECAC009043F0 /* Artikel */ = {
 			isa = PBXGroup;
 			children = (
+				92E668E5276CB84400578B04 /* Model */,
 				3EF0F9D3276839110058CFCF /* ArticleDetail */,
 				17399711276A5656004E4095 /* Search */,
 				17CD8F3C2761ED2D009043F0 /* Article.storyboard */,
@@ -441,28 +443,28 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		92D67A01276CAB9E0038628C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				92A9D65E27620362001BD05C /* ArticleService.swift */,
-				92A9D65A27620338001BD05C /* ArticleModel.swift */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
 		92DA8AE32763AA0300028BF3 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
 				92A9D6602762036B001BD05C /* UserLoginService.swift */,
+				92A9D65A27620338001BD05C /* ArticleModel.swift */,
 			);
 			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		92E668E5276CB84400578B04 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				92E668E6276CB85F00578B04 /* ArticleModel.swift */,
+				92E668E3276CB83200578B04 /* ArticleService.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		92EED41C27683818005B8F32 /* Service */ = {
 			isa = PBXGroup;
 			children = (
 				92DA8AEF2763D46200028BF3 /* RegisterService.swift */,
-				3E14E2DA276C81C400495CF1 /* ArticleService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -578,8 +580,8 @@
 				924DC49D275F141700FCE093 /* SceneDelegate.swift in Sources */,
 				8CB695E827639EEE0096BCAB /* RegisterView.swift in Sources */,
 				17CD8F412761ED49009043F0 /* ArticleViewController.swift in Sources */,
+				92E668E4276CB83200578B04 /* ArticleService.swift in Sources */,
 				92DC1A402765AEE20084FC4E /* SavedData.swift in Sources */,
-				92A9D65C27620338001BD05C /* ArticleModel.swift in Sources */,
 				1739971B276A5F58004E4095 /* ArticleSearchTableViewCell.swift in Sources */,
 				3EFA07BC275F99100010AA10 /* UIButton+extension.swift in Sources */,
 				92DA8AE82763C02D00028BF3 /* Session.swift in Sources */,
@@ -593,9 +595,9 @@
 				92DA8AF02763D46200028BF3 /* RegisterService.swift in Sources */,
 				8C61212D2762214600511B76 /* RegisterViewController.swift in Sources */,
 				17CD8F642761F106009043F0 /* ResetPasswordView.swift in Sources */,
+				92E668E7276CB86000578B04 /* ArticleModel.swift in Sources */,
 				924DC4C1275F32E900FCE093 /* PopToSelectedController+Exten.swift in Sources */,
 				92A9D66B276213AD001BD05C /* TabBarControll.swift in Sources */,
-				3E14E2DB276C81C400495CF1 /* ArticleService.swift in Sources */,
 				3E15D84527688D0E0050F6CC /* ResetPasswordService.swift in Sources */,
 				17399717276A5C06004E4095 /* ArticleSearchViewController.swift in Sources */,
 				924DC4BB275F269100FCE093 /* DeviceHelper.swift in Sources */,
