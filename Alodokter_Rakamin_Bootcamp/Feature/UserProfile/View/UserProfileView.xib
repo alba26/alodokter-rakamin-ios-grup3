@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="accountContainer" destination="dw8-ts-INV" id="cfb-Mb-0zQ"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="aZl-9M-K9W"/>
+                <outlet property="history" destination="bUt-aw-MbW" id="YjO-4H-Mpz"/>
                 <outlet property="logout" destination="yG7-pM-3hU" id="cZH-Hz-x7e"/>
                 <outlet property="logoutContainer" destination="nMW-rd-sgK" id="gte-ZT-GDM"/>
                 <outlet property="myData" destination="JBm-hq-ZBJ" id="0ti-H2-PfM"/>
@@ -64,9 +65,18 @@
                                 <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="16"/>
                             </buttonConfiguration>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUt-aw-MbW">
+                            <rect key="frame" x="8" y="152" width="350" height="34"/>
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Riwayat">
+                                <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="16"/>
+                            </buttonConfiguration>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstItem="bUt-aw-MbW" firstAttribute="top" secondItem="0pO-q5-jh5" secondAttribute="bottom" constant="8" id="74x-Vl-5GO"/>
                         <constraint firstAttribute="trailing" secondItem="0pO-q5-jh5" secondAttribute="trailing" constant="8" id="8gh-Ml-wRG"/>
                         <constraint firstItem="0pO-q5-jh5" firstAttribute="leading" secondItem="dw8-ts-INV" secondAttribute="leading" constant="8" id="CUl-Np-l6R"/>
                         <constraint firstItem="JBm-hq-ZBJ" firstAttribute="top" secondItem="btZ-Eu-oer" secondAttribute="bottom" constant="14" id="KXD-np-QEC"/>
@@ -79,6 +89,9 @@
                         <constraint firstItem="btZ-Eu-oer" firstAttribute="top" secondItem="yvC-Xz-8AI" secondAttribute="bottom" constant="14" id="fmB-DO-Bpt"/>
                         <constraint firstItem="yvC-Xz-8AI" firstAttribute="top" secondItem="dw8-ts-INV" secondAttribute="top" constant="18" id="lW3-6p-ahv"/>
                         <constraint firstAttribute="trailing" secondItem="btZ-Eu-oer" secondAttribute="trailing" constant="8" id="pZp-0j-955"/>
+                        <constraint firstAttribute="bottom" secondItem="bUt-aw-MbW" secondAttribute="bottom" constant="34" id="u0h-5T-nPP"/>
+                        <constraint firstAttribute="trailing" secondItem="bUt-aw-MbW" secondAttribute="trailing" constant="8" id="u4H-r1-GkM"/>
+                        <constraint firstItem="bUt-aw-MbW" firstAttribute="leading" secondItem="dw8-ts-INV" secondAttribute="leading" constant="8" id="wEc-w2-H8H"/>
                         <constraint firstItem="btZ-Eu-oer" firstAttribute="leading" secondItem="dw8-ts-INV" secondAttribute="leading" constant="8" id="zaX-O4-gew"/>
                     </constraints>
                 </view>
