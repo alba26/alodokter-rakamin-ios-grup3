@@ -30,14 +30,17 @@ class ArticleViewController: UIViewController {
     var currentCellIndex: Int = 0
     
     var viewModel = ArticleViewModel()
+    var articleResult : ArticlesModel?
+    var totalArticleLoaded : Int = 11
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
         sliderCollectionView.collectionViewLayout = setupImageSliderViewLayout()
         pageControl.numberOfPages = imageArray.count //viewModel. HeroArticlesData.count
-        viewModel.getArticlesData()
+        getArticlesData()
         articleTableView.delegate = self
         articleTableView.dataSource = self
+        contentScrollView.delegate = self
         
     }
     
@@ -152,6 +155,24 @@ class ArticleViewController: UIViewController {
         self.categoryMenu.showsMenuAsPrimaryAction = true
     }
     
+    func getArticlesData() {
+        let articleService = ArticleService(param: "per_page",value: totalArticleLoaded)
+        APIService.APIRequest(model: ArticlesModel.self, req: articleService) { (results) in
+        switch(results) {
+        case .success(let results):
+            DispatchQueue.main.async {
+                self.articleResult = results as? ArticlesModel
+            }
+            print(self.articleResult)
+            
+                
+        case .failure(let error):
+//            failToLoadArticle(title: "Load Artikel Gagal", message: "Terdapat kendala load artikel")
+            print(error,"error")
+        }
+            
+        }
+    }
 }
 
 
@@ -162,31 +183,13 @@ extension ArticleViewController: UICollectionViewDataSource, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        if collectionView == self.articleCollectionView {
-////            return viewModel.listOfArticle?.count ?? 0
-//            return 12
-//        }
-//        else {
-//            //viewmodel heroArticle.count
-//            return imageArray.count
-//        }
+        //articleHeroData.count
         return imageArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//            if collectionView == self.articleCollectionView {
-//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "articleCell", for: indexPath) as! ArticleCollectionViewCell
-////                cell.articleTitleLabel.text = viewModel.listOfArticle?[indexPath.row].title
-//                cell.articleTitleLabel.text = "4 Manfaat Daun Sambiloto untuk Kulit yang Sayang Dilewatkan"
-//                cell.articleImageView.image = UIImage(named: "ArticleImage")
-////                let imgURL = URL(string: (viewModel.listOfArticle?[indexPath.row].image)!)
-////                let data = try? Data(contentsOf: imgURL!)
-////                cell.articleImageView.image = UIImage(data: data!)
-//
-//            return cell
-//        }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageSliderCell", for: indexPath) as! ImageSliderCollectionViewCell
-        //assign viewmodel
+        //assign viewmodel articleHeroData
         cell.imageSliderImg.image = UIImage(named: imageArray[indexPath.row])
         cell.imageSliderTitle.text = "4 Manfaat Daun Sambiloto untuk Kulit yang Sayang Dilewatkan"
         cell.imageSliderTitle.backgroundColor = UIColor.black
@@ -205,12 +208,13 @@ extension ArticleViewController: UICollectionViewDataSource, UICollectionViewDel
 
 extension ArticleViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 12
+        print("jumlah", articleResult?.data.count)
+        return totalArticleLoaded
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "articleCell", for: indexPath) as! ArticleTableViewCell
-                cell.articleTitleLabel.text = viewModel.listOfArticle?[indexPath.row].title
+        cell.articleTitleLabel.text = articleResult?.data[indexPath.row].title
             cell.articleImageView.image = UIImage(named: "ArticleImage")
 //                let imgURL = URL(string: (viewModel.listOfArticle?[indexPath.row].image)!)
 //                let data = try? Data(contentsOf: imgURL!)
@@ -224,6 +228,16 @@ extension ArticleViewController : UITableViewDelegate, UITableViewDataSource {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        if scrollView == contentScrollView {
+            articleTableView.isScrollEnabled = (contentScrollView.contentOffset.y > 0)
+        }
+
+        if scrollView == articleTableView {
+            articleTableView.isScrollEnabled = (articleTableView.contentOffset.y <= 500 || articleTableView.contentOffset.y > 200)
+        }
+    }
     
     
 }
