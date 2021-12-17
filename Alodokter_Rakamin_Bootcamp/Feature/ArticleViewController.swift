@@ -31,6 +31,7 @@ class ArticleViewController: UIViewController {
     
     var viewModel = ArticleViewModel()
     var articleResult : ArticlesModel?
+    var filterResult : [Article]?
     var totalArticleLoaded : Int = 11
     
     override func viewWillAppear(_ animated: Bool) {
@@ -146,9 +147,23 @@ class ArticleViewController: UIViewController {
         categoryView.layer.cornerRadius = 10
         
         let menu = UIMenu(title: "Category", options: .displayInline, children: [
-            UIAction(title: "Trending") {(_) in self.categoryMenu.titleLabel?.text = "Trending"},
-            UIAction(title: "Kesehatan") {(_) in self.categoryMenu.titleLabel?.text = "Kesehatan"},
-            UIAction(title: "Keluarga") {(_) in self.categoryMenu.titleLabel?.text = "Keluarga"},
+            UIAction(title: "Trending") { [self](_) in self.categoryMenu.titleLabel?.text = Category.trending.rawValue
+                print("trending is displayed")
+                filterResult = articleResult?.data.filter({ (data) in
+                    let category = data.category
+                    if category.rawValue.contains(Category.kesehatan.rawValue) {
+                        return true
+                    }
+                    else {
+                        return false
+                    }
+                })
+                print(filterResult?.count)
+                self.articleTableView.reloadData()
+            },
+            UIAction(title: "Kesehatan") {(_) in self.categoryMenu.titleLabel?.text = Category.kesehatan.rawValue},
+            UIAction(title: "Keluarga") {(_) in self.categoryMenu.titleLabel?.text = Category.keluarga.rawValue},
+            UIAction(title: "Hidup Sehat") {(_) in self.categoryMenu.titleLabel?.text = Category.hidupSehat.rawValue},
         ])
         
         self.categoryMenu.menu = menu
@@ -160,8 +175,9 @@ class ArticleViewController: UIViewController {
         APIService.APIRequest(model: ArticlesModel.self, req: articleService) { (results) in
         switch(results) {
         case .success(let results):
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [self] in
                 self.articleResult = results as? ArticlesModel
+                self.filterResult = articleResult?.data
             }
             print(self.articleResult)
             
@@ -209,16 +225,23 @@ extension ArticleViewController: UICollectionViewDataSource, UICollectionViewDel
 extension ArticleViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("jumlah", articleResult?.data.count)
-        return totalArticleLoaded
+        if filterResult?.count != nil {
+            return totalArticleLoaded
+        }
+        else {
+            return filterResult?.count ?? 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "articleCell", for: indexPath) as! ArticleTableViewCell
-        cell.articleTitleLabel.text = articleResult?.data[indexPath.row].title
-            cell.articleImageView.image = UIImage(named: "ArticleImage")
-//                let imgURL = URL(string: (viewModel.listOfArticle?[indexPath.row].image)!)
-//                let data = try? Data(contentsOf: imgURL!)
-//                cell.articleImageView.image = UIImage(data: data!)
+        cell.articleTitleLabel.text = filterResult?[indexPath.row].title
+        if articleResult?.data[indexPath.row].image.contains("https") == true {
+            let imgURL = URL(string: (filterResult?[indexPath.row].image)!)
+            let data = try? Data(contentsOf: imgURL!)
+            cell.articleImageView.image = UIImage(data: data!)
+        }
+        
         return cell
     }
     
