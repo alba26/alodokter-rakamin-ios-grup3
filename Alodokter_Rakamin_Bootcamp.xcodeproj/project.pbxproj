@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1739970E2768E2C9004E4095 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739970D2768E2C9004E4095 /* ArticleViewModel.swift */; };
+		17399710276A561C004E4095 /* ArticleSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1739970F276A561B004E4095 /* ArticleSearch.storyboard */; };
+		17399717276A5C06004E4095 /* ArticleSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17399716276A5C06004E4095 /* ArticleSearchViewController.swift */; };
+		1739971B276A5F58004E4095 /* ArticleSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739971A276A5F58004E4095 /* ArticleSearchTableViewCell.swift */; };
 		17CD8F3D2761ED2D009043F0 /* Article.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F3C2761ED2D009043F0 /* Article.storyboard */; };
 		17CD8F3F2761ED3F009043F0 /* ArticleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD8F3E2761ED3F009043F0 /* ArticleCollectionViewCell.swift */; };
 		17CD8F412761ED49009043F0 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD8F402761ED49009043F0 /* ArticleViewController.swift */; };
-		17CD8F432761ED55009043F0 /* ArticleListSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F422761ED55009043F0 /* ArticleListSection.xib */; };
 		17CD8F452761ED71009043F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F442761ED71009043F0 /* Main.storyboard */; };
 		17CD8F482761ED86009043F0 /* Booking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F472761ED86009043F0 /* Booking.storyboard */; };
 		17CD8F5E2761F106009043F0 /* ResetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F532761F106009043F0 /* ResetPassword.storyboard */; };
@@ -66,10 +68,12 @@
 
 /* Begin PBXFileReference section */
 		1739970D2768E2C9004E4095 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
+		1739970F276A561B004E4095 /* ArticleSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ArticleSearch.storyboard; sourceTree = "<group>"; };
+		17399716276A5C06004E4095 /* ArticleSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleSearchViewController.swift; sourceTree = "<group>"; };
+		1739971A276A5F58004E4095 /* ArticleSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleSearchTableViewCell.swift; sourceTree = "<group>"; };
 		17CD8F3C2761ED2D009043F0 /* Article.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Article.storyboard; sourceTree = "<group>"; };
 		17CD8F3E2761ED3F009043F0 /* ArticleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleCollectionViewCell.swift; sourceTree = "<group>"; };
 		17CD8F402761ED49009043F0 /* ArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
-		17CD8F422761ED55009043F0 /* ArticleListSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleListSection.xib; sourceTree = "<group>"; };
 		17CD8F442761ED71009043F0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		17CD8F472761ED86009043F0 /* Booking.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Booking.storyboard; sourceTree = "<group>"; };
 		17CD8F532761F106009043F0 /* ResetPassword.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ResetPassword.storyboard; sourceTree = "<group>"; };
@@ -136,12 +140,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17399711276A5656004E4095 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				1739970F276A561B004E4095 /* ArticleSearch.storyboard */,
+				17399716276A5C06004E4095 /* ArticleSearchViewController.swift */,
+				1739971A276A5F58004E4095 /* ArticleSearchTableViewCell.swift */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
 		17CD8F392761ECAC009043F0 /* Artikel */ = {
 			isa = PBXGroup;
 			children = (
 				3EF0F9D3276839110058CFCF /* ArticleDetail */,
+				17399711276A5656004E4095 /* Search */,
 				17CD8F3C2761ED2D009043F0 /* Article.storyboard */,
-				17CD8F422761ED55009043F0 /* ArticleListSection.xib */,
 				17CD8F3E2761ED3F009043F0 /* ArticleCollectionViewCell.swift */,
 				17CD8F402761ED49009043F0 /* ArticleViewController.swift */,
 				17CD8F6E27645070009043F0 /* ImageSliderCollectionViewCell.swift */,
@@ -161,6 +175,7 @@
 		17CD8F522761F0E3009043F0 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				8C6121282762213700511B76 /* Register */,
 				8CB695F227639F790096BCAB /* ChangeData */,
 				8CB695E927639F2E0096BCAB /* UserProfile */,
 				17CD8F542761F106009043F0 /* Login */,
@@ -272,7 +287,6 @@
 		924DC4B3275F25BA00FCE093 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				8C6121282762213700511B76 /* Register */,
 				17CD8F522761F0E3009043F0 /* Profile */,
 				17CD8F392761ECAC009043F0 /* Artikel */,
 				17CD8F462761ED7D009043F0 /* Booking */,
@@ -286,8 +300,6 @@
 				924DC4B8275F266500FCE093 /* UIColor.swift */,
 				924DC4BA275F269100FCE093 /* DeviceHelper.swift */,
 				924DC4BC275F26DF00FCE093 /* Utility.swift */,
-				3EFA07BB275F99100010AA10 /* UIButton+extension.swift */,
-				3EC13CB82763146B00B4A878 /* UITextField+extension.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -295,6 +307,8 @@
 		924DC4BF275F32DA00FCE093 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				3EFA07BB275F99100010AA10 /* UIButton+extension.swift */,
+				3EC13CB82763146B00B4A878 /* UITextField+extension.swift */,
 				924DC4C0275F32E900FCE093 /* PopToSelectedController+Exten.swift */,
 				924DC4C2275F337200FCE093 /* SetRootView+Extension.swift */,
 			);
@@ -478,12 +492,12 @@
 				17CD8F6B2761F36B009043F0 /* ResetPasswordView.xib in Resources */,
 				17CD8F6A2761F366009043F0 /* LoginView.xib in Resources */,
 				17CD8F692761F35A009043F0 /* Login.storyboard in Resources */,
-				17CD8F432761ED55009043F0 /* ArticleListSection.xib in Resources */,
 				924DC4A7275F141800FCE093 /* LaunchScreen.storyboard in Resources */,
 				924DC4A4275F141800FCE093 /* Assets.xcassets in Resources */,
 				8CB695F627639F850096BCAB /* ChangeData.storyboard in Resources */,
 				3EF0F9D5276839320058CFCF /* ArticleDetailView.xib in Resources */,
 				8CB695F027639F440096BCAB /* UserProfileView.xib in Resources */,
+				17399710276A561C004E4095 /* ArticleSearch.storyboard in Resources */,
 				17CD8F482761ED86009043F0 /* Booking.storyboard in Resources */,
 				17CD8F452761ED71009043F0 /* Main.storyboard in Resources */,
 				17CD8F5E2761F106009043F0 /* ResetPassword.storyboard in Resources */,
@@ -524,6 +538,7 @@
 				17CD8F412761ED49009043F0 /* ArticleViewController.swift in Sources */,
 				92DC1A402765AEE20084FC4E /* SavedData.swift in Sources */,
 				92A9D65C27620338001BD05C /* ArticleModel.swift in Sources */,
+				1739971B276A5F58004E4095 /* ArticleSearchTableViewCell.swift in Sources */,
 				3EFA07BC275F99100010AA10 /* UIButton+extension.swift in Sources */,
 				92DA8AE82763C02D00028BF3 /* Session.swift in Sources */,
 				924DC4B9275F266500FCE093 /* UIColor.swift in Sources */,
@@ -538,6 +553,7 @@
 				924DC4C1275F32E900FCE093 /* PopToSelectedController+Exten.swift in Sources */,
 				92A9D66B276213AD001BD05C /* TabBarControll.swift in Sources */,
 				3E15D84527688D0E0050F6CC /* ResetPasswordService.swift in Sources */,
+				17399717276A5C06004E4095 /* ArticleSearchViewController.swift in Sources */,
 				924DC4BB275F269100FCE093 /* DeviceHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -31,10 +31,12 @@ class ArticleViewController: UIViewController {
     var viewModel = ArticleViewModel()
     
     override func viewWillAppear(_ animated: Bool) {
+        
         articleCollectionView.collectionViewLayout = setupCollectionViewLayout()
         sliderCollectionView.collectionViewLayout = setupImageSliderViewLayout()
         pageControl.numberOfPages = imageArray.count //viewModel. HeroArticlesData.count
         viewModel.getArticlesData()
+        
     }
     
     override func viewDidLoad() {
@@ -66,13 +68,16 @@ class ArticleViewController: UIViewController {
     func configNavigationBar(){
         
         //search bar
-        let searchArticleController = UISearchController(searchResultsController: nil)
+        let searchArticleController = UISearchController(searchResultsController: ArticleSearchViewController())
+        searchArticleController.searchResultsUpdater = self
+        
         self.navigationItem.searchController = searchArticleController
         self.navigationItem.hidesSearchBarWhenScrolling = false
         searchArticleController.searchBar.tintColor = UIColor.white
         searchArticleController.searchBar.barTintColor = UIColor.white
         searchArticleController.searchBar.searchTextField.backgroundColor = UIColor.white
-        
+        searchArticleController.searchBar.delegate = self
+
         
         //right attribute
         let profileNavView = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
@@ -94,7 +99,6 @@ class ArticleViewController: UIViewController {
         //kasih trailing leading constraintnya right attribute
         
     }
-    
     
     @objc func profileMenuTapped(sender: UIBarButtonItem) {
         if !UserDefaults().checkIsUserLogin(){
@@ -215,6 +219,32 @@ extension ArticleViewController: UICollectionViewDataSource, UICollectionViewDel
         guard let vc = storyboard.instantiateViewController(withIdentifier: "ArticleDetail") as? ArticleDetailViewController else { return }
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+}
+
+extension ArticleViewController : UISearchResultsUpdating, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 12
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = ArticleSearchViewController().searchResultTableView.dequeueReusableCell(withIdentifier: "searchResultCell", for: indexPath) as! ArticleSearchTableViewCell
+        cell.articleSearchImage.image = UIImage(named: "ArticleImage")
+        cell.articleSearchTitleLabel.text = "4 Manfaat Daun"
+        
+        return cell
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let searchText = searchController.searchBar.text else {
+            return
+        }
+        let searchResultVC = searchController.searchResultsController as? ArticleSearchViewController
+        
+        
+        print(searchText) // call api get data or filter api get data
+    }
+    
     
 }
 

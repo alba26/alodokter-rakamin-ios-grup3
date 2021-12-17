@@ -23,7 +23,7 @@ class LoginViewController: UIViewController {
         loginView.emailLoginTextField.addTarget(self, action: #selector(emailLoginValidation), for: .editingChanged)
         loginView.passwordLoginTextField.addTarget(self, action: #selector(passwordLoginValidation), for: .editingChanged)
         loginView.loginButton.isEnabled = false
-
+        self.title = "Login"
         loginVM.msgSuccess = { [self] msg in
             let profileStoryboard : UIStoryboard = UIStoryboard(name: "UserProfile", bundle: nil)
             let profileVC = profileStoryboard.instantiateViewController(withIdentifier: "UserProfileViewController")
@@ -33,13 +33,14 @@ class LoginViewController: UIViewController {
             })
 
         }
+        
         loginVM.msgFail = { [self] msg in
             spinner.dismiss(animated: true, completion: {
                 failToLogin(title: "Login Gagal", message: msg ?? "")
             })
             loginView.loginButton.isEnabled = false
-
         }
+        
         loginVM.emailValidationMsg = { [self] msg in
             loginView.emailValidationMessage.text = msg
             loginView.emailValidationMessage.textColor = .red
@@ -85,6 +86,9 @@ extension LoginViewController{
     }
     
 }
+
+
+
 
 
 

@@ -86,4 +86,22 @@ class Utility {
         alert.view.addSubview(spinner)
         return alert
     }
+    
+    public func stringHasNumber(_ string:String) -> Bool {
+        for character in string{
+            if character.isNumber{
+                return true
+            }
+        }
+        return false
+    }
+    
+    func stringHasCharacter(_ string:String) -> Bool {
+        for character in string{
+            if character.isLetter{
+                return true
+            }
+        }
+        return false
+    }
 }

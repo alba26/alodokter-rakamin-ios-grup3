@@ -10,9 +10,6 @@ import Foundation
 
 class LoginViewModel{
     
-//    var loginDataToken:String?
-//    var loginDataId:Int?
-//    var loginMsg:String?
     
     var userProfileData: UserProfile?
     var loginData:LoginModel?
