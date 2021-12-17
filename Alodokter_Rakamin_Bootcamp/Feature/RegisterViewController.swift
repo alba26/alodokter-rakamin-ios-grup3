@@ -15,6 +15,13 @@ class RegisterViewController: UIViewController {
     let registerVM = RegisterViewModel()
     var spinner = Utility().showSpinner()
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.addKeyboardObserver()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.removeKeyboardObserver()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,6 +78,9 @@ class RegisterViewController: UIViewController {
         registerVM.enableRegister = {[self] enabledRegister in
             registerView.registerButton.isEnabled = enabledRegister ?? false
         }
+        
+        
+
     }
     @objc func register(){
         registerVM.register(email:  registerView.emailRegisterTextField.text ?? "", fullname: registerView.nameRegisterTextField.text ?? "", password: registerView.passwordRegisterTextField.text ?? "", phone: registerView.phoneRegisterTextField.text ?? "")
@@ -97,40 +107,6 @@ class RegisterViewController: UIViewController {
     @objc func passwordConfirmRegisterValidation(){
         registerVM.confirmPasswordValidation(password: registerView.passwordRegisterTextField.text ?? "", confirmPassword: registerView.passwordConfirmRegisterTextField.text ?? "")
     }
+    
+
 }
-
-
-
-//self.email = registerView.emailRegisterTextField.text ?? ""
-//self.fullName = registerView.nameRegisterTextField.text ?? ""
-//self.password = registerView.passwordRegisterTextField.text ?? ""
-//let registerService = RegisterService(email: self.email , fullname: self.fullName, phone: "08111111111", password: self.password)
-//
-//registerView.isUserInteractionEnabled = false
-//APIService.APIRequest(model: UserData.self, req: registerService){ [self](result) in
-//    switch result {
-//    case .success(let user):
-//        guard let register = user as? UserData else{
-//            return
-//        }
-//        if register.code == 201{
-//            DispatchQueue.main.async {
-//                utils.showAlertAction(title: "Pendaftaran Berhasil", message: "Silahkan Login.", uiview: self)
-//                registerView.isUserInteractionEnabled = true
-//            }
-//        }else{
-//            DispatchQueue.main.async {
-//                utils.showAlertAction(title: "Pendaftaran Gagal", message: "Gagal untuk melakukan pendaftaran, silahkan coba lagi.", uiview: self)
-//                registerView.isUserInteractionEnabled = true
-//            }
-//
-//        }
-//
-//    case .failure(_):
-//        DispatchQueue.main.async {
-//            utils.showAlertAction(title: "Pendaftaran Gagal", message: "Gagal untuk melakukan pendaftaran, server error, silahkan hubungi developer.", uiview: self)
-//            registerView.isUserInteractionEnabled = true
-//        }
-//    }
-//
-//}

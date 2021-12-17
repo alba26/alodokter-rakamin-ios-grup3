@@ -10,25 +10,22 @@ import Foundation
 class ArticleViewModel {
     
     let utils = Utility()
-    var listOfArticle: [Article]?
-    
+
     func getArticlesData() {
-        let articleService = ArticleService()
-        APIService.APIRequest(model: ArticleModel.self, req: articleService) { (results) in
+        let articleService = ArticleService(param: "per_page",value: 2)
+        APIService.APIRequest(model: ArticlesModel.self, req: articleService) { (results) in
         switch(results) {
         case .success(let results):
-            guard let articlesData  = results as? ArticleModel else {
+            guard let articlesData  = results as? ArticlesModel else {
                 return
             }
-            self.listOfArticle = articlesData.listOfArticles
+            print(articlesData)
             
                 
-        case .failure(_):
+        case .failure(let error):
 //            failToLoadArticle(title: "Load Artikel Gagal", message: "Terdapat kendala load artikel")
-            print("error")
+            print(error,"error")
         }
-            
-            
             
         }
     }
