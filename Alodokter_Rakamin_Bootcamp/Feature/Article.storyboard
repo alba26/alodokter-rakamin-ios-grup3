@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="always" translatesAutoresizingMaskIntoConstraints="NO" id="rta-eA-dmR">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" contentInsetAdjustmentBehavior="always" translatesAutoresizingMaskIntoConstraints="NO" id="rta-eA-dmR">
                                 <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TWg-pC-sm7">
@@ -45,66 +45,6 @@
                                             <constraint firstAttribute="height" constant="61" id="6wU-R5-Nim"/>
                                         </constraints>
                                     </view>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Nzx-ZS-2M3">
-                                        <rect key="frame" x="16" y="362" width="382" height="600"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="382" id="7qc-KD-sjo"/>
-                                            <constraint firstAttribute="height" constant="600" id="qHr-EP-G3L"/>
-                                        </constraints>
-                                        <viewLayoutGuide key="contentLayoutGuide" id="ChA-XF-fAp"/>
-                                        <viewLayoutGuide key="frameLayoutGuide" id="Obb-xu-z4U"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Haw-UC-gdF">
-                                            <size key="itemSize" width="328" height="100"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="articleCell" id="lMl-Rk-b5C" customClass="ArticleCollectionViewCell" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="382" height="100"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hXB-AC-hxy">
-                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="100"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 Manfaat Daun Sambiloto untuk Kulit yang Sayang Dilewatkan" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idY-CB-eiz">
-                                                            <rect key="frame" x="163" y="16" width="205" height="54"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="205" id="QUo-Ig-xUv"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ArticleImage" translatesAutoresizingMaskIntoConstraints="NO" id="a9K-Hj-eJA">
-                                                            <rect key="frame" x="0.0" y="0.0" width="147" height="100"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" secondItem="a9K-Hj-eJA" secondAttribute="height" multiplier="16:9" id="8yF-2r-0c0"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="a9K-Hj-eJA" firstAttribute="centerY" secondItem="hXB-AC-hxy" secondAttribute="centerY" id="Cri-1k-qbJ"/>
-                                                        <constraint firstItem="a9K-Hj-eJA" firstAttribute="leading" secondItem="hXB-AC-hxy" secondAttribute="leading" id="L2b-H9-0sX"/>
-                                                        <constraint firstAttribute="trailing" secondItem="idY-CB-eiz" secondAttribute="trailing" constant="14" id="OgF-1f-JnP"/>
-                                                        <constraint firstItem="idY-CB-eiz" firstAttribute="leading" secondItem="a9K-Hj-eJA" secondAttribute="trailing" constant="16" id="UFq-of-WSy"/>
-                                                        <constraint firstItem="a9K-Hj-eJA" firstAttribute="top" secondItem="hXB-AC-hxy" secondAttribute="top" id="ZWC-lX-6jP"/>
-                                                        <constraint firstItem="idY-CB-eiz" firstAttribute="top" secondItem="hXB-AC-hxy" secondAttribute="top" constant="16" id="uCm-z3-DGh"/>
-                                                    </constraints>
-                                                </collectionViewCellContentView>
-                                                <size key="customSize" width="382" height="100"/>
-                                                <connections>
-                                                    <outlet property="articleImageView" destination="a9K-Hj-eJA" id="u4q-xS-hNj"/>
-                                                    <outlet property="articleTitleLabel" destination="idY-CB-eiz" id="kqn-7b-zFi"/>
-                                                </connections>
-                                            </collectionViewCell>
-                                        </cells>
-                                        <connections>
-                                            <outlet property="dataSource" destination="F7J-lf-dcU" id="R1v-M3-2F3"/>
-                                            <outlet property="delegate" destination="F7J-lf-dcU" id="rht-6b-HEA"/>
-                                        </connections>
-                                    </collectionView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IYs-Zq-gDQ">
                                         <rect key="frame" x="0.0" y="-13" width="414" height="250"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -161,21 +101,68 @@
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="D2W-ab-98a">
                                         <rect key="frame" x="129" y="207" width="156" height="26"/>
                                     </pageControl>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2YD-8a-f4P">
+                                        <rect key="frame" x="0.0" y="358" width="414" height="315"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="articleCell" rowHeight="120" id="cFo-Tm-R8e" customClass="ArticleTableViewCell" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="44.5" width="414" height="120"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cFo-Tm-R8e" id="N8C-TN-aT4">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VRq-Gf-0rY">
+                                                            <rect key="frame" x="20" y="10" width="147" height="100"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 Manfaat Daun Sambiloto untuk Kulit yang Sayang Dilewatkan" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKZ-Je-zob">
+                                                            <rect key="frame" x="183" y="16" width="205" height="54"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="205" id="b53-dU-u1k"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="lKZ-Je-zob" secondAttribute="trailing" constant="6" id="AFR-C5-9cl"/>
+                                                        <constraint firstItem="lKZ-Je-zob" firstAttribute="top" secondItem="N8C-TN-aT4" secondAttribute="topMargin" constant="5" id="NBk-v9-d6O"/>
+                                                        <constraint firstItem="VRq-Gf-0rY" firstAttribute="centerY" secondItem="N8C-TN-aT4" secondAttribute="centerY" id="TmE-vs-ccK"/>
+                                                        <constraint firstItem="VRq-Gf-0rY" firstAttribute="leading" secondItem="N8C-TN-aT4" secondAttribute="leadingMargin" id="UAO-jl-cbA"/>
+                                                        <constraint firstItem="VRq-Gf-0rY" firstAttribute="top" secondItem="N8C-TN-aT4" secondAttribute="topMargin" constant="-1" id="Wqd-Kf-RnR"/>
+                                                        <constraint firstItem="lKZ-Je-zob" firstAttribute="leading" secondItem="VRq-Gf-0rY" secondAttribute="trailing" constant="16" id="jg7-8k-bqB"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="lKZ-Je-zob" secondAttribute="bottom" constant="39" id="nkv-Yd-9F8"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="articleImageView" destination="VRq-Gf-0rY" id="eEO-iF-TNe"/>
+                                                    <outlet property="articleTitleLabel" destination="lKZ-Je-zob" id="a3w-0Y-jQF"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="F7J-lf-dcU" id="zgo-cd-H5O"/>
+                                            <outlet property="delegate" destination="F7J-lf-dcU" id="xtu-rG-dkh"/>
+                                        </connections>
+                                    </tableView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="IYs-Zq-gDQ" firstAttribute="centerX" secondItem="rta-eA-dmR" secondAttribute="centerX" id="3p1-2z-hgE"/>
                                     <constraint firstItem="D2W-ab-98a" firstAttribute="top" secondItem="rta-eA-dmR" secondAttribute="top" constant="207" id="5QI-Jx-eVT"/>
-                                    <constraint firstItem="Nzx-ZS-2M3" firstAttribute="top" secondItem="TWg-pC-sm7" secondAttribute="bottom" constant="32" id="89n-lt-Is9"/>
-                                    <constraint firstItem="TWg-pC-sm7" firstAttribute="leading" secondItem="Nzx-ZS-2M3" secondAttribute="leading" id="IcA-eF-FTd"/>
+                                    <constraint firstItem="TWg-pC-sm7" firstAttribute="centerX" secondItem="2YD-8a-f4P" secondAttribute="centerX" id="GyF-nv-noO"/>
+                                    <constraint firstItem="2YD-8a-f4P" firstAttribute="top" secondItem="TWg-pC-sm7" secondAttribute="bottom" constant="28" id="HBO-CX-h34"/>
+                                    <constraint firstAttribute="bottom" secondItem="TWg-pC-sm7" secondAttribute="bottom" constant="343" id="LeR-Od-5HI"/>
                                     <constraint firstItem="TWg-pC-sm7" firstAttribute="top" secondItem="IYs-Zq-gDQ" secondAttribute="bottom" constant="32" id="Mtz-wy-LBo"/>
                                     <constraint firstAttribute="trailing" secondItem="TWg-pC-sm7" secondAttribute="trailing" constant="16" id="OmG-Gx-EG4"/>
                                     <constraint firstItem="TWg-pC-sm7" firstAttribute="centerX" secondItem="IYs-Zq-gDQ" secondAttribute="centerX" id="Skf-Gi-NfR"/>
+                                    <constraint firstAttribute="bottom" secondItem="2YD-8a-f4P" secondAttribute="bottom" id="W2X-Ow-tvX"/>
                                     <constraint firstItem="D2W-ab-98a" firstAttribute="centerX" secondItem="rta-eA-dmR" secondAttribute="centerX" id="b8D-5L-0m8"/>
                                     <constraint firstItem="TWg-pC-sm7" firstAttribute="top" secondItem="D2W-ab-98a" secondAttribute="bottom" constant="36" id="eec-zU-klZ"/>
                                     <constraint firstItem="TWg-pC-sm7" firstAttribute="top" secondItem="rta-eA-dmR" secondAttribute="top" constant="269" id="fRe-1A-Dwj"/>
                                     <constraint firstItem="IYs-Zq-gDQ" firstAttribute="top" secondItem="rta-eA-dmR" secondAttribute="top" constant="-13" id="g8I-lv-Wdy"/>
-                                    <constraint firstItem="TWg-pC-sm7" firstAttribute="trailing" secondItem="Nzx-ZS-2M3" secondAttribute="trailing" id="rlV-0l-Y7O"/>
-                                    <constraint firstAttribute="bottom" secondItem="Nzx-ZS-2M3" secondAttribute="bottom" constant="-289" id="uHb-Ie-YYG"/>
+                                    <constraint firstItem="TWg-pC-sm7" firstAttribute="leading" secondItem="rta-eA-dmR" secondAttribute="leading" constant="16" id="lbF-rf-5gG"/>
+                                    <constraint firstItem="2YD-8a-f4P" firstAttribute="leading" secondItem="IYs-Zq-gDQ" secondAttribute="leading" id="uw3-PE-TCS"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -213,7 +200,7 @@
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="articleCollectionView" destination="Nzx-ZS-2M3" id="MQX-Ja-N9K"/>
+                        <outlet property="articleTableView" destination="2YD-8a-f4P" id="Zhr-Tz-qRH"/>
                         <outlet property="categoryMenu" destination="3fc-lD-DFr" id="18k-2V-UYn"/>
                         <outlet property="categoryView" destination="TWg-pC-sm7" id="fbV-wZ-m7P"/>
                         <outlet property="contentScrollView" destination="rta-eA-dmR" id="v7A-LY-e50"/>
