@@ -18,12 +18,19 @@ class UserProfileViewController: UIViewController {
         userProfileView.resetPasswordButton.addTarget(self, action: #selector(resetPasswordTapped), for: .touchUpInside)
         userProfileView.logout.addTarget(self, action: #selector(logout), for: .touchUpInside)
         userProfileView.myData.addTarget(self, action: #selector(seeMyData), for: .touchUpInside)
+        userProfileView.history.addTarget(self, action: #selector(historyTapped), for: .touchUpInside)
         
         if UserDefaults().checkIsUserLogin(){
             decodeUserData()
         }
 
         NotificationCenter.default.addObserver(self, selector: #selector(changeLabelImageName), name: NSNotification.Name(rawValue: "changeNameLabel"), object: nil)
+    }
+    
+    @objc func historyTapped() {
+        let storyboard = UIStoryboard.init(name: "Appointment", bundle: nil)
+        let historyVC = storyboard.instantiateViewController(withIdentifier: "AppointmentViewController")
+        self.navigationController?.pushViewController(historyVC, animated: true)
     }
     
     @objc func resetPasswordTapped() {
