@@ -15,6 +15,13 @@ class RegisterViewController: UIViewController {
     let registerVM = RegisterViewModel()
     var spinner = Utility().showSpinner()
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.addKeyboardObserver()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.removeKeyboardObserver()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,6 +78,9 @@ class RegisterViewController: UIViewController {
         registerVM.enableRegister = {[self] enabledRegister in
             registerView.registerButton.isEnabled = enabledRegister ?? false
         }
+        
+        
+
     }
     @objc func register(){
         registerVM.register(email:  registerView.emailRegisterTextField.text ?? "", fullname: registerView.nameRegisterTextField.text ?? "", password: registerView.passwordRegisterTextField.text ?? "", phone: registerView.phoneRegisterTextField.text ?? "")
@@ -97,4 +107,6 @@ class RegisterViewController: UIViewController {
     @objc func passwordConfirmRegisterValidation(){
         registerVM.confirmPasswordValidation(password: registerView.passwordRegisterTextField.text ?? "", confirmPassword: registerView.passwordConfirmRegisterTextField.text ?? "")
     }
+    
+
 }

@@ -43,8 +43,13 @@ class RegisterView: UIView {
         phoneRegisterTextField.setCustomUI(withPlaceholder: "No. HP")
         emailRegisterTextField.setCustomUI(withPlaceholder: "Email")
         nameRegisterTextField.setCustomUI(withPlaceholder: "Nama")
-        
+        phoneRegisterTextField.addDoneButtonOnKeyboard()
+        passwordRegisterTextField.addDoneButtonOnKeyboard()
+        passwordConfirmRegisterTextField.addDoneButtonOnKeyboard()
+        nameRegisterTextField.addDoneButtonOnKeyboard()
+        emailRegisterTextField.addDoneButtonOnKeyboard()
         phoneRegisterTextField.keyboardType = .numberPad
+        
     }
 
 }

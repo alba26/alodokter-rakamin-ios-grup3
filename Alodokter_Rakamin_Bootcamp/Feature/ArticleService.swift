@@ -8,6 +8,9 @@
 import Foundation
 
 class ArticleService: BaseService{
+    var param: String
+    var value: Int
+    
     func httpBody() -> [String : String] {
         return [:]
     }
@@ -21,11 +24,17 @@ class ArticleService: BaseService{
     }
     
     func url() -> URL {
-        return URL(string: "http://localhost:3000/article")!
+        return URL(string: "https://alogrup3.herokuapp.com/api/v1/articles?\(param)=\(value)")!
     }
     
     func timeout() -> TimeInterval {
         return 30
+    }
+    
+    init(param: String,value: Int){
+        
+        self.param = param
+        self.value = value
     }
     
 }

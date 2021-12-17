@@ -149,6 +149,7 @@
 		17CD8F392761ECAC009043F0 /* Artikel */ = {
 			isa = PBXGroup;
 			children = (
+				92D67A01276CAB9E0038628C /* Model */,
 				17399711276A5656004E4095 /* Search */,
 				17CD8F3C2761ED2D009043F0 /* Article.storyboard */,
 				17CD8F3E2761ED3F009043F0 /* ArticleCollectionViewCell.swift */,
@@ -313,7 +314,6 @@
 		92A9D6592762032B001BD05C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				92A9D65A27620338001BD05C /* ArticleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -399,6 +399,15 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		92D67A01276CAB9E0038628C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				92A9D65E27620362001BD05C /* ArticleService.swift */,
+				92A9D65A27620338001BD05C /* ArticleModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		92DA8AE32763AA0300028BF3 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,7 +419,6 @@
 		92EED41C27683818005B8F32 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				92A9D65E27620362001BD05C /* ArticleService.swift */,
 				92DA8AEF2763D46200028BF3 /* RegisterService.swift */,
 			);
 			path = Service;
