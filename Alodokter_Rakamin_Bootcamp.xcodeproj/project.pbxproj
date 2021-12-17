@@ -26,7 +26,6 @@
 		17CD8F6A2761F366009043F0 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F552761F106009043F0 /* LoginView.xib */; };
 		17CD8F6B2761F36B009043F0 /* ResetPasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F5A2761F106009043F0 /* ResetPasswordView.xib */; };
 		17CD8F6F27645070009043F0 /* ImageSliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD8F6E27645070009043F0 /* ImageSliderCollectionViewCell.swift */; };
-		3E14E2DB276C81C400495CF1 /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E2DA276C81C400495CF1 /* ArticleService.swift */; };
 		3E15D843276881C00050F6CC /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E15D842276881C00050F6CC /* ResetPasswordViewModel.swift */; };
 		3E15D84527688D0E0050F6CC /* ResetPasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E15D84427688D0E0050F6CC /* ResetPasswordService.swift */; };
 		3EF0F9D5276839320058CFCF /* ArticleDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EF0F9D4276839320058CFCF /* ArticleDetailView.xib */; };
@@ -43,6 +42,12 @@
 		8CB695F127639F440096BCAB /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB695ED27639F440096BCAB /* UserProfileView.swift */; };
 		8CB695F527639F850096BCAB /* ChangeDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB695F327639F850096BCAB /* ChangeDataViewController.swift */; };
 		8CB695F627639F850096BCAB /* ChangeData.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB695F427639F850096BCAB /* ChangeData.storyboard */; };
+		8CB6E3E9276C6D8800720B7B /* LatestAppointmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB6E3E3276C6D8800720B7B /* LatestAppointmentView.swift */; };
+		8CB6E3EA276C6D8800720B7B /* CompletedAppointmentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CB6E3E4276C6D8800720B7B /* CompletedAppointmentView.xib */; };
+		8CB6E3EB276C6D8800720B7B /* Appointment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB6E3E5276C6D8800720B7B /* Appointment.storyboard */; };
+		8CB6E3EC276C6D8800720B7B /* CompletedAppointmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB6E3E6276C6D8800720B7B /* CompletedAppointmentView.swift */; };
+		8CB6E3ED276C6D8800720B7B /* LatestAppointmentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CB6E3E7276C6D8800720B7B /* LatestAppointmentView.xib */; };
+		8CB6E3EE276C6D8800720B7B /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB6E3E8276C6D8800720B7B /* AppointmentViewController.swift */; };
 		924DC49B275F141700FCE093 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC49A275F141700FCE093 /* AppDelegate.swift */; };
 		924DC49D275F141700FCE093 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC49C275F141700FCE093 /* SceneDelegate.swift */; };
 		924DC49F275F141700FCE093 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC49E275F141700FCE093 /* ViewController.swift */; };
@@ -53,7 +58,6 @@
 		924DC4BD275F26DF00FCE093 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC4BC275F26DF00FCE093 /* Utility.swift */; };
 		924DC4C1275F32E900FCE093 /* PopToSelectedController+Exten.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC4C0275F32E900FCE093 /* PopToSelectedController+Exten.swift */; };
 		924DC4C3275F337200FCE093 /* SetRootView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC4C2275F337200FCE093 /* SetRootView+Extension.swift */; };
-		92A9D65C27620338001BD05C /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9D65A27620338001BD05C /* ArticleModel.swift */; };
 		92A9D65D27620338001BD05C /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9D65B27620338001BD05C /* LoginModel.swift */; };
 		92A9D66327620380001BD05C /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9D66227620380001BD05C /* APIService.swift */; };
 		92A9D66B276213AD001BD05C /* TabBarControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9D66A276213AD001BD05C /* TabBarControll.swift */; };
@@ -65,6 +69,8 @@
 		92DA8AF02763D46200028BF3 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DA8AEF2763D46200028BF3 /* RegisterService.swift */; };
 		92DC1A402765AEE20084FC4E /* SavedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DC1A3F2765AEE20084FC4E /* SavedData.swift */; };
 		92E21A4A2764A3A200924C38 /* UserProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E21A492764A3A100924C38 /* UserProfileService.swift */; };
+		92E668E4276CB83200578B04 /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E668E3276CB83200578B04 /* ArticleService.swift */; };
+		92E668E7276CB86000578B04 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E668E6276CB85F00578B04 /* ArticleModel.swift */; };
 		92EED41E2768E86C005B8F32 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EED41D2768E86C005B8F32 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -88,7 +94,6 @@
 		17CD8F5B2761F106009043F0 /* ResetPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		17CD8F5C2761F106009043F0 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		17CD8F6E27645070009043F0 /* ImageSliderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSliderCollectionViewCell.swift; sourceTree = "<group>"; };
-		3E14E2DA276C81C400495CF1 /* ArticleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleService.swift; sourceTree = "<group>"; };
 		3E15D842276881C00050F6CC /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
 		3E15D84427688D0E0050F6CC /* ResetPasswordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordService.swift; sourceTree = "<group>"; };
 		3EC13CB82763146B00B4A878 /* UITextField+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+extension.swift"; sourceTree = "<group>"; };
@@ -106,6 +111,12 @@
 		8CB695ED27639F440096BCAB /* UserProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		8CB695F327639F850096BCAB /* ChangeDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeDataViewController.swift; sourceTree = "<group>"; };
 		8CB695F427639F850096BCAB /* ChangeData.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChangeData.storyboard; sourceTree = "<group>"; };
+		8CB6E3E3276C6D8800720B7B /* LatestAppointmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LatestAppointmentView.swift; sourceTree = "<group>"; };
+		8CB6E3E4276C6D8800720B7B /* CompletedAppointmentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CompletedAppointmentView.xib; sourceTree = "<group>"; };
+		8CB6E3E5276C6D8800720B7B /* Appointment.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Appointment.storyboard; sourceTree = "<group>"; };
+		8CB6E3E6276C6D8800720B7B /* CompletedAppointmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletedAppointmentView.swift; sourceTree = "<group>"; };
+		8CB6E3E7276C6D8800720B7B /* LatestAppointmentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LatestAppointmentView.xib; sourceTree = "<group>"; };
+		8CB6E3E8276C6D8800720B7B /* AppointmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentViewController.swift; sourceTree = "<group>"; };
 		924DC497275F141700FCE093 /* Alodokter_Rakamin_Bootcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alodokter_Rakamin_Bootcamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		924DC49A275F141700FCE093 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		924DC49C275F141700FCE093 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +141,8 @@
 		92DA8AEF2763D46200028BF3 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
 		92DC1A3F2765AEE20084FC4E /* SavedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedData.swift; sourceTree = "<group>"; };
 		92E21A492764A3A100924C38 /* UserProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileService.swift; sourceTree = "<group>"; };
+		92E668E3276CB83200578B04 /* ArticleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArticleService.swift; path = Alodokter_Rakamin_Bootcamp/Feature/ArticleService.swift; sourceTree = SOURCE_ROOT; };
+		92E668E6276CB85F00578B04 /* ArticleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 		92EED41D2768E86C005B8F32 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,6 +170,7 @@
 		17CD8F392761ECAC009043F0 /* Artikel */ = {
 			isa = PBXGroup;
 			children = (
+				92E668E5276CB84400578B04 /* Model */,
 				3EF0F9D3276839110058CFCF /* ArticleDetail */,
 				17399711276A5656004E4095 /* Search */,
 				17CD8F3C2761ED2D009043F0 /* Article.storyboard */,
@@ -180,6 +194,7 @@
 		17CD8F522761F0E3009043F0 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				8CB6E3E2276C6D6B00720B7B /* Appointment */,
 				8C6121282762213700511B76 /* Register */,
 				8CB695F227639F790096BCAB /* ChangeData */,
 				8CB695E927639F2E0096BCAB /* UserProfile */,
@@ -249,6 +264,19 @@
 				8CB695F327639F850096BCAB /* ChangeDataViewController.swift */,
 			);
 			path = ChangeData;
+			sourceTree = "<group>";
+		};
+		8CB6E3E2276C6D6B00720B7B /* Appointment */ = {
+			isa = PBXGroup;
+			children = (
+				8CB6E3E5276C6D8800720B7B /* Appointment.storyboard */,
+				8CB6E3E8276C6D8800720B7B /* AppointmentViewController.swift */,
+				8CB6E3E6276C6D8800720B7B /* CompletedAppointmentView.swift */,
+				8CB6E3E4276C6D8800720B7B /* CompletedAppointmentView.xib */,
+				8CB6E3E3276C6D8800720B7B /* LatestAppointmentView.swift */,
+				8CB6E3E7276C6D8800720B7B /* LatestAppointmentView.xib */,
+			);
+			path = Appointment;
 			sourceTree = "<group>";
 		};
 		924DC48E275F141700FCE093 = {
@@ -333,7 +361,6 @@
 		92A9D6592762032B001BD05C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				92A9D65A27620338001BD05C /* ArticleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -423,15 +450,24 @@
 			isa = PBXGroup;
 			children = (
 				92A9D6602762036B001BD05C /* UserLoginService.swift */,
+				92A9D65A27620338001BD05C /* ArticleModel.swift */,
 			);
 			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		92E668E5276CB84400578B04 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				92E668E6276CB85F00578B04 /* ArticleModel.swift */,
+				92E668E3276CB83200578B04 /* ArticleService.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		92EED41C27683818005B8F32 /* Service */ = {
 			isa = PBXGroup;
 			children = (
 				92DA8AEF2763D46200028BF3 /* RegisterService.swift */,
-				3E14E2DA276C81C400495CF1 /* ArticleService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -497,13 +533,16 @@
 				8C61212E2762214600511B76 /* RegisterView.xib in Resources */,
 				17CD8F6B2761F36B009043F0 /* ResetPasswordView.xib in Resources */,
 				17CD8F6A2761F366009043F0 /* LoginView.xib in Resources */,
+				8CB6E3ED276C6D8800720B7B /* LatestAppointmentView.xib in Resources */,
 				17CD8F692761F35A009043F0 /* Login.storyboard in Resources */,
+				8CB6E3EA276C6D8800720B7B /* CompletedAppointmentView.xib in Resources */,
 				924DC4A7275F141800FCE093 /* LaunchScreen.storyboard in Resources */,
 				924DC4A4275F141800FCE093 /* Assets.xcassets in Resources */,
 				8CB695F627639F850096BCAB /* ChangeData.storyboard in Resources */,
 				3EF0F9D5276839320058CFCF /* ArticleDetailView.xib in Resources */,
 				8CB695F027639F440096BCAB /* UserProfileView.xib in Resources */,
 				17399710276A561C004E4095 /* ArticleSearch.storyboard in Resources */,
+				8CB6E3EB276C6D8800720B7B /* Appointment.storyboard in Resources */,
 				17CD8F482761ED86009043F0 /* Booking.storyboard in Resources */,
 				17CD8F452761ED71009043F0 /* Main.storyboard in Resources */,
 				17CD8F5E2761F106009043F0 /* ResetPassword.storyboard in Resources */,
@@ -523,9 +562,11 @@
 				92DA8AE62763BE4900028BF3 /* UITextField+extension.swift in Sources */,
 				17CD8F672761F138009043F0 /* LoginView.swift in Sources */,
 				92DA8AEC2763C35B00028BF3 /* LoginService.swift in Sources */,
+				8CB6E3E9276C6D8800720B7B /* LatestAppointmentView.swift in Sources */,
 				92DA8AEA2763C1EE00028BF3 /* UserData.swift in Sources */,
 				3EF0F9D927686F3D0058CFCF /* ArticleDetailViewController.swift in Sources */,
 				92A9D66327620380001BD05C /* APIService.swift in Sources */,
+				8CB6E3EC276C6D8800720B7B /* CompletedAppointmentView.swift in Sources */,
 				3E15D843276881C00050F6CC /* ResetPasswordViewModel.swift in Sources */,
 				17CD8F622761F106009043F0 /* LoginViewController.swift in Sources */,
 				92E21A4A2764A3A200924C38 /* UserProfileService.swift in Sources */,
@@ -543,11 +584,12 @@
 				924DC49D275F141700FCE093 /* SceneDelegate.swift in Sources */,
 				8CB695E827639EEE0096BCAB /* RegisterView.swift in Sources */,
 				17CD8F412761ED49009043F0 /* ArticleViewController.swift in Sources */,
+				92E668E4276CB83200578B04 /* ArticleService.swift in Sources */,
 				92DC1A402765AEE20084FC4E /* SavedData.swift in Sources */,
-				92A9D65C27620338001BD05C /* ArticleModel.swift in Sources */,
 				1739971B276A5F58004E4095 /* ArticleSearchTableViewCell.swift in Sources */,
 				3EFA07BC275F99100010AA10 /* UIButton+extension.swift in Sources */,
 				92DA8AE82763C02D00028BF3 /* Session.swift in Sources */,
+				8CB6E3EE276C6D8800720B7B /* AppointmentViewController.swift in Sources */,
 				924DC4B9275F266500FCE093 /* UIColor.swift in Sources */,
 				92A9D65D27620338001BD05C /* LoginModel.swift in Sources */,
 				92D478A9276A42800092BB50 /* RegisterViewModel.swift in Sources */,
@@ -557,9 +599,9 @@
 				92DA8AF02763D46200028BF3 /* RegisterService.swift in Sources */,
 				8C61212D2762214600511B76 /* RegisterViewController.swift in Sources */,
 				17CD8F642761F106009043F0 /* ResetPasswordView.swift in Sources */,
+				92E668E7276CB86000578B04 /* ArticleModel.swift in Sources */,
 				924DC4C1275F32E900FCE093 /* PopToSelectedController+Exten.swift in Sources */,
 				92A9D66B276213AD001BD05C /* TabBarControll.swift in Sources */,
-				3E14E2DB276C81C400495CF1 /* ArticleService.swift in Sources */,
 				3E15D84527688D0E0050F6CC /* ResetPasswordService.swift in Sources */,
 				17399717276A5C06004E4095 /* ArticleSearchViewController.swift in Sources */,
 				924DC4BB275F269100FCE093 /* DeviceHelper.swift in Sources */,

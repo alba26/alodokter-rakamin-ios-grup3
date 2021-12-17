@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LatestAppointmentView" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target">
+            <connections>
+                <outlet property="appointmentCard" destination="D0s-Vj-hT7" id="bpI-Lq-fJV"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="hcx-VZ-6Wa"/>
+                <outlet property="doctorImage" destination="vyq-2l-Hny" id="5eG-I5-hAn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="272"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D0s-Vj-hT7">
+                    <rect key="frame" x="20" y="91" width="374" height="121"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="vyq-2l-Hny">
+                            <rect key="frame" x="16" y="16" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="vyq-2l-Hny" secondAttribute="height" multiplier="1:1" id="0FC-80-8JD"/>
+                                <constraint firstAttribute="width" constant="60" id="860-WA-jv8"/>
+                                <constraint firstAttribute="height" constant="60" id="nxD-X0-ba0"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dr. Nia Santosa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoi-xK-aDI">
+                            <rect key="frame" x="108" y="16" width="110" height="18"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u1V-zR-B9J">
+                            <rect key="frame" x="0.0" y="90" width="374" height="1"/>
+                            <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="lpI-OO-dvC"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dokter Mata" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loS-lC-GZx">
+                            <rect key="frame" x="108" y="39" width="65" height="14"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RS Siloam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLC-1Q-UlA">
+                            <rect key="frame" x="108" y="58" width="53" height="14"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGt-2B-UDB">
+                            <rect key="frame" x="332" y="16" width="26" height="14"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoG-wl-C3s">
+                            <rect key="frame" x="16" y="98" width="22" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14.00 - 16.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5e-2D-vpe">
+                            <rect key="frame" x="108" y="98" width="70" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="xLC-1Q-UlA" firstAttribute="top" secondItem="loS-lC-GZx" secondAttribute="bottom" constant="5" id="2kC-n9-lkN"/>
+                        <constraint firstItem="aoi-xK-aDI" firstAttribute="leading" secondItem="vyq-2l-Hny" secondAttribute="trailing" constant="32" id="3zX-px-kdm"/>
+                        <constraint firstAttribute="bottom" secondItem="KoG-wl-C3s" secondAttribute="bottom" constant="5" id="4yd-yr-JFY"/>
+                        <constraint firstItem="aoi-xK-aDI" firstAttribute="top" secondItem="D0s-Vj-hT7" secondAttribute="top" constant="16" id="5MV-Mv-tdz"/>
+                        <constraint firstAttribute="trailing" secondItem="NGt-2B-UDB" secondAttribute="trailing" constant="16" id="HMv-WW-fwE"/>
+                        <constraint firstItem="aoi-xK-aDI" firstAttribute="leading" secondItem="D0s-Vj-hT7" secondAttribute="leading" constant="108" id="Iyk-EA-s0U"/>
+                        <constraint firstAttribute="bottom" secondItem="v5e-2D-vpe" secondAttribute="bottom" constant="5" id="NAP-kF-CHk"/>
+                        <constraint firstItem="v5e-2D-vpe" firstAttribute="top" secondItem="u1V-zR-B9J" secondAttribute="bottom" constant="7" id="Og7-GA-KUM"/>
+                        <constraint firstItem="KoG-wl-C3s" firstAttribute="leading" secondItem="D0s-Vj-hT7" secondAttribute="leading" constant="16" id="W6O-Cp-rEu"/>
+                        <constraint firstItem="loS-lC-GZx" firstAttribute="top" secondItem="aoi-xK-aDI" secondAttribute="bottom" constant="5" id="YpJ-OB-bP7"/>
+                        <constraint firstItem="v5e-2D-vpe" firstAttribute="leading" secondItem="KoG-wl-C3s" secondAttribute="trailing" constant="70" id="bvh-wc-MC5"/>
+                        <constraint firstItem="xLC-1Q-UlA" firstAttribute="leading" secondItem="vyq-2l-Hny" secondAttribute="trailing" constant="32" id="gwM-yU-fJw"/>
+                        <constraint firstAttribute="height" constant="121" id="hDR-cB-vGT"/>
+                        <constraint firstItem="loS-lC-GZx" firstAttribute="leading" secondItem="vyq-2l-Hny" secondAttribute="trailing" constant="32" id="hnF-QU-mMh"/>
+                        <constraint firstItem="vyq-2l-Hny" firstAttribute="leading" secondItem="D0s-Vj-hT7" secondAttribute="leading" constant="16" id="i3R-oy-qr7"/>
+                        <constraint firstItem="NGt-2B-UDB" firstAttribute="top" secondItem="D0s-Vj-hT7" secondAttribute="top" constant="16" id="iMN-ec-oPU"/>
+                        <constraint firstItem="vyq-2l-Hny" firstAttribute="top" secondItem="D0s-Vj-hT7" secondAttribute="top" constant="16" id="nHj-cd-jue"/>
+                        <constraint firstItem="u1V-zR-B9J" firstAttribute="leading" secondItem="D0s-Vj-hT7" secondAttribute="leading" id="qqA-Jc-ObE"/>
+                        <constraint firstAttribute="trailing" secondItem="u1V-zR-B9J" secondAttribute="trailing" id="qyf-aO-Wjg"/>
+                        <constraint firstItem="KoG-wl-C3s" firstAttribute="top" secondItem="u1V-zR-B9J" secondAttribute="bottom" constant="7" id="r7D-mo-kdP"/>
+                        <constraint firstAttribute="bottom" secondItem="u1V-zR-B9J" secondAttribute="bottom" constant="30" id="zSM-0U-Raq"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="D0s-Vj-hT7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="M5Z-kp-5vz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="D0s-Vj-hT7" secondAttribute="trailing" constant="20" id="ya4-uD-bSg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="-62.276785714285708"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ProfileImage" width="5020" height="3347"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
