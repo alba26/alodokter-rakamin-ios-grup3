@@ -33,7 +33,6 @@ class ArticleViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
-        articleCollectionView.collectionViewLayout = setupCollectionViewLayout()
         sliderCollectionView.collectionViewLayout = setupImageSliderViewLayout()
         pageControl.numberOfPages = imageArray.count //viewModel. HeroArticlesData.count
         viewModel.getArticlesData()
@@ -153,28 +152,6 @@ class ArticleViewController: UIViewController {
         self.categoryMenu.showsMenuAsPrimaryAction = true
     }
     
-//    func setupCollectionViewLayout() -> UICollectionViewCompositionalLayout{
-//        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(100))
-//        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-//
-//        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
-//        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
-//        group.interItemSpacing = .flexible(12)
-//
-//        let section = NSCollectionLayoutSection(group: group)
-//        section.orthogonalScrollingBehavior = .groupPaging
-//        section.interGroupSpacing = 16
-//
-//        let layout = UICollectionViewCompositionalLayout(section: section)
-//
-//        let config = UICollectionViewCompositionalLayoutConfiguration()
-//        config.interSectionSpacing = 100
-//        layout.configuration = config
-//
-//
-//        return layout
-//
-//    }
 }
 
 
@@ -239,6 +216,12 @@ extension ArticleViewController : UITableViewDelegate, UITableViewDataSource {
 //                let data = try? Data(contentsOf: imgURL!)
 //                cell.articleImageView.image = UIImage(data: data!)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Article", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "ArticleDetail") as? ArticleDetailViewController else { return }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     
