@@ -214,6 +214,36 @@
             </objects>
             <point key="canvasLocation" x="2255.072463768116" y="-135.26785714285714"/>
         </scene>
+        <!--Article Detail View Controller-->
+        <scene sceneID="sdt-91-Qsm">
+            <objects>
+                <viewController storyboardIdentifier="ArticleDetail" id="KNc-kC-tgg" customClass="ArticleDetailViewController" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hNh-sU-OVT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1TH-nM-HRA" customClass="ArticleDetailView" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TRp-M6-S0O"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1TH-nM-HRA" firstAttribute="top" secondItem="TRp-M6-S0O" secondAttribute="top" id="6TX-5a-oip"/>
+                            <constraint firstItem="TRp-M6-S0O" firstAttribute="trailing" secondItem="1TH-nM-HRA" secondAttribute="trailing" id="H84-vv-v0B"/>
+                            <constraint firstItem="TRp-M6-S0O" firstAttribute="bottom" secondItem="1TH-nM-HRA" secondAttribute="bottom" id="eGl-7a-A1Z"/>
+                            <constraint firstItem="1TH-nM-HRA" firstAttribute="leading" secondItem="TRp-M6-S0O" secondAttribute="leading" id="l5F-kv-esg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="articleDetailView" destination="1TH-nM-HRA" id="cna-gZ-n6S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Rr-E3-9Oh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3165" y="-135"/>
+        </scene>
         <!--Artikel-->
         <scene sceneID="FlM-Mg-h1B">
             <objects>

@@ -32,8 +32,8 @@ class ArticleViewController: UIViewController {
     var viewModel = ArticleViewModel()
     
     override func viewWillAppear(_ animated: Bool) {
-        
-//        articleCollectionView.collectionViewLayout = setupCollectionViewLayout()
+        self.tabBarController?.tabBar.isHidden = false
+        articleCollectionView.collectionViewLayout = setupCollectionViewLayout()
         sliderCollectionView.collectionViewLayout = setupImageSliderViewLayout()
         pageControl.numberOfPages = imageArray.count //viewModel. HeroArticlesData.count
         viewModel.getArticlesData()
@@ -178,7 +178,7 @@ class ArticleViewController: UIViewController {
 }
 
 
-extension ArticleViewController: UICollectionViewDataSource {
+extension ArticleViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -216,8 +216,14 @@ extension ArticleViewController: UICollectionViewDataSource {
         cell.imageSliderTitle.textColor = UIColor.white
         
         return cell
-        
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Article", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "ArticleDetail") as? ArticleDetailViewController else { return }
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 
 extension ArticleViewController : UITableViewDelegate, UITableViewDataSource {
