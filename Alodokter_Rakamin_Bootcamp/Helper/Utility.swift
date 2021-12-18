@@ -50,6 +50,15 @@ class Utility {
         return fixedString
     }
     
+    public func convertDateFromDatePicker(date: Date) ->String{
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMMM yyyy"
+        dateFormatter.locale = Locale(identifier: "id")
+        return dateFormatter.string(from: date)
+        
+    }
+    
     
     public func showAlertAction(title: String, message: String, uiview: UIViewController, controller:UINavigationController = UINavigationController(), action:Bool = false){
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
@@ -67,8 +76,10 @@ class Utility {
         if date != ""{
             let dateFormatterGet = DateFormatter()
             dateFormatterGet.dateFormat = "yyyy-MM-dd"
+            dateFormatterGet.locale = Locale(identifier: "id")
             let dateFormatterPrint = DateFormatter()
-            dateFormatterPrint.dateFormat = "MMM dd,yyyy"
+            dateFormatterPrint.dateFormat = "dd MMMM yyyy"
+            dateFormatterPrint.locale = Locale(identifier: "id")
             let date: NSDate? = dateFormatterGet.date(from: date) as NSDate?
             let fixDate = dateFormatterPrint.string(from: date! as Date)
             return fixDate
@@ -77,6 +88,22 @@ class Utility {
         }
 
     }
+    public func convertDateToAPIFormat(date:String) -> String{
+        if date != ""{
+            let dateFormatterGet = DateFormatter()
+            dateFormatterGet.dateFormat = "dd MMMM yyyy"
+            dateFormatterGet.locale = Locale(identifier: "id")
+            let dateFormatterPrint = DateFormatter()
+            dateFormatterPrint.dateFormat = "yyyy-MM-dd"
+            let date: NSDate? = dateFormatterGet.date(from: date) as NSDate?
+            let fixDate = dateFormatterPrint.string(from: date! as Date)
+            return fixDate
+        }else{
+            return ""
+        }
+
+    }
+    
     
     public func showSpinner() -> UIAlertController{
         let alert = UIAlertController(title: nil, message: "Mohon Tunggu", preferredStyle: .alert)

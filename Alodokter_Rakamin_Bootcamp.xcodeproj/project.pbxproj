@@ -82,6 +82,8 @@
 		92A9D65D27620338001BD05C /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9D65B27620338001BD05C /* LoginModel.swift */; };
 		92A9D66327620380001BD05C /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9D66227620380001BD05C /* APIService.swift */; };
 		92A9D66B276213AD001BD05C /* TabBarControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9D66A276213AD001BD05C /* TabBarControll.swift */; };
+		92AB685D276E20E000F8880F /* ChangeDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB685C276E20E000F8880F /* ChangeDataViewModel.swift */; };
+		92AB685F276E21B700F8880F /* ChangeDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB685E276E21B700F8880F /* ChangeDataService.swift */; };
 		92D478A9276A42800092BB50 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D478A8276A42800092BB50 /* RegisterViewModel.swift */; };
 		92DA8AE62763BE4900028BF3 /* UITextField+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC13CB82763146B00B4A878 /* UITextField+extension.swift */; };
 		92DA8AE82763C02D00028BF3 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DA8AE72763C02D00028BF3 /* Session.swift */; };
@@ -176,6 +178,8 @@
 		92A9D6602762036B001BD05C /* UserLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLoginService.swift; sourceTree = "<group>"; };
 		92A9D66227620380001BD05C /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		92A9D66A276213AD001BD05C /* TabBarControll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControll.swift; sourceTree = "<group>"; };
+		92AB685C276E20E000F8880F /* ChangeDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeDataViewModel.swift; sourceTree = "<group>"; };
+		92AB685E276E21B700F8880F /* ChangeDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeDataService.swift; sourceTree = "<group>"; };
 		92D478A8276A42800092BB50 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		92DA8AE72763C02D00028BF3 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		92DA8AE92763C1EE00028BF3 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
@@ -230,8 +234,6 @@
 			children = (
 				3ED57300276DCD2400295F35 /* BookingSelesai */,
 				3ED572FD276DC96800295F35 /* KonfirmasiData */,
-				3E14E2FD276D994A00495CF1 /* PilihJadwal */,
-				3E14E2FC276D993B00495CF1 /* IsiDataPasien */,
 				17CD8F472761ED86009043F0 /* Booking.storyboard */,
 				3E14E2FD276D994A00495CF1 /* PilihJadwal */,
 				3E14E2FC276D993B00495CF1 /* IsiDataPasien */,
@@ -353,6 +355,8 @@
 			children = (
 				8CB695F427639F850096BCAB /* ChangeData.storyboard */,
 				8CB695F327639F850096BCAB /* ChangeDataViewController.swift */,
+				92AB685C276E20E000F8880F /* ChangeDataViewModel.swift */,
+				92AB685E276E21B700F8880F /* ChangeDataService.swift */,
 			);
 			path = ChangeData;
 			sourceTree = "<group>";
@@ -672,6 +676,7 @@
 				3ED5730A276DD24B00295F35 /* KonfirmasiDataViewController.swift in Sources */,
 				92DA8AE62763BE4900028BF3 /* UITextField+extension.swift in Sources */,
 				17CD8F672761F138009043F0 /* LoginView.swift in Sources */,
+				92AB685F276E21B700F8880F /* ChangeDataService.swift in Sources */,
 				3E14E2F2276D194B00495CF1 /* IsiDataPasienView.swift in Sources */,
 				3E14E2FA276D988F00495CF1 /* DataPasienViewController.swift in Sources */,
 				92DA8AEC2763C35B00028BF3 /* LoginService.swift in Sources */,
@@ -690,6 +695,7 @@
 				3EF0F9D727683EFF0058CFCF /* ArticleDetailView.swift in Sources */,
 				924DC49F275F141700FCE093 /* ViewController.swift in Sources */,
 				92EED41E2768E86C005B8F32 /* LoginViewModel.swift in Sources */,
+				92AB685D276E20E000F8880F /* ChangeDataViewModel.swift in Sources */,
 				17CD8F652761F106009043F0 /* ResetPasswordViewController.swift in Sources */,
 				3E14E2EA276D101A00495CF1 /* ArticleDetailViewModel.swift in Sources */,
 				924DC49B275F141700FCE093 /* AppDelegate.swift in Sources */,
@@ -698,7 +704,6 @@
 				924DC4C3275F337200FCE093 /* SetRootView+Extension.swift in Sources */,
 				924DC4BD275F26DF00FCE093 /* Utility.swift in Sources */,
 				3E14E2E8276D0FB800495CF1 /* ArticleDetailService.swift in Sources */,
-
 				1739971D276BBF87004E4095 /* ArticleTableViewCell.swift in Sources */,
 				924DC49D275F141700FCE093 /* SceneDelegate.swift in Sources */,
 				8CB695E827639EEE0096BCAB /* RegisterView.swift in Sources */,

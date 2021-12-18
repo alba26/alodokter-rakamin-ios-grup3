@@ -61,6 +61,9 @@
                                 <rect key="frame" x="32" y="410" width="350" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="email"/>
+                                <connections>
+                                    <action selector="convertDates:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="RlV-ZX-DzZ"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T9Q-1z-xwa">
                                 <rect key="frame" x="32" y="498" width="350" height="34"/>
@@ -89,6 +92,9 @@
                                 <rect key="frame" x="32" y="586" width="350" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="date-time"/>
+                                <connections>
+                                    <action selector="test:" destination="Y6W-OH-hqX" eventType="editingChanged" id="UUD-wD-DGN"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alamat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASe-4A-ndX">
                                 <rect key="frame" x="32" y="648" width="51" height="18"/>
