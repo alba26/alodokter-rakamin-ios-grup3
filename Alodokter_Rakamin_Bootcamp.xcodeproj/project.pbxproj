@@ -225,6 +225,8 @@
 				3E14E2FD276D994A00495CF1 /* PilihJadwal */,
 				3E14E2FC276D993B00495CF1 /* IsiDataPasien */,
 				17CD8F472761ED86009043F0 /* Booking.storyboard */,
+				3E14E2FD276D994A00495CF1 /* PilihJadwal */,
+				3E14E2FC276D993B00495CF1 /* IsiDataPasien */,
 				3E14E2F5276D980300495CF1 /* BookingViewController.swift */,
 			);
 			name = Booking;
@@ -674,6 +676,7 @@
 				924DC4C3275F337200FCE093 /* SetRootView+Extension.swift in Sources */,
 				924DC4BD275F26DF00FCE093 /* Utility.swift in Sources */,
 				3E14E2E8276D0FB800495CF1 /* ArticleDetailService.swift in Sources */,
+
 				1739971D276BBF87004E4095 /* ArticleTableViewCell.swift in Sources */,
 				924DC49D275F141700FCE093 /* SceneDelegate.swift in Sources */,
 				8CB695E827639EEE0096BCAB /* RegisterView.swift in Sources */,
