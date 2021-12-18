@@ -34,6 +34,7 @@ class ArticleViewController: UIViewController {
        var articleHeroResults : [Article]?
        var searchResult : [Article]?
        var totalArticleLoaded : Int = 6
+    let searchArticleController = UISearchController(searchResultsController: nil)
        
        override func viewWillAppear(_ animated: Bool) {
            self.tabBarController?.tabBar.isHidden = false
@@ -202,7 +203,6 @@ class ArticleViewController: UIViewController {
            activityIndicator.start {
                DispatchQueue.global(qos: .utility).async { [self] in
                    sleep(1)
-                   print("LODA")
                    DispatchQueue.main.async { [weak self] in
                        self?.activityIndicator.stop()
                    }
@@ -220,8 +220,7 @@ class ArticleViewController: UIViewController {
                guard let searchText = searchController.searchBar.text else {
                    return
                }
-               let searchResultVC = searchController.searchResultsController as? ArticleSearchViewController
-               searchResult = articleResult?.data.filter({ (data) in
+               filterResult = articleResult?.data.filter({ (data) in
                    let searchArticle = data.title
                    if searchArticle.lowercased().contains(searchText.lowercased()) {
                        return true
@@ -230,11 +229,7 @@ class ArticleViewController: UIViewController {
                        return false
                    }
                })
-               print(searchResult?.count)
-               searchResultVC?.searchArticleResult = searchResult
-               print(searchResultVC?.searchArticleResult?.count)
-               
-               print(searchText) // call api get data or filter api get data
+           self.articleTableView.reloadData()
            }
 
        
@@ -268,7 +263,7 @@ class ArticleViewController: UIViewController {
            
            let menu = UIMenu(title: "Category", options: .displayInline, children: [
                UIAction(title: "Trending") { [self](_) in self.categoryMenu.titleLabel?.text = Category.trending.rawValue
-                   print("trending is displayed")
+
                    filterResult = articleResult?.data.filter({ (data) in
                        let category = data.category
                        if category.rawValue.contains(Category.trending.rawValue) {
@@ -325,7 +320,7 @@ class ArticleViewController: UIViewController {
        func configNavigationBar(){
            
            //search bar
-           let searchArticleController = UISearchController(searchResultsController: ArticleSearchViewController())
+
            searchArticleController.searchResultsUpdater = self
            
            self.navigationItem.searchController = searchArticleController
