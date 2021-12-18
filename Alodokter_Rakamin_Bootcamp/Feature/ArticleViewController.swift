@@ -35,7 +35,6 @@ class ArticleViewController: UIViewController {
     var articleHeroResults : [Article]?
     var totalArticleLoaded : Int = 6
     
-    
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
         sliderCollectionView.collectionViewLayout = setupImageSliderViewLayout()
