@@ -35,7 +35,7 @@
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dw8-ts-INV">
-                    <rect key="frame" x="24" y="196" width="366" height="220"/>
+                    <rect key="frame" x="24" y="196" width="366" height="242"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btZ-Eu-oer">
                             <rect key="frame" x="8" y="53" width="350" height="1"/>
@@ -75,7 +75,7 @@
                             </buttonConfiguration>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uuC-Ud-nd2">
-                            <rect key="frame" x="8" y="186" width="350" height="34"/>
+                            <rect key="frame" x="8" y="194" width="350" height="34"/>
                             <color key="tintColor" systemColor="labelColor"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Onboarding">
@@ -85,16 +85,15 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="uuC-Ud-nd2" firstAttribute="top" secondItem="bUt-aw-MbW" secondAttribute="bottom" id="0Z1-IO-cyA"/>
+                        <constraint firstItem="uuC-Ud-nd2" firstAttribute="top" secondItem="bUt-aw-MbW" secondAttribute="bottom" constant="8" id="0Z1-IO-cyA"/>
                         <constraint firstItem="bUt-aw-MbW" firstAttribute="top" secondItem="0pO-q5-jh5" secondAttribute="bottom" constant="8" id="74x-Vl-5GO"/>
                         <constraint firstAttribute="trailing" secondItem="0pO-q5-jh5" secondAttribute="trailing" constant="8" id="8gh-Ml-wRG"/>
                         <constraint firstItem="0pO-q5-jh5" firstAttribute="leading" secondItem="dw8-ts-INV" secondAttribute="leading" constant="8" id="CUl-Np-l6R"/>
-                        <constraint firstAttribute="bottom" secondItem="uuC-Ud-nd2" secondAttribute="bottom" id="EDM-dg-am0"/>
+                        <constraint firstAttribute="bottom" secondItem="uuC-Ud-nd2" secondAttribute="bottom" constant="14" id="EDM-dg-am0"/>
                         <constraint firstItem="uuC-Ud-nd2" firstAttribute="leading" secondItem="dw8-ts-INV" secondAttribute="leading" constant="8" id="GkR-Eo-XIF"/>
                         <constraint firstItem="JBm-hq-ZBJ" firstAttribute="top" secondItem="btZ-Eu-oer" secondAttribute="bottom" constant="14" id="KXD-np-QEC"/>
                         <constraint firstItem="0pO-q5-jh5" firstAttribute="top" secondItem="JBm-hq-ZBJ" secondAttribute="bottom" constant="8" id="LRk-NP-jfC"/>
                         <constraint firstItem="JBm-hq-ZBJ" firstAttribute="leading" secondItem="dw8-ts-INV" secondAttribute="leading" constant="8" id="O7O-jL-Tr1"/>
-                        <constraint firstAttribute="height" constant="220" id="RWR-IF-BVi"/>
                         <constraint firstItem="yvC-Xz-8AI" firstAttribute="leading" secondItem="dw8-ts-INV" secondAttribute="leading" constant="14" id="S2s-xl-dbH"/>
                         <constraint firstAttribute="trailing" secondItem="JBm-hq-ZBJ" secondAttribute="trailing" constant="8" id="U7h-th-HB4"/>
                         <constraint firstAttribute="trailing" secondItem="yvC-Xz-8AI" secondAttribute="trailing" constant="14" id="aFX-6x-67u"/>
@@ -108,7 +107,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nMW-rd-sgK">
-                    <rect key="frame" x="24" y="450" width="366" height="50"/>
+                    <rect key="frame" x="24" y="472" width="366" height="50"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yG7-pM-3hU">
                             <rect key="frame" x="8" y="8" width="350" height="34"/>

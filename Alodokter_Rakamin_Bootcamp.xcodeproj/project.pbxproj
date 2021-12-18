@@ -33,7 +33,6 @@
 		3E14E2F0276D193500495CF1 /* PilihJadwalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E2EF276D193500495CF1 /* PilihJadwalView.swift */; };
 		3E14E2F2276D194B00495CF1 /* IsiDataPasienView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E2F1276D194B00495CF1 /* IsiDataPasienView.swift */; };
 		3E14E2F4276D196400495CF1 /* IsiDataPasienView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E14E2F3276D196400495CF1 /* IsiDataPasienView.xib */; };
-		3E14E2F6276D980400495CF1 /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E2F5276D980300495CF1 /* BookingViewController.swift */; };
 		3E14E2F8276D987E00495CF1 /* PilihJadwalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E2F7276D987E00495CF1 /* PilihJadwalViewController.swift */; };
 		3E14E2FA276D988F00495CF1 /* DataPasienViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E2F9276D988F00495CF1 /* DataPasienViewController.swift */; };
 		3E15D843276881C00050F6CC /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E15D842276881C00050F6CC /* ResetPasswordViewModel.swift */; };
@@ -45,6 +44,14 @@
 		3ED57306276DCF6C00295F35 /* KonfirmasiDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED57305276DCF6C00295F35 /* KonfirmasiDataView.swift */; };
 		3ED57308276DD12600295F35 /* BookingSelesaiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED57307276DD12600295F35 /* BookingSelesaiViewController.swift */; };
 		3ED5730A276DD24B00295F35 /* KonfirmasiDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED57309276DD24B00295F35 /* KonfirmasiDataViewController.swift */; };
+		3ED5730E276E0D1700295F35 /* ListDokterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5730D276E0D1700295F35 /* ListDokterView.swift */; };
+		3ED57310276E0D2700295F35 /* ListDokterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ED5730F276E0D2700295F35 /* ListDokterView.xib */; };
+		3ED57312276E0D3A00295F35 /* ListDokterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED57311276E0D3A00295F35 /* ListDokterViewController.swift */; };
+		3ED57314276E0D4A00295F35 /* DetailDokterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED57313276E0D4A00295F35 /* DetailDokterViewController.swift */; };
+		3ED57316276E0D6800295F35 /* DetailDokterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED57315276E0D6800295F35 /* DetailDokterView.swift */; };
+		3ED57318276E0D7600295F35 /* DetailDokterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ED57317276E0D7600295F35 /* DetailDokterView.xib */; };
+		3ED5731C276E0E7800295F35 /* ListDokterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5731A276E0E7800295F35 /* ListDokterTableViewCell.swift */; };
+		3ED5731D276E0E7800295F35 /* ListDokterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ED5731B276E0E7800295F35 /* ListDokterTableViewCell.xib */; };
 		3EF0F9D5276839320058CFCF /* ArticleDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EF0F9D4276839320058CFCF /* ArticleDetailView.xib */; };
 		3EF0F9D727683EFF0058CFCF /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF0F9D627683EFF0058CFCF /* ArticleDetailView.swift */; };
 		3EF0F9D927686F3D0058CFCF /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF0F9D827686F3D0058CFCF /* ArticleDetailViewController.swift */; };
@@ -122,7 +129,6 @@
 		3E14E2EF276D193500495CF1 /* PilihJadwalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilihJadwalView.swift; sourceTree = "<group>"; };
 		3E14E2F1276D194B00495CF1 /* IsiDataPasienView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsiDataPasienView.swift; sourceTree = "<group>"; };
 		3E14E2F3276D196400495CF1 /* IsiDataPasienView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IsiDataPasienView.xib; sourceTree = "<group>"; };
-		3E14E2F5276D980300495CF1 /* BookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewController.swift; sourceTree = "<group>"; };
 		3E14E2F7276D987E00495CF1 /* PilihJadwalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilihJadwalViewController.swift; sourceTree = "<group>"; };
 		3E14E2F9276D988F00495CF1 /* DataPasienViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPasienViewController.swift; sourceTree = "<group>"; };
 		3E15D842276881C00050F6CC /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
@@ -135,6 +141,14 @@
 		3ED57305276DCF6C00295F35 /* KonfirmasiDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KonfirmasiDataView.swift; sourceTree = "<group>"; };
 		3ED57307276DD12600295F35 /* BookingSelesaiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSelesaiViewController.swift; sourceTree = "<group>"; };
 		3ED57309276DD24B00295F35 /* KonfirmasiDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KonfirmasiDataViewController.swift; sourceTree = "<group>"; };
+		3ED5730D276E0D1700295F35 /* ListDokterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDokterView.swift; sourceTree = "<group>"; };
+		3ED5730F276E0D2700295F35 /* ListDokterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListDokterView.xib; sourceTree = "<group>"; };
+		3ED57311276E0D3A00295F35 /* ListDokterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDokterViewController.swift; sourceTree = "<group>"; };
+		3ED57313276E0D4A00295F35 /* DetailDokterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDokterViewController.swift; sourceTree = "<group>"; };
+		3ED57315276E0D6800295F35 /* DetailDokterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDokterView.swift; sourceTree = "<group>"; };
+		3ED57317276E0D7600295F35 /* DetailDokterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailDokterView.xib; sourceTree = "<group>"; };
+		3ED5731A276E0E7800295F35 /* ListDokterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDokterTableViewCell.swift; sourceTree = "<group>"; };
+		3ED5731B276E0E7800295F35 /* ListDokterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListDokterTableViewCell.xib; sourceTree = "<group>"; };
 		3EF0F9D4276839320058CFCF /* ArticleDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleDetailView.xib; sourceTree = "<group>"; };
 		3EF0F9D627683EFF0058CFCF /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
 		3EF0F9D827686F3D0058CFCF /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
@@ -228,14 +242,13 @@
 		17CD8F462761ED7D009043F0 /* Booking */ = {
 			isa = PBXGroup;
 			children = (
+				3ED5730C276E0CF500295F35 /* DokterDetail */,
+				3ED5730B276E0CD200295F35 /* ListDokter */,
 				3ED57300276DCD2400295F35 /* BookingSelesai */,
 				3ED572FD276DC96800295F35 /* KonfirmasiData */,
 				3E14E2FD276D994A00495CF1 /* PilihJadwal */,
 				3E14E2FC276D993B00495CF1 /* IsiDataPasien */,
 				17CD8F472761ED86009043F0 /* Booking.storyboard */,
-				3E14E2FD276D994A00495CF1 /* PilihJadwal */,
-				3E14E2FC276D993B00495CF1 /* IsiDataPasien */,
-				3E14E2F5276D980300495CF1 /* BookingViewController.swift */,
 			);
 			name = Booking;
 			sourceTree = "<group>";
@@ -314,6 +327,36 @@
 				3ED57307276DD12600295F35 /* BookingSelesaiViewController.swift */,
 			);
 			path = BookingSelesai;
+			sourceTree = "<group>";
+		};
+		3ED5730B276E0CD200295F35 /* ListDokter */ = {
+			isa = PBXGroup;
+			children = (
+				3ED57319276E0E5700295F35 /* Cell */,
+				3ED5730D276E0D1700295F35 /* ListDokterView.swift */,
+				3ED5730F276E0D2700295F35 /* ListDokterView.xib */,
+				3ED57311276E0D3A00295F35 /* ListDokterViewController.swift */,
+			);
+			name = ListDokter;
+			sourceTree = "<group>";
+		};
+		3ED5730C276E0CF500295F35 /* DokterDetail */ = {
+			isa = PBXGroup;
+			children = (
+				3ED57313276E0D4A00295F35 /* DetailDokterViewController.swift */,
+				3ED57315276E0D6800295F35 /* DetailDokterView.swift */,
+				3ED57317276E0D7600295F35 /* DetailDokterView.xib */,
+			);
+			name = DokterDetail;
+			sourceTree = "<group>";
+		};
+		3ED57319276E0E5700295F35 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3ED5731A276E0E7800295F35 /* ListDokterTableViewCell.swift */,
+				3ED5731B276E0E7800295F35 /* ListDokterTableViewCell.xib */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		3EF0F9D3276839110058CFCF /* ArticleDetail */ = {
@@ -646,6 +689,7 @@
 				924DC4A4275F141800FCE093 /* Assets.xcassets in Resources */,
 				8CB695F627639F850096BCAB /* ChangeData.storyboard in Resources */,
 				3EF0F9D5276839320058CFCF /* ArticleDetailView.xib in Resources */,
+				3ED5731D276E0E7800295F35 /* ListDokterTableViewCell.xib in Resources */,
 				8CB695F027639F440096BCAB /* UserProfileView.xib in Resources */,
 				8CBD35B9276DA50F00E1D837 /* Onboarding.storyboard in Resources */,
 				17399710276A561C004E4095 /* ArticleSearch.storyboard in Resources */,
@@ -653,7 +697,9 @@
 				3ED57302276DCD5200295F35 /* BookingSelesaiView.xib in Resources */,
 				17CD8F482761ED86009043F0 /* Booking.storyboard in Resources */,
 				17CD8F452761ED71009043F0 /* Main.storyboard in Resources */,
+				3ED57310276E0D2700295F35 /* ListDokterView.xib in Resources */,
 				17CD8F5E2761F106009043F0 /* ResetPassword.storyboard in Resources */,
+				3ED57318276E0D7600295F35 /* DetailDokterView.xib in Resources */,
 				3E14E2EE276D192400495CF1 /* PilihJadwalView.xib in Resources */,
 				8CB695EF27639F440096BCAB /* UserProfile.storyboard in Resources */,
 				17CD8F3D2761ED2D009043F0 /* Article.storyboard in Resources */,
@@ -687,31 +733,33 @@
 				8CB695EE27639F440096BCAB /* UserProfileViewController.swift in Sources */,
 				8CB695F527639F850096BCAB /* ChangeDataViewController.swift in Sources */,
 				3ED57306276DCF6C00295F35 /* KonfirmasiDataView.swift in Sources */,
+				3ED57316276E0D6800295F35 /* DetailDokterView.swift in Sources */,
 				3EF0F9D727683EFF0058CFCF /* ArticleDetailView.swift in Sources */,
 				924DC49F275F141700FCE093 /* ViewController.swift in Sources */,
 				92EED41E2768E86C005B8F32 /* LoginViewModel.swift in Sources */,
 				17CD8F652761F106009043F0 /* ResetPasswordViewController.swift in Sources */,
 				3E14E2EA276D101A00495CF1 /* ArticleDetailViewModel.swift in Sources */,
 				924DC49B275F141700FCE093 /* AppDelegate.swift in Sources */,
+				3ED5731C276E0E7800295F35 /* ListDokterTableViewCell.swift in Sources */,
 				8CBD35BB276DA83D00E1D837 /* OnboardingSlide.swift in Sources */,
 				17CD8F6F27645070009043F0 /* ImageSliderCollectionViewCell.swift in Sources */,
 				924DC4C3275F337200FCE093 /* SetRootView+Extension.swift in Sources */,
 				924DC4BD275F26DF00FCE093 /* Utility.swift in Sources */,
 				3E14E2E8276D0FB800495CF1 /* ArticleDetailService.swift in Sources */,
-
 				1739971D276BBF87004E4095 /* ArticleTableViewCell.swift in Sources */,
 				924DC49D275F141700FCE093 /* SceneDelegate.swift in Sources */,
 				8CB695E827639EEE0096BCAB /* RegisterView.swift in Sources */,
+				3ED57314276E0D4A00295F35 /* DetailDokterViewController.swift in Sources */,
 				17CD8F412761ED49009043F0 /* ArticleViewController.swift in Sources */,
 				3ED57308276DD12600295F35 /* BookingSelesaiViewController.swift in Sources */,
 				92E668E4276CB83200578B04 /* ArticleService.swift in Sources */,
-				3E14E2F6276D980400495CF1 /* BookingViewController.swift in Sources */,
 				92DC1A402765AEE20084FC4E /* SavedData.swift in Sources */,
 				3E14E2F0276D193500495CF1 /* PilihJadwalView.swift in Sources */,
 				3ED57304276DCF6000295F35 /* BookingSelesaiView.swift in Sources */,
 				1739971B276A5F58004E4095 /* ArticleSearchTableViewCell.swift in Sources */,
 				8CBD35B7276DA4EB00E1D837 /* OnboardingViewController.swift in Sources */,
 				3EFA07BC275F99100010AA10 /* UIButton+extension.swift in Sources */,
+				3ED5730E276E0D1700295F35 /* ListDokterView.swift in Sources */,
 				92DA8AE82763C02D00028BF3 /* Session.swift in Sources */,
 				8CB6E3EE276C6D8800720B7B /* AppointmentViewController.swift in Sources */,
 				924DC4B9275F266500FCE093 /* UIColor.swift in Sources */,
@@ -730,6 +778,7 @@
 				3E15D84527688D0E0050F6CC /* ResetPasswordService.swift in Sources */,
 				17399717276A5C06004E4095 /* ArticleSearchViewController.swift in Sources */,
 				924DC4BB275F269100FCE093 /* DeviceHelper.swift in Sources */,
+				3ED57312276E0D3A00295F35 /* ListDokterViewController.swift in Sources */,
 				3E14E2F8276D987E00495CF1 /* PilihJadwalViewController.swift in Sources */,
 				3E14E2EC276D111300495CF1 /* ArticleDetailModel.swift in Sources */,
 			);
