@@ -35,6 +35,7 @@ class ArticleViewController: UIViewController {
     var articleHeroResults : [Article]?
     var totalArticleLoaded : Int = 6
     
+    
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
         sliderCollectionView.collectionViewLayout = setupImageSliderViewLayout()
@@ -43,7 +44,7 @@ class ArticleViewController: UIViewController {
         articleTableView.delegate = self
         articleTableView.dataSource = self
         contentScrollView.delegate = self
-        
+        setUpMenu()
     }
     
     override func viewDidLoad() {
@@ -52,7 +53,6 @@ class ArticleViewController: UIViewController {
         DispatchQueue.main.async {
             self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.slideToNext), userInfo: nil, repeats: true)
         }
-        setUpMenu()
     }
     
     @objc func slideToNext(){
@@ -143,6 +143,7 @@ class ArticleViewController: UIViewController {
     }
 
     func setUpMenu() {
+        self.categoryMenu.titleLabel?.text = Category.trending.rawValue
         categoryView.layer.borderWidth = 1
         categoryView.layer.borderColor = UIColor.black.cgColor
         categoryView.layer.cornerRadius = 10
