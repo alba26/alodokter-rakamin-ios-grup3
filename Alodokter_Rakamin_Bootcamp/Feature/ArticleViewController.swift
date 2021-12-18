@@ -33,6 +33,7 @@ class ArticleViewController: UIViewController {
        var articleResult : ArticlesModel?
        var filterResult : [Article]?
        var articleHeroResults : [Article]?
+       var searchResult : [Article]?
        var totalArticleLoaded : Int = 6
        
        override func viewWillAppear(_ animated: Bool) {
@@ -203,12 +204,26 @@ class ArticleViewController: UIViewController {
    extension ArticleViewController : UISearchResultsUpdating, UISearchBarDelegate{
        
        func updateSearchResults(for searchController: UISearchController) {
-           guard let searchText = searchController.searchBar.text else {
-               return
+               guard let searchText = searchController.searchBar.text else {
+                   return
+               }
+               let searchResultVC = searchController.searchResultsController as? ArticleSearchViewController
+               searchResult = articleResult?.data.filter({ (data) in
+                   let searchArticle = data.title
+                   if searchArticle.contains(searchText) {
+                       return true
+                   }
+                   else {
+                       return false
+                   }
+               })
+               print(searchResult?.count)
+               searchResultVC?.searchArticleResult = searchResult
+               print(searchResultVC?.searchArticleResult?.count)
+               
+               print(searchText) // call api get data or filter api get data
            }
-           let searchResultVC = searchController.searchResultsController as? ArticleSearchViewController
-           print(searchText) // call api get data or filter api get data
-       }
+
        
        func setupImageSliderViewLayout() -> UICollectionViewCompositionalLayout{
            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(245))
