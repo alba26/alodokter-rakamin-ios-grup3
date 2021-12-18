@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ResetPasswordView: UIView {
+class ResetPasswordView: UIView, UITextFieldDelegate {
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
@@ -28,6 +28,9 @@ class ResetPasswordView: UIView {
         oldPasswordTextField.setCustomUI(withPlaceholder: "Kata sandi lama")
         newPasswordTextField.setCustomUI(withPlaceholder: "Min. 8 karakter")
         confirmPasswordTextField.setCustomUI(withPlaceholder: "Konfirmasi kata sandi")
+        oldPasswordTextField.returnKeyType = .done
+        newPasswordTextField.returnKeyType = .done
+        confirmPasswordTextField.returnKeyType = .done
         addSubview(contentView)
     }
     

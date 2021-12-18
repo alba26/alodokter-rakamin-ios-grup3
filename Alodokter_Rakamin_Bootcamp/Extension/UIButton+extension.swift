@@ -37,7 +37,6 @@ extension UIViewController {
         var txtFieldY : CGFloat = 0.0
         let spaceBetweenTxtFieldAndKeyboard : CGFloat = 50.0
 
-
         var frame = CGRect(x: 0, y: 0, width: 0, height: 0)
         if let activeTextField = UIResponder.currentFirst() as? UITextField ?? UIResponder.currentFirst() as? UITextView {
             frame = self.view.convert(activeTextField.frame, from:activeTextField.superview)

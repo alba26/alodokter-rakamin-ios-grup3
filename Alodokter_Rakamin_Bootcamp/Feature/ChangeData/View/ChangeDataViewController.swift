@@ -10,6 +10,10 @@ import UIKit
 class ChangeDataViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate{
     
 
+    @IBOutlet weak var nameValidation: UILabel!
+    @IBOutlet weak var emailValidation: UILabel!
+    @IBOutlet weak var phoneValidation: UILabel!
+    @IBOutlet weak var ktpValidation: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var birthdayTextField: UITextField!
@@ -31,6 +35,14 @@ class ChangeDataViewController: UIViewController, UIPickerViewDataSource, UIPick
     let utils = Utility()
     var spinner = Utility().showSpinner()
     var id:Int?
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.addKeyboardObserver()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.removeKeyboardObserver()
+    }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -78,15 +90,18 @@ class ChangeDataViewController: UIViewController, UIPickerViewDataSource, UIPick
             })
         }
         
+        changeVM.emailValidationMsg = {[self] msg in
+            emailValidation.text = msg
+        }
+        
+        changeVM.identityValidationMsg = {[self] msg in
+            ktpValidation.text = msg
+            
+        }
+        
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.addKeyboardObserver()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        self.removeKeyboardObserver()
-    }
+
     
     @objc func donePressed() {
         let dateFormatter = DateFormatter()
@@ -115,6 +130,26 @@ class ChangeDataViewController: UIViewController, UIPickerViewDataSource, UIPick
     @IBAction func convertDate(_ sender: Any) {
         birthdayTextField.text = utils.convertDateFromDatePicker(date: self.datePicker.date)
     }
+    
+    
+    @IBAction func nameCheck(_ sender: Any) {
+
+    }
+    
+    
+    @IBAction func emailCheck(_ sender: Any) {
+        changeVM.emailValidation(email: emailTextField.text ?? "")
+    }
+    
+    @IBAction func phoneCheck(_ sender: Any) {
+        changeVM.phoneValidation(phone: phoneTextField.text ?? "")
+    }
+    
+    
+    @IBAction func identityChec(_ sender: Any) {
+        changeVM.identityValidation(identity: ktpTextField.text ?? "")
+    }
+    
     func loadData(){
         if let data = UserDefaults.standard.data(forKey: "userdata"){
             do{
@@ -137,7 +172,6 @@ class ChangeDataViewController: UIViewController, UIPickerViewDataSource, UIPick
 
 }
 
-
 extension ChangeDataViewController{
     func createToolbar() -> UIToolbar {
         let toolbar = UIToolbar()
@@ -148,7 +182,7 @@ extension ChangeDataViewController{
         
         return toolbar
     }
-    
+
     func createDatePicker() {
         datePicker.preferredDatePickerStyle = .wheels
         datePicker.datePickerMode = .date
@@ -161,7 +195,7 @@ extension ChangeDataViewController{
         birthdayTextField.inputView =  datePicker
         birthdayTextField.inputAccessoryView = createToolbar()
     }
-    
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
             self.view.endEditing(true)
             return false
@@ -237,13 +271,11 @@ extension ChangeDataViewController{
     }
     
     private func textFieldDelegate(){
-        
+
         nameTextField.delegate = self
         nameTextField.returnKeyType = .done
-        
         emailTextField.delegate = self
         emailTextField.returnKeyType = .done
-        
         addressTextField.delegate = self
         addressTextField.returnKeyType = .done
         

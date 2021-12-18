@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ResetPasswordViewController: UIViewController {
+class ResetPasswordViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var resetPasswordView: ResetPasswordView!
     var userId: String?
@@ -17,6 +17,9 @@ class ResetPasswordViewController: UIViewController {
         super.viewDidLoad()
         resetPasswordView.cancelButton.action = #selector(dismissButtonTapped)
         resetPasswordView.saveButton.addTarget(self, action: #selector(saveNewPassword), for: .touchUpInside)
+        resetPasswordView.confirmPasswordTextField.delegate = self
+        resetPasswordView.newPasswordTextField.delegate = self
+        resetPasswordView.oldPasswordTextField.delegate = self
     }
     
     @objc func saveNewPassword() {
@@ -38,5 +41,10 @@ class ResetPasswordViewController: UIViewController {
     
     @objc func dismissButtonTapped() {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            self.view.endEditing(true)
+            return false
     }
 }

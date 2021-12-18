@@ -110,8 +110,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             self.view.endEditing(true)
             return false
         }
-    
-
 }
 
 extension RegisterViewController{
