@@ -159,7 +159,6 @@ class ArticleViewController: UIViewController {
                         return false
                     }
                 })
-                print("filter result",filterResult?.count)
                 self.articleTableView.reloadData()
             },
             UIAction(title: "Kesehatan") { [self](_) in self.categoryMenu.titleLabel?.text = Category.kesehatan.rawValue
@@ -184,7 +183,6 @@ class ArticleViewController: UIViewController {
                         return false
                     }
                 })
-                print("filter result",filterResult?.count)
                 self.articleTableView.reloadData()
             },
             UIAction(title: "Hidup Sehat") { [self](_) in self.categoryMenu.titleLabel?.text = Category.hidupSehat.rawValue
@@ -197,7 +195,6 @@ class ArticleViewController: UIViewController {
                         return false
                     }
                 })
-                print("filter result",filterResult?.count)
                 self.articleTableView.reloadData()
             },
         ])
