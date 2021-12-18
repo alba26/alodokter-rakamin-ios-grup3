@@ -39,6 +39,36 @@
             </objects>
             <point key="canvasLocation" x="2255.072463768116" y="590.625"/>
         </scene>
+        <!--Doctor Detail View Controller-->
+        <scene sceneID="RgO-fn-AUN">
+            <objects>
+                <viewController storyboardIdentifier="DoctorDetailViewController" id="6ww-aX-1ql" customClass="DoctorDetailViewController" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P1Z-V2-FOj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cab-4W-qdS" customClass="DoctorDetailView" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="q9k-GU-a88"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cab-4W-qdS" firstAttribute="leading" secondItem="q9k-GU-a88" secondAttribute="leading" id="EKG-ux-plC"/>
+                            <constraint firstItem="cab-4W-qdS" firstAttribute="top" secondItem="P1Z-V2-FOj" secondAttribute="top" id="JI1-T9-9EF"/>
+                            <constraint firstAttribute="bottom" secondItem="cab-4W-qdS" secondAttribute="bottom" id="YgV-Rn-Xxe"/>
+                            <constraint firstItem="cab-4W-qdS" firstAttribute="trailing" secondItem="q9k-GU-a88" secondAttribute="trailing" id="eKb-3C-iSK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="DoctorDetailView" destination="cab-4W-qdS" id="KeA-T9-CRi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ua2-Ef-tlJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3179.7101449275365" y="590.625"/>
+        </scene>
         <!--Pilih Jadwal View Controller-->
         <scene sceneID="cn9-c2-ifT">
             <objects>
@@ -67,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IKW-zh-f6W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3278" y="591"/>
+            <point key="canvasLocation" x="4130" y="591"/>
         </scene>
         <!--Data Pasien View Controller-->
         <scene sceneID="Dv9-Wk-DIb">
@@ -97,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ak-Gb-9cT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4093" y="591"/>
+            <point key="canvasLocation" x="4838" y="591"/>
         </scene>
         <!--Konfirmasi Data View Controller-->
         <scene sceneID="KEf-kq-Wql">
@@ -127,7 +157,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJn-Pf-QMl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4924.6376811594209" y="590.625"/>
+            <point key="canvasLocation" x="5564" y="591"/>
         </scene>
         <!--Booking Selesai View Controller-->
         <scene sceneID="o4T-XB-P6S">
@@ -157,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fsk-TT-v99" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5747.826086956522" y="590.625"/>
+            <point key="canvasLocation" x="6310" y="591"/>
         </scene>
         <!--Dokter-->
         <scene sceneID="iHv-EH-erO">
