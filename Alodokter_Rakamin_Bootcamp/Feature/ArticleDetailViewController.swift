@@ -28,7 +28,7 @@ class ArticleDetailViewController: UIViewController {
         viewModel.getArticleData { [weak self] article in
             DispatchQueue.main.async {
                 self?.articleDetailView.articleTitleLabel.text = article.title
-                self?.articleDetailView.articleBodyLabel.text = article.content?.htmlToString
+                self?.articleDetailView.articleBodyLabel.attributedText = article.content?.htmlAttributedString()
                 guard let urlImage = URL(string: article.image), let dataImage = try? Data(contentsOf: urlImage) else { return }
                 self?.articleDetailView.articleImageView.image = UIImage(data: dataImage)
             }
