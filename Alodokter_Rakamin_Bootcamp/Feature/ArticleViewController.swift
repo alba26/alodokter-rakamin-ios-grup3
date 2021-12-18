@@ -18,6 +18,7 @@ class ArticleViewController: UIViewController {
     @IBOutlet weak var categoryMenu: UIButton!
     @IBOutlet weak var categoryView: UIView!
     
+    @IBOutlet weak var articleTableView: UITableView!
     @IBOutlet weak var articleCollectionView: UICollectionView!
     
     @IBOutlet weak var profileNavItemView: UIView!
@@ -30,13 +31,18 @@ class ArticleViewController: UIViewController {
     
     var viewModel = ArticleViewModel()
     var idArticle = ""
+    var articleResult : ArticlesModel?
+    var filterResult : [Article]?
+    var totalArticleLoaded : Int = 11
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
-        articleCollectionView.collectionViewLayout = setupCollectionViewLayout()
         sliderCollectionView.collectionViewLayout = setupImageSliderViewLayout()
         pageControl.numberOfPages = imageArray.count //viewModel. HeroArticlesData.count
-        viewModel.getArticlesData()
+        getArticlesData()
+        articleTableView.delegate = self
+        articleTableView.dataSource = self
+        contentScrollView.delegate = self
         
     }
     
@@ -142,36 +148,47 @@ class ArticleViewController: UIViewController {
         categoryView.layer.cornerRadius = 10
         
         let menu = UIMenu(title: "Category", options: .displayInline, children: [
-            UIAction(title: "Trending") {(_) in self.categoryMenu.titleLabel?.text = "Trending"},
-            UIAction(title: "Kesehatan") {(_) in self.categoryMenu.titleLabel?.text = "Kesehatan"},
-            UIAction(title: "Keluarga") {(_) in self.categoryMenu.titleLabel?.text = "Keluarga"},
+            UIAction(title: "Trending") { [self](_) in self.categoryMenu.titleLabel?.text = Category.trending.rawValue
+                print("trending is displayed")
+                filterResult = articleResult?.data.filter({ (data) in
+                    let category = data.category
+                    if category.rawValue.contains(Category.kesehatan.rawValue) {
+                        return true
+                    }
+                    else {
+                        return false
+                    }
+                })
+                print(filterResult?.count)
+                self.articleTableView.reloadData()
+            },
+            UIAction(title: "Kesehatan") {(_) in self.categoryMenu.titleLabel?.text = Category.kesehatan.rawValue},
+            UIAction(title: "Keluarga") {(_) in self.categoryMenu.titleLabel?.text = Category.keluarga.rawValue},
+            UIAction(title: "Hidup Sehat") {(_) in self.categoryMenu.titleLabel?.text = Category.hidupSehat.rawValue},
         ])
         
         self.categoryMenu.menu = menu
         self.categoryMenu.showsMenuAsPrimaryAction = true
     }
     
-    func setupCollectionViewLayout() -> UICollectionViewCompositionalLayout{
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(100))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
-        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
-        group.interItemSpacing = .flexible(12)
-        
-        let section = NSCollectionLayoutSection(group: group)
-        section.orthogonalScrollingBehavior = .groupPaging
-        section.interGroupSpacing = 16
-        
-        let layout = UICollectionViewCompositionalLayout(section: section)
-        
-        let config = UICollectionViewCompositionalLayoutConfiguration()
-        config.interSectionSpacing = 100
-        layout.configuration = config
-        
-        
-        return layout
-        
+    func getArticlesData() {
+        let articleService = ArticleService(param: "per_page",value: totalArticleLoaded)
+        APIService.APIRequest(model: ArticlesModel.self, req: articleService) { (results) in
+        switch(results) {
+        case .success(let results):
+            DispatchQueue.main.async { [self] in
+                self.articleResult = results as? ArticlesModel
+                self.filterResult = articleResult?.data
+            }
+            print(self.articleResult)
+            
+                
+        case .failure(let error):
+//            failToLoadArticle(title: "Load Artikel Gagal", message: "Terdapat kendala load artikel")
+            print(error,"error")
+        }
+            
+        }
     }
 }
 
@@ -183,30 +200,13 @@ extension ArticleViewController: UICollectionViewDataSource, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == self.articleCollectionView {
-//            return viewModel.listOfArticle?.count ?? 0
-            return 12
-        }
-        else {
-            //viewmodel heroArticle.count
-            return imageArray.count
-        }
+        //articleHeroData.count
+        return imageArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            if collectionView == self.articleCollectionView {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "articleCell", for: indexPath) as! ArticleCollectionViewCell
-//                cell.articleTitleLabel.text = viewModel.listOfArticle?[indexPath.row].title
-                cell.articleTitleLabel.text = "4 Manfaat Daun Sambiloto untuk Kulit yang Sayang Dilewatkan"
-                cell.articleImageView.image = UIImage(named: "ArticleImage")
-//                let imgURL = URL(string: (viewModel.listOfArticle?[indexPath.row].image)!)
-//                let data = try? Data(contentsOf: imgURL!)
-//                cell.articleImageView.image = UIImage(data: data!)
-        
-            return cell
-        }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageSliderCell", for: indexPath) as! ImageSliderCollectionViewCell
-        //assign viewmodel
+        //assign viewmodel articleHeroData
         cell.imageSliderImg.image = UIImage(named: imageArray[indexPath.row])
         cell.imageSliderTitle.text = "4 Manfaat Daun Sambiloto untuk Kulit yang Sayang Dilewatkan"
         cell.imageSliderTitle.backgroundColor = UIColor.black
@@ -224,18 +224,50 @@ extension ArticleViewController: UICollectionViewDataSource, UICollectionViewDel
     
 }
 
-extension ArticleViewController : UISearchResultsUpdating, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource{
+extension ArticleViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 12
+        print("jumlah", articleResult?.data.count)
+        if filterResult?.count != nil {
+            return totalArticleLoaded
+        }
+        else {
+            return filterResult?.count ?? 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = ArticleSearchViewController().searchResultTableView.dequeueReusableCell(withIdentifier: "searchResultCell", for: indexPath) as! ArticleSearchTableViewCell
-        cell.articleSearchImage.image = UIImage(named: "ArticleImage")
-        cell.articleSearchTitleLabel.text = "4 Manfaat Daun"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "articleCell", for: indexPath) as! ArticleTableViewCell
+        cell.articleTitleLabel.text = filterResult?[indexPath.row].title
+        if articleResult?.data[indexPath.row].image.contains("https") == true {
+            let imgURL = URL(string: (filterResult?[indexPath.row].image)!)
+            let data = try? Data(contentsOf: imgURL!)
+            cell.articleImageView.image = UIImage(data: data!)
+        }
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Article", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "ArticleDetail") as? ArticleDetailViewController else { return }
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        if scrollView == contentScrollView {
+            articleTableView.isScrollEnabled = (contentScrollView.contentOffset.y > 0)
+        }
+
+        if scrollView == articleTableView {
+            articleTableView.isScrollEnabled = (articleTableView.contentOffset.y <= 500 || articleTableView.contentOffset.y > 200)
+        }
+    }
+    
+    
+}
+
+extension ArticleViewController : UISearchResultsUpdating, UISearchBarDelegate{
     
     func updateSearchResults(for searchController: UISearchController) {
         guard let searchText = searchController.searchBar.text else {
