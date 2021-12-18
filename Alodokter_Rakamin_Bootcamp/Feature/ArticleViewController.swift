@@ -24,11 +24,10 @@ class ArticleViewController: UIViewController {
     @IBOutlet weak var profileNavItemView: UIView!
     @IBOutlet weak var profileNavImageView: UIImageView!
 
-    
     var imageArray = ["ArticleImage","ArticleImage","ProfileImage"]
        var timer : Timer?
        var currentCellIndex: Int = 0
-       
+       var activityIndicator: LoadData!
        var viewModel = ArticleViewModel()
        var articleResult : ArticlesModel?
        var filterResult : [Article]?
@@ -55,6 +54,8 @@ class ArticleViewController: UIViewController {
                self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.slideToNext), userInfo: nil, repeats: true)
            }
            setUpMenu()
+           onboarding()
+           activityIndicator = LoadData(scrollView: articleTableView, spacingFromLastCell: 10, spacingFromLastCellWhenLoadMoreActionStart: 100)
        }
        
        @objc func slideToNext(){
@@ -196,8 +197,20 @@ class ArticleViewController: UIViewController {
            if scrollView == articleTableView {
                articleTableView.isScrollEnabled = (articleTableView.contentOffset.y <= 500 || articleTableView.contentOffset.y > 200)
            }
+           
+           
+           activityIndicator.start {
+               DispatchQueue.global(qos: .utility).async { [self] in
+                   sleep(1)
+                   print("LODA")
+                   DispatchQueue.main.async { [weak self] in
+                       self?.activityIndicator.stop()
+                   }
+               }
+           }
        }
        
+
        
    }
 
@@ -342,6 +355,21 @@ class ArticleViewController: UIViewController {
            //kasih trailing leading constraintnya right attribute
            
        }
+       
+       func onboarding(){
+           if UserDefaults.standard.value(forKey: "firstInstall") == nil{
+               let storyboard = UIStoryboard.init(name: "Onboarding", bundle: nil)
+               let onboardingVC = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController")
+               onboardingVC.modalPresentationStyle = .fullScreen
+               self.present(onboardingVC, animated: true, completion: nil)
+               UserDefaults.standard.set(Session.unregistered.rawValue, forKey: "session")
+               UserDefaults.standard.set("alreadyInstalled", forKey: "firstInstall")
+           }
+           
+
+       }
+       
+       
        
    }
 

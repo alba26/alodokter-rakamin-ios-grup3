@@ -39,7 +39,9 @@ class OnboardingViewController: UIViewController {
 
     @IBAction func nextButtonClicked(_ sender: Any) {
         if currentPage == slides.count - 1 {
-            print("Go to the next page")
+            self.dismiss(animated: true, completion: {
+                
+            })
         } else {
             currentPage += 1
             let indexPath = IndexPath(item: currentPage, section: 0)
