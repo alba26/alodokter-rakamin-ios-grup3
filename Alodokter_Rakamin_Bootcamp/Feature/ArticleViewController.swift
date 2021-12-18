@@ -32,7 +32,8 @@ class ArticleViewController: UIViewController {
     var viewModel = ArticleViewModel()
     var articleResult : ArticlesModel?
     var filterResult : [Article]?
-    var totalArticleLoaded : Int = 11
+    var articleHeroResults : [Article]?
+    var totalArticleLoaded : Int = 6
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
@@ -151,6 +152,19 @@ class ArticleViewController: UIViewController {
                 print("trending is displayed")
                 filterResult = articleResult?.data.filter({ (data) in
                     let category = data.category
+                    if category.rawValue.contains(Category.trending.rawValue) {
+                        return true
+                    }
+                    else {
+                        return false
+                    }
+                })
+                print("filter result",filterResult?.count)
+                self.articleTableView.reloadData()
+            },
+            UIAction(title: "Kesehatan") { [self](_) in self.categoryMenu.titleLabel?.text = Category.kesehatan.rawValue
+                filterResult = articleResult?.data.filter({ (data) in
+                    let category = data.category
                     if category.rawValue.contains(Category.kesehatan.rawValue) {
                         return true
                     }
@@ -158,12 +172,34 @@ class ArticleViewController: UIViewController {
                         return false
                     }
                 })
-                print(filterResult?.count)
                 self.articleTableView.reloadData()
             },
-            UIAction(title: "Kesehatan") {(_) in self.categoryMenu.titleLabel?.text = Category.kesehatan.rawValue},
-            UIAction(title: "Keluarga") {(_) in self.categoryMenu.titleLabel?.text = Category.keluarga.rawValue},
-            UIAction(title: "Hidup Sehat") {(_) in self.categoryMenu.titleLabel?.text = Category.hidupSehat.rawValue},
+            UIAction(title: "Keluarga") { [self](_) in self.categoryMenu.titleLabel?.text = Category.keluarga.rawValue
+                filterResult = articleResult?.data.filter({ (data) in
+                    let category = data.category
+                    if category.rawValue.contains(Category.keluarga.rawValue) {
+                        return true
+                    }
+                    else {
+                        return false
+                    }
+                })
+                print("filter result",filterResult?.count)
+                self.articleTableView.reloadData()
+            },
+            UIAction(title: "Hidup Sehat") { [self](_) in self.categoryMenu.titleLabel?.text = Category.hidupSehat.rawValue
+                filterResult = articleResult?.data.filter({ (data) in
+                    let category = data.category
+                    if category.rawValue.contains(Category.hidupSehat.rawValue) {
+                        return true
+                    }
+                    else {
+                        return false
+                    }
+                })
+                print("filter result",filterResult?.count)
+                self.articleTableView.reloadData()
+            },
         ])
         
         self.categoryMenu.menu = menu
@@ -178,6 +214,9 @@ class ArticleViewController: UIViewController {
             DispatchQueue.main.async { [self] in
                 self.articleResult = results as? ArticlesModel
                 self.filterResult = articleResult?.data
+                self.articleHeroResults = articleResult?.data
+                self.articleTableView.reloadData()
+//                self.articleCollectionView.reloadData()
             }
             print(self.articleResult)
             
@@ -199,15 +238,15 @@ extension ArticleViewController: UICollectionViewDataSource, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //articleHeroData.count
-        return imageArray.count
+        return articleHeroResults?.count ?? 0
+//        return imageArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageSliderCell", for: indexPath) as! ImageSliderCollectionViewCell
         //assign viewmodel articleHeroData
         cell.imageSliderImg.image = UIImage(named: imageArray[indexPath.row])
-        cell.imageSliderTitle.text = "4 Manfaat Daun Sambiloto untuk Kulit yang Sayang Dilewatkan"
+        cell.imageSliderTitle.text = articleHeroResults?[indexPath.row].title
         cell.imageSliderTitle.backgroundColor = UIColor.black
         cell.imageSliderTitle.textColor = UIColor.white
         
@@ -225,12 +264,7 @@ extension ArticleViewController: UICollectionViewDataSource, UICollectionViewDel
 extension ArticleViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("jumlah", articleResult?.data.count)
-        if filterResult?.count != nil {
-            return totalArticleLoaded
-        }
-        else {
-            return filterResult?.count ?? 0
-        }
+        return filterResult?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
