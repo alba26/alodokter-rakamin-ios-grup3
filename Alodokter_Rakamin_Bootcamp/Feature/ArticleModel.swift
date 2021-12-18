@@ -29,6 +29,8 @@ struct Article: Codable {
     let category: Category
     let image: String
     let headline: Bool?
+    let content: String?
+    let reviewer: String?
 }
 
 enum Category: String, Codable {

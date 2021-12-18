@@ -218,9 +218,6 @@ class ArticleViewController: UIViewController {
                 self.articleTableView.reloadData()
 //                self.articleCollectionView.reloadData()
             }
-            print(self.articleResult)
-            
-                
         case .failure(let error):
 //            failToLoadArticle(title: "Load Artikel Gagal", message: "Terdapat kendala load artikel")
             print(error,"error")
@@ -282,6 +279,7 @@ extension ArticleViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Article", bundle: nil)
         guard let vc = storyboard.instantiateViewController(withIdentifier: "ArticleDetail") as? ArticleDetailViewController else { return }
+        vc.idArticle = String(filterResult?[indexPath.row].id ?? 0)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
