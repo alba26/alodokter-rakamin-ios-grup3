@@ -142,7 +142,7 @@ class ArticleViewController: UIViewController {
        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageSliderCell", for: indexPath) as! ImageSliderCollectionViewCell
 
-           if articleResult?.data[indexPath.row].image.contains("https") == true {
+           if articleHeroResults?[indexPath.row].image.contains("https") == true {
                let imgURL = URL(string: (filterResult?[indexPath.row].image)!)
                let data = try? Data(contentsOf: imgURL!)
                cell.imageSliderImg.image = UIImage(data: data!)
