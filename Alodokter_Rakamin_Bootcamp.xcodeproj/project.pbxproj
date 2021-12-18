@@ -69,6 +69,8 @@
 		8CBD35B9276DA50F00E1D837 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CBD35B8276DA50F00E1D837 /* Onboarding.storyboard */; };
 		8CBD35BB276DA83D00E1D837 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBD35BA276DA83D00E1D837 /* OnboardingSlide.swift */; };
 		8CBD35BD276DA9BA00E1D837 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBD35BC276DA9BA00E1D837 /* OnboardingCollectionViewCell.swift */; };
+		923A04B2276DF6BD007654AB /* ListDokterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A04B0276DF6BD007654AB /* ListDokterCell.swift */; };
+		923A04B3276DF6BD007654AB /* ListDokterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 923A04B1276DF6BD007654AB /* ListDokterCell.xib */; };
 		924DC49B275F141700FCE093 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC49A275F141700FCE093 /* AppDelegate.swift */; };
 		924DC49D275F141700FCE093 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC49C275F141700FCE093 /* SceneDelegate.swift */; };
 		924DC49F275F141700FCE093 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC49E275F141700FCE093 /* ViewController.swift */; };
@@ -159,6 +161,8 @@
 		8CBD35B8276DA50F00E1D837 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		8CBD35BA276DA83D00E1D837 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		8CBD35BC276DA9BA00E1D837 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		923A04B0276DF6BD007654AB /* ListDokterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDokterCell.swift; sourceTree = "<group>"; };
+		923A04B1276DF6BD007654AB /* ListDokterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListDokterCell.xib; sourceTree = "<group>"; };
 		924DC497275F141700FCE093 /* Alodokter_Rakamin_Bootcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alodokter_Rakamin_Bootcamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		924DC49A275F141700FCE093 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		924DC49C275F141700FCE093 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -228,10 +232,9 @@
 		17CD8F462761ED7D009043F0 /* Booking */ = {
 			isa = PBXGroup;
 			children = (
+				923A04AF276DF61A007654AB /* ListDokter */,
 				3ED57300276DCD2400295F35 /* BookingSelesai */,
 				3ED572FD276DC96800295F35 /* KonfirmasiData */,
-				3E14E2FD276D994A00495CF1 /* PilihJadwal */,
-				3E14E2FC276D993B00495CF1 /* IsiDataPasien */,
 				17CD8F472761ED86009043F0 /* Booking.storyboard */,
 				3E14E2FD276D994A00495CF1 /* PilihJadwal */,
 				3E14E2FC276D993B00495CF1 /* IsiDataPasien */,
@@ -381,6 +384,15 @@
 			name = Onboarding;
 			sourceTree = "<group>";
 		};
+		923A04AF276DF61A007654AB /* ListDokter */ = {
+			isa = PBXGroup;
+			children = (
+				923A04B0276DF6BD007654AB /* ListDokterCell.swift */,
+				923A04B1276DF6BD007654AB /* ListDokterCell.xib */,
+			);
+			name = ListDokter;
+			sourceTree = "<group>";
+		};
 		924DC48E275F141700FCE093 = {
 			isa = PBXGroup;
 			children = (
@@ -402,7 +414,6 @@
 			isa = PBXGroup;
 			children = (
 				92EED41C27683818005B8F32 /* Service */,
-				92A9D6592762032B001BD05C /* Model */,
 				92A9D6582762030D001BD05C /* Base */,
 				924DC4B3275F25BA00FCE093 /* Feature */,
 				924DC4BF275F32DA00FCE093 /* Extension */,
@@ -460,13 +471,6 @@
 				92DC1A3F2765AEE20084FC4E /* SavedData.swift */,
 			);
 			path = Base;
-			sourceTree = "<group>";
-		};
-		92A9D6592762032B001BD05C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		92D478AA276A42910092BB50 /* View */ = {
@@ -657,6 +661,7 @@
 				3E14E2EE276D192400495CF1 /* PilihJadwalView.xib in Resources */,
 				8CB695EF27639F440096BCAB /* UserProfile.storyboard in Resources */,
 				17CD8F3D2761ED2D009043F0 /* Article.storyboard in Resources */,
+				923A04B3276DF6BD007654AB /* ListDokterCell.xib in Resources */,
 				8CB695E627639EE00096BCAB /* Register.storyboard in Resources */,
 				3ED572FF276DC97F00295F35 /* KonfirmasiDataView.xib in Resources */,
 			);
@@ -698,7 +703,6 @@
 				924DC4C3275F337200FCE093 /* SetRootView+Extension.swift in Sources */,
 				924DC4BD275F26DF00FCE093 /* Utility.swift in Sources */,
 				3E14E2E8276D0FB800495CF1 /* ArticleDetailService.swift in Sources */,
-
 				1739971D276BBF87004E4095 /* ArticleTableViewCell.swift in Sources */,
 				924DC49D275F141700FCE093 /* SceneDelegate.swift in Sources */,
 				8CB695E827639EEE0096BCAB /* RegisterView.swift in Sources */,
@@ -714,6 +718,7 @@
 				3EFA07BC275F99100010AA10 /* UIButton+extension.swift in Sources */,
 				92DA8AE82763C02D00028BF3 /* Session.swift in Sources */,
 				8CB6E3EE276C6D8800720B7B /* AppointmentViewController.swift in Sources */,
+				923A04B2276DF6BD007654AB /* ListDokterCell.swift in Sources */,
 				924DC4B9275F266500FCE093 /* UIColor.swift in Sources */,
 				92A9D65D27620338001BD05C /* LoginModel.swift in Sources */,
 				92D478A9276A42800092BB50 /* RegisterViewModel.swift in Sources */,
