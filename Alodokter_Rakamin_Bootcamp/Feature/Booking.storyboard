@@ -97,7 +97,67 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ak-Gb-9cT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4063" y="604"/>
+            <point key="canvasLocation" x="4093" y="591"/>
+        </scene>
+        <!--Konfirmasi Data View Controller-->
+        <scene sceneID="KEf-kq-Wql">
+            <objects>
+                <viewController storyboardIdentifier="KonfirmasiData" id="qQL-Ks-sxF" customClass="KonfirmasiDataViewController" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ke7-nC-i23">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GnH-WA-iVc" customClass="KonfirmasiDataView" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xgd-A0-ig9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GnH-WA-iVc" firstAttribute="top" secondItem="Ke7-nC-i23" secondAttribute="top" id="1f9-qI-Kdz"/>
+                            <constraint firstItem="GnH-WA-iVc" firstAttribute="leading" secondItem="xgd-A0-ig9" secondAttribute="leading" id="QKz-2p-Gqz"/>
+                            <constraint firstItem="xgd-A0-ig9" firstAttribute="trailing" secondItem="GnH-WA-iVc" secondAttribute="trailing" id="Ttl-B9-Ec8"/>
+                            <constraint firstAttribute="bottom" secondItem="GnH-WA-iVc" secondAttribute="bottom" id="aQf-v4-FKJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="GnH-WA-iVc" id="aI2-hF-nMa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RJn-Pf-QMl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4924.6376811594209" y="590.625"/>
+        </scene>
+        <!--Booking Selesai View Controller-->
+        <scene sceneID="o4T-XB-P6S">
+            <objects>
+                <viewController storyboardIdentifier="BookingSelesai" id="8gZ-26-rlb" customClass="BookingSelesaiViewController" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X9y-jC-zl5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rvo-kz-Oig" customClass="BookingSelesaiView" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3jr-Tn-TgV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3jr-Tn-TgV" firstAttribute="trailing" secondItem="Rvo-kz-Oig" secondAttribute="trailing" id="1za-QI-4k4"/>
+                            <constraint firstItem="Rvo-kz-Oig" firstAttribute="top" secondItem="X9y-jC-zl5" secondAttribute="top" id="G9O-or-wmS"/>
+                            <constraint firstAttribute="bottom" secondItem="Rvo-kz-Oig" secondAttribute="bottom" id="b4q-HL-hzF"/>
+                            <constraint firstItem="Rvo-kz-Oig" firstAttribute="leading" secondItem="3jr-Tn-TgV" secondAttribute="leading" id="qg7-v2-No2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="Rvo-kz-Oig" id="AKy-Dl-Fjy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fsk-TT-v99" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5747.826086956522" y="590.625"/>
         </scene>
         <!--Item-->
         <scene sceneID="iHv-EH-erO">

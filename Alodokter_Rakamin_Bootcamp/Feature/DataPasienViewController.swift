@@ -30,10 +30,12 @@ class DataPasienViewController: UIViewController {
         picker.delegate = self
         isiDataPasienView.jenisKelaminTextField.inputView = picker
         self.hideKeyboardWhenTappedAround()
+        isiDataPasienView.nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
     }
     
     @objc func nextButtonTapped() {
-        self.dismiss(animated: true, completion: nil)
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "KonfirmasiData") else { return }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 

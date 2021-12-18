@@ -39,6 +39,12 @@
 		3E15D843276881C00050F6CC /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E15D842276881C00050F6CC /* ResetPasswordViewModel.swift */; };
 		3E15D84527688D0E0050F6CC /* ResetPasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E15D84427688D0E0050F6CC /* ResetPasswordService.swift */; };
 		3E19490E276DA94C00B15044 /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E19490D276DA94C00B15044 /* UIView+extension.swift */; };
+		3ED572FF276DC97F00295F35 /* KonfirmasiDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ED572FE276DC97F00295F35 /* KonfirmasiDataView.xib */; };
+		3ED57302276DCD5200295F35 /* BookingSelesaiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ED57301276DCD5200295F35 /* BookingSelesaiView.xib */; };
+		3ED57304276DCF6000295F35 /* BookingSelesaiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED57303276DCF6000295F35 /* BookingSelesaiView.swift */; };
+		3ED57306276DCF6C00295F35 /* KonfirmasiDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED57305276DCF6C00295F35 /* KonfirmasiDataView.swift */; };
+		3ED57308276DD12600295F35 /* BookingSelesaiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED57307276DD12600295F35 /* BookingSelesaiViewController.swift */; };
+		3ED5730A276DD24B00295F35 /* KonfirmasiDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED57309276DD24B00295F35 /* KonfirmasiDataViewController.swift */; };
 		3EF0F9D5276839320058CFCF /* ArticleDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EF0F9D4276839320058CFCF /* ArticleDetailView.xib */; };
 		3EF0F9D727683EFF0058CFCF /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF0F9D627683EFF0058CFCF /* ArticleDetailView.swift */; };
 		3EF0F9D927686F3D0058CFCF /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF0F9D827686F3D0058CFCF /* ArticleDetailViewController.swift */; };
@@ -119,6 +125,12 @@
 		3E15D84427688D0E0050F6CC /* ResetPasswordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordService.swift; sourceTree = "<group>"; };
 		3E19490D276DA94C00B15044 /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
 		3EC13CB82763146B00B4A878 /* UITextField+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+extension.swift"; sourceTree = "<group>"; };
+		3ED572FE276DC97F00295F35 /* KonfirmasiDataView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KonfirmasiDataView.xib; sourceTree = "<group>"; };
+		3ED57301276DCD5200295F35 /* BookingSelesaiView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingSelesaiView.xib; sourceTree = "<group>"; };
+		3ED57303276DCF6000295F35 /* BookingSelesaiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSelesaiView.swift; sourceTree = "<group>"; };
+		3ED57305276DCF6C00295F35 /* KonfirmasiDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KonfirmasiDataView.swift; sourceTree = "<group>"; };
+		3ED57307276DD12600295F35 /* BookingSelesaiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSelesaiViewController.swift; sourceTree = "<group>"; };
+		3ED57309276DD24B00295F35 /* KonfirmasiDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KonfirmasiDataViewController.swift; sourceTree = "<group>"; };
 		3EF0F9D4276839320058CFCF /* ArticleDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleDetailView.xib; sourceTree = "<group>"; };
 		3EF0F9D627683EFF0058CFCF /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
 		3EF0F9D827686F3D0058CFCF /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
@@ -208,9 +220,11 @@
 		17CD8F462761ED7D009043F0 /* Booking */ = {
 			isa = PBXGroup;
 			children = (
-				17CD8F472761ED86009043F0 /* Booking.storyboard */,
+				3ED57300276DCD2400295F35 /* BookingSelesai */,
+				3ED572FD276DC96800295F35 /* KonfirmasiData */,
 				3E14E2FD276D994A00495CF1 /* PilihJadwal */,
 				3E14E2FC276D993B00495CF1 /* IsiDataPasien */,
+				17CD8F472761ED86009043F0 /* Booking.storyboard */,
 				3E14E2F5276D980300495CF1 /* BookingViewController.swift */,
 			);
 			name = Booking;
@@ -270,6 +284,26 @@
 				3E14E2F7276D987E00495CF1 /* PilihJadwalViewController.swift */,
 			);
 			name = PilihJadwal;
+			sourceTree = "<group>";
+		};
+		3ED572FD276DC96800295F35 /* KonfirmasiData */ = {
+			isa = PBXGroup;
+			children = (
+				3ED572FE276DC97F00295F35 /* KonfirmasiDataView.xib */,
+				3ED57305276DCF6C00295F35 /* KonfirmasiDataView.swift */,
+				3ED57309276DD24B00295F35 /* KonfirmasiDataViewController.swift */,
+			);
+			name = KonfirmasiData;
+			sourceTree = "<group>";
+		};
+		3ED57300276DCD2400295F35 /* BookingSelesai */ = {
+			isa = PBXGroup;
+			children = (
+				3ED57301276DCD5200295F35 /* BookingSelesaiView.xib */,
+				3ED57303276DCF6000295F35 /* BookingSelesaiView.swift */,
+				3ED57307276DD12600295F35 /* BookingSelesaiViewController.swift */,
+			);
+			path = BookingSelesai;
 			sourceTree = "<group>";
 		};
 		3EF0F9D3276839110058CFCF /* ArticleDetail */ = {
@@ -593,6 +627,7 @@
 				8CB695F027639F440096BCAB /* UserProfileView.xib in Resources */,
 				17399710276A561C004E4095 /* ArticleSearch.storyboard in Resources */,
 				8CB6E3EB276C6D8800720B7B /* Appointment.storyboard in Resources */,
+				3ED57302276DCD5200295F35 /* BookingSelesaiView.xib in Resources */,
 				17CD8F482761ED86009043F0 /* Booking.storyboard in Resources */,
 				17CD8F452761ED71009043F0 /* Main.storyboard in Resources */,
 				17CD8F5E2761F106009043F0 /* ResetPassword.storyboard in Resources */,
@@ -600,6 +635,7 @@
 				8CB695EF27639F440096BCAB /* UserProfile.storyboard in Resources */,
 				17CD8F3D2761ED2D009043F0 /* Article.storyboard in Resources */,
 				8CB695E627639EE00096BCAB /* Register.storyboard in Resources */,
+				3ED572FF276DC97F00295F35 /* KonfirmasiDataView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,6 +646,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ED5730A276DD24B00295F35 /* KonfirmasiDataViewController.swift in Sources */,
 				92DA8AE62763BE4900028BF3 /* UITextField+extension.swift in Sources */,
 				17CD8F672761F138009043F0 /* LoginView.swift in Sources */,
 				3E14E2F2276D194B00495CF1 /* IsiDataPasienView.swift in Sources */,
@@ -626,6 +663,7 @@
 				92E21A4A2764A3A200924C38 /* UserProfileService.swift in Sources */,
 				8CB695EE27639F440096BCAB /* UserProfileViewController.swift in Sources */,
 				8CB695F527639F850096BCAB /* ChangeDataViewController.swift in Sources */,
+				3ED57306276DCF6C00295F35 /* KonfirmasiDataView.swift in Sources */,
 				3EF0F9D727683EFF0058CFCF /* ArticleDetailView.swift in Sources */,
 				924DC49F275F141700FCE093 /* ViewController.swift in Sources */,
 				92EED41E2768E86C005B8F32 /* LoginViewModel.swift in Sources */,
@@ -640,10 +678,12 @@
 				924DC49D275F141700FCE093 /* SceneDelegate.swift in Sources */,
 				8CB695E827639EEE0096BCAB /* RegisterView.swift in Sources */,
 				17CD8F412761ED49009043F0 /* ArticleViewController.swift in Sources */,
+				3ED57308276DD12600295F35 /* BookingSelesaiViewController.swift in Sources */,
 				92E668E4276CB83200578B04 /* ArticleService.swift in Sources */,
 				3E14E2F6276D980400495CF1 /* BookingViewController.swift in Sources */,
 				92DC1A402765AEE20084FC4E /* SavedData.swift in Sources */,
 				3E14E2F0276D193500495CF1 /* PilihJadwalView.swift in Sources */,
+				3ED57304276DCF6000295F35 /* BookingSelesaiView.swift in Sources */,
 				1739971B276A5F58004E4095 /* ArticleSearchTableViewCell.swift in Sources */,
 				3EFA07BC275F99100010AA10 /* UIButton+extension.swift in Sources */,
 				92DA8AE82763C02D00028BF3 /* Session.swift in Sources */,

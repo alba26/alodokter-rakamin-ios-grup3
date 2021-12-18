@@ -179,10 +179,8 @@ class ArticleViewController: UIViewController {
             DispatchQueue.main.async { [self] in
                 self.articleResult = results as? ArticlesModel
                 self.filterResult = articleResult?.data
+                self.articleTableView.reloadData()
             }
-            print(self.articleResult)
-            
-                
         case .failure(let error):
 //            failToLoadArticle(title: "Load Artikel Gagal", message: "Terdapat kendala load artikel")
             print(error,"error")
@@ -218,7 +216,6 @@ extension ArticleViewController: UICollectionViewDataSource, UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Article", bundle: nil)
         guard let vc = storyboard.instantiateViewController(withIdentifier: "ArticleDetail") as? ArticleDetailViewController else { return }
-        vc.idArticle = idArticle
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -226,7 +223,6 @@ extension ArticleViewController: UICollectionViewDataSource, UICollectionViewDel
 
 extension ArticleViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("jumlah", articleResult?.data.count)
         if filterResult?.count != nil {
             return totalArticleLoaded
         }
@@ -250,6 +246,7 @@ extension ArticleViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Article", bundle: nil)
         guard let vc = storyboard.instantiateViewController(withIdentifier: "ArticleDetail") as? ArticleDetailViewController else { return }
+        vc.idArticle = String(filterResult?[indexPath.row].id ?? 0)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
