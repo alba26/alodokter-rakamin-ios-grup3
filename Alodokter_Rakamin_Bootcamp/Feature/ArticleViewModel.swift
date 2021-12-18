@@ -10,6 +10,7 @@ import Foundation
 class ArticleViewModel {
     
     let utils = Utility()
+    var articleHeroData: [Article]?
 
     func getArticlesData() {
         let articleService = ArticleService(param: "per_page",value: 2)
@@ -21,6 +22,10 @@ class ArticleViewModel {
             }
             print(articlesData)
             
+            // loop results, klo results headlinenya true, append ke articleHeroData
+//            if articlesData.data[0].headline == true {
+//                self.articleHeroData?.append(articlesData.data[0])
+//            }
                 
         case .failure(let error):
 //            failToLoadArticle(title: "Load Artikel Gagal", message: "Terdapat kendala load artikel")

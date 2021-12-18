@@ -32,6 +32,7 @@ struct Article: Codable {
 }
 
 enum Category: String, Codable {
+    case trending = "Trending"
     case hidupSehat = "Hidup Sehat"
     case keluarga = "Keluarga"
     case kesehatan = "Kesehatan"
