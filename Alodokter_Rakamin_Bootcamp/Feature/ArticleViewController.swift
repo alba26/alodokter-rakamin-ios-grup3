@@ -145,7 +145,7 @@ class ArticleViewController: UIViewController {
            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageSliderCell", for: indexPath) as! ImageSliderCollectionViewCell
 
            if articleHeroResults?[indexPath.row].image.contains("https") == true {
-               let imgURL = URL(string: (filterResult?[indexPath.row].image)!)
+               let imgURL = URL(string: (articleHeroResults?[indexPath.row].image)!)
                let data = try? Data(contentsOf: imgURL!)
                cell.imageSliderImg.image = UIImage(data: data!)
            }
@@ -365,12 +365,7 @@ class ArticleViewController: UIViewController {
                UserDefaults.standard.set(Session.unregistered.rawValue, forKey: "session")
                UserDefaults.standard.set("alreadyInstalled", forKey: "firstInstall")
            }
-           
-
        }
-       
-       
-       
    }
 
 
