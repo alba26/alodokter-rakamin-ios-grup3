@@ -29,6 +29,7 @@ class ArticleViewController: UIViewController {
     var currentCellIndex: Int = 0
     
     var viewModel = ArticleViewModel()
+    var idArticle = ""
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
@@ -217,6 +218,7 @@ extension ArticleViewController: UICollectionViewDataSource, UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Article", bundle: nil)
         guard let vc = storyboard.instantiateViewController(withIdentifier: "ArticleDetail") as? ArticleDetailViewController else { return }
+        vc.idArticle = idArticle
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

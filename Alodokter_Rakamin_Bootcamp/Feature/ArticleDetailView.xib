@@ -25,25 +25,22 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XQO-b9-ltZ">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="976"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="398"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ola-3X-tUQ">
-                                    <rect key="frame" x="24" y="24" width="366" height="30"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ola-3X-tUQ">
+                                    <rect key="frame" x="24" y="24" width="366" height="0.0"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ArticleImage" translatesAutoresizingMaskIntoConstraints="NO" id="H22-XI-aDS">
-                                    <rect key="frame" x="0.0" y="78" width="414" height="276"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H22-XI-aDS">
+                                    <rect key="frame" x="0.0" y="48" width="414" height="276"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="H22-XI-aDS" secondAttribute="height" multiplier="15:10" id="lZd-6i-8YX"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbz-9W-CeV">
-                                    <rect key="frame" x="24" y="378" width="366" height="548"/>
-                                    <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sollicitudin odio libero, sit amet placerat odio bibendum eu. Donec porta felis id pulvinar pharetra. Sed dapibus congue lorem, sit amet ultricies massa pellentesque eget. Suspendisse gravida lacinia nibh eu porta. In euismod mi eu odio fringilla, eget rhoncus eros dignissim. Proin imperdiet mi non tortor consequat auctor. Duis a lorem aliquam, accumsan nisi ut, tristique justo. Sed hendrerit, eros vitae vestibulum viverra, risus metus suscipit velit, egestas ultricies sem tortor et lectus. Etiam ultricies leo sed tempus dapibus.
-
-Suspendisse potenti. Suspendisse a fringilla lacus, vel venenatis enim. Morbi vel congue mauris. Praesent rhoncus sem ut dui posuere pretium at nec elit. Maecenas nec nibh in justo ornare scelerisque at id odio. Nunc luctus eros sit amet eros condimentum rutrum. Phasellus eget dignissim leo. Nulla dignissim tortor nec quam faucibus, sed laoreet arcu volutpat. Proin eu ultrices lorem. Nullam tempor id tellus a placerat. Nunc rutrum ipsum at elit consectetur, sed semper ipsum tempor. Curabitur in eros ut urna rutrum fermentum sed at quam.</string>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbz-9W-CeV">
+                                    <rect key="frame" x="24" y="348" width="366" height="0.0"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -87,7 +84,6 @@ Suspendisse potenti. Suspendisse a fringilla lacus, vel venenatis enim. Morbi ve
         </view>
     </objects>
     <resources>
-        <image name="ArticleImage" width="650" height="433"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

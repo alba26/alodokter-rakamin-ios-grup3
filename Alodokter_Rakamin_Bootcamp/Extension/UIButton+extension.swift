@@ -14,6 +14,7 @@ extension UIButton {
     
     func setCustomUI(color: ButtonColor, title: String) {
         self.setTitle(title, for: .normal)
+        self.tintColor = .white
         self.backgroundColor = UIColor(named: color.rawValue)
         self.layer.cornerRadius = 8
         self.clipsToBounds = true
@@ -62,6 +63,16 @@ extension UIViewController {
             self.view.frame.origin.y = -viewOriginY
         }
     }
+    
+    func hideKeyboardWhenTappedAround() {
+            let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+            tap.cancelsTouchesInView = false
+            view.addGestureRecognizer(tap)
+        }
+        
+        @objc func dismissKeyboard() {
+            view.endEditing(true)
+        }
 }
 
 extension UIResponder {
@@ -112,3 +123,4 @@ extension UITextField{
         self.resignFirstResponder()
     }
 }
+

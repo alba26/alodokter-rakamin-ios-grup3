@@ -13,7 +13,7 @@ class ArticleDetailView: UIView {
     @IBOutlet weak var articleTitleLabel: UILabel!
     @IBOutlet weak var articleImageView: UIImageView!
     @IBOutlet weak var articleBodyLabel: UILabel!
-    
+        
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
