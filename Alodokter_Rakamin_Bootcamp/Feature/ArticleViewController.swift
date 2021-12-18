@@ -35,6 +35,7 @@ class ArticleViewController: UIViewController {
        var searchResult : [Article]?
        var totalArticleLoaded : Int = 6
     let searchArticleController = UISearchController(searchResultsController: nil)
+    let spinner = Utility().showSpinner()
        
        override func viewWillAppear(_ animated: Bool) {
            self.tabBarController?.tabBar.isHidden = false
@@ -57,6 +58,8 @@ class ArticleViewController: UIViewController {
            setUpMenu()
            onboarding()
            activityIndicator = LoadData(scrollView: articleTableView, spacingFromLastCell: 10, spacingFromLastCellWhenLoadMoreActionStart: 100)
+           
+           self.present(spinner, animated: true, completion: nil)
        }
        
        @objc func slideToNext(){
@@ -103,6 +106,7 @@ class ArticleViewController: UIViewController {
                    articleHeroResults = articleResult?.data
                    articleTableView.reloadData()
                    getArticlesHeroData()
+                   spinner.dismiss(animated: true, completion: {})
 
 
                }
