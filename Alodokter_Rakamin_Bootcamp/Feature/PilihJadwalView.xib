@@ -14,7 +14,7 @@
                 <outlet property="detailDokterCard" destination="Ycg-Rj-6nb" id="SwV-Qh-oGx"/>
                 <outlet property="imageView" destination="G7C-0D-Qbr" id="41O-mG-hjA"/>
                 <outlet property="jamTextField" destination="ceV-eN-UYW" id="05F-wh-1lH"/>
-                <outlet property="nextButton" destination="g0Y-Bv-idd" id="Ah2-Yz-yCL"/>
+                <outlet property="nextButton" destination="I3c-FB-8aG" id="dlf-g3-0hR"/>
                 <outlet property="pilihJadwalCard" destination="IPW-gp-Y4D" id="jrE-me-53v"/>
                 <outlet property="scrollView" destination="wcz-jq-1Bo" id="oCy-N9-0bM"/>
                 <outlet property="tanggalTextField" destination="Za0-bt-vLO" id="ZPn-u5-seO"/>
@@ -182,25 +182,37 @@
                     <viewLayoutGuide key="contentLayoutGuide" id="4tF-7k-9aq"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="ixm-P9-O3D"/>
                 </scrollView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0Y-Bv-idd">
-                    <rect key="frame" x="20" y="793" width="374" height="45"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tvu-Ri-SXy">
+                    <rect key="frame" x="0.0" y="801" width="414" height="95"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3c-FB-8aG">
+                            <rect key="frame" x="20" y="14" width="374" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="BgX-W4-Lv2"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="45" id="Fxl-tg-GD4"/>
+                        <constraint firstAttribute="trailing" secondItem="I3c-FB-8aG" secondAttribute="trailing" constant="20" id="DE7-FE-78E"/>
+                        <constraint firstAttribute="bottom" secondItem="I3c-FB-8aG" secondAttribute="bottom" constant="36" id="iOP-UC-KWF"/>
+                        <constraint firstItem="I3c-FB-8aG" firstAttribute="top" secondItem="tvu-Ri-SXy" secondAttribute="top" constant="14" id="kV0-hG-CGw"/>
+                        <constraint firstItem="I3c-FB-8aG" firstAttribute="leading" secondItem="tvu-Ri-SXy" secondAttribute="leading" constant="20" id="q2K-Cj-vgD"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                </button>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="tvu-Ri-SXy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="3IW-Xy-Qi3"/>
                 <constraint firstItem="wcz-jq-1Bo" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="8l1-en-zhH"/>
+                <constraint firstAttribute="trailing" secondItem="tvu-Ri-SXy" secondAttribute="trailing" id="8lU-XT-yQQ"/>
+                <constraint firstAttribute="bottom" secondItem="tvu-Ri-SXy" secondAttribute="bottom" id="Od5-UJ-WGi"/>
                 <constraint firstItem="wcz-jq-1Bo" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="b2S-cO-2ll"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="g0Y-Bv-idd" secondAttribute="bottom" constant="24" id="bVp-j4-aOU"/>
                 <constraint firstAttribute="bottom" secondItem="wcz-jq-1Bo" secondAttribute="bottom" id="e0o-7k-NPH"/>
                 <constraint firstItem="wcz-jq-1Bo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="kTG-cH-iEM"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="g0Y-Bv-idd" secondAttribute="trailing" constant="20" id="kci-oh-bHL"/>
-                <constraint firstItem="g0Y-Bv-idd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="vQh-O7-Ruy"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="88.392857142857139"/>
         </view>

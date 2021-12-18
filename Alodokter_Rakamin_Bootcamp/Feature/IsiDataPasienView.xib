@@ -223,25 +223,37 @@
                     <viewLayoutGuide key="contentLayoutGuide" id="XD7-Qd-gTD"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="fgv-8h-ejx"/>
                 </scrollView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9x-1V-HaO">
-                    <rect key="frame" x="32" y="956" width="350" height="45"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="auj-YG-2gu">
+                    <rect key="frame" x="0.0" y="964" width="414" height="95"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9x-1V-HaO">
+                            <rect key="frame" x="20" y="14" width="374" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="olm-cD-hRN"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="45" id="olm-cD-hRN"/>
+                        <constraint firstItem="W9x-1V-HaO" firstAttribute="leading" secondItem="auj-YG-2gu" secondAttribute="leading" constant="20" id="F6Z-po-RLW"/>
+                        <constraint firstItem="W9x-1V-HaO" firstAttribute="top" secondItem="auj-YG-2gu" secondAttribute="top" constant="14" id="eAu-xm-oai"/>
+                        <constraint firstAttribute="bottom" secondItem="W9x-1V-HaO" secondAttribute="bottom" constant="36" id="hXX-JF-pcy"/>
+                        <constraint firstAttribute="trailing" secondItem="W9x-1V-HaO" secondAttribute="trailing" constant="20" id="hxA-yX-Lvh"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                </button>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="gF3-cB-cxr"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="auj-YG-2gu" secondAttribute="bottom" id="822-gc-P2B"/>
                 <constraint firstItem="sK3-F1-ub6" firstAttribute="top" secondItem="gF3-cB-cxr" secondAttribute="top" id="BE9-f8-nwO"/>
-                <constraint firstItem="gF3-cB-cxr" firstAttribute="trailing" secondItem="W9x-1V-HaO" secondAttribute="trailing" constant="32" id="Pab-r1-Pfk"/>
+                <constraint firstItem="auj-YG-2gu" firstAttribute="leading" secondItem="gF3-cB-cxr" secondAttribute="leading" id="XmB-t5-dxF"/>
                 <constraint firstItem="sK3-F1-ub6" firstAttribute="trailing" secondItem="gF3-cB-cxr" secondAttribute="trailing" id="fDg-J1-qqY"/>
-                <constraint firstItem="gF3-cB-cxr" firstAttribute="bottom" secondItem="W9x-1V-HaO" secondAttribute="bottom" constant="24" id="k4Z-Fk-ySl"/>
+                <constraint firstItem="gF3-cB-cxr" firstAttribute="trailing" secondItem="auj-YG-2gu" secondAttribute="trailing" id="fn2-NI-RnZ"/>
                 <constraint firstItem="sK3-F1-ub6" firstAttribute="leading" secondItem="gF3-cB-cxr" secondAttribute="leading" id="m5V-R9-XPC"/>
                 <constraint firstAttribute="bottom" secondItem="sK3-F1-ub6" secondAttribute="bottom" id="ovm-ar-R5p"/>
-                <constraint firstItem="W9x-1V-HaO" firstAttribute="leading" secondItem="gF3-cB-cxr" secondAttribute="leading" constant="32" id="qFe-SD-E9W"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="115.94202898550725" y="150.33482142857142"/>
