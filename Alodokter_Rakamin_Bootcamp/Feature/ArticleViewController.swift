@@ -210,7 +210,7 @@ class ArticleViewController: UIViewController {
                let searchResultVC = searchController.searchResultsController as? ArticleSearchViewController
                searchResult = articleResult?.data.filter({ (data) in
                    let searchArticle = data.title
-                   if searchArticle.contains(searchText) {
+                   if searchArticle.lowercased().contains(searchText.lowercased()) {
                        return true
                    }
                    else {
