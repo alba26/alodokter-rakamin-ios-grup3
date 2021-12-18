@@ -11,25 +11,28 @@ class ArticleSearchViewController: UIViewController {
 
     @IBOutlet weak var searchResultTableView: UITableView!
     
+    var testArr = ["test 1", "test 2"]
     var searchArticleResult : [Article]?
+//    var articleVC = ArticleViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.white
-
     }
+    
 }
 
 
 extension ArticleSearchViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return searchArticleResult?.count ?? 0
+//        return searchArticleResult?.count ?? 0
+        return testArr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = searchResultTableView.dequeueReusableCell(withIdentifier: "searchResultCell", for: indexPath) as! ArticleSearchTableViewCell
-        cell.articleSearchImage.image = UIImage(named: "ArticleImage")
-        cell.articleSearchTitleLabel.text = searchArticleResult![indexPath.row].title
+//        cell.articleSearchImage.image = UIImage(named: "ArticleImage")
+        cell.articleSearchTitleLabel.text = testArr[indexPath.row]
         
         return cell
     }
