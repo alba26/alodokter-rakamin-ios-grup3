@@ -91,8 +91,7 @@ class ArticleViewController: UIViewController {
         let profileImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
         profileImageView.image = UIImage(named: "ProfileImage")
         profileImageView.contentMode = UIView.ContentMode.scaleAspectFill
-        profileImageView.layer.cornerRadius = 20
-        profileImageView.layer.masksToBounds = true
+        profileImageView.circleView()
         profileNavView.addSubview(profileImageView)
         profileImageView.isUserInteractionEnabled = true
         let tap = UITapGestureRecognizer(target: self, action: #selector(profileMenuTapped(sender:)))
@@ -213,7 +212,8 @@ class ArticleViewController: UIViewController {
                 self.filterResult = articleResult?.data
                 self.articleHeroResults = articleResult?.data
                 self.articleTableView.reloadData()
-//                self.articleCollectionView.reloadData()
+                getArticlesHeroData()
+//               self.articleCollectionView.reloadData()
             }
         case .failure(let error):
 //            failToLoadArticle(title: "Load Artikel Gagal", message: "Terdapat kendala load artikel")
@@ -221,6 +221,19 @@ class ArticleViewController: UIViewController {
         }
             
         }
+    }
+    
+    func getArticlesHeroData() {
+        articleHeroResults = articleResult?.data.filter({ (data) in
+            let heroArticle = data.headline
+            if heroArticle == false {
+                return true
+            }
+            else {
+                return false
+            }
+        })
+        print("hero article", articleHeroResults?.count)
     }
 }
 
