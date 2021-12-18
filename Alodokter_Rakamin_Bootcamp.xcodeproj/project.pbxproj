@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1739970E2768E2C9004E4095 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739970D2768E2C9004E4095 /* ArticleViewModel.swift */; };
+		17399710276A561C004E4095 /* ArticleSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1739970F276A561B004E4095 /* ArticleSearch.storyboard */; };
+		17399717276A5C06004E4095 /* ArticleSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17399716276A5C06004E4095 /* ArticleSearchViewController.swift */; };
+		1739971B276A5F58004E4095 /* ArticleSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739971A276A5F58004E4095 /* ArticleSearchTableViewCell.swift */; };
+		1739971D276BBF87004E4095 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739971C276BBF87004E4095 /* ArticleTableViewCell.swift */; };
 		17CD8F3D2761ED2D009043F0 /* Article.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F3C2761ED2D009043F0 /* Article.storyboard */; };
 		17CD8F3F2761ED3F009043F0 /* ArticleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD8F3E2761ED3F009043F0 /* ArticleCollectionViewCell.swift */; };
 		17CD8F412761ED49009043F0 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD8F402761ED49009043F0 /* ArticleViewController.swift */; };
-		17CD8F432761ED55009043F0 /* ArticleListSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F422761ED55009043F0 /* ArticleListSection.xib */; };
 		17CD8F452761ED71009043F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F442761ED71009043F0 /* Main.storyboard */; };
 		17CD8F482761ED86009043F0 /* Booking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F472761ED86009043F0 /* Booking.storyboard */; };
 		17CD8F5E2761F106009043F0 /* ResetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F532761F106009043F0 /* ResetPassword.storyboard */; };
@@ -22,7 +26,26 @@
 		17CD8F6A2761F366009043F0 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F552761F106009043F0 /* LoginView.xib */; };
 		17CD8F6B2761F36B009043F0 /* ResetPasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17CD8F5A2761F106009043F0 /* ResetPasswordView.xib */; };
 		17CD8F6F27645070009043F0 /* ImageSliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD8F6E27645070009043F0 /* ImageSliderCollectionViewCell.swift */; };
-		3EC13CB92763146B00B4A878 /* UITextField+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC13CB82763146B00B4A878 /* UITextField+extension.swift */; };
+		3E14E2E8276D0FB800495CF1 /* ArticleDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E2E7276D0FB800495CF1 /* ArticleDetailService.swift */; };
+		3E14E2EA276D101A00495CF1 /* ArticleDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E2E9276D101A00495CF1 /* ArticleDetailViewModel.swift */; };
+		3E14E2EC276D111300495CF1 /* ArticleDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E2EB276D111300495CF1 /* ArticleDetailModel.swift */; };
+		3E15D843276881C00050F6CC /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E15D842276881C00050F6CC /* ResetPasswordViewModel.swift */; };
+		3E15D84527688D0E0050F6CC /* ResetPasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E15D84427688D0E0050F6CC /* ResetPasswordService.swift */; };
+		3E19490E276DA94C00B15044 /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E19490D276DA94C00B15044 /* UIView+extension.swift */; };
+		3ED572FF276DC97F00295F35 /* KonfirmasiDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ED572FE276DC97F00295F35 /* KonfirmasiDataView.xib */; };
+		3ED57302276DCD5200295F35 /* BookingSelesaiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ED57301276DCD5200295F35 /* BookingSelesaiView.xib */; };
+		3ED57304276DCF6000295F35 /* BookingSelesaiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED57303276DCF6000295F35 /* BookingSelesaiView.swift */; };
+		3ED57306276DCF6C00295F35 /* KonfirmasiDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED57305276DCF6C00295F35 /* KonfirmasiDataView.swift */; };
+		3ED57308276DD12600295F35 /* BookingSelesaiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED57307276DD12600295F35 /* BookingSelesaiViewController.swift */; };
+		3ED5730A276DD24B00295F35 /* KonfirmasiDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED57309276DD24B00295F35 /* KonfirmasiDataViewController.swift */; };
+		3ED5730E276E0D1700295F35 /* ListDokterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5730D276E0D1700295F35 /* ListDokterView.swift */; };
+		3ED57310276E0D2700295F35 /* ListDokterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ED5730F276E0D2700295F35 /* ListDokterView.xib */; };
+		3ED57312276E0D3A00295F35 /* ListDokterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED57311276E0D3A00295F35 /* ListDokterViewController.swift */; };
+		3ED5731C276E0E7800295F35 /* ListDokterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5731A276E0E7800295F35 /* ListDokterTableViewCell.swift */; };
+		3ED5731D276E0E7800295F35 /* ListDokterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ED5731B276E0E7800295F35 /* ListDokterTableViewCell.xib */; };
+		3EF0F9D5276839320058CFCF /* ArticleDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EF0F9D4276839320058CFCF /* ArticleDetailView.xib */; };
+		3EF0F9D727683EFF0058CFCF /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF0F9D627683EFF0058CFCF /* ArticleDetailView.swift */; };
+		3EF0F9D927686F3D0058CFCF /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF0F9D827686F3D0058CFCF /* ArticleDetailViewController.swift */; };
 		3EFA07BC275F99100010AA10 /* UIButton+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFA07BB275F99100010AA10 /* UIButton+extension.swift */; };
 		8C61212D2762214600511B76 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6121292762214600511B76 /* RegisterViewController.swift */; };
 		8C61212E2762214600511B76 /* RegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C61212A2762214600511B76 /* RegisterView.xib */; };
@@ -34,6 +57,19 @@
 		8CB695F127639F440096BCAB /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB695ED27639F440096BCAB /* UserProfileView.swift */; };
 		8CB695F527639F850096BCAB /* ChangeDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB695F327639F850096BCAB /* ChangeDataViewController.swift */; };
 		8CB695F627639F850096BCAB /* ChangeData.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB695F427639F850096BCAB /* ChangeData.storyboard */; };
+		8CB6E3E9276C6D8800720B7B /* LatestAppointmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB6E3E3276C6D8800720B7B /* LatestAppointmentView.swift */; };
+		8CB6E3EA276C6D8800720B7B /* CompletedAppointmentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CB6E3E4276C6D8800720B7B /* CompletedAppointmentView.xib */; };
+		8CB6E3EB276C6D8800720B7B /* Appointment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB6E3E5276C6D8800720B7B /* Appointment.storyboard */; };
+		8CB6E3EC276C6D8800720B7B /* CompletedAppointmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB6E3E6276C6D8800720B7B /* CompletedAppointmentView.swift */; };
+		8CB6E3ED276C6D8800720B7B /* LatestAppointmentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CB6E3E7276C6D8800720B7B /* LatestAppointmentView.xib */; };
+		8CB6E3EE276C6D8800720B7B /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB6E3E8276C6D8800720B7B /* AppointmentViewController.swift */; };
+		8CBD35B7276DA4EB00E1D837 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBD35B6276DA4EB00E1D837 /* OnboardingViewController.swift */; };
+		8CBD35B9276DA50F00E1D837 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CBD35B8276DA50F00E1D837 /* Onboarding.storyboard */; };
+		8CBD35BB276DA83D00E1D837 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBD35BA276DA83D00E1D837 /* OnboardingSlide.swift */; };
+		8CBD35BD276DA9BA00E1D837 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBD35BC276DA9BA00E1D837 /* OnboardingCollectionViewCell.swift */; };
+		8CBDD7A8276E4B64009A6B27 /* DoctorDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBDD7A5276E4B64009A6B27 /* DoctorDetailView.swift */; };
+		8CBDD7A9276E4B64009A6B27 /* DoctorDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CBDD7A6276E4B64009A6B27 /* DoctorDetailView.xib */; };
+		8CBDD7AA276E4B64009A6B27 /* DoctorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBDD7A7276E4B64009A6B27 /* DoctorDetailViewController.swift */; };
 		924DC49B275F141700FCE093 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC49A275F141700FCE093 /* AppDelegate.swift */; };
 		924DC49D275F141700FCE093 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC49C275F141700FCE093 /* SceneDelegate.swift */; };
 		924DC49F275F141700FCE093 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC49E275F141700FCE093 /* ViewController.swift */; };
@@ -44,24 +80,40 @@
 		924DC4BD275F26DF00FCE093 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC4BC275F26DF00FCE093 /* Utility.swift */; };
 		924DC4C1275F32E900FCE093 /* PopToSelectedController+Exten.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC4C0275F32E900FCE093 /* PopToSelectedController+Exten.swift */; };
 		924DC4C3275F337200FCE093 /* SetRootView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC4C2275F337200FCE093 /* SetRootView+Extension.swift */; };
-		92A9D65C27620338001BD05C /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9D65A27620338001BD05C /* ArticleModel.swift */; };
 		92A9D65D27620338001BD05C /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9D65B27620338001BD05C /* LoginModel.swift */; };
-		92A9D65F27620362001BD05C /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9D65E27620362001BD05C /* ArticleService.swift */; };
 		92A9D66327620380001BD05C /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9D66227620380001BD05C /* APIService.swift */; };
 		92A9D66B276213AD001BD05C /* TabBarControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9D66A276213AD001BD05C /* TabBarControll.swift */; };
+		92AB685D276E20E000F8880F /* ChangeDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB685C276E20E000F8880F /* ChangeDataViewModel.swift */; };
+		92AB685F276E21B700F8880F /* ChangeDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB685E276E21B700F8880F /* ChangeDataService.swift */; };
+		92AB6864276E369E00F8880F /* DataPasienViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB6861276E369E00F8880F /* DataPasienViewController.swift */; };
+		92AB6865276E369E00F8880F /* IsiDataPasienView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB6862276E369E00F8880F /* IsiDataPasienView.swift */; };
+		92AB6866276E369E00F8880F /* IsiDataPasienView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92AB6863276E369E00F8880F /* IsiDataPasienView.xib */; };
+		92AB686B276E373000F8880F /* PilihJadwalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB6868276E373000F8880F /* PilihJadwalViewController.swift */; };
+		92AB686C276E373000F8880F /* PilihJadwalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92AB6869276E373000F8880F /* PilihJadwalView.xib */; };
+		92AB686D276E373000F8880F /* PilihJadwalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB686A276E373000F8880F /* PilihJadwalView.swift */; };
+		92AB686F276E3A4500F8880F /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB686E276E3A4500F8880F /* LoadData.swift */; };
+		92D478A9276A42800092BB50 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D478A8276A42800092BB50 /* RegisterViewModel.swift */; };
 		92DA8AE62763BE4900028BF3 /* UITextField+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC13CB82763146B00B4A878 /* UITextField+extension.swift */; };
 		92DA8AE82763C02D00028BF3 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DA8AE72763C02D00028BF3 /* Session.swift */; };
 		92DA8AEA2763C1EE00028BF3 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DA8AE92763C1EE00028BF3 /* UserData.swift */; };
 		92DA8AEC2763C35B00028BF3 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DA8AEB2763C35B00028BF3 /* LoginService.swift */; };
 		92DA8AF02763D46200028BF3 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DA8AEF2763D46200028BF3 /* RegisterService.swift */; };
+		92DC1A402765AEE20084FC4E /* SavedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DC1A3F2765AEE20084FC4E /* SavedData.swift */; };
 		92E21A4A2764A3A200924C38 /* UserProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E21A492764A3A100924C38 /* UserProfileService.swift */; };
+		92E668E4276CB83200578B04 /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E668E3276CB83200578B04 /* ArticleService.swift */; };
+		92E668E7276CB86000578B04 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E668E6276CB85F00578B04 /* ArticleModel.swift */; };
+		92EED41E2768E86C005B8F32 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EED41D2768E86C005B8F32 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1739970D2768E2C9004E4095 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
+		1739970F276A561B004E4095 /* ArticleSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ArticleSearch.storyboard; sourceTree = "<group>"; };
+		17399716276A5C06004E4095 /* ArticleSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleSearchViewController.swift; sourceTree = "<group>"; };
+		1739971A276A5F58004E4095 /* ArticleSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleSearchTableViewCell.swift; sourceTree = "<group>"; };
+		1739971C276BBF87004E4095 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		17CD8F3C2761ED2D009043F0 /* Article.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Article.storyboard; sourceTree = "<group>"; };
 		17CD8F3E2761ED3F009043F0 /* ArticleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleCollectionViewCell.swift; sourceTree = "<group>"; };
 		17CD8F402761ED49009043F0 /* ArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
-		17CD8F422761ED55009043F0 /* ArticleListSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleListSection.xib; sourceTree = "<group>"; };
 		17CD8F442761ED71009043F0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		17CD8F472761ED86009043F0 /* Booking.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Booking.storyboard; sourceTree = "<group>"; };
 		17CD8F532761F106009043F0 /* ResetPassword.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ResetPassword.storyboard; sourceTree = "<group>"; };
@@ -73,7 +125,33 @@
 		17CD8F5B2761F106009043F0 /* ResetPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		17CD8F5C2761F106009043F0 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		17CD8F6E27645070009043F0 /* ImageSliderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSliderCollectionViewCell.swift; sourceTree = "<group>"; };
+		3E14E2E7276D0FB800495CF1 /* ArticleDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailService.swift; sourceTree = "<group>"; };
+		3E14E2E9276D101A00495CF1 /* ArticleDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewModel.swift; sourceTree = "<group>"; };
+		3E14E2EB276D111300495CF1 /* ArticleDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailModel.swift; sourceTree = "<group>"; };
+		3E14E2ED276D192400495CF1 /* PilihJadwalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PilihJadwalView.xib; sourceTree = "<group>"; };
+		3E14E2EF276D193500495CF1 /* PilihJadwalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilihJadwalView.swift; sourceTree = "<group>"; };
+		3E14E2F1276D194B00495CF1 /* IsiDataPasienView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsiDataPasienView.swift; sourceTree = "<group>"; };
+		3E14E2F3276D196400495CF1 /* IsiDataPasienView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IsiDataPasienView.xib; sourceTree = "<group>"; };
+		3E14E2F7276D987E00495CF1 /* PilihJadwalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilihJadwalViewController.swift; sourceTree = "<group>"; };
+		3E14E2F9276D988F00495CF1 /* DataPasienViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPasienViewController.swift; sourceTree = "<group>"; };
+		3E15D842276881C00050F6CC /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
+		3E15D84427688D0E0050F6CC /* ResetPasswordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordService.swift; sourceTree = "<group>"; };
+		3E19490D276DA94C00B15044 /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
 		3EC13CB82763146B00B4A878 /* UITextField+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+extension.swift"; sourceTree = "<group>"; };
+		3ED572FE276DC97F00295F35 /* KonfirmasiDataView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KonfirmasiDataView.xib; sourceTree = "<group>"; };
+		3ED57301276DCD5200295F35 /* BookingSelesaiView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingSelesaiView.xib; sourceTree = "<group>"; };
+		3ED57303276DCF6000295F35 /* BookingSelesaiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSelesaiView.swift; sourceTree = "<group>"; };
+		3ED57305276DCF6C00295F35 /* KonfirmasiDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KonfirmasiDataView.swift; sourceTree = "<group>"; };
+		3ED57307276DD12600295F35 /* BookingSelesaiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSelesaiViewController.swift; sourceTree = "<group>"; };
+		3ED57309276DD24B00295F35 /* KonfirmasiDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KonfirmasiDataViewController.swift; sourceTree = "<group>"; };
+		3ED5730D276E0D1700295F35 /* ListDokterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDokterView.swift; sourceTree = "<group>"; };
+		3ED5730F276E0D2700295F35 /* ListDokterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListDokterView.xib; sourceTree = "<group>"; };
+		3ED57311276E0D3A00295F35 /* ListDokterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDokterViewController.swift; sourceTree = "<group>"; };
+		3ED5731A276E0E7800295F35 /* ListDokterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDokterTableViewCell.swift; sourceTree = "<group>"; };
+		3ED5731B276E0E7800295F35 /* ListDokterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListDokterTableViewCell.xib; sourceTree = "<group>"; };
+		3EF0F9D4276839320058CFCF /* ArticleDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleDetailView.xib; sourceTree = "<group>"; };
+		3EF0F9D627683EFF0058CFCF /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
+		3EF0F9D827686F3D0058CFCF /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
 		3EFA07BB275F99100010AA10 /* UIButton+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+extension.swift"; sourceTree = "<group>"; };
 		8C6121292762214600511B76 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8C61212A2762214600511B76 /* RegisterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterView.xib; sourceTree = "<group>"; };
@@ -85,6 +163,19 @@
 		8CB695ED27639F440096BCAB /* UserProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		8CB695F327639F850096BCAB /* ChangeDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeDataViewController.swift; sourceTree = "<group>"; };
 		8CB695F427639F850096BCAB /* ChangeData.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChangeData.storyboard; sourceTree = "<group>"; };
+		8CB6E3E3276C6D8800720B7B /* LatestAppointmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LatestAppointmentView.swift; sourceTree = "<group>"; };
+		8CB6E3E4276C6D8800720B7B /* CompletedAppointmentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CompletedAppointmentView.xib; sourceTree = "<group>"; };
+		8CB6E3E5276C6D8800720B7B /* Appointment.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Appointment.storyboard; sourceTree = "<group>"; };
+		8CB6E3E6276C6D8800720B7B /* CompletedAppointmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletedAppointmentView.swift; sourceTree = "<group>"; };
+		8CB6E3E7276C6D8800720B7B /* LatestAppointmentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LatestAppointmentView.xib; sourceTree = "<group>"; };
+		8CB6E3E8276C6D8800720B7B /* AppointmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentViewController.swift; sourceTree = "<group>"; };
+		8CBD35B6276DA4EB00E1D837 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		8CBD35B8276DA50F00E1D837 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		8CBD35BA276DA83D00E1D837 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
+		8CBD35BC276DA9BA00E1D837 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		8CBDD7A5276E4B64009A6B27 /* DoctorDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorDetailView.swift; sourceTree = "<group>"; };
+		8CBDD7A6276E4B64009A6B27 /* DoctorDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoctorDetailView.xib; sourceTree = "<group>"; };
+		8CBDD7A7276E4B64009A6B27 /* DoctorDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorDetailViewController.swift; sourceTree = "<group>"; };
 		924DC497275F141700FCE093 /* Alodokter_Rakamin_Bootcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alodokter_Rakamin_Bootcamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		924DC49A275F141700FCE093 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		924DC49C275F141700FCE093 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,15 +190,28 @@
 		924DC4C2275F337200FCE093 /* SetRootView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SetRootView+Extension.swift"; sourceTree = "<group>"; };
 		92A9D65A27620338001BD05C /* ArticleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 		92A9D65B27620338001BD05C /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
-		92A9D65E27620362001BD05C /* ArticleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleService.swift; sourceTree = "<group>"; };
 		92A9D6602762036B001BD05C /* UserLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLoginService.swift; sourceTree = "<group>"; };
 		92A9D66227620380001BD05C /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		92A9D66A276213AD001BD05C /* TabBarControll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControll.swift; sourceTree = "<group>"; };
+		92AB685C276E20E000F8880F /* ChangeDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeDataViewModel.swift; sourceTree = "<group>"; };
+		92AB685E276E21B700F8880F /* ChangeDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeDataService.swift; sourceTree = "<group>"; };
+		92AB6861276E369E00F8880F /* DataPasienViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPasienViewController.swift; sourceTree = "<group>"; };
+		92AB6862276E369E00F8880F /* IsiDataPasienView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsiDataPasienView.swift; sourceTree = "<group>"; };
+		92AB6863276E369E00F8880F /* IsiDataPasienView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IsiDataPasienView.xib; sourceTree = "<group>"; };
+		92AB6868276E373000F8880F /* PilihJadwalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PilihJadwalViewController.swift; sourceTree = "<group>"; };
+		92AB6869276E373000F8880F /* PilihJadwalView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PilihJadwalView.xib; sourceTree = "<group>"; };
+		92AB686A276E373000F8880F /* PilihJadwalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PilihJadwalView.swift; sourceTree = "<group>"; };
+		92AB686E276E3A4500F8880F /* LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadData.swift; sourceTree = "<group>"; };
+		92D478A8276A42800092BB50 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		92DA8AE72763C02D00028BF3 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		92DA8AE92763C1EE00028BF3 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		92DA8AEB2763C35B00028BF3 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		92DA8AEF2763D46200028BF3 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
+		92DC1A3F2765AEE20084FC4E /* SavedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedData.swift; sourceTree = "<group>"; };
 		92E21A492764A3A100924C38 /* UserProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileService.swift; sourceTree = "<group>"; };
+		92E668E3276CB83200578B04 /* ArticleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArticleService.swift; path = Alodokter_Rakamin_Bootcamp/Feature/ArticleService.swift; sourceTree = SOURCE_ROOT; };
+		92E668E6276CB85F00578B04 /* ArticleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
+		92EED41D2768E86C005B8F32 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,15 +225,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17399711276A5656004E4095 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				1739970F276A561B004E4095 /* ArticleSearch.storyboard */,
+				17399716276A5C06004E4095 /* ArticleSearchViewController.swift */,
+				1739971A276A5F58004E4095 /* ArticleSearchTableViewCell.swift */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
 		17CD8F392761ECAC009043F0 /* Artikel */ = {
 			isa = PBXGroup;
 			children = (
-				92A9D65E27620362001BD05C /* ArticleService.swift */,
+				92E668E5276CB84400578B04 /* Model */,
+				3EF0F9D3276839110058CFCF /* ArticleDetail */,
+				17399711276A5656004E4095 /* Search */,
 				17CD8F3C2761ED2D009043F0 /* Article.storyboard */,
-				17CD8F422761ED55009043F0 /* ArticleListSection.xib */,
 				17CD8F3E2761ED3F009043F0 /* ArticleCollectionViewCell.swift */,
+				1739971C276BBF87004E4095 /* ArticleTableViewCell.swift */,
 				17CD8F402761ED49009043F0 /* ArticleViewController.swift */,
 				17CD8F6E27645070009043F0 /* ImageSliderCollectionViewCell.swift */,
+				1739970D2768E2C9004E4095 /* ArticleViewModel.swift */,
 			);
 			name = Artikel;
 			sourceTree = "<group>";
@@ -137,6 +254,12 @@
 		17CD8F462761ED7D009043F0 /* Booking */ = {
 			isa = PBXGroup;
 			children = (
+				8CBDD7A4276E4B55009A6B27 /* DetailDokter */,
+				92AB6867276E371F00F8880F /* PilihJadwal */,
+				92AB6860276E367F00F8880F /* IsiDataPasien */,
+				3ED5730B276E0CD200295F35 /* ListDokter */,
+				3ED57300276DCD2400295F35 /* BookingSelesai */,
+				3ED572FD276DC96800295F35 /* KonfirmasiData */,
 				17CD8F472761ED86009043F0 /* Booking.storyboard */,
 			);
 			name = Booking;
@@ -145,6 +268,8 @@
 		17CD8F522761F0E3009043F0 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				8CB6E3E2276C6D6B00720B7B /* Appointment */,
+				8C6121282762213700511B76 /* Register */,
 				8CB695F227639F790096BCAB /* ChangeData */,
 				8CB695E927639F2E0096BCAB /* UserProfile */,
 				17CD8F542761F106009043F0 /* Login */,
@@ -156,11 +281,9 @@
 		17CD8F542761F106009043F0 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				17CD8F552761F106009043F0 /* LoginView.xib */,
-				17CD8F562761F106009043F0 /* LoginView.swift */,
-				17CD8F572761F106009043F0 /* Login.storyboard */,
-				17CD8F582761F106009043F0 /* LoginViewController.swift */,
-				92DA8AEB2763C35B00028BF3 /* LoginService.swift */,
+				92D478AC276A42CF0092BB50 /* ViewModel */,
+				92D478AB276A42980092BB50 /* Model */,
+				92D478AA276A42910092BB50 /* View */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -172,18 +295,70 @@
 				17CD8F5A2761F106009043F0 /* ResetPasswordView.xib */,
 				17CD8F5B2761F106009043F0 /* ResetPasswordView.swift */,
 				17CD8F5C2761F106009043F0 /* ResetPasswordViewController.swift */,
+				3E15D842276881C00050F6CC /* ResetPasswordViewModel.swift */,
+				3E15D84427688D0E0050F6CC /* ResetPasswordService.swift */,
 			);
 			path = ResetPassword;
+			sourceTree = "<group>";
+		};
+		3ED572FD276DC96800295F35 /* KonfirmasiData */ = {
+			isa = PBXGroup;
+			children = (
+				3ED572FE276DC97F00295F35 /* KonfirmasiDataView.xib */,
+				3ED57305276DCF6C00295F35 /* KonfirmasiDataView.swift */,
+				3ED57309276DD24B00295F35 /* KonfirmasiDataViewController.swift */,
+			);
+			name = KonfirmasiData;
+			sourceTree = "<group>";
+		};
+		3ED57300276DCD2400295F35 /* BookingSelesai */ = {
+			isa = PBXGroup;
+			children = (
+				3ED57301276DCD5200295F35 /* BookingSelesaiView.xib */,
+				3ED57303276DCF6000295F35 /* BookingSelesaiView.swift */,
+				3ED57307276DD12600295F35 /* BookingSelesaiViewController.swift */,
+			);
+			path = BookingSelesai;
+			sourceTree = "<group>";
+		};
+		3ED5730B276E0CD200295F35 /* ListDokter */ = {
+			isa = PBXGroup;
+			children = (
+				3ED57319276E0E5700295F35 /* Cell */,
+				3ED5730D276E0D1700295F35 /* ListDokterView.swift */,
+				3ED5730F276E0D2700295F35 /* ListDokterView.xib */,
+				3ED57311276E0D3A00295F35 /* ListDokterViewController.swift */,
+			);
+			name = ListDokter;
+			sourceTree = "<group>";
+		};
+		3ED57319276E0E5700295F35 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3ED5731A276E0E7800295F35 /* ListDokterTableViewCell.swift */,
+				3ED5731B276E0E7800295F35 /* ListDokterTableViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		3EF0F9D3276839110058CFCF /* ArticleDetail */ = {
+			isa = PBXGroup;
+			children = (
+				3EF0F9D4276839320058CFCF /* ArticleDetailView.xib */,
+				3EF0F9D627683EFF0058CFCF /* ArticleDetailView.swift */,
+				3EF0F9D827686F3D0058CFCF /* ArticleDetailViewController.swift */,
+				3E14E2E7276D0FB800495CF1 /* ArticleDetailService.swift */,
+				3E14E2E9276D101A00495CF1 /* ArticleDetailViewModel.swift */,
+			);
+			name = ArticleDetail;
 			sourceTree = "<group>";
 		};
 		8C6121282762213700511B76 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				8CB695E727639EEE0096BCAB /* RegisterView.swift */,
-				8CB695E527639EE00096BCAB /* Register.storyboard */,
-				8C61212A2762214600511B76 /* RegisterView.xib */,
-				8C6121292762214600511B76 /* RegisterViewController.swift */,
-				92DA8AEF2763D46200028BF3 /* RegisterService.swift */,
+				92D478B2276A434D0092BB50 /* Model */,
+				92D478B1276A43470092BB50 /* ViewModel */,
+				92D478B0276A43430092BB50 /* View */,
 			);
 			name = Register;
 			sourceTree = "<group>";
@@ -191,11 +366,9 @@
 		8CB695E927639F2E0096BCAB /* UserProfile */ = {
 			isa = PBXGroup;
 			children = (
-				8CB695EB27639F430096BCAB /* UserProfile.storyboard */,
-				8CB695EA27639F430096BCAB /* UserProfileViewController.swift */,
-				8CB695ED27639F440096BCAB /* UserProfileView.swift */,
-				8CB695EC27639F440096BCAB /* UserProfileView.xib */,
-				92E21A492764A3A100924C38 /* UserProfileService.swift */,
+				92D478AF276A42F10092BB50 /* View */,
+				92D478AE276A42E70092BB50 /* Model */,
+				92D478AD276A42E10092BB50 /* ViewModel */,
 			);
 			path = UserProfile;
 			sourceTree = "<group>";
@@ -205,8 +378,44 @@
 			children = (
 				8CB695F427639F850096BCAB /* ChangeData.storyboard */,
 				8CB695F327639F850096BCAB /* ChangeDataViewController.swift */,
+				92AB685C276E20E000F8880F /* ChangeDataViewModel.swift */,
+				92AB685E276E21B700F8880F /* ChangeDataService.swift */,
 			);
 			path = ChangeData;
+			sourceTree = "<group>";
+		};
+		8CB6E3E2276C6D6B00720B7B /* Appointment */ = {
+			isa = PBXGroup;
+			children = (
+				8CB6E3E5276C6D8800720B7B /* Appointment.storyboard */,
+				8CB6E3E8276C6D8800720B7B /* AppointmentViewController.swift */,
+				8CB6E3E6276C6D8800720B7B /* CompletedAppointmentView.swift */,
+				8CB6E3E4276C6D8800720B7B /* CompletedAppointmentView.xib */,
+				8CB6E3E3276C6D8800720B7B /* LatestAppointmentView.swift */,
+				8CB6E3E7276C6D8800720B7B /* LatestAppointmentView.xib */,
+			);
+			path = Appointment;
+			sourceTree = "<group>";
+		};
+		8CB6E3EF276CDBD400720B7B /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				8CBD35B6276DA4EB00E1D837 /* OnboardingViewController.swift */,
+				8CBD35B8276DA50F00E1D837 /* Onboarding.storyboard */,
+				8CBD35BA276DA83D00E1D837 /* OnboardingSlide.swift */,
+				8CBD35BC276DA9BA00E1D837 /* OnboardingCollectionViewCell.swift */,
+			);
+			name = Onboarding;
+			sourceTree = "<group>";
+		};
+		8CBDD7A4276E4B55009A6B27 /* DetailDokter */ = {
+			isa = PBXGroup;
+			children = (
+				8CBDD7A5276E4B64009A6B27 /* DoctorDetailView.swift */,
+				8CBDD7A6276E4B64009A6B27 /* DoctorDetailView.xib */,
+				8CBDD7A7276E4B64009A6B27 /* DoctorDetailViewController.swift */,
+			);
+			name = DetailDokter;
 			sourceTree = "<group>";
 		};
 		924DC48E275F141700FCE093 = {
@@ -229,6 +438,7 @@
 		924DC499275F141700FCE093 /* Alodokter_Rakamin_Bootcamp */ = {
 			isa = PBXGroup;
 			children = (
+				92EED41C27683818005B8F32 /* Service */,
 				92A9D6592762032B001BD05C /* Model */,
 				92A9D6582762030D001BD05C /* Base */,
 				924DC4B3275F25BA00FCE093 /* Feature */,
@@ -249,7 +459,7 @@
 		924DC4B3275F25BA00FCE093 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				8C6121282762213700511B76 /* Register */,
+				8CB6E3EF276CDBD400720B7B /* Onboarding */,
 				17CD8F522761F0E3009043F0 /* Profile */,
 				17CD8F392761ECAC009043F0 /* Artikel */,
 				17CD8F462761ED7D009043F0 /* Booking */,
@@ -263,8 +473,6 @@
 				924DC4B8275F266500FCE093 /* UIColor.swift */,
 				924DC4BA275F269100FCE093 /* DeviceHelper.swift */,
 				924DC4BC275F26DF00FCE093 /* Utility.swift */,
-				3EFA07BB275F99100010AA10 /* UIButton+extension.swift */,
-				3EC13CB82763146B00B4A878 /* UITextField+extension.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -272,8 +480,11 @@
 		924DC4BF275F32DA00FCE093 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				3EFA07BB275F99100010AA10 /* UIButton+extension.swift */,
+				3EC13CB82763146B00B4A878 /* UITextField+extension.swift */,
 				924DC4C0275F32E900FCE093 /* PopToSelectedController+Exten.swift */,
 				924DC4C2275F337200FCE093 /* SetRootView+Extension.swift */,
+				3E19490D276DA94C00B15044 /* UIView+extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -283,6 +494,8 @@
 			children = (
 				92A9D66227620380001BD05C /* APIService.swift */,
 				92DA8AE72763C02D00028BF3 /* Session.swift */,
+				92DC1A3F2765AEE20084FC4E /* SavedData.swift */,
+				92AB686E276E3A4500F8880F /* LoadData.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -290,19 +503,142 @@
 		92A9D6592762032B001BD05C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				92A9D65A27620338001BD05C /* ArticleModel.swift */,
-				92A9D65B27620338001BD05C /* LoginModel.swift */,
-				92DA8AE92763C1EE00028BF3 /* UserData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		92AB6860276E367F00F8880F /* IsiDataPasien */ = {
+			isa = PBXGroup;
+			children = (
+				92AB6861276E369E00F8880F /* DataPasienViewController.swift */,
+				92AB6862276E369E00F8880F /* IsiDataPasienView.swift */,
+				92AB6863276E369E00F8880F /* IsiDataPasienView.xib */,
+			);
+			name = IsiDataPasien;
+			sourceTree = "<group>";
+		};
+		92AB6867276E371F00F8880F /* PilihJadwal */ = {
+			isa = PBXGroup;
+			children = (
+				92AB686A276E373000F8880F /* PilihJadwalView.swift */,
+				92AB6869276E373000F8880F /* PilihJadwalView.xib */,
+				92AB6868276E373000F8880F /* PilihJadwalViewController.swift */,
+			);
+			name = PilihJadwal;
+			sourceTree = "<group>";
+		};
+		92D478AA276A42910092BB50 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				17CD8F552761F106009043F0 /* LoginView.xib */,
+				17CD8F572761F106009043F0 /* Login.storyboard */,
+				17CD8F562761F106009043F0 /* LoginView.swift */,
+				17CD8F582761F106009043F0 /* LoginViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		92D478AB276A42980092BB50 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				92DA8AEB2763C35B00028BF3 /* LoginService.swift */,
+				92A9D65B27620338001BD05C /* LoginModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		92D478AC276A42CF0092BB50 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				92EED41D2768E86C005B8F32 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		92D478AD276A42E10092BB50 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		92D478AE276A42E70092BB50 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				92DA8AE92763C1EE00028BF3 /* UserData.swift */,
+				92E21A492764A3A100924C38 /* UserProfileService.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		92D478AF276A42F10092BB50 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8CB695ED27639F440096BCAB /* UserProfileView.swift */,
+				8CB695EC27639F440096BCAB /* UserProfileView.xib */,
+				8CB695EA27639F430096BCAB /* UserProfileViewController.swift */,
+				8CB695EB27639F430096BCAB /* UserProfile.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		92D478B0276A43430092BB50 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8C6121292762214600511B76 /* RegisterViewController.swift */,
+				8CB695E727639EEE0096BCAB /* RegisterView.swift */,
+				8CB695E527639EE00096BCAB /* Register.storyboard */,
+				8C61212A2762214600511B76 /* RegisterView.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		92D478B1276A43470092BB50 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				92D478A8276A42800092BB50 /* RegisterViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		92D478B2276A434D0092BB50 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		92DA8AE32763AA0300028BF3 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
 				92A9D6602762036B001BD05C /* UserLoginService.swift */,
+				92A9D65A27620338001BD05C /* ArticleModel.swift */,
+				3E14E2F1276D194B00495CF1 /* IsiDataPasienView.swift */,
+				3E14E2F9276D988F00495CF1 /* DataPasienViewController.swift */,
+				3E14E2EF276D193500495CF1 /* PilihJadwalView.swift */,
+				3E14E2F7276D987E00495CF1 /* PilihJadwalViewController.swift */,
+				3E14E2F3276D196400495CF1 /* IsiDataPasienView.xib */,
+				3E14E2ED276D192400495CF1 /* PilihJadwalView.xib */,
 			);
 			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		92E668E5276CB84400578B04 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				92E668E6276CB85F00578B04 /* ArticleModel.swift */,
+				92E668E3276CB83200578B04 /* ArticleService.swift */,
+				3E14E2EB276D111300495CF1 /* ArticleDetailModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		92EED41C27683818005B8F32 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				92DA8AEF2763D46200028BF3 /* RegisterService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,18 +702,30 @@
 				8C61212E2762214600511B76 /* RegisterView.xib in Resources */,
 				17CD8F6B2761F36B009043F0 /* ResetPasswordView.xib in Resources */,
 				17CD8F6A2761F366009043F0 /* LoginView.xib in Resources */,
+				8CB6E3ED276C6D8800720B7B /* LatestAppointmentView.xib in Resources */,
 				17CD8F692761F35A009043F0 /* Login.storyboard in Resources */,
-				17CD8F432761ED55009043F0 /* ArticleListSection.xib in Resources */,
+				8CB6E3EA276C6D8800720B7B /* CompletedAppointmentView.xib in Resources */,
 				924DC4A7275F141800FCE093 /* LaunchScreen.storyboard in Resources */,
 				924DC4A4275F141800FCE093 /* Assets.xcassets in Resources */,
 				8CB695F627639F850096BCAB /* ChangeData.storyboard in Resources */,
+				92AB6866276E369E00F8880F /* IsiDataPasienView.xib in Resources */,
+				3EF0F9D5276839320058CFCF /* ArticleDetailView.xib in Resources */,
+				3ED5731D276E0E7800295F35 /* ListDokterTableViewCell.xib in Resources */,
 				8CB695F027639F440096BCAB /* UserProfileView.xib in Resources */,
+				8CBD35B9276DA50F00E1D837 /* Onboarding.storyboard in Resources */,
+				17399710276A561C004E4095 /* ArticleSearch.storyboard in Resources */,
+				8CB6E3EB276C6D8800720B7B /* Appointment.storyboard in Resources */,
+				92AB686C276E373000F8880F /* PilihJadwalView.xib in Resources */,
+				8CBDD7A9276E4B64009A6B27 /* DoctorDetailView.xib in Resources */,
+				3ED57302276DCD5200295F35 /* BookingSelesaiView.xib in Resources */,
 				17CD8F482761ED86009043F0 /* Booking.storyboard in Resources */,
 				17CD8F452761ED71009043F0 /* Main.storyboard in Resources */,
+				3ED57310276E0D2700295F35 /* ListDokterView.xib in Resources */,
 				17CD8F5E2761F106009043F0 /* ResetPassword.storyboard in Resources */,
 				8CB695EF27639F440096BCAB /* UserProfile.storyboard in Resources */,
 				17CD8F3D2761ED2D009043F0 /* Article.storyboard in Resources */,
 				8CB695E627639EE00096BCAB /* Register.storyboard in Resources */,
+				3ED572FF276DC97F00295F35 /* KonfirmasiDataView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,38 +736,75 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ED5730A276DD24B00295F35 /* KonfirmasiDataViewController.swift in Sources */,
 				92DA8AE62763BE4900028BF3 /* UITextField+extension.swift in Sources */,
 				17CD8F672761F138009043F0 /* LoginView.swift in Sources */,
+				92AB685F276E21B700F8880F /* ChangeDataService.swift in Sources */,
 				92DA8AEC2763C35B00028BF3 /* LoginService.swift in Sources */,
+				8CB6E3E9276C6D8800720B7B /* LatestAppointmentView.swift in Sources */,
+				92AB6865276E369E00F8880F /* IsiDataPasienView.swift in Sources */,
 				92DA8AEA2763C1EE00028BF3 /* UserData.swift in Sources */,
+				3EF0F9D927686F3D0058CFCF /* ArticleDetailViewController.swift in Sources */,
 				92A9D66327620380001BD05C /* APIService.swift in Sources */,
+				8CBDD7A8276E4B64009A6B27 /* DoctorDetailView.swift in Sources */,
+				8CB6E3EC276C6D8800720B7B /* CompletedAppointmentView.swift in Sources */,
+				3E15D843276881C00050F6CC /* ResetPasswordViewModel.swift in Sources */,
 				17CD8F622761F106009043F0 /* LoginViewController.swift in Sources */,
+				3E19490E276DA94C00B15044 /* UIView+extension.swift in Sources */,
 				92E21A4A2764A3A200924C38 /* UserProfileService.swift in Sources */,
 				8CB695EE27639F440096BCAB /* UserProfileViewController.swift in Sources */,
 				8CB695F527639F850096BCAB /* ChangeDataViewController.swift in Sources */,
+				3ED57306276DCF6C00295F35 /* KonfirmasiDataView.swift in Sources */,
+				3EF0F9D727683EFF0058CFCF /* ArticleDetailView.swift in Sources */,
 				924DC49F275F141700FCE093 /* ViewController.swift in Sources */,
+				92EED41E2768E86C005B8F32 /* LoginViewModel.swift in Sources */,
+				92AB685D276E20E000F8880F /* ChangeDataViewModel.swift in Sources */,
 				17CD8F652761F106009043F0 /* ResetPasswordViewController.swift in Sources */,
+				8CBDD7AA276E4B64009A6B27 /* DoctorDetailViewController.swift in Sources */,
+				3E14E2EA276D101A00495CF1 /* ArticleDetailViewModel.swift in Sources */,
+				92AB686B276E373000F8880F /* PilihJadwalViewController.swift in Sources */,
+				92AB686F276E3A4500F8880F /* LoadData.swift in Sources */,
 				924DC49B275F141700FCE093 /* AppDelegate.swift in Sources */,
+				3ED5731C276E0E7800295F35 /* ListDokterTableViewCell.swift in Sources */,
+				8CBD35BB276DA83D00E1D837 /* OnboardingSlide.swift in Sources */,
 				17CD8F6F27645070009043F0 /* ImageSliderCollectionViewCell.swift in Sources */,
 				924DC4C3275F337200FCE093 /* SetRootView+Extension.swift in Sources */,
-				92A9D65F27620362001BD05C /* ArticleService.swift in Sources */,
 				924DC4BD275F26DF00FCE093 /* Utility.swift in Sources */,
+				3E14E2E8276D0FB800495CF1 /* ArticleDetailService.swift in Sources */,
+				1739971D276BBF87004E4095 /* ArticleTableViewCell.swift in Sources */,
 				924DC49D275F141700FCE093 /* SceneDelegate.swift in Sources */,
 				8CB695E827639EEE0096BCAB /* RegisterView.swift in Sources */,
 				17CD8F412761ED49009043F0 /* ArticleViewController.swift in Sources */,
-				92A9D65C27620338001BD05C /* ArticleModel.swift in Sources */,
+				3ED57308276DD12600295F35 /* BookingSelesaiViewController.swift in Sources */,
+				92E668E4276CB83200578B04 /* ArticleService.swift in Sources */,
+				92DC1A402765AEE20084FC4E /* SavedData.swift in Sources */,
+				3ED57304276DCF6000295F35 /* BookingSelesaiView.swift in Sources */,
+				1739971B276A5F58004E4095 /* ArticleSearchTableViewCell.swift in Sources */,
+				8CBD35B7276DA4EB00E1D837 /* OnboardingViewController.swift in Sources */,
 				3EFA07BC275F99100010AA10 /* UIButton+extension.swift in Sources */,
+				3ED5730E276E0D1700295F35 /* ListDokterView.swift in Sources */,
 				92DA8AE82763C02D00028BF3 /* Session.swift in Sources */,
+				8CB6E3EE276C6D8800720B7B /* AppointmentViewController.swift in Sources */,
 				924DC4B9275F266500FCE093 /* UIColor.swift in Sources */,
 				92A9D65D27620338001BD05C /* LoginModel.swift in Sources */,
+				92AB686D276E373000F8880F /* PilihJadwalView.swift in Sources */,
+				92D478A9276A42800092BB50 /* RegisterViewModel.swift in Sources */,
+				8CBD35BD276DA9BA00E1D837 /* OnboardingCollectionViewCell.swift in Sources */,
 				17CD8F3F2761ED3F009043F0 /* ArticleCollectionViewCell.swift in Sources */,
 				8CB695F127639F440096BCAB /* UserProfileView.swift in Sources */,
+				1739970E2768E2C9004E4095 /* ArticleViewModel.swift in Sources */,
 				92DA8AF02763D46200028BF3 /* RegisterService.swift in Sources */,
 				8C61212D2762214600511B76 /* RegisterViewController.swift in Sources */,
 				17CD8F642761F106009043F0 /* ResetPasswordView.swift in Sources */,
+				92E668E7276CB86000578B04 /* ArticleModel.swift in Sources */,
 				924DC4C1275F32E900FCE093 /* PopToSelectedController+Exten.swift in Sources */,
 				92A9D66B276213AD001BD05C /* TabBarControll.swift in Sources */,
+				3E15D84527688D0E0050F6CC /* ResetPasswordService.swift in Sources */,
+				17399717276A5C06004E4095 /* ArticleSearchViewController.swift in Sources */,
 				924DC4BB275F269100FCE093 /* DeviceHelper.swift in Sources */,
+				3ED57312276E0D3A00295F35 /* ListDokterViewController.swift in Sources */,
+				3E14E2EC276D111300495CF1 /* ArticleDetailModel.swift in Sources */,
+				92AB6864276E369E00F8880F /* DataPasienViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,6 +948,7 @@
 				DEVELOPMENT_TEAM = 6W5NPNJGK4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Alodokter_Rakamin_Bootcamp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Alodokter;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = UserProfile;
@@ -591,6 +977,7 @@
 				DEVELOPMENT_TEAM = 6W5NPNJGK4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Alodokter_Rakamin_Bootcamp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Alodokter;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = UserProfile;

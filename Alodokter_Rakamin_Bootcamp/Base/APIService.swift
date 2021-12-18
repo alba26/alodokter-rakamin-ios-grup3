@@ -32,6 +32,7 @@ class APIService{
         var request = URLRequest(url: req.url())
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = req.method().rawValue
+        request.timeoutInterval = req.timeout()
         if req.httpBody().isEmpty != true{
             do {
                 request.httpBody = try JSONSerialization.data(withJSONObject: req.httpBody(), options: .prettyPrinted)
@@ -40,25 +41,24 @@ class APIService{
             }
         }
         
-        if req.auth() != ""{
+        if req.auth() != "" {
             request.setValue(req.auth(), forHTTPHeaderField: "Authorization")
         }
-
+        
         let task = URLSession.shared.dataTask(with: request) {data, _, error in
             guard let data = data, error == nil else{
                 completion(.failure(error!))
                 return
             }
-            do{
+            do {
                 let response = try JSONDecoder().decode(model.self, from: data)
                 completion(.success(response))
             }
-            catch{
+            catch {
                 completion(.failure(error))
             }
         }
         task.resume()
-        
     }
     
 }

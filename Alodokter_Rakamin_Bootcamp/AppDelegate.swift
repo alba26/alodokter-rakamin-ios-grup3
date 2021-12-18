@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         setUpNavigation()
-        firstInstall()
+//        firstInstall()
         
         return true
     }
@@ -32,6 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var backgroundImage = UIImage(named: "NavbarBG")
         backgroundImage = backgroundImage?.stretchableImage(withLeftCapWidth: 0, topCapHeight: 0)
         navigationBarAppearance.setBackgroundImage(backgroundImage, for: .default)
+        navigationBarAppearance.barTintColor = .white
+        navigationBarAppearance.tintColor = .white
         
         let newNavigationBarAppearance = UINavigationBarAppearance()
         newNavigationBarAppearance.backgroundImage = backgroundImage
@@ -39,7 +41,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationBarAppearance.scrollEdgeAppearance = navigationBarAppearance.standardAppearance
         newNavigationBarAppearance.largeTitleTextAttributes = [.foregroundColor : UIColor.white]
         newNavigationBarAppearance.titleTextAttributes = [.foregroundColor : UIColor.white]
-        
         
     }
     

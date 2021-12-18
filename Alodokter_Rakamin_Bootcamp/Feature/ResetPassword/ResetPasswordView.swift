@@ -26,7 +26,7 @@ class ResetPasswordView: UIView {
         contentView.frame = self.bounds
         saveButton.setCustomUI(color: .orange, title: "Simpan")
         oldPasswordTextField.setCustomUI(withPlaceholder: "Kata sandi lama")
-        newPasswordTextField.setCustomUI(withPlaceholder: "Min. 8 karakter")
+        newPasswordTextField.setCustomUI(withPlaceholder: "Min. 6 karakter")
         confirmPasswordTextField.setCustomUI(withPlaceholder: "Konfirmasi kata sandi")
         addSubview(contentView)
     }

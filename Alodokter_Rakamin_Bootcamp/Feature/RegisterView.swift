@@ -11,9 +11,15 @@ class RegisterView: UIView {
 
     @IBOutlet var contentView: UIView!
     
+    @IBOutlet weak var hpValidationLabel: UILabel!
     @IBOutlet weak var passwordRegisterTextField: UITextField!
     @IBOutlet weak var passwordConfirmRegisterTextField: UITextField!
     
+    @IBOutlet weak var phoneRegisterTextField: UITextField!
+    @IBOutlet weak var passwordConfirmValidationLabel: UILabel!
+    @IBOutlet weak var passwordValidationLabel: UILabel!
+    @IBOutlet weak var emailValidationLabel: UILabel!
+    @IBOutlet weak var namaValidationLabel: UILabel!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var emailRegisterTextField: UITextField!
     @IBOutlet weak var nameRegisterTextField: UITextField!
@@ -31,6 +37,19 @@ class RegisterView: UIView {
         Bundle.main.loadNibNamed("RegisterView", owner: self, options: nil)
         contentView.frame = self.bounds
         addSubview(contentView)
+        
+        passwordRegisterTextField.setCustomUI(withPlaceholder: "Konfirmasi Kata Sandi")
+        passwordConfirmRegisterTextField.setCustomUI(withPlaceholder: "Kata Sandi")
+        phoneRegisterTextField.setCustomUI(withPlaceholder: "No. HP")
+        emailRegisterTextField.setCustomUI(withPlaceholder: "Email")
+        nameRegisterTextField.setCustomUI(withPlaceholder: "Nama")
+        phoneRegisterTextField.addDoneButtonOnKeyboard()
+        passwordRegisterTextField.addDoneButtonOnKeyboard()
+        passwordConfirmRegisterTextField.addDoneButtonOnKeyboard()
+        nameRegisterTextField.addDoneButtonOnKeyboard()
+        emailRegisterTextField.addDoneButtonOnKeyboard()
+        phoneRegisterTextField.keyboardType = .numberPad
+        
     }
 
 }

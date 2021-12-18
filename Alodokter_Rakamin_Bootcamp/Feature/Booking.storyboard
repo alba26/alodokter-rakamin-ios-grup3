@@ -11,24 +11,189 @@
         <!--Booking-->
         <scene sceneID="0V7-xk-f5q">
             <objects>
-                <viewController id="WNQ-xS-Spb" customClass="BookingViewController" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WNQ-xS-Spb" customClass="ListDokterViewController" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fAz-mc-NmV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="USW-jr-EP7" customClass="ListDokterView" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="RnI-0l-mje"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="USW-jr-EP7" firstAttribute="trailing" secondItem="RnI-0l-mje" secondAttribute="trailing" id="9fE-Xp-LI7"/>
+                            <constraint firstItem="USW-jr-EP7" firstAttribute="top" secondItem="RnI-0l-mje" secondAttribute="top" id="fm6-Ae-3T1"/>
+                            <constraint firstAttribute="bottom" secondItem="USW-jr-EP7" secondAttribute="bottom" id="lMp-sC-h1D"/>
+                            <constraint firstItem="USW-jr-EP7" firstAttribute="leading" secondItem="RnI-0l-mje" secondAttribute="leading" id="neK-8e-Gyi"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Booking" id="PkA-5m-cdh"/>
+                    <navigationItem key="navigationItem" title="Booking" largeTitleDisplayMode="always" id="PkA-5m-cdh"/>
+                    <connections>
+                        <outlet property="contentView" destination="USW-jr-EP7" id="AQP-Uv-8Sx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TXP-SB-GUm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2255.072463768116" y="590.625"/>
         </scene>
-        <!--Item-->
+        <!--Doctor Detail View Controller-->
+        <scene sceneID="RgO-fn-AUN">
+            <objects>
+                <viewController storyboardIdentifier="DoctorDetailViewController" id="6ww-aX-1ql" customClass="DoctorDetailViewController" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P1Z-V2-FOj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cab-4W-qdS" customClass="DoctorDetailView" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="q9k-GU-a88"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cab-4W-qdS" firstAttribute="leading" secondItem="q9k-GU-a88" secondAttribute="leading" id="EKG-ux-plC"/>
+                            <constraint firstItem="cab-4W-qdS" firstAttribute="top" secondItem="P1Z-V2-FOj" secondAttribute="top" id="JI1-T9-9EF"/>
+                            <constraint firstAttribute="bottom" secondItem="cab-4W-qdS" secondAttribute="bottom" id="YgV-Rn-Xxe"/>
+                            <constraint firstItem="cab-4W-qdS" firstAttribute="trailing" secondItem="q9k-GU-a88" secondAttribute="trailing" id="eKb-3C-iSK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="DoctorDetailView" destination="cab-4W-qdS" id="KeA-T9-CRi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ua2-Ef-tlJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3179.7101449275365" y="590.625"/>
+        </scene>
+        <!--Pilih Jadwal View Controller-->
+        <scene sceneID="cn9-c2-ifT">
+            <objects>
+                <viewController storyboardIdentifier="PilihJadwal" id="hoR-vn-W8D" customClass="PilihJadwalViewController" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xx4-Lu-WM0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ssA-My-9Ia" customClass="PilihJadwalView" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7m9-jx-6sF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ssA-My-9Ia" firstAttribute="top" secondItem="xx4-Lu-WM0" secondAttribute="top" id="Jrd-4C-rd4"/>
+                            <constraint firstAttribute="bottom" secondItem="ssA-My-9Ia" secondAttribute="bottom" id="MUR-oW-WD2"/>
+                            <constraint firstItem="ssA-My-9Ia" firstAttribute="leading" secondItem="7m9-jx-6sF" secondAttribute="leading" id="f7L-fC-V5A"/>
+                            <constraint firstItem="7m9-jx-6sF" firstAttribute="trailing" secondItem="ssA-My-9Ia" secondAttribute="trailing" id="gEV-yV-ngV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pilihJadwalView" destination="ssA-My-9Ia" id="lCc-x5-pwJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IKW-zh-f6W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4130" y="591"/>
+        </scene>
+        <!--Data Pasien View Controller-->
+        <scene sceneID="Dv9-Wk-DIb">
+            <objects>
+                <viewController storyboardIdentifier="IsiDataPasien" id="JmE-oq-YHp" customClass="DataPasienViewController" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EeP-rj-11v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHQ-We-nAr" customClass="IsiDataPasienView" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SWE-UX-58b"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dHQ-We-nAr" firstAttribute="top" secondItem="EeP-rj-11v" secondAttribute="top" id="McX-vF-LJz"/>
+                            <constraint firstItem="dHQ-We-nAr" firstAttribute="trailing" secondItem="SWE-UX-58b" secondAttribute="trailing" id="teo-Uk-x4U"/>
+                            <constraint firstItem="dHQ-We-nAr" firstAttribute="leading" secondItem="SWE-UX-58b" secondAttribute="leading" id="uAF-gT-OoA"/>
+                            <constraint firstAttribute="bottom" secondItem="dHQ-We-nAr" secondAttribute="bottom" id="ye7-u5-nWw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="isiDataPasienView" destination="dHQ-We-nAr" id="7wF-R4-mGx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ak-Gb-9cT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4838" y="591"/>
+        </scene>
+        <!--Konfirmasi Data View Controller-->
+        <scene sceneID="KEf-kq-Wql">
+            <objects>
+                <viewController storyboardIdentifier="KonfirmasiData" id="qQL-Ks-sxF" customClass="KonfirmasiDataViewController" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ke7-nC-i23">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GnH-WA-iVc" customClass="KonfirmasiDataView" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xgd-A0-ig9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GnH-WA-iVc" firstAttribute="top" secondItem="Ke7-nC-i23" secondAttribute="top" id="1f9-qI-Kdz"/>
+                            <constraint firstItem="GnH-WA-iVc" firstAttribute="leading" secondItem="xgd-A0-ig9" secondAttribute="leading" id="QKz-2p-Gqz"/>
+                            <constraint firstItem="xgd-A0-ig9" firstAttribute="trailing" secondItem="GnH-WA-iVc" secondAttribute="trailing" id="Ttl-B9-Ec8"/>
+                            <constraint firstAttribute="bottom" secondItem="GnH-WA-iVc" secondAttribute="bottom" id="aQf-v4-FKJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="GnH-WA-iVc" id="aI2-hF-nMa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RJn-Pf-QMl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5564" y="591"/>
+        </scene>
+        <!--Booking Selesai View Controller-->
+        <scene sceneID="o4T-XB-P6S">
+            <objects>
+                <viewController storyboardIdentifier="BookingSelesai" id="8gZ-26-rlb" customClass="BookingSelesaiViewController" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X9y-jC-zl5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rvo-kz-Oig" customClass="BookingSelesaiView" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3jr-Tn-TgV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3jr-Tn-TgV" firstAttribute="trailing" secondItem="Rvo-kz-Oig" secondAttribute="trailing" id="1za-QI-4k4"/>
+                            <constraint firstItem="Rvo-kz-Oig" firstAttribute="top" secondItem="X9y-jC-zl5" secondAttribute="top" id="G9O-or-wmS"/>
+                            <constraint firstAttribute="bottom" secondItem="Rvo-kz-Oig" secondAttribute="bottom" id="b4q-HL-hzF"/>
+                            <constraint firstItem="Rvo-kz-Oig" firstAttribute="leading" secondItem="3jr-Tn-TgV" secondAttribute="leading" id="qg7-v2-No2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="Rvo-kz-Oig" id="AKy-Dl-Fjy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fsk-TT-v99" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6310" y="591"/>
+        </scene>
+        <!--Dokter-->
         <scene sceneID="iHv-EH-erO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nXy-Eu-BFd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Jw1-EQ-V3h"/>
+                    <tabBarItem key="tabBarItem" title="Dokter" image="stethoscope" catalog="system" id="Jw1-EQ-V3h"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="MCQ-sD-RmT">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -45,6 +210,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="stethoscope" catalog="system" width="128" height="96"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

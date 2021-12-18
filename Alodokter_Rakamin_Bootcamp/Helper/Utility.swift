@@ -49,4 +49,86 @@ class Utility {
         }
         return fixedString
     }
+    
+    public func convertDateFromDatePicker(date: Date) ->String{
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMMM yyyy"
+        dateFormatter.locale = Locale(identifier: "id")
+        return dateFormatter.string(from: date)
+        
+    }
+    
+    
+    public func showAlertAction(title: String, message: String, uiview: UIViewController, controller:UINavigationController = UINavigationController(), action:Bool = false){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        if action{
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {_ in 
+                uiview.navigationController?.viewControllers.removeLast()
+            }))
+        }else{
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        }
+        uiview.present(alert, animated: true, completion: nil)
+    }
+    
+    public func convertDateToIOSFormat(date:String) -> String{
+        if date != ""{
+            let dateFormatterGet = DateFormatter()
+            dateFormatterGet.dateFormat = "yyyy-MM-dd"
+            dateFormatterGet.locale = Locale(identifier: "id")
+            let dateFormatterPrint = DateFormatter()
+            dateFormatterPrint.dateFormat = "dd MMMM yyyy"
+            dateFormatterPrint.locale = Locale(identifier: "id")
+            let date: NSDate? = dateFormatterGet.date(from: date) as NSDate?
+            let fixDate = dateFormatterPrint.string(from: date! as Date)
+            return fixDate
+        }else{
+            return ""
+        }
+
+    }
+    public func convertDateToAPIFormat(date:String) -> String{
+        if date != ""{
+            let dateFormatterGet = DateFormatter()
+            dateFormatterGet.dateFormat = "dd MMMM yyyy"
+            dateFormatterGet.locale = Locale(identifier: "id")
+            let dateFormatterPrint = DateFormatter()
+            dateFormatterPrint.dateFormat = "yyyy-MM-dd"
+            let date: NSDate? = dateFormatterGet.date(from: date) as NSDate?
+            let fixDate = dateFormatterPrint.string(from: date! as Date)
+            return fixDate
+        }else{
+            return ""
+        }
+
+    }
+    
+    
+    public func showSpinner() -> UIAlertController{
+        let alert = UIAlertController(title: nil, message: "Mohon Tunggu", preferredStyle: .alert)
+        let spinner = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+        spinner.startAnimating()
+        spinner.hidesWhenStopped = true
+        alert.view.addSubview(spinner)
+        return alert
+    }
+    
+    public func stringHasNumber(_ string:String) -> Bool {
+        for character in string{
+            if character.isNumber{
+                return true
+            }
+        }
+        return false
+    }
+    
+    func stringHasCharacter(_ string:String) -> Bool {
+        for character in string{
+            if character.isLetter{
+                return true
+            }
+        }
+        return false
+    }
 }
