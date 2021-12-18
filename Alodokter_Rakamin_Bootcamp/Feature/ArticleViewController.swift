@@ -55,6 +55,7 @@ class ArticleViewController: UIViewController {
                self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.slideToNext), userInfo: nil, repeats: true)
            }
            setUpMenu()
+           onboarding()
        }
        
        @objc func slideToNext(){
@@ -341,6 +342,19 @@ class ArticleViewController: UIViewController {
 
            //kasih trailing leading constraintnya right attribute
            
+       }
+       
+       func onboarding(){
+           if UserDefaults.standard.value(forKey: "firstInstall") == nil{
+               let storyboard = UIStoryboard.init(name: "Onboarding", bundle: nil)
+               let onboardingVC = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController")
+               onboardingVC.modalPresentationStyle = .fullScreen
+               self.present(onboardingVC, animated: true, completion: nil)
+               UserDefaults.standard.set(Session.unregistered.rawValue, forKey: "session")
+               UserDefaults.standard.set("alreadyInstalled", forKey: "firstInstall")
+           }
+           
+
        }
        
    }
