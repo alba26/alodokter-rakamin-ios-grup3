@@ -159,11 +159,11 @@
             </objects>
             <point key="canvasLocation" x="5747.826086956522" y="590.625"/>
         </scene>
-        <!--Item-->
+        <!--Dokter-->
         <scene sceneID="iHv-EH-erO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nXy-Eu-BFd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Jw1-EQ-V3h"/>
+                    <tabBarItem key="tabBarItem" title="Dokter" image="stethoscope" catalog="system" id="Jw1-EQ-V3h"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="MCQ-sD-RmT">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -180,6 +180,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="stethoscope" catalog="system" width="128" height="96"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
