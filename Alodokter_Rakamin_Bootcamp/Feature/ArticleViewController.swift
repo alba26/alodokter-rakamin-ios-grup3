@@ -38,7 +38,7 @@ class ArticleViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
         sliderCollectionView.collectionViewLayout = setupImageSliderViewLayout()
-        pageControl.numberOfPages = imageArray.count //viewModel. HeroArticlesData.count
+        pageControl.numberOfPages = articleHeroResults?.count ?? 0 //viewModel. HeroArticlesData.count
         getArticlesData()
         articleTableView.delegate = self
         articleTableView.dataSource = self
@@ -56,7 +56,7 @@ class ArticleViewController: UIViewController {
     }
     
     @objc func slideToNext(){
-        if currentCellIndex < imageArray.count //diganti ke pagecontrol.numberofpages ato viewModel HeroArticles.count
+        if currentCellIndex < articleHeroResults!.count//diganti ke pagecontrol.numberofpages ato viewModel HeroArticles.count
         {
             let index = IndexPath.init(item: currentCellIndex, section: 0)
             self.sliderCollectionView.scrollToItem(at:  index, at: .centeredHorizontally, animated: true)
@@ -91,7 +91,8 @@ class ArticleViewController: UIViewController {
         let profileImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
         profileImageView.image = UIImage(named: "ProfileImage")
         profileImageView.contentMode = UIView.ContentMode.scaleAspectFill
-        profileImageView.circleView()
+        profileImageView.layer.cornerRadius = 20
+        profileImageView.layer.masksToBounds = true
         profileNavView.addSubview(profileImageView)
         profileImageView.isUserInteractionEnabled = true
         let tap = UITapGestureRecognizer(target: self, action: #selector(profileMenuTapped(sender:)))
@@ -246,13 +247,17 @@ extension ArticleViewController: UICollectionViewDataSource, UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return articleHeroResults?.count ?? 0
-//        return imageArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageSliderCell", for: indexPath) as! ImageSliderCollectionViewCell
         //assign viewmodel articleHeroData
-        cell.imageSliderImg.image = UIImage(named: imageArray[indexPath.row])
+//        cell.imageSliderImg.image = UIImage(named: imageArray[indexPath.row])
+        if articleHeroResults?[indexPath.row].image.contains("https") == true {
+            let imgURL = URL(string: (articleHeroResults?[indexPath.row].image)!)
+            let data = try? Data(contentsOf: imgURL!)
+            cell.imageSliderImg.image = UIImage(data: data!)
+        }
         cell.imageSliderTitle.text = articleHeroResults?[indexPath.row].title
         cell.imageSliderTitle.backgroundColor = UIColor.black
         cell.imageSliderTitle.textColor = UIColor.white
