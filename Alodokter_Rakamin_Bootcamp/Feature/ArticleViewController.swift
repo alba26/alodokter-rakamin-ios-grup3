@@ -24,11 +24,10 @@ class ArticleViewController: UIViewController {
     @IBOutlet weak var profileNavItemView: UIView!
     @IBOutlet weak var profileNavImageView: UIImageView!
 
-    
     var imageArray = ["ArticleImage","ArticleImage","ProfileImage"]
        var timer : Timer?
        var currentCellIndex: Int = 0
-       
+       var activityIndicator: LoadData!
        var viewModel = ArticleViewModel()
        var articleResult : ArticlesModel?
        var filterResult : [Article]?
@@ -56,6 +55,7 @@ class ArticleViewController: UIViewController {
            }
            setUpMenu()
            onboarding()
+           activityIndicator = LoadData(scrollView: articleTableView, spacingFromLastCell: 10, spacingFromLastCellWhenLoadMoreActionStart: 100)
        }
        
        @objc func slideToNext(){
@@ -197,8 +197,20 @@ class ArticleViewController: UIViewController {
            if scrollView == articleTableView {
                articleTableView.isScrollEnabled = (articleTableView.contentOffset.y <= 500 || articleTableView.contentOffset.y > 200)
            }
+           
+           
+           activityIndicator.start {
+               DispatchQueue.global(qos: .utility).async { [self] in
+                   sleep(1)
+                   print("LODA")
+                   DispatchQueue.main.async { [weak self] in
+                       self?.activityIndicator.stop()
+                   }
+               }
+           }
        }
        
+
        
    }
 
@@ -356,6 +368,8 @@ class ArticleViewController: UIViewController {
            
 
        }
+       
+       
        
    }
 

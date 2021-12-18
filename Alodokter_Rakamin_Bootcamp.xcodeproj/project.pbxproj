@@ -88,6 +88,7 @@
 		92AB686B276E373000F8880F /* PilihJadwalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB6868276E373000F8880F /* PilihJadwalViewController.swift */; };
 		92AB686C276E373000F8880F /* PilihJadwalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92AB6869276E373000F8880F /* PilihJadwalView.xib */; };
 		92AB686D276E373000F8880F /* PilihJadwalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB686A276E373000F8880F /* PilihJadwalView.swift */; };
+		92AB686F276E3A4500F8880F /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB686E276E3A4500F8880F /* LoadData.swift */; };
 		92D478A9276A42800092BB50 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D478A8276A42800092BB50 /* RegisterViewModel.swift */; };
 		92DA8AE62763BE4900028BF3 /* UITextField+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC13CB82763146B00B4A878 /* UITextField+extension.swift */; };
 		92DA8AE82763C02D00028BF3 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DA8AE72763C02D00028BF3 /* Session.swift */; };
@@ -194,6 +195,7 @@
 		92AB6868276E373000F8880F /* PilihJadwalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PilihJadwalViewController.swift; sourceTree = "<group>"; };
 		92AB6869276E373000F8880F /* PilihJadwalView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PilihJadwalView.xib; sourceTree = "<group>"; };
 		92AB686A276E373000F8880F /* PilihJadwalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PilihJadwalView.swift; sourceTree = "<group>"; };
+		92AB686E276E3A4500F8880F /* LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadData.swift; sourceTree = "<group>"; };
 		92D478A8276A42800092BB50 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		92DA8AE72763C02D00028BF3 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		92DA8AE92763C1EE00028BF3 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
@@ -476,6 +478,7 @@
 				92A9D66227620380001BD05C /* APIService.swift */,
 				92DA8AE72763C02D00028BF3 /* Session.swift */,
 				92DC1A3F2765AEE20084FC4E /* SavedData.swift */,
+				92AB686E276E3A4500F8880F /* LoadData.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -740,6 +743,7 @@
 				17CD8F652761F106009043F0 /* ResetPasswordViewController.swift in Sources */,
 				3E14E2EA276D101A00495CF1 /* ArticleDetailViewModel.swift in Sources */,
 				92AB686B276E373000F8880F /* PilihJadwalViewController.swift in Sources */,
+				92AB686F276E3A4500F8880F /* LoadData.swift in Sources */,
 				924DC49B275F141700FCE093 /* AppDelegate.swift in Sources */,
 				3ED5731C276E0E7800295F35 /* ListDokterTableViewCell.swift in Sources */,
 				8CBD35BB276DA83D00E1D837 /* OnboardingSlide.swift in Sources */,

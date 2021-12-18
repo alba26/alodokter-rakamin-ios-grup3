@@ -24,6 +24,7 @@ class ChangeDataViewController: UIViewController, UIPickerViewDataSource, UIPick
             
         }
     }
+    
     let changeVM = ChangeDataViewModel()
     let data = ["Pria", "Wanita"]
     let picker = UIPickerView()
