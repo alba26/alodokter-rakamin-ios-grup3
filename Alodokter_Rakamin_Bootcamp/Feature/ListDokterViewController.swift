@@ -38,7 +38,7 @@ extension ListDokterViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "PilihJadwal") else { return }
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "DoctorDetailViewController") else { return }
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -67,6 +67,9 @@
 		8CBD35B9276DA50F00E1D837 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CBD35B8276DA50F00E1D837 /* Onboarding.storyboard */; };
 		8CBD35BB276DA83D00E1D837 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBD35BA276DA83D00E1D837 /* OnboardingSlide.swift */; };
 		8CBD35BD276DA9BA00E1D837 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBD35BC276DA9BA00E1D837 /* OnboardingCollectionViewCell.swift */; };
+		8CBDD7A8276E4B64009A6B27 /* DoctorDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBDD7A5276E4B64009A6B27 /* DoctorDetailView.swift */; };
+		8CBDD7A9276E4B64009A6B27 /* DoctorDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CBDD7A6276E4B64009A6B27 /* DoctorDetailView.xib */; };
+		8CBDD7AA276E4B64009A6B27 /* DoctorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBDD7A7276E4B64009A6B27 /* DoctorDetailViewController.swift */; };
 		924DC49B275F141700FCE093 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC49A275F141700FCE093 /* AppDelegate.swift */; };
 		924DC49D275F141700FCE093 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC49C275F141700FCE093 /* SceneDelegate.swift */; };
 		924DC49F275F141700FCE093 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC49E275F141700FCE093 /* ViewController.swift */; };
@@ -170,6 +173,9 @@
 		8CBD35B8276DA50F00E1D837 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		8CBD35BA276DA83D00E1D837 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		8CBD35BC276DA9BA00E1D837 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		8CBDD7A5276E4B64009A6B27 /* DoctorDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorDetailView.swift; sourceTree = "<group>"; };
+		8CBDD7A6276E4B64009A6B27 /* DoctorDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoctorDetailView.xib; sourceTree = "<group>"; };
+		8CBDD7A7276E4B64009A6B27 /* DoctorDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorDetailViewController.swift; sourceTree = "<group>"; };
 		924DC497275F141700FCE093 /* Alodokter_Rakamin_Bootcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alodokter_Rakamin_Bootcamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		924DC49A275F141700FCE093 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		924DC49C275F141700FCE093 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -248,6 +254,7 @@
 		17CD8F462761ED7D009043F0 /* Booking */ = {
 			isa = PBXGroup;
 			children = (
+				8CBDD7A4276E4B55009A6B27 /* DetailDokter */,
 				92AB6867276E371F00F8880F /* PilihJadwal */,
 				92AB6860276E367F00F8880F /* IsiDataPasien */,
 				3ED5730B276E0CD200295F35 /* ListDokter */,
@@ -399,6 +406,16 @@
 				8CBD35BC276DA9BA00E1D837 /* OnboardingCollectionViewCell.swift */,
 			);
 			name = Onboarding;
+			sourceTree = "<group>";
+		};
+		8CBDD7A4276E4B55009A6B27 /* DetailDokter */ = {
+			isa = PBXGroup;
+			children = (
+				8CBDD7A5276E4B64009A6B27 /* DoctorDetailView.swift */,
+				8CBDD7A6276E4B64009A6B27 /* DoctorDetailView.xib */,
+				8CBDD7A7276E4B64009A6B27 /* DoctorDetailViewController.swift */,
+			);
+			name = DetailDokter;
 			sourceTree = "<group>";
 		};
 		924DC48E275F141700FCE093 = {
@@ -699,6 +716,7 @@
 				17399710276A561C004E4095 /* ArticleSearch.storyboard in Resources */,
 				8CB6E3EB276C6D8800720B7B /* Appointment.storyboard in Resources */,
 				92AB686C276E373000F8880F /* PilihJadwalView.xib in Resources */,
+				8CBDD7A9276E4B64009A6B27 /* DoctorDetailView.xib in Resources */,
 				3ED57302276DCD5200295F35 /* BookingSelesaiView.xib in Resources */,
 				17CD8F482761ED86009043F0 /* Booking.storyboard in Resources */,
 				17CD8F452761ED71009043F0 /* Main.storyboard in Resources */,
@@ -728,6 +746,7 @@
 				92DA8AEA2763C1EE00028BF3 /* UserData.swift in Sources */,
 				3EF0F9D927686F3D0058CFCF /* ArticleDetailViewController.swift in Sources */,
 				92A9D66327620380001BD05C /* APIService.swift in Sources */,
+				8CBDD7A8276E4B64009A6B27 /* DoctorDetailView.swift in Sources */,
 				8CB6E3EC276C6D8800720B7B /* CompletedAppointmentView.swift in Sources */,
 				3E15D843276881C00050F6CC /* ResetPasswordViewModel.swift in Sources */,
 				17CD8F622761F106009043F0 /* LoginViewController.swift in Sources */,
@@ -741,6 +760,7 @@
 				92EED41E2768E86C005B8F32 /* LoginViewModel.swift in Sources */,
 				92AB685D276E20E000F8880F /* ChangeDataViewModel.swift in Sources */,
 				17CD8F652761F106009043F0 /* ResetPasswordViewController.swift in Sources */,
+				8CBDD7AA276E4B64009A6B27 /* DoctorDetailViewController.swift in Sources */,
 				3E14E2EA276D101A00495CF1 /* ArticleDetailViewModel.swift in Sources */,
 				92AB686B276E373000F8880F /* PilihJadwalViewController.swift in Sources */,
 				92AB686F276E3A4500F8880F /* LoadData.swift in Sources */,
