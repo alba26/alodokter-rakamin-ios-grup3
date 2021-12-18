@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PilihJadwalView" customModule="Alodokter_Rakamin_Bootcamp" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="qx2-Ee-M8a"/>
+                <outlet property="detailDokterCard" destination="Ycg-Rj-6nb" id="SwV-Qh-oGx"/>
+                <outlet property="imageView" destination="G7C-0D-Qbr" id="41O-mG-hjA"/>
+                <outlet property="jamTextField" destination="ceV-eN-UYW" id="05F-wh-1lH"/>
+                <outlet property="nextButton" destination="g0Y-Bv-idd" id="Ah2-Yz-yCL"/>
+                <outlet property="pilihJadwalCard" destination="IPW-gp-Y4D" id="jrE-me-53v"/>
+                <outlet property="scrollView" destination="wcz-jq-1Bo" id="oCy-N9-0bM"/>
+                <outlet property="tanggalTextField" destination="Za0-bt-vLO" id="ZPn-u5-seO"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wcz-jq-1Bo">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ufm-ec-Sfa">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="763"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ycg-Rj-6nb">
+                                    <rect key="frame" x="20" y="144" width="374" height="229"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dokter Pilihan Anda" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGf-U0-syb">
+                                            <rect key="frame" x="14" y="20" width="346" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lokasi Praktek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9UX-Vw-8A3">
+                                            <rect key="frame" x="14" y="163.5" width="346" height="17"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="G7C-0D-Qbr">
+                                            <rect key="frame" x="14" y="64.5" width="75" height="75"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="75" id="MYW-2V-dPy"/>
+                                                <constraint firstAttribute="width" constant="75" id="Pfh-UX-XZy"/>
+                                            </constraints>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="oHa-jR-SQF">
+                                            <rect key="frame" x="105" y="78" width="255" height="48"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dr. Adrian Santosa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ny8-08-v4h">
+                                                    <rect key="frame" x="0.0" y="0.0" width="255" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dokter umum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2Y-cF-vG8">
+                                                    <rect key="frame" x="0.0" y="27.5" width="255" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RSIA Setya Bhakti" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMM-iu-5gk">
+                                            <rect key="frame" x="14" y="188.5" width="346" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="fMM-iu-5gk" firstAttribute="leading" secondItem="Ycg-Rj-6nb" secondAttribute="leading" constant="14" id="5PY-5k-o2b"/>
+                                        <constraint firstItem="WGf-U0-syb" firstAttribute="top" secondItem="Ycg-Rj-6nb" secondAttribute="top" constant="20" id="5eE-ED-YU1"/>
+                                        <constraint firstItem="G7C-0D-Qbr" firstAttribute="leading" secondItem="Ycg-Rj-6nb" secondAttribute="leading" constant="14" id="G4a-4P-Rc6"/>
+                                        <constraint firstAttribute="trailing" secondItem="9UX-Vw-8A3" secondAttribute="trailing" constant="14" id="JVM-Go-LU6"/>
+                                        <constraint firstItem="oHa-jR-SQF" firstAttribute="leading" secondItem="G7C-0D-Qbr" secondAttribute="trailing" constant="16" id="KfG-dD-7Im"/>
+                                        <constraint firstItem="G7C-0D-Qbr" firstAttribute="top" secondItem="WGf-U0-syb" secondAttribute="bottom" constant="24" id="Nz1-yh-EQd"/>
+                                        <constraint firstItem="9UX-Vw-8A3" firstAttribute="top" secondItem="G7C-0D-Qbr" secondAttribute="bottom" constant="24" id="Vng-04-b2X"/>
+                                        <constraint firstItem="oHa-jR-SQF" firstAttribute="centerY" secondItem="G7C-0D-Qbr" secondAttribute="centerY" id="Y8S-OY-cGA"/>
+                                        <constraint firstAttribute="trailing" secondItem="fMM-iu-5gk" secondAttribute="trailing" constant="14" id="aqS-dN-hlt"/>
+                                        <constraint firstAttribute="trailing" secondItem="oHa-jR-SQF" secondAttribute="trailing" constant="14" id="dgj-Jm-SdT"/>
+                                        <constraint firstItem="9UX-Vw-8A3" firstAttribute="leading" secondItem="Ycg-Rj-6nb" secondAttribute="leading" constant="14" id="fht-zd-VKf"/>
+                                        <constraint firstItem="WGf-U0-syb" firstAttribute="leading" secondItem="Ycg-Rj-6nb" secondAttribute="leading" constant="14" id="h1F-bB-KoX"/>
+                                        <constraint firstItem="fMM-iu-5gk" firstAttribute="top" secondItem="9UX-Vw-8A3" secondAttribute="bottom" constant="8" id="hhD-Br-aAn"/>
+                                        <constraint firstAttribute="bottom" secondItem="fMM-iu-5gk" secondAttribute="bottom" constant="20" id="i2E-72-3Zu"/>
+                                        <constraint firstAttribute="trailing" secondItem="WGf-U0-syb" secondAttribute="trailing" constant="14" id="ogG-xH-LFg"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pilih Jadwal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xYP-xb-8MU">
+                                    <rect key="frame" x="20" y="100" width="374" height="30"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header1" translatesAutoresizingMaskIntoConstraints="NO" id="ql0-sH-W9M">
+                                    <rect key="frame" x="20" y="10" width="275" height="80"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="80" id="DK4-f1-TLp"/>
+                                        <constraint firstAttribute="width" constant="275" id="ShQ-D3-4xe"/>
+                                    </constraints>
+                                </imageView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IPW-gp-Y4D">
+                                    <rect key="frame" x="20" y="409" width="374" height="204"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pilih Tanggal Praktek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1j1-qf-bEa">
+                                            <rect key="frame" x="14" y="24" width="346" height="17"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Za0-bt-vLO">
+                                            <rect key="frame" x="14" y="49" width="346" height="34"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pilih Jam Praktek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zlt-o0-Yr4">
+                                            <rect key="frame" x="14" y="109" width="346" height="17"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ceV-eN-UYW">
+                                            <rect key="frame" x="14" y="134" width="346" height="34"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="1j1-qf-bEa" firstAttribute="top" secondItem="IPW-gp-Y4D" secondAttribute="top" constant="24" id="3GZ-hs-SzL"/>
+                                        <constraint firstItem="Za0-bt-vLO" firstAttribute="top" secondItem="1j1-qf-bEa" secondAttribute="bottom" constant="8" id="Cqh-9m-XBK"/>
+                                        <constraint firstAttribute="trailing" secondItem="Za0-bt-vLO" secondAttribute="trailing" constant="14" id="Gg3-2I-Ieu"/>
+                                        <constraint firstItem="1j1-qf-bEa" firstAttribute="leading" secondItem="IPW-gp-Y4D" secondAttribute="leading" constant="14" id="Hdf-a6-L8W"/>
+                                        <constraint firstAttribute="trailing" secondItem="ceV-eN-UYW" secondAttribute="trailing" constant="14" id="QiF-ds-5uv"/>
+                                        <constraint firstItem="Za0-bt-vLO" firstAttribute="leading" secondItem="IPW-gp-Y4D" secondAttribute="leading" constant="14" id="Sxb-c0-e9K"/>
+                                        <constraint firstItem="ceV-eN-UYW" firstAttribute="leading" secondItem="IPW-gp-Y4D" secondAttribute="leading" constant="14" id="eoj-1z-TPy"/>
+                                        <constraint firstAttribute="trailing" secondItem="1j1-qf-bEa" secondAttribute="trailing" constant="14" id="fJN-ce-oh5"/>
+                                        <constraint firstAttribute="bottom" secondItem="ceV-eN-UYW" secondAttribute="bottom" constant="36" id="gsp-i4-8Hd"/>
+                                        <constraint firstAttribute="trailing" secondItem="zlt-o0-Yr4" secondAttribute="trailing" constant="14" id="hzI-tY-FFV"/>
+                                        <constraint firstItem="zlt-o0-Yr4" firstAttribute="leading" secondItem="IPW-gp-Y4D" secondAttribute="leading" constant="14" id="k3H-t3-7Vu"/>
+                                        <constraint firstItem="ceV-eN-UYW" firstAttribute="top" secondItem="zlt-o0-Yr4" secondAttribute="bottom" constant="8" id="kpB-69-ZHx"/>
+                                        <constraint firstItem="zlt-o0-Yr4" firstAttribute="top" secondItem="Za0-bt-vLO" secondAttribute="bottom" constant="26" id="oHc-E5-EKF"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="xYP-xb-8MU" firstAttribute="leading" secondItem="Ufm-ec-Sfa" secondAttribute="leading" constant="20" id="8T0-ji-zFU"/>
+                                <constraint firstItem="ql0-sH-W9M" firstAttribute="leading" secondItem="Ufm-ec-Sfa" secondAttribute="leading" constant="20" id="94j-UR-P75"/>
+                                <constraint firstAttribute="trailing" secondItem="Ycg-Rj-6nb" secondAttribute="trailing" constant="20" id="Aps-yU-RHL"/>
+                                <constraint firstItem="IPW-gp-Y4D" firstAttribute="top" secondItem="Ycg-Rj-6nb" secondAttribute="bottom" constant="36" id="DQt-pW-wZT"/>
+                                <constraint firstAttribute="trailing" secondItem="xYP-xb-8MU" secondAttribute="trailing" constant="20" id="F0W-aJ-ipH"/>
+                                <constraint firstAttribute="trailing" secondItem="IPW-gp-Y4D" secondAttribute="trailing" constant="20" id="Yfi-al-9UK"/>
+                                <constraint firstAttribute="bottom" secondItem="IPW-gp-Y4D" secondAttribute="bottom" constant="150" id="b3F-Va-k0J"/>
+                                <constraint firstAttribute="trailing" secondItem="xYP-xb-8MU" secondAttribute="trailing" constant="20" id="cp4-V3-DAz"/>
+                                <constraint firstItem="xYP-xb-8MU" firstAttribute="leading" secondItem="Ufm-ec-Sfa" secondAttribute="leading" constant="20" id="eV2-cg-RUV"/>
+                                <constraint firstItem="IPW-gp-Y4D" firstAttribute="leading" secondItem="Ufm-ec-Sfa" secondAttribute="leading" constant="20" id="gTZ-Sc-9nW"/>
+                                <constraint firstItem="xYP-xb-8MU" firstAttribute="top" secondItem="ql0-sH-W9M" secondAttribute="bottom" constant="10" id="ptB-2U-OK6"/>
+                                <constraint firstItem="ql0-sH-W9M" firstAttribute="top" secondItem="Ufm-ec-Sfa" secondAttribute="top" constant="10" id="s2y-CB-Sog"/>
+                                <constraint firstItem="Ycg-Rj-6nb" firstAttribute="top" secondItem="xYP-xb-8MU" secondAttribute="bottom" constant="14" id="usW-3g-Lc5"/>
+                                <constraint firstItem="Ycg-Rj-6nb" firstAttribute="leading" secondItem="Ufm-ec-Sfa" secondAttribute="leading" constant="20" id="wGJ-tp-bKr"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Ufm-ec-Sfa" secondAttribute="bottom" id="0xP-rg-uaH"/>
+                        <constraint firstItem="Ufm-ec-Sfa" firstAttribute="width" secondItem="wcz-jq-1Bo" secondAttribute="width" id="PHY-iJ-1AM"/>
+                        <constraint firstItem="Ufm-ec-Sfa" firstAttribute="leading" secondItem="wcz-jq-1Bo" secondAttribute="leading" id="ROp-Bb-AtN"/>
+                        <constraint firstAttribute="trailing" secondItem="Ufm-ec-Sfa" secondAttribute="trailing" id="WfU-Ta-qFO"/>
+                        <constraint firstItem="Ufm-ec-Sfa" firstAttribute="top" secondItem="wcz-jq-1Bo" secondAttribute="top" id="t9a-qX-qKA"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="4tF-7k-9aq"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="ixm-P9-O3D"/>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0Y-Bv-idd">
+                    <rect key="frame" x="20" y="793" width="374" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="Fxl-tg-GD4"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="wcz-jq-1Bo" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="8l1-en-zhH"/>
+                <constraint firstItem="wcz-jq-1Bo" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="b2S-cO-2ll"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="g0Y-Bv-idd" secondAttribute="bottom" constant="24" id="bVp-j4-aOU"/>
+                <constraint firstAttribute="bottom" secondItem="wcz-jq-1Bo" secondAttribute="bottom" id="e0o-7k-NPH"/>
+                <constraint firstItem="wcz-jq-1Bo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="kTG-cH-iEM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="g0Y-Bv-idd" secondAttribute="trailing" constant="20" id="kci-oh-bHL"/>
+                <constraint firstItem="g0Y-Bv-idd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="vQh-O7-Ruy"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="88.392857142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ProfileImage" width="5020" height="3347"/>
+        <image name="header1" width="472" height="72"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
