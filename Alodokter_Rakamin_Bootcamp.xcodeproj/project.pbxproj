@@ -65,6 +65,10 @@
 		8CB6E3EC276C6D8800720B7B /* CompletedAppointmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB6E3E6276C6D8800720B7B /* CompletedAppointmentView.swift */; };
 		8CB6E3ED276C6D8800720B7B /* LatestAppointmentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CB6E3E7276C6D8800720B7B /* LatestAppointmentView.xib */; };
 		8CB6E3EE276C6D8800720B7B /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB6E3E8276C6D8800720B7B /* AppointmentViewController.swift */; };
+		8CBD35B7276DA4EB00E1D837 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBD35B6276DA4EB00E1D837 /* OnboardingViewController.swift */; };
+		8CBD35B9276DA50F00E1D837 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CBD35B8276DA50F00E1D837 /* Onboarding.storyboard */; };
+		8CBD35BB276DA83D00E1D837 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBD35BA276DA83D00E1D837 /* OnboardingSlide.swift */; };
+		8CBD35BD276DA9BA00E1D837 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBD35BC276DA9BA00E1D837 /* OnboardingCollectionViewCell.swift */; };
 		924DC49B275F141700FCE093 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC49A275F141700FCE093 /* AppDelegate.swift */; };
 		924DC49D275F141700FCE093 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC49C275F141700FCE093 /* SceneDelegate.swift */; };
 		924DC49F275F141700FCE093 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC49E275F141700FCE093 /* ViewController.swift */; };
@@ -151,6 +155,10 @@
 		8CB6E3E6276C6D8800720B7B /* CompletedAppointmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletedAppointmentView.swift; sourceTree = "<group>"; };
 		8CB6E3E7276C6D8800720B7B /* LatestAppointmentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LatestAppointmentView.xib; sourceTree = "<group>"; };
 		8CB6E3E8276C6D8800720B7B /* AppointmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentViewController.swift; sourceTree = "<group>"; };
+		8CBD35B6276DA4EB00E1D837 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		8CBD35B8276DA50F00E1D837 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		8CBD35BA276DA83D00E1D837 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
+		8CBD35BC276DA9BA00E1D837 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		924DC497275F141700FCE093 /* Alodokter_Rakamin_Bootcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alodokter_Rakamin_Bootcamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		924DC49A275F141700FCE093 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		924DC49C275F141700FCE093 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -362,6 +370,17 @@
 			path = Appointment;
 			sourceTree = "<group>";
 		};
+		8CB6E3EF276CDBD400720B7B /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				8CBD35B6276DA4EB00E1D837 /* OnboardingViewController.swift */,
+				8CBD35B8276DA50F00E1D837 /* Onboarding.storyboard */,
+				8CBD35BA276DA83D00E1D837 /* OnboardingSlide.swift */,
+				8CBD35BC276DA9BA00E1D837 /* OnboardingCollectionViewCell.swift */,
+			);
+			name = Onboarding;
+			sourceTree = "<group>";
+		};
 		924DC48E275F141700FCE093 = {
 			isa = PBXGroup;
 			children = (
@@ -403,6 +422,7 @@
 		924DC4B3275F25BA00FCE093 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				8CB6E3EF276CDBD400720B7B /* Onboarding */,
 				17CD8F522761F0E3009043F0 /* Profile */,
 				17CD8F392761ECAC009043F0 /* Artikel */,
 				17CD8F462761ED7D009043F0 /* Booking */,
@@ -627,6 +647,7 @@
 				8CB695F627639F850096BCAB /* ChangeData.storyboard in Resources */,
 				3EF0F9D5276839320058CFCF /* ArticleDetailView.xib in Resources */,
 				8CB695F027639F440096BCAB /* UserProfileView.xib in Resources */,
+				8CBD35B9276DA50F00E1D837 /* Onboarding.storyboard in Resources */,
 				17399710276A561C004E4095 /* ArticleSearch.storyboard in Resources */,
 				8CB6E3EB276C6D8800720B7B /* Appointment.storyboard in Resources */,
 				3ED57302276DCD5200295F35 /* BookingSelesaiView.xib in Resources */,
@@ -672,6 +693,7 @@
 				17CD8F652761F106009043F0 /* ResetPasswordViewController.swift in Sources */,
 				3E14E2EA276D101A00495CF1 /* ArticleDetailViewModel.swift in Sources */,
 				924DC49B275F141700FCE093 /* AppDelegate.swift in Sources */,
+				8CBD35BB276DA83D00E1D837 /* OnboardingSlide.swift in Sources */,
 				17CD8F6F27645070009043F0 /* ImageSliderCollectionViewCell.swift in Sources */,
 				924DC4C3275F337200FCE093 /* SetRootView+Extension.swift in Sources */,
 				924DC4BD275F26DF00FCE093 /* Utility.swift in Sources */,
@@ -688,12 +710,14 @@
 				3E14E2F0276D193500495CF1 /* PilihJadwalView.swift in Sources */,
 				3ED57304276DCF6000295F35 /* BookingSelesaiView.swift in Sources */,
 				1739971B276A5F58004E4095 /* ArticleSearchTableViewCell.swift in Sources */,
+				8CBD35B7276DA4EB00E1D837 /* OnboardingViewController.swift in Sources */,
 				3EFA07BC275F99100010AA10 /* UIButton+extension.swift in Sources */,
 				92DA8AE82763C02D00028BF3 /* Session.swift in Sources */,
 				8CB6E3EE276C6D8800720B7B /* AppointmentViewController.swift in Sources */,
 				924DC4B9275F266500FCE093 /* UIColor.swift in Sources */,
 				92A9D65D27620338001BD05C /* LoginModel.swift in Sources */,
 				92D478A9276A42800092BB50 /* RegisterViewModel.swift in Sources */,
+				8CBD35BD276DA9BA00E1D837 /* OnboardingCollectionViewCell.swift in Sources */,
 				17CD8F3F2761ED3F009043F0 /* ArticleCollectionViewCell.swift in Sources */,
 				8CB695F127639F440096BCAB /* UserProfileView.swift in Sources */,
 				1739970E2768E2C9004E4095 /* ArticleViewModel.swift in Sources */,

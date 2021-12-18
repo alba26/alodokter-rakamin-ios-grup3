@@ -18,6 +18,7 @@ class UserProfileView: UIView {
     @IBOutlet weak var myData: UIButton!
     @IBOutlet weak var logout: UIButton!
     @IBOutlet weak var history: UIButton!
+    @IBOutlet weak var onboarding: UIButton!
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()

@@ -19,12 +19,21 @@ class UserProfileViewController: UIViewController {
         userProfileView.logout.addTarget(self, action: #selector(logout), for: .touchUpInside)
         userProfileView.myData.addTarget(self, action: #selector(seeMyData), for: .touchUpInside)
         userProfileView.history.addTarget(self, action: #selector(historyTapped), for: .touchUpInside)
+        userProfileView.onboarding.addTarget(self, action: #selector(onboardingTapped), for: .touchUpInside)
         
         if UserDefaults().checkIsUserLogin(){
             decodeUserData()
         }
 
         NotificationCenter.default.addObserver(self, selector: #selector(changeLabelImageName), name: NSNotification.Name(rawValue: "changeNameLabel"), object: nil)
+    }
+    
+    @objc func onboardingTapped() {
+        let storyboard = UIStoryboard.init(name: "Onboarding", bundle: nil)
+        let onboardingVC = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController")
+//        self.navigationController?.pushViewController(onboardingVC, animated: true)
+        onboardingVC.modalPresentationStyle = .fullScreen
+        self.present(onboardingVC, animated: true, completion: nil)
     }
     
     @objc func historyTapped() {
