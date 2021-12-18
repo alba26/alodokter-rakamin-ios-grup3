@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var registerView: RegisterView!
     
@@ -25,6 +25,7 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        delegateTextField()
 
         registerView.registerButton.addTarget(self, action: #selector(register), for: .touchUpInside)
         registerView.nameRegisterTextField.addTarget(self, action: #selector(nameRegisterValidation), for: .editingChanged)
@@ -78,9 +79,6 @@ class RegisterViewController: UIViewController {
         registerVM.enableRegister = {[self] enabledRegister in
             registerView.registerButton.isEnabled = enabledRegister ?? false
         }
-        
-        
-
     }
     @objc func register(){
         registerVM.register(email:  registerView.emailRegisterTextField.text ?? "", fullname: registerView.nameRegisterTextField.text ?? "", password: registerView.passwordRegisterTextField.text ?? "", phone: registerView.phoneRegisterTextField.text ?? "")
@@ -108,5 +106,32 @@ class RegisterViewController: UIViewController {
         registerVM.confirmPasswordValidation(password: registerView.passwordRegisterTextField.text ?? "", confirmPassword: registerView.passwordConfirmRegisterTextField.text ?? "")
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            self.view.endEditing(true)
+            return false
+        }
+    
 
+}
+
+extension RegisterViewController{
+    private func delegateTextField(){
+
+        registerView.nameRegisterTextField.delegate = self
+        registerView.nameRegisterTextField.returnKeyType = .done
+        
+        registerView.emailRegisterTextField.delegate = self
+        registerView.emailRegisterTextField.returnKeyType = .done
+        
+        registerView.phoneRegisterTextField.delegate = self
+        registerView.phoneRegisterTextField.returnKeyType = .done
+        
+        registerView.passwordRegisterTextField.delegate = self
+        registerView.passwordRegisterTextField.returnKeyType = .done
+        
+        registerView.passwordConfirmRegisterTextField.delegate = self
+        registerView.passwordConfirmRegisterTextField.returnKeyType = .done
+        
+        
+    }
 }

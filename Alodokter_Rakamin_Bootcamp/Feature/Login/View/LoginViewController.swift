@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var loginView: LoginView!
 
@@ -15,6 +15,14 @@ class LoginViewController: UIViewController {
     let utils = Utility()
     var loginVM = LoginViewModel()
     let spinner = Utility().showSpinner()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.addKeyboardObserver()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.removeKeyboardObserver()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +32,11 @@ class LoginViewController: UIViewController {
         loginView.emailLoginTextField.addTarget(self, action: #selector(emailLoginValidation), for: .editingChanged)
         loginView.passwordLoginTextField.addTarget(self, action: #selector(passwordLoginValidation), for: .editingChanged)
         loginView.loginButton.isEnabled = false
-
+        delegateTextField()
+    
         self.title = "Login"
+        
+        
         loginVM.msgSuccess = { [self] msg in
             let profileStoryboard : UIStoryboard = UIStoryboard(name: "UserProfile", bundle: nil)
             let profileVC = profileStoryboard.instantiateViewController(withIdentifier: "UserProfileViewController")
@@ -81,6 +92,12 @@ class LoginViewController: UIViewController {
     @objc func forgotPassword(){
         ArticleViewModel().getArticlesData()
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            self.view.endEditing(true)
+            return false
+        }
+    
 }
 
 extension LoginViewController{
@@ -93,4 +110,12 @@ extension LoginViewController{
     
 }
 
+extension LoginViewController {
+    private func delegateTextField(){
+        loginView.emailLoginTextField.delegate = self
+        loginView.emailLoginTextField.returnKeyType = .done
+        loginView.passwordLoginTextField.delegate = self
+        loginView.passwordLoginTextField.returnKeyType = .done
+    }
 
+}

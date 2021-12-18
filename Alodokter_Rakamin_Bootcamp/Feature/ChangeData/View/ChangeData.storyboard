@@ -61,6 +61,9 @@
                                 <rect key="frame" x="32" y="410" width="350" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="email"/>
+                                <connections>
+                                    <action selector="convertDate:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="rE9-Dl-EQN"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T9Q-1z-xwa">
                                 <rect key="frame" x="32" y="498" width="350" height="34"/>

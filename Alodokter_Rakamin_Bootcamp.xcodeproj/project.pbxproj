@@ -47,6 +47,9 @@
 		8CB6E3EC276C6D8800720B7B /* CompletedAppointmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB6E3E6276C6D8800720B7B /* CompletedAppointmentView.swift */; };
 		8CB6E3ED276C6D8800720B7B /* LatestAppointmentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CB6E3E7276C6D8800720B7B /* LatestAppointmentView.xib */; };
 		8CB6E3EE276C6D8800720B7B /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB6E3E8276C6D8800720B7B /* AppointmentViewController.swift */; };
+		923A04A6276CF3E0007654AB /* DoneButtonKeyboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A04A5276CF3E0007654AB /* DoneButtonKeyboard+Extension.swift */; };
+		923A04A8276D039E007654AB /* ChangeDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A04A7276D039E007654AB /* ChangeDataService.swift */; };
+		923A04AD276D0A2D007654AB /* ChangeDataViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A04AC276D0A2D007654AB /* ChangeDataViewModal.swift */; };
 		924DC49B275F141700FCE093 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC49A275F141700FCE093 /* AppDelegate.swift */; };
 		924DC49D275F141700FCE093 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC49C275F141700FCE093 /* SceneDelegate.swift */; };
 		924DC49F275F141700FCE093 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DC49E275F141700FCE093 /* ViewController.swift */; };
@@ -115,6 +118,9 @@
 		8CB6E3E6276C6D8800720B7B /* CompletedAppointmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletedAppointmentView.swift; sourceTree = "<group>"; };
 		8CB6E3E7276C6D8800720B7B /* LatestAppointmentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LatestAppointmentView.xib; sourceTree = "<group>"; };
 		8CB6E3E8276C6D8800720B7B /* AppointmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentViewController.swift; sourceTree = "<group>"; };
+		923A04A5276CF3E0007654AB /* DoneButtonKeyboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DoneButtonKeyboard+Extension.swift"; sourceTree = "<group>"; };
+		923A04A7276D039E007654AB /* ChangeDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeDataService.swift; sourceTree = "<group>"; };
+		923A04AC276D0A2D007654AB /* ChangeDataViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeDataViewModal.swift; sourceTree = "<group>"; };
 		924DC497275F141700FCE093 /* Alodokter_Rakamin_Bootcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alodokter_Rakamin_Bootcamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		924DC49A275F141700FCE093 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		924DC49C275F141700FCE093 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -257,8 +263,9 @@
 		8CB695F227639F790096BCAB /* ChangeData */ = {
 			isa = PBXGroup;
 			children = (
-				8CB695F427639F850096BCAB /* ChangeData.storyboard */,
-				8CB695F327639F850096BCAB /* ChangeDataViewController.swift */,
+				923A04AB276D09FD007654AB /* ViewModal */,
+				923A04AA276D09EC007654AB /* Model */,
+				923A04A9276D09D7007654AB /* View */,
 			);
 			path = ChangeData;
 			sourceTree = "<group>";
@@ -274,6 +281,31 @@
 				8CB6E3E7276C6D8800720B7B /* LatestAppointmentView.xib */,
 			);
 			path = Appointment;
+			sourceTree = "<group>";
+		};
+		923A04A9276D09D7007654AB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8CB695F327639F850096BCAB /* ChangeDataViewController.swift */,
+				8CB695F427639F850096BCAB /* ChangeData.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		923A04AA276D09EC007654AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				923A04A7276D039E007654AB /* ChangeDataService.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		923A04AB276D09FD007654AB /* ViewModal */ = {
+			isa = PBXGroup;
+			children = (
+				923A04AC276D0A2D007654AB /* ChangeDataViewModal.swift */,
+			);
+			path = ViewModal;
 			sourceTree = "<group>";
 		};
 		924DC48E275F141700FCE093 = {
@@ -296,8 +328,6 @@
 		924DC499275F141700FCE093 /* Alodokter_Rakamin_Bootcamp */ = {
 			isa = PBXGroup;
 			children = (
-				92EED41C27683818005B8F32 /* Service */,
-				92A9D6592762032B001BD05C /* Model */,
 				92A9D6582762030D001BD05C /* Base */,
 				924DC4B3275F25BA00FCE093 /* Feature */,
 				924DC4BF275F32DA00FCE093 /* Extension */,
@@ -341,6 +371,7 @@
 				3EC13CB82763146B00B4A878 /* UITextField+extension.swift */,
 				924DC4C0275F32E900FCE093 /* PopToSelectedController+Exten.swift */,
 				924DC4C2275F337200FCE093 /* SetRootView+Extension.swift */,
+				923A04A5276CF3E0007654AB /* DoneButtonKeyboard+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -353,13 +384,6 @@
 				92DC1A3F2765AEE20084FC4E /* SavedData.swift */,
 			);
 			path = Base;
-			sourceTree = "<group>";
-		};
-		92A9D6592762032B001BD05C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		92D478AA276A42910092BB50 /* View */ = {
@@ -439,6 +463,7 @@
 		92D478B2276A434D0092BB50 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				92DA8AEF2763D46200028BF3 /* RegisterService.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -459,14 +484,6 @@
 				92E668E3276CB83200578B04 /* ArticleService.swift */,
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		92EED41C27683818005B8F32 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				92DA8AEF2763D46200028BF3 /* RegisterService.swift */,
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -559,13 +576,16 @@
 				92DA8AE62763BE4900028BF3 /* UITextField+extension.swift in Sources */,
 				17CD8F672761F138009043F0 /* LoginView.swift in Sources */,
 				92DA8AEC2763C35B00028BF3 /* LoginService.swift in Sources */,
+				923A04A8276D039E007654AB /* ChangeDataService.swift in Sources */,
 				8CB6E3E9276C6D8800720B7B /* LatestAppointmentView.swift in Sources */,
 				92DA8AEA2763C1EE00028BF3 /* UserData.swift in Sources */,
 				3EF0F9D927686F3D0058CFCF /* ArticleDetailViewController.swift in Sources */,
 				92A9D66327620380001BD05C /* APIService.swift in Sources */,
 				8CB6E3EC276C6D8800720B7B /* CompletedAppointmentView.swift in Sources */,
+				923A04A6276CF3E0007654AB /* DoneButtonKeyboard+Extension.swift in Sources */,
 				3E15D843276881C00050F6CC /* ResetPasswordViewModel.swift in Sources */,
 				17CD8F622761F106009043F0 /* LoginViewController.swift in Sources */,
+				923A04AD276D0A2D007654AB /* ChangeDataViewModal.swift in Sources */,
 				92E21A4A2764A3A200924C38 /* UserProfileService.swift in Sources */,
 				8CB695EE27639F440096BCAB /* UserProfileViewController.swift in Sources */,
 				8CB695F527639F850096BCAB /* ChangeDataViewController.swift in Sources */,

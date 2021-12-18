@@ -10,6 +10,7 @@ import Foundation
 class UserProfileService: BaseService{
     var token:String
     var id:Int
+
     
     func method() -> APIService.Method {
         return .get
