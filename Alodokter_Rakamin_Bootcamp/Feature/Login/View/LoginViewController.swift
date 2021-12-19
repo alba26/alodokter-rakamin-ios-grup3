@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var loginView: LoginView!
 
@@ -15,6 +15,15 @@ class LoginViewController: UIViewController {
     let utils = Utility()
     var loginVM = LoginViewModel()
     let spinner = Utility().showSpinner()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.addKeyboardObserver()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.removeKeyboardObserver()
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +33,7 @@ class LoginViewController: UIViewController {
         loginView.emailLoginTextField.addTarget(self, action: #selector(emailLoginValidation), for: .editingChanged)
         loginView.passwordLoginTextField.addTarget(self, action: #selector(passwordLoginValidation), for: .editingChanged)
         loginView.loginButton.isEnabled = false
+        textFieldDelegate()
 
         self.title = "Login"
         loginVM.msgSuccess = { [self] msg in
@@ -81,6 +91,12 @@ class LoginViewController: UIViewController {
     @objc func forgotPassword(){
         ArticleViewModel().getArticlesData()
     }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            self.view.endEditing(true)
+            return false
+        }
 }
 
 extension LoginViewController{
@@ -89,6 +105,16 @@ extension LoginViewController{
         utils.showAlertAction(title: title, message: message, uiview: self)
         loginView.passwordLoginTextField.text = ""
         loginView.isUserInteractionEnabled = true
+    }
+    
+    private func textFieldDelegate(){
+        
+        
+        loginView.emailLoginTextField.returnKeyType = .done
+        loginView.passwordLoginTextField.returnKeyType = .done
+        
+        loginView.emailLoginTextField.delegate = self
+        loginView.passwordLoginTextField.delegate = self
     }
     
 }
