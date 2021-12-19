@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var registerView: RegisterView!
     
@@ -23,6 +23,8 @@ class RegisterViewController: UIViewController {
         self.removeKeyboardObserver()
     }
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,7 +36,7 @@ class RegisterViewController: UIViewController {
         registerView.passwordConfirmRegisterTextField.addTarget(self, action: #selector(passwordConfirmRegisterValidation), for: .editingChanged)
         registerView.registerButton.isEnabled = false
         self.title = "Registrasi"
-        
+        textFieldDelegate()
         registerVM.registerSuccess = { [self] msg in
             spinner.dismiss(animated: true, completion: {
                 utils.showAlertAction(title: "Pendaftaran Berhasil", message: msg ?? "Silahkan Login.", uiview: self, action: true)
@@ -108,5 +110,25 @@ class RegisterViewController: UIViewController {
         registerVM.confirmPasswordValidation(password: registerView.passwordRegisterTextField.text ?? "", confirmPassword: registerView.passwordConfirmRegisterTextField.text ?? "")
     }
     
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            self.view.endEditing(true)
+            return false
+        }
+    
+    private func textFieldDelegate(){
+        
+        registerView.emailRegisterTextField.returnKeyType = .done
+        registerView.nameRegisterTextField.returnKeyType = .done
+        registerView.phoneRegisterTextField.returnKeyType = .done
+        registerView.passwordRegisterTextField.returnKeyType = .done
+        registerView.passwordConfirmRegisterTextField.returnKeyType = .done
+        
+        registerView.emailRegisterTextField.delegate = self
+        registerView.nameRegisterTextField.delegate = self
+        registerView.phoneRegisterTextField.delegate = self
+        registerView.passwordRegisterTextField.delegate = self
+        registerView.passwordConfirmRegisterTextField.delegate = self
+    }
 
 }
