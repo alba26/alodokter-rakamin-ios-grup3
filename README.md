@@ -106,13 +106,13 @@ Note : Change to development branch to get updated every day. Main branch only u
   <div class="column">
     <img src="images/artikel.png" alt="Artikel" width="320" height="628">
   </div>
-    <div class="column">
+  <div class="column">
     <img src="images/login.png" alt="Login" width="320" height="628">
   </div>
-    <div class="column">
+  <div class="column">
     <img src="images/profile.png" alt="Profile" width="320" height="628">
   </div>
-    <div class="column">
+  <div class="column">
     <img src="images/pilihjadwal.png" alt="pilihjadwal" width="320" height="628">
   </div>
 </div>
