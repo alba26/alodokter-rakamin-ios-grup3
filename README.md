@@ -98,9 +98,24 @@ Note : Change to development branch to get updated every day. Main branch only u
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-<img src="images/onboarding.png" alt="Onboarding" width="160" height="314">
-<img src="images/artikel.png" alt="Artikel">
-<img src="images/login.png" alt="Login">
+
+<div class="row">
+  <div class="column">
+    <img src="images/onboarding.png" alt="Onboarding" width="320" height="628">
+  </div>
+  <div class="column">
+    <img src="images/artikel.png" alt="Artikel" width="320" height="628">
+  </div>
+    <div class="column">
+    <img src="images/login.png" alt="Login" width="320" height="628">
+  </div>
+    <div class="column">
+    <img src="images/profile.png" alt="Profile" width="320" height="628">
+  </div>
+    <div class="column">
+    <img src="images/pilihjadwal.png" alt="pilihjadwal" width="320" height="628">
+  </div>
+</div>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
