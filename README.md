@@ -129,17 +129,17 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-Adhitya Laksamana Bayu Adrian - https://www.linkedin.com/in/adhityalba/ - adhityalba@gmail.com - https://adhityalba.myportfolio.com
+* Adhitya Laksamana Bayu Adrian - https://www.linkedin.com/in/adhityalba/ - adhityalba@gmail.com - https://adhityalba.myportfolio.com
 
   Project Link: https://github.com/alba26
 
-Aurelia Natasha - https://www.linkedin.com/in/aurelianatasha/ - aurelianatashaaa@gmail.com
+* Aurelia Natasha - https://www.linkedin.com/in/aurelianatasha/ - aurelianatashaaa@gmail.com
 
   Project Link: https://github.com/aurelianatasha
 
-Felinda Gracia Lubis - https://linktr.ee/felindalubis
+* Felinda Gracia Lubis - https://linktr.ee/felindalubis
 
-Finsen Antonius - https://www.linkedin.com/in/finsenantonius/ - finsenantonius42@gmail.com
+* Finsen Antonius - https://www.linkedin.com/in/finsenantonius/ - finsenantonius42@gmail.com
 
   Project Link : https://github.com/finsenantonius
 
