@@ -131,17 +131,17 @@ Don't forget to give the project a star! Thanks again!
 
 Adhitya Laksamana Bayu Adrian - https://www.linkedin.com/in/adhityalba/ - adhityalba@gmail.com - https://adhityalba.myportfolio.com
 
-Project Link: https://github.com/alba26
+  Project Link: https://github.com/alba26
 
 Aurelia Natasha - https://www.linkedin.com/in/aurelianatasha/ - aurelianatashaaa@gmail.com
 
-Project Link: https://github.com/aurelianatasha
+  Project Link: https://github.com/aurelianatasha
 
 Felinda Gracia Lubis - https://linktr.ee/felindalubis
 
 Finsen Antonius - https://www.linkedin.com/in/finsenantonius/ - finsenantonius42@gmail.com
 
-Project Link : https://github.com/finsenantonius
+  Project Link : https://github.com/finsenantonius
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
