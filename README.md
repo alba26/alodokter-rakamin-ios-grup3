@@ -98,7 +98,7 @@ Note : Change to development branch to get updated every day. Main branch only u
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-<img src="images/onboarding.png" alt="Onboarding">
+<img src="images/onboarding.png" alt="Onboarding" width="160" height="314">
 <img src="images/artikel.png" alt="Artikel">
 <img src="images/login.png" alt="Login">
 
