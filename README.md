@@ -98,14 +98,8 @@ Note : Change to development branch to get updated every day. Main branch only u
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-
+<img src="images/onboarding.png" alt="Onboarding" width="320" height="628"> <img src="images/artikel.png" alt="Artikel" width="320" height="628">
 <div class="row">
-  <div class="column">
-    <img src="images/onboarding.png" alt="Onboarding" width="320" height="628">
-  </div>
-  <div class="column">
-    <img src="images/artikel.png" alt="Artikel" width="320" height="628">
-  </div>
   <div class="column">
     <img src="images/login.png" alt="Login" width="320" height="628">
   </div>
