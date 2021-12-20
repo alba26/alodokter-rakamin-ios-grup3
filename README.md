@@ -64,7 +64,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 This is a project that we have been working on for 1 month. The project we are working on is an application that makes it easy for users to read articles about health and schedule consultations anytime and anywhere with doctors. We are working on this application to fulfill the final task of Rakamin Alodokter Bootcamp.
 
 
@@ -99,9 +98,11 @@ Note : Change to development branch to get updated every day. Main branch only u
 <!-- USAGE EXAMPLES -->
 ## Usage
 <img src="images/onboarding.png" alt="Onboarding" width="320" height="628"> <img src="images/artikel.png" alt="Artikel" width="320" height="628">
+
 You can read the article without login or registered before. Just explore the article !
 
 <img src="images/profile.png" alt="Profile" width="320" height="628"> <img src="images/pilihjadwal.png" alt="pilihjadwal" width="320" height="628">
+
 To accessing profile page, you need to registered before, and login. You can see the list of doctors and their schedule without login, but if you want to book, you need to login first.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
